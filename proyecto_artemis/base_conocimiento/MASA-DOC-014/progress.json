@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-014",
+  "title": "Power Distribution and Management Guide",
+  "type": "system_guide",
+  "status": "success",
+  "word_count": 1080,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 43,
+    "facts_present": 31,
+    "facts_missing": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-020",
+  "title": "EVA and External Operations Procedures",
+  "type": "operational_procedure",
+  "status": "success",
+  "word_count": 1641,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 29,
+    "facts_present": 23,
+    "facts_missing": []
+  }
+}

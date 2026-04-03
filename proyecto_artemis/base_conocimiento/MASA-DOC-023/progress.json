@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-023",
+  "title": "Mission Report: Condor-1 — Initial Orbital Insertion",
+  "type": "mission_record",
+  "status": "success",
+  "word_count": 1392,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 4,
+    "facts_present": 4,
+    "facts_missing": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-053",
+  "title": "Kuntur Station Construction Timeline",
+  "type": "noise",
+  "status": "success",
+  "word_count": 992,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 0,
+    "facts_present": 0,
+    "facts_missing": []
+  }
+}

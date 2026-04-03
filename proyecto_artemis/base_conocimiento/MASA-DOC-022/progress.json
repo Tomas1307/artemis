@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-022",
+  "title": "Emergency Drills and Training Procedures",
+  "type": "operational_procedure",
+  "status": "success",
+  "word_count": 1620,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 2,
+    "facts_present": 2,
+    "facts_missing": []
+  }
+}

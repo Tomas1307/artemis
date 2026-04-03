@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-032",
+  "title": "Crew Profile: Science Specialist Kai Nakamura",
+  "type": "crew_profile",
+  "status": "success",
+  "word_count": 1123,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 2,
+    "facts_present": 2,
+    "facts_missing": []
+  }
+}

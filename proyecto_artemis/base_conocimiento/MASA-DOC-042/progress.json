@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-042",
+  "title": "Crew Health and Fitness Program",
+  "type": "cross_cutting",
+  "status": "success",
+  "word_count": 1284,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 19,
+    "facts_present": 12,
+    "facts_missing": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-036",
+  "title": "Kuntur Station — Complete Systems Overview",
+  "type": "cross_cutting",
+  "status": "success",
+  "word_count": 2079,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 4,
+    "facts_present": 4,
+    "facts_missing": []
+  }
+}

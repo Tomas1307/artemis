@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-015",
+  "title": "Life Support Systems Comprehensive Guide",
+  "type": "system_guide",
+  "status": "success",
+  "word_count": 1657,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 81,
+    "facts_present": 53,
+    "facts_missing": []
+  }
+}

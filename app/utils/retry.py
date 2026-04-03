@@ -18,6 +18,8 @@ RETRYABLE_ERRORS = (
     "ServiceUnavailable",
 )
 
+DEGRADED_DELAY = 60.0
+
 
 def retry_on_api_error(
     func: Callable[..., T],
@@ -25,16 +27,16 @@ def retry_on_api_error(
     base_delay: float = 5.0,
     backoff_factor: float = 2.0,
 ) -> T:
-    """Execute a function with exponential backoff retry on API errors.
+    """Execute a function with retry on API errors.
 
-    Retries on transient HTTP errors (429, 5xx), rate limits, and
-    NVIDIA-specific DEGRADED function errors. Non-retryable errors
-    are raised immediately.
+    Uses exponential backoff for transient errors (429, 5xx). For DEGRADED
+    errors (sustained API outage), waits 60 seconds between retries since
+    short waits are useless.
 
     Args:
         func: Callable to execute. Must take no arguments (use lambda or partial).
         max_retries: Maximum number of retry attempts.
-        base_delay: Initial delay in seconds before first retry.
+        base_delay: Initial delay in seconds for transient errors.
         backoff_factor: Multiplier applied to delay after each retry.
 
     Returns:
@@ -48,6 +50,9 @@ def retry_on_api_error(
     for attempt in range(1, max_retries + 1):
         try:
             return func()
+        except KeyboardInterrupt:
+            logger.warning("Interrupted by user during API call")
+            raise
         except Exception as exc:
             last_exception = exc
             error_str = str(exc).lower()
@@ -58,12 +63,21 @@ def retry_on_api_error(
                 logger.error(f"Non-retryable error on attempt {attempt}: {exc}")
                 raise
 
+            is_degraded = "degraded" in error_str
+
             if attempt < max_retries:
-                delay = base_delay * (backoff_factor ** (attempt - 1))
-                logger.warning(
-                    f"Retryable error on attempt {attempt}/{max_retries}: {exc}. "
-                    f"Retrying in {delay:.1f}s..."
-                )
+                if is_degraded:
+                    delay = DEGRADED_DELAY
+                    logger.warning(
+                        f"API DEGRADED on attempt {attempt}/{max_retries}. "
+                        f"Waiting {delay:.0f}s before retry..."
+                    )
+                else:
+                    delay = base_delay * (backoff_factor ** (attempt - 1))
+                    logger.warning(
+                        f"Retryable error on attempt {attempt}/{max_retries}: {exc}. "
+                        f"Retrying in {delay:.1f}s..."
+                    )
                 time.sleep(delay)
             else:
                 logger.error(

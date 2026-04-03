@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-017",
+  "title": "Ventilation and Filtration Systems Guide",
+  "type": "system_guide",
+  "status": "success",
+  "word_count": 1476,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 41,
+    "facts_present": 26,
+    "facts_missing": []
+  }
+}

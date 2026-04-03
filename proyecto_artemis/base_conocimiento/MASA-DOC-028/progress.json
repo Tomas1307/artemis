@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-028",
+  "title": "Mission Report: Condor-6 — Crew Rotation and Antenna Upgrade",
+  "type": "mission_record",
+  "status": "success",
+  "word_count": 1107,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 0,
+    "facts_present": 0,
+    "facts_missing": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-009",
+  "title": "Radiation Safety Protocols",
+  "type": "protocol_group",
+  "status": "success",
+  "word_count": 2665,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 393,
+    "facts_present": 354,
+    "facts_missing": []
+  }
+}

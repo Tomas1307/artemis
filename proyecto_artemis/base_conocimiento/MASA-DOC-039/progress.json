@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-039",
+  "title": "Inventory Management and Supply Chain Guide",
+  "type": "cross_cutting",
+  "status": "success",
+  "word_count": 2342,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 26,
+    "facts_present": 18,
+    "facts_missing": []
+  }
+}

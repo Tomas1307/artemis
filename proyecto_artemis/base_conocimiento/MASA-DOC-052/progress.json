@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-052",
+  "title": "MASA Astronaut Training Program Overview",
+  "type": "noise",
+  "status": "success",
+  "word_count": 916,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 0,
+    "facts_present": 0,
+    "facts_missing": []
+  }
+}

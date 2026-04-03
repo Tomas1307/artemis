@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-041",
+  "title": "Scientific Research Program Overview",
+  "type": "cross_cutting",
+  "status": "success",
+  "word_count": 1482,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 1,
+    "facts_present": 1,
+    "facts_missing": []
+  }
+}

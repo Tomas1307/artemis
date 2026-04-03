@@ -118,9 +118,27 @@ class DocumentPipelineFacade:
 
             logger.info(f"[{idx}/{total}] Processing {spec.doc_id}: {spec.title}")
 
-            result = self._process_single(spec)
-            results.append(result)
+            try:
+                result = self._process_single(spec)
+            except KeyboardInterrupt:
+                logger.warning(
+                    f"Interrupted at {spec.doc_id} ({idx}/{total}). "
+                    "Progress saved — resume with the same command."
+                )
+                self._save_manifest(results)
+                self._log_summary(results)
+                raise
+            except Exception as exc:
+                logger.error(f"{spec.doc_id}: unexpected error — {exc}")
+                result = GenerationResult(
+                    doc_id=spec.doc_id,
+                    title=spec.title,
+                    type=spec.type,
+                    status="failed",
+                    error=str(exc),
+                )
 
+            results.append(result)
             self._save_manifest(results)
 
             if progress_callback:

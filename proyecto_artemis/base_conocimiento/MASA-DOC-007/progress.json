@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-007",
+  "title": "Atmospheric Emergency Protocols",
+  "type": "protocol_group",
+  "status": "success",
+  "word_count": 1917,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 36,
+    "facts_present": 32,
+    "facts_missing": []
+  }
+}

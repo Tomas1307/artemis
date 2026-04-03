@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-011",
+  "title": "System Failure Response Protocols",
+  "type": "protocol_group",
+  "status": "success",
+  "word_count": 1997,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 0,
+    "facts_present": 0,
+    "facts_missing": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-004",
+  "title": "Colibrí Module — Communications and Navigation Manual",
+  "type": "module_manual",
+  "status": "success",
+  "word_count": 1684,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 18,
+    "facts_present": 13,
+    "facts_missing": []
+  }
+}

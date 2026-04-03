@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-061",
+  "title": "Microgravity Effects on Human Physiology — General Overview",
+  "type": "noise",
+  "status": "success",
+  "word_count": 816,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 0,
+    "facts_present": 0,
+    "facts_missing": []
+  }
+}

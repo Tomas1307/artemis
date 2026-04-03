@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-006",
+  "title": "Tucán Module — Crew Quarters and Medical Facilities Manual",
+  "type": "module_manual",
+  "status": "success",
+  "word_count": 1952,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 85,
+    "facts_present": 58,
+    "facts_missing": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "doc_id": "MASA-DOC-008",
+  "title": "Thermal and Fire Safety Protocols",
+  "type": "protocol_group",
+  "status": "success",
+  "word_count": 2103,
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "facts_checked": 23,
+    "facts_present": 18,
+    "facts_missing": []
+  }
+}
