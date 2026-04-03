@@ -1,0 +1,767 @@
+# ==============================================================================
+# DOCUMENT REGISTRY — Defines all ~70 documents to generate
+# Types: module_manual, protocol_group, system_guide, operational_procedure,
+#        mission_record, crew_profile, cross_cutting, noise
+# ==============================================================================
+
+# --- MODULE TECHNICAL MANUALS (6 docs, 4-5 pages each) ---
+MASA-DOC-001:
+  title: "Cóndor Module — Technical Operations Manual"
+  type: module_manual
+  target_words: 2200
+  skeleton_refs:
+    - modules.condor
+  sections:
+    - Module Overview and Primary Function
+    - Command and Control Systems Architecture
+    - Telemetry Specifications and Operational Ranges
+    - Alert Threshold Table (temperature, pressure, oxygen, radiation, humidity, power)
+    - Assigned Crew and Duty Stations
+    - Interconnections with Other Modules
+    - Maintenance Schedule and Known Issues
+
+MASA-DOC-002:
+  title: "Quetzal Module — Scientific Laboratory Manual"
+  type: module_manual
+  target_words: 2400
+  skeleton_refs:
+    - modules.quetzal
+  sections:
+    - Module Overview and Research Mission
+    - Laboratory Layout and 12 Workstation Configuration
+    - Scientific Equipment Inventory
+    - Telemetry Specifications and Operational Ranges
+    - Alert Threshold Table
+    - Assigned Research Crew and Specializations
+    - Experiment Safety Protocols
+    - Environmental Requirements for Active Experiments
+
+MASA-DOC-003:
+  title: "Jaguar Module — Life Support Systems Manual"
+  type: module_manual
+  target_words: 2500
+  skeleton_refs:
+    - modules.jaguar
+  sections:
+    - Module Overview and Critical Role
+    - Class A Redundancy Architecture
+    - Life Support Subsystems (O2 generation, CO2 scrubbing, water recycling)
+    - Telemetry Specifications and Operational Ranges
+    - Alert Threshold Table
+    - Backup System Activation Procedures
+    - Assigned Engineering Crew
+    - Failure Mode Analysis
+
+MASA-DOC-004:
+  title: "Colibrí Module — Communications and Navigation Manual"
+  type: module_manual
+  target_words: 2200
+  skeleton_refs:
+    - modules.colibri
+  sections:
+    - Module Overview and Communication Role
+    - Long-Range Antenna Array Specifications
+    - Navigation System Components
+    - Telemetry Specifications and Operational Ranges
+    - Alert Threshold Table
+    - Ground Station Contact Windows
+    - Orbital Tracking and Positioning
+    - Assigned Crew and Communication Protocols
+
+MASA-DOC-005:
+  title: "Vicuña Module — Storage and Cargo Operations Manual"
+  type: module_manual
+  target_words: 2000
+  skeleton_refs:
+    - modules.vicuna
+  sections:
+    - Module Overview and Cargo Function
+    - Docking Port Specifications and Procedures
+    - Cargo Bay Layout and Capacity
+    - Telemetry Specifications and Operational Ranges
+    - Alert Threshold Table
+    - Inventory Management System
+    - Assigned Crew for Cargo Operations
+
+MASA-DOC-006:
+  title: "Tucán Module — Crew Quarters and Medical Facilities Manual"
+  type: module_manual
+  target_words: 2000
+  skeleton_refs:
+    - modules.tucan
+  sections:
+    - Module Overview and Habitational Function
+    - Cabin Layout (6 Individual Cabins)
+    - Medical Bay Equipment and Capabilities
+    - Telemetry Specifications and Operational Ranges
+    - Alert Threshold Table
+    - Crew Welfare and Recreation Facilities
+    - Assigned Medical Officer Responsibilities
+
+# --- SECURITY PROTOCOL GROUPS (6 docs, 3-4 pages each) ---
+MASA-DOC-007:
+  title: "Atmospheric Emergency Protocols"
+  type: protocol_group
+  target_words: 1800
+  skeleton_refs:
+    - security_protocols.MASA-SEC-001
+    - security_protocols.MASA-SEC-002
+    - security_protocols.MASA-SEC-009
+    - security_protocols.MASA-SEC-010
+    - security_protocols.MASA-SEC-011
+  sections:
+    - Protocol Overview and Activation Authority
+    - "MASA-SEC-001: Rapid Decompression Response"
+    - "MASA-SEC-002: Oxygen Depletion Response"
+    - "MASA-SEC-009: Toxic Atmosphere Detection"
+    - "MASA-SEC-010: Low Oxygen Warning Response"
+    - "MASA-SEC-011: Moderate Pressure Drop Response"
+    - Cross-Protocol Escalation Procedures
+    - Equipment and Resource Requirements
+
+MASA-DOC-008:
+  title: "Thermal and Fire Safety Protocols"
+  type: protocol_group
+  target_words: 1500
+  skeleton_refs:
+    - security_protocols.MASA-SEC-003
+  sections:
+    - Protocol Overview
+    - "MASA-SEC-003: Fire and Thermal Runaway Suppression"
+    - Module-Specific Temperature Critical Thresholds
+    - Fire Suppression System Locations
+    - Evacuation Routes per Module
+    - Post-Fire Assessment Procedures
+
+MASA-DOC-009:
+  title: "Radiation Safety Protocols"
+  type: protocol_group
+  target_words: 1500
+  skeleton_refs:
+    - security_protocols.MASA-SEC-004
+    - security_protocols.MASA-SEC-012
+  sections:
+    - Protocol Overview and Radiation Monitoring
+    - "MASA-SEC-004: Radiation Lockdown Protocol"
+    - "MASA-SEC-012: Solar Flare Advisory"
+    - Shielded Module Designations (Jaguar, Cóndor)
+    - Crew Exposure Tracking Requirements
+    - EVA Restrictions During Radiation Events
+
+MASA-DOC-010:
+  title: "Structural and Mechanical Safety Protocols"
+  type: protocol_group
+  target_words: 1800
+  skeleton_refs:
+    - security_protocols.MASA-SEC-008
+    - security_protocols.MASA-SEC-013
+    - security_protocols.MASA-SEC-017
+  sections:
+    - Protocol Overview
+    - "MASA-SEC-008: Structural Integrity Alert"
+    - "MASA-SEC-013: Docking Bay Pressure Anomaly"
+    - "MASA-SEC-017: Airlock Seal Failure Protocol"
+    - Hull Inspection Procedures
+    - EVA Repair Team Composition
+
+MASA-DOC-011:
+  title: "System Failure Response Protocols"
+  type: protocol_group
+  target_words: 2000
+  skeleton_refs:
+    - security_protocols.MASA-SEC-006
+    - security_protocols.MASA-SEC-007
+    - security_protocols.MASA-SEC-014
+    - security_protocols.MASA-SEC-015
+    - security_protocols.MASA-SEC-018
+  sections:
+    - Protocol Overview
+    - "MASA-SEC-006: Power Grid Critical Failure"
+    - "MASA-SEC-007: Communication Blackout Protocol"
+    - "MASA-SEC-014: CO2 Scrubber Failure Protocol"
+    - "MASA-SEC-015: Water Recycling System Failure"
+    - "MASA-SEC-018: Power Fluctuation Response"
+    - System Interdependency Map
+    - Backup System Activation Sequence
+
+MASA-DOC-012:
+  title: "Critical Response and Evacuation Protocols"
+  type: protocol_group
+  target_words: 1800
+  skeleton_refs:
+    - security_protocols.MASA-SEC-005
+    - security_protocols.MASA-SEC-019
+    - security_protocols.MASA-SEC-020
+  sections:
+    - Protocol Overview and Command Authority
+    - "MASA-SEC-005: Medical Emergency Response"
+    - "MASA-SEC-019: Biological Contamination Containment"
+    - "MASA-SEC-020: Emergency Station Evacuation"
+    - Evacuation Capsule Capacity and Location
+    - MAYDAY Communication Procedures
+    - Crew Priority and Evacuation Order
+
+# --- SYSTEM GUIDES (5 docs, 3-4 pages each) ---
+MASA-DOC-013:
+  title: "Thermal Management System Guide"
+  type: system_guide
+  target_words: 1800
+  skeleton_refs:
+    - modules.condor.telemetry.temperature
+    - modules.quetzal.telemetry.temperature
+    - modules.jaguar.telemetry.temperature
+    - modules.colibri.telemetry.temperature
+    - modules.vicuna.telemetry.temperature
+    - modules.tucan.telemetry.temperature
+  sections:
+    - System Overview
+    - Module-by-Module Temperature Operating Ranges
+    - Heating and Cooling System Specifications per Module
+    - Alert Severity Mapping for Temperature Deviations
+    - Seasonal Orbital Thermal Variations
+    - Maintenance Schedule for Thermal Components
+
+MASA-DOC-014:
+  title: "Power Distribution and Management Guide"
+  type: system_guide
+  target_words: 1700
+  skeleton_refs:
+    - modules.condor.telemetry.power
+    - modules.quetzal.telemetry.power
+    - modules.jaguar.telemetry.power
+    - modules.colibri.telemetry.power
+    - modules.vicuna.telemetry.power
+    - modules.tucan.telemetry.power
+  sections:
+    - Station Power Architecture
+    - Solar Panel Array and Battery Bank
+    - Per-Module Power Allocation and Rated Capacity
+    - Load Priority Classification (Essential vs Non-Essential)
+    - Power Alert Thresholds and Load Shedding Procedures
+    - Backup Power Systems
+
+MASA-DOC-015:
+  title: "Life Support Systems Comprehensive Guide"
+  type: system_guide
+  target_words: 2000
+  skeleton_refs:
+    - modules.jaguar
+    - modules.condor.telemetry.oxygen
+    - modules.quetzal.telemetry.oxygen
+    - modules.tucan.telemetry.oxygen
+  sections:
+    - O2 Generation and Distribution
+    - CO2 Scrubbing System
+    - Water Recycling and Purification
+    - Per-Module Oxygen Operational Ranges
+    - Humidity Control Across All Modules
+    - Air Quality Monitoring Sensors
+    - Filter Replacement Schedule
+
+MASA-DOC-016:
+  title: "Communications Infrastructure Guide"
+  type: system_guide
+  target_words: 1500
+  skeleton_refs:
+    - modules.colibri
+  sections:
+    - Antenna Array Architecture
+    - Ground Station Contact Schedule
+    - Inter-Module Communication Network
+    - Emergency Communication Frequencies
+    - Data Relay Protocols
+    - Bandwidth Allocation per Module
+
+MASA-DOC-017:
+  title: "Ventilation and Filtration Systems Guide"
+  type: system_guide
+  target_words: 1500
+  skeleton_refs:
+    - modules.jaguar.telemetry.humidity
+    - modules.condor.telemetry.humidity
+    - modules.quetzal.telemetry.humidity
+  sections:
+    - Ventilation Architecture and Airflow Patterns
+    - HEPA and Chemical Filtration Stages
+    - Per-Module Humidity Operating Ranges
+    - Filter Status Monitoring and Replacement
+    - Emergency Ventilation Flush Procedures
+    - Contamination Isolation Capabilities
+
+# --- OPERATIONAL PROCEDURES (5 docs, 2-3 pages each) ---
+MASA-DOC-018:
+  title: "Daily Operations and Shift Management Procedures"
+  type: operational_procedure
+  target_words: 1200
+  skeleton_refs:
+    - operational_procedures.MASA-OPS-001
+    - operational_procedures.MASA-OPS-006
+    - operational_procedures.MASA-OPS-008
+  sections:
+    - "MASA-OPS-001: Daily System Health Check"
+    - "MASA-OPS-006: Crew Shift Handoff"
+    - "MASA-OPS-008: Communication Window Management"
+    - Daily Schedule Template
+
+MASA-DOC-019:
+  title: "Maintenance and Calibration Procedures"
+  type: operational_procedure
+  target_words: 1300
+  skeleton_refs:
+    - operational_procedures.MASA-OPS-002
+    - operational_procedures.MASA-OPS-010
+    - operational_procedures.MASA-OPS-014
+  sections:
+    - "MASA-OPS-002: Scheduled Preventive Maintenance"
+    - "MASA-OPS-010: Life Support Maintenance"
+    - "MASA-OPS-014: Software Update and System Calibration"
+    - Maintenance Tool Inventory
+    - Reduced Operation Mode During Updates
+
+MASA-DOC-020:
+  title: "EVA and External Operations Procedures"
+  type: operational_procedure
+  target_words: 1100
+  skeleton_refs:
+    - operational_procedures.MASA-OPS-004
+  sections:
+    - "MASA-OPS-004: EVA Preparation and Execution"
+    - Suit Systems Checklist
+    - Airlock Cycling Protocol
+    - Communication Requirements During EVA
+    - Emergency Recall Procedures
+
+MASA-DOC-021:
+  title: "Docking, Cargo, and Supply Procedures"
+  type: operational_procedure
+  target_words: 1200
+  skeleton_refs:
+    - operational_procedures.MASA-OPS-003
+    - operational_procedures.MASA-OPS-005
+    - operational_procedures.MASA-OPS-013
+  sections:
+    - "MASA-OPS-003: Docking and Undocking Procedure"
+    - "MASA-OPS-005: Cargo Transfer and Inventory Update"
+    - "MASA-OPS-013: Supply Request and Inventory Management"
+    - Docking Approach Sequence
+    - Cargo Manifest Verification
+
+MASA-DOC-022:
+  title: "Emergency Drills and Training Procedures"
+  type: operational_procedure
+  target_words: 1100
+  skeleton_refs:
+    - operational_procedures.MASA-OPS-015
+    - operational_procedures.MASA-OPS-012
+  sections:
+    - "MASA-OPS-015: Emergency Drill"
+    - "MASA-OPS-012: Crew Medical Examination"
+    - Drill Scenario Library
+    - Performance Evaluation Criteria
+    - Medical Fitness Standards
+
+# --- MISSION RECORDS (7 docs, 1-2 pages each) ---
+MASA-DOC-023:
+  title: "Mission Report: Condor-1 — Initial Orbital Insertion"
+  type: mission_record
+  target_words: 600
+  skeleton_refs:
+    - missions.Condor-1
+  sections:
+    - Mission Summary
+    - Objectives and Outcomes
+    - Systems Activation Log
+    - Post-Deployment Assessment
+
+MASA-DOC-024:
+  title: "Mission Report: Condor-2 — First Crewed Mission"
+  type: mission_record
+  target_words: 800
+  skeleton_refs:
+    - missions.Condor-2
+  sections:
+    - Mission Summary and Crew Manifest
+    - Station Commissioning Activities
+    - Anomalies and Resolutions (CO2 Scrubber Calibration)
+    - Lessons Learned
+
+MASA-DOC-025:
+  title: "Mission Report: Condor-3 — Full Crew Activation"
+  type: mission_record
+  target_words: 800
+  skeleton_refs:
+    - missions.Condor-3
+  sections:
+    - Mission Summary and Crew Manifest
+    - Quetzal Laboratory Commissioning
+    - Workstation Recalibration Notes (Stations 7-12)
+    - Science Program Inauguration
+
+MASA-DOC-026:
+  title: "Mission Report: Condor-4 — Emergency Thermal Repair"
+  type: mission_record
+  target_words: 900
+  skeleton_refs:
+    - missions.Condor-4
+  sections:
+    - Mission Summary and Emergency Timeline
+    - Jaguar Thermal Failure Analysis
+    - EVA Repair Operations
+    - Temperature Readings During Incident (47.3 C peak)
+    - Post-Repair Verification
+
+MASA-DOC-027:
+  title: "Mission Report: Condor-5 — Automated Cargo Resupply"
+  type: mission_record
+  target_words: 600
+  skeleton_refs:
+    - missions.Condor-5
+  sections:
+    - Mission Summary
+    - Docking Sequence and Pressure Differential (3.2 kPa)
+    - Cargo Manifest (2.4 tonnes)
+    - Transfer Completion Report
+
+MASA-DOC-028:
+  title: "Mission Report: Condor-6 — Crew Rotation and Antenna Upgrade"
+  type: mission_record
+  target_words: 800
+  skeleton_refs:
+    - missions.Condor-6
+  sections:
+    - Mission Summary and Crew Roster
+    - Personnel Rotation Details
+    - Colibrí Antenna Array Upgrade (40% bandwidth increase)
+    - Transition to Current Operations
+
+MASA-DOC-029:
+  title: "Mission Report: Condor-7 — Current Operational Mission"
+  type: mission_record
+  target_words: 700
+  skeleton_refs:
+    - missions.Condor-7
+  sections:
+    - Mission Summary and Active Crew
+    - Current Objectives
+    - Quetzal Microgravity Biology Experiments (Phase 3)
+    - Upcoming Condor-8 Supply Rendezvous Preparation
+
+# --- CREW PROFILES (6 docs, 1 page each) ---
+MASA-DOC-030:
+  title: "Crew Profile: Commander Santiago Reyes"
+  type: crew_profile
+  target_words: 500
+  skeleton_refs:
+    - crew.commander
+  sections:
+    - Personal Background and Nationality
+    - Specialization and Experience
+    - Mission History
+    - Current Assignment and Responsibilities
+
+MASA-DOC-031:
+  title: "Crew Profile: Pilot Ana Valdivia"
+  type: crew_profile
+  target_words: 500
+  skeleton_refs:
+    - crew.pilot
+  sections:
+    - Personal Background and Nationality
+    - Specialization and Experience
+    - Mission History
+    - Current Assignment and Responsibilities
+
+MASA-DOC-032:
+  title: "Crew Profile: Science Specialist Kai Nakamura"
+  type: crew_profile
+  target_words: 500
+  skeleton_refs:
+    - crew.specialist_1
+  sections:
+    - Personal Background and Nationality
+    - Specialization and Experience
+    - Mission History
+    - Current Assignment and Responsibilities
+
+MASA-DOC-033:
+  title: "Crew Profile: Science Specialist Fátima Al-Hassan"
+  type: crew_profile
+  target_words: 500
+  skeleton_refs:
+    - crew.specialist_2
+  sections:
+    - Personal Background and Nationality
+    - Specialization and Experience
+    - Mission History
+    - Current Assignment and Responsibilities
+
+MASA-DOC-034:
+  title: "Crew Profile: Systems Engineer Pavel Kozlov"
+  type: crew_profile
+  target_words: 500
+  skeleton_refs:
+    - crew.engineer
+  sections:
+    - Personal Background and Nationality
+    - Specialization and Experience
+    - Mission History
+    - Current Assignment and Responsibilities
+
+MASA-DOC-035:
+  title: "Crew Profile: Medical Officer Lucía Mendoza"
+  type: crew_profile
+  target_words: 500
+  skeleton_refs:
+    - crew.medical_officer
+  sections:
+    - Personal Background and Nationality
+    - Specialization and Experience
+    - Mission History
+    - Current Assignment and Responsibilities
+
+# --- CROSS-CUTTING GUIDES (5 docs, 2-3 pages each) ---
+MASA-DOC-036:
+  title: "Kuntur Station — Complete Systems Overview"
+  type: cross_cutting
+  target_words: 1500
+  skeleton_refs:
+    - meta
+    - modules.condor
+    - modules.quetzal
+    - modules.jaguar
+    - modules.colibri
+    - modules.vicuna
+    - modules.tucan
+  sections:
+    - Station Architecture and Orbital Parameters
+    - Module Interconnection Map
+    - Station-Wide Systems Summary
+    - Crew Complement and Module Assignments
+    - Emergency Systems Overview
+
+MASA-DOC-037:
+  title: "MASA Internal Regulations and Code of Conduct"
+  type: cross_cutting
+  target_words: 1200
+  skeleton_refs:
+    - meta
+    - crew
+  sections:
+    - Regulatory Framework
+    - Chain of Command
+    - Communication Protocols with Ground Control
+    - Crew Conduct Standards
+    - Reporting and Documentation Requirements
+    - Disciplinary Procedures
+
+MASA-DOC-038:
+  title: "Emergency Quick-Reference Card"
+  type: cross_cutting
+  target_words: 1000
+  skeleton_refs:
+    - security_protocols.MASA-SEC-001
+    - security_protocols.MASA-SEC-002
+    - security_protocols.MASA-SEC-003
+    - security_protocols.MASA-SEC-004
+    - security_protocols.MASA-SEC-006
+    - security_protocols.MASA-SEC-020
+  sections:
+    - Critical Protocol Summary Table
+    - Evacuation Route Map Description
+    - Emergency Contact Frequencies
+    - First Response Actions by Protocol Type
+
+MASA-DOC-039:
+  title: "Inventory Management and Supply Chain Guide"
+  type: cross_cutting
+  target_words: 1100
+  skeleton_refs:
+    - modules.vicuna
+    - operational_procedures.MASA-OPS-013
+  sections:
+    - Supply Categories and Storage Locations
+    - Inventory Tracking System
+    - Resupply Request Procedures and Urgency Levels
+    - Minimum Reserve Thresholds
+    - Cargo Transfer Safety Requirements
+
+MASA-DOC-040:
+  title: "Orbital Navigation and Trajectory Management Guide"
+  type: cross_cutting
+  target_words: 1200
+  skeleton_refs:
+    - modules.colibri
+    - operational_procedures.MASA-OPS-007
+    - security_protocols.MASA-SEC-016
+  sections:
+    - Orbital Mechanics Fundamentals for Kuntur Station
+    - Station-Keeping Procedures
+    - Trajectory Deviation Alert Thresholds
+    - Maneuver Types and Urgency Classification
+    - Debris Avoidance Protocols
+    - Reentry Planning
+
+MASA-DOC-041:
+  title: "Scientific Research Program Overview"
+  type: cross_cutting
+  target_words: 1000
+  skeleton_refs:
+    - modules.quetzal
+    - operational_procedures.MASA-OPS-009
+  sections:
+    - Active Research Streams
+    - Quetzal Laboratory Capabilities
+    - Experiment Scheduling and Prioritization
+    - Data Collection and Downlink Procedures
+    - Safety Requirements for Active Experiments
+
+MASA-DOC-042:
+  title: "Crew Health and Fitness Program"
+  type: cross_cutting
+  target_words: 1000
+  skeleton_refs:
+    - crew
+    - operational_procedures.MASA-OPS-012
+  sections:
+    - Medical Examination Schedule and Procedures
+    - Physical Fitness Requirements
+    - Nutrition Guidelines
+    - Sleep Hygiene and Circadian Rhythm Management
+    - Psychological Support Resources
+
+# --- NOISE DOCUMENTS (12 docs, 1-2 pages each) ---
+# These contain NO actionable thresholds, protocol triggers, or tool-relevant data.
+# They use realistic technical tone and reference module/crew names but provide
+# zero information needed to answer any tool-call question.
+MASA-DOC-050:
+  title: "MASA — Agency History and Founding Vision"
+  type: noise
+  target_words: 700
+  skeleton_refs: []
+  sections:
+    - Origins and Founding in 2028
+    - MASA's Position in Latin American Space Programs
+    - Early Milestones and International Recognition
+    - Future Vision and Long-Term Goals
+
+MASA-DOC-051:
+  title: "Kuntur Station — Design Heritage and Naming Origins"
+  type: noise
+  target_words: 600
+  skeleton_refs: []
+  sections:
+    - The Name Kuntur and Its Quechua Roots
+    - Module Naming Convention (Andean and Mesoamerican Fauna)
+    - Station Design Influences and Architectural Philosophy
+    - Cultural Significance of the Space Program
+
+MASA-DOC-052:
+  title: "MASA Astronaut Training Program Overview"
+  type: noise
+  target_words: 700
+  skeleton_refs: []
+  sections:
+    - Training Program Structure and Duration
+    - Physical and Psychological Selection Criteria
+    - Simulation Facilities in Bogotá
+    - International Training Partnerships
+
+MASA-DOC-053:
+  title: "Kuntur Station Construction Timeline"
+  type: noise
+  target_words: 600
+  skeleton_refs: []
+  sections:
+    - Phase 1 Module Manufacturing (2028-2029)
+    - Launch Vehicle Selection
+    - Orbital Assembly Sequence
+    - Final Integration and Pressurization Tests
+
+MASA-DOC-054:
+  title: "MASA Public Affairs and Educational Outreach"
+  type: noise
+  target_words: 500
+  skeleton_refs: []
+  sections:
+    - Public Communication Strategy
+    - Educational Programs for Latin American Schools
+    - Live Stream Events from Kuntur Station
+    - Media Relations and Press Protocols
+
+MASA-DOC-055:
+  title: "Space Nutrition and Meal Planning on Kuntur Station"
+  type: noise
+  target_words: 600
+  skeleton_refs: []
+  sections:
+    - Menu Design and Caloric Requirements
+    - Food Preparation in Microgravity
+    - Cultural Meal Preferences of the Crew
+    - Supply Rotation and Shelf Life Management
+
+MASA-DOC-056:
+  title: "Crew Recreation and Morale Activities"
+  type: noise
+  target_words: 500
+  skeleton_refs: []
+  sections:
+    - Recreation Time Allocation
+    - Available Entertainment and Communication with Family
+    - Team Building Activities in Orbit
+    - Holiday and Cultural Celebrations
+
+MASA-DOC-057:
+  title: "MASA Inter-Agency Cooperation Framework"
+  type: noise
+  target_words: 600
+  skeleton_refs: []
+  sections:
+    - Partnership Agreements with International Agencies
+    - Joint Research Initiatives
+    - Shared Ground Station Network
+    - Personnel Exchange Programs
+
+MASA-DOC-058:
+  title: "Environmental Impact Assessment of MASA Launch Operations"
+  type: noise
+  target_words: 500
+  skeleton_refs: []
+  sections:
+    - Launch Site Environmental Monitoring
+    - Carbon Offset Program
+    - Debris Mitigation Policies
+    - Sustainability Commitments
+
+MASA-DOC-059:
+  title: "Photography and Earth Observation from Kuntur Station"
+  type: noise
+  target_words: 500
+  skeleton_refs: []
+  sections:
+    - Observation Windows and Camera Equipment
+    - Earth Monitoring for Climate Research
+    - Notable Photography from Previous Missions
+    - Data Sharing with Environmental Agencies
+
+MASA-DOC-060:
+  title: "MASA Commemorative Mission Patches and Insignia"
+  type: noise
+  target_words: 400
+  skeleton_refs: []
+  sections:
+    - Design Tradition for Condor Mission Patches
+    - Symbolism and Artist Selection
+    - Crew Involvement in Patch Design
+    - Archive of Past Mission Insignia
+
+MASA-DOC-061:
+  title: "Microgravity Effects on Human Physiology — General Overview"
+  type: noise
+  target_words: 700
+  skeleton_refs: []
+  sections:
+    - Bone Density and Muscle Atrophy in Long-Duration Spaceflight
+    - Cardiovascular Adaptation
+    - Vision Changes and Intracranial Pressure
+    - Countermeasures and Exercise Regimens
+    - Ongoing Research Questions

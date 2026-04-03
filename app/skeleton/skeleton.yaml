@@ -1,0 +1,1034 @@
+meta:
+  station_name: Kuntur Station
+  orbit: Low Earth Orbit (LEO)
+  altitude_km: 408
+  agency: MASA
+  agency_full: Misión Aeroespacial Sudamericana Avanzada
+  founded: 2028
+  headquarters: Bogotá, Colombia
+  current_mission: Condor-7
+  mission_start: "2031-09-01"
+
+# ==============================================================================
+# MODULES
+# Each module defines alert thresholds for all telemetry metrics.
+# Severity bands are strictly non-overlapping. Direction matters:
+#   temperature/radiation/humidity_high: low_max < medium_max < high_max < critical_min
+#   pressure/oxygen/humidity_low: critical_max < high_max < medium_max < low_max
+# ==============================================================================
+modules:
+  condor:
+    name: Cóndor
+    function: Command and control
+    role: Main control hub for all station operations
+    crew_capacity: 2
+    primary_crew: [commander, pilot]
+    systems: [ventilation, heating, lighting, cooling, filtration]
+    telemetry:
+      temperature:
+        unit: celsius
+        normal_min: 20.0
+        normal_max: 24.0
+        low_alert_max: 30.0
+        medium_alert_max: 40.0
+        high_alert_max: 55.0
+        critical_above: 55.0
+      pressure:
+        unit: kPa
+        normal_min: 99.0
+        normal_max: 103.0
+        low_alert_min: 95.0
+        medium_alert_min: 90.0
+        high_alert_min: 85.0
+        critical_below: 85.0
+      oxygen:
+        unit: percent
+        normal_min: 19.5
+        normal_max: 23.5
+        low_alert_min: 18.0
+        medium_alert_min: 16.0
+        high_alert_min: 14.0
+        critical_below: 14.0
+      radiation:
+        unit: mSv_per_hour
+        normal_max: 0.5
+        low_alert_max: 1.0
+        medium_alert_max: 2.0
+        high_alert_max: 5.0
+        critical_above: 5.0
+      humidity:
+        unit: percent
+        normal_min: 40
+        normal_max: 60
+        low_alert_band: [30, 39]
+        low_alert_high_band: [61, 70]
+        medium_alert_band: [20, 29]
+        medium_alert_high_band: [71, 80]
+        high_alert_band: [15, 19]
+        high_alert_high_band: [81, 90]
+        critical_below: 15
+        critical_above: 90
+      power:
+        unit: percent_rated_capacity
+        normal_max: 80
+        low_alert_max: 88
+        medium_alert_max: 93
+        high_alert_max: 97
+        critical_above: 97
+
+  quetzal:
+    name: Quetzal
+    function: Scientific laboratory
+    role: Primary research and experimentation module
+    crew_capacity: 4
+    primary_crew: [specialist_1, specialist_2]
+    workstations: 12
+    systems: [ventilation, heating, lighting, cooling, filtration]
+    telemetry:
+      temperature:
+        unit: celsius
+        normal_min: 18.0
+        normal_max: 26.0
+        low_alert_max: 35.0
+        medium_alert_max: 45.0
+        high_alert_max: 60.0
+        critical_above: 60.0
+      pressure:
+        unit: kPa
+        normal_min: 99.0
+        normal_max: 103.0
+        low_alert_min: 95.0
+        medium_alert_min: 90.0
+        high_alert_min: 85.0
+        critical_below: 85.0
+      oxygen:
+        unit: percent
+        normal_min: 19.5
+        normal_max: 23.5
+        low_alert_min: 18.0
+        medium_alert_min: 16.0
+        high_alert_min: 14.0
+        critical_below: 14.0
+      radiation:
+        unit: mSv_per_hour
+        normal_max: 0.5
+        low_alert_max: 1.0
+        medium_alert_max: 2.0
+        high_alert_max: 5.0
+        critical_above: 5.0
+      humidity:
+        unit: percent
+        normal_min: 40
+        normal_max: 60
+        low_alert_band: [30, 39]
+        low_alert_high_band: [61, 70]
+        medium_alert_band: [20, 29]
+        medium_alert_high_band: [71, 80]
+        high_alert_band: [15, 19]
+        high_alert_high_band: [81, 90]
+        critical_below: 15
+        critical_above: 90
+      power:
+        unit: percent_rated_capacity
+        normal_max: 80
+        low_alert_max: 88
+        medium_alert_max: 93
+        high_alert_max: 97
+        critical_above: 97
+
+  jaguar:
+    name: Jaguar
+    function: Life support and critical systems
+    role: Station life support backbone with Class A redundancy
+    crew_capacity: 6
+    primary_crew: [engineer]
+    redundancy_class: A
+    systems: [ventilation, heating, lighting, cooling, filtration]
+    telemetry:
+      temperature:
+        unit: celsius
+        normal_min: 19.0
+        normal_max: 23.0
+        low_alert_max: 28.0
+        medium_alert_max: 38.0
+        high_alert_max: 50.0
+        critical_above: 50.0
+      pressure:
+        unit: kPa
+        normal_min: 99.0
+        normal_max: 103.0
+        low_alert_min: 95.0
+        medium_alert_min: 90.0
+        high_alert_min: 85.0
+        critical_below: 85.0
+      oxygen:
+        unit: percent
+        normal_min: 19.5
+        normal_max: 23.5
+        low_alert_min: 18.0
+        medium_alert_min: 16.0
+        high_alert_min: 14.0
+        critical_below: 14.0
+      radiation:
+        unit: mSv_per_hour
+        normal_max: 0.5
+        low_alert_max: 1.0
+        medium_alert_max: 2.0
+        high_alert_max: 5.0
+        critical_above: 5.0
+      humidity:
+        unit: percent
+        normal_min: 40
+        normal_max: 60
+        low_alert_band: [30, 39]
+        low_alert_high_band: [61, 70]
+        medium_alert_band: [20, 29]
+        medium_alert_high_band: [71, 80]
+        high_alert_band: [15, 19]
+        high_alert_high_band: [81, 90]
+        critical_below: 15
+        critical_above: 90
+      power:
+        unit: percent_rated_capacity
+        normal_max: 80
+        low_alert_max: 88
+        medium_alert_max: 93
+        high_alert_max: 97
+        critical_above: 97
+
+  colibri:
+    name: Colibrí
+    function: Communications and navigation
+    role: Long-range antenna array and orbital navigation systems
+    crew_capacity: 2
+    primary_crew: [pilot]
+    systems: [ventilation, heating, lighting, cooling, filtration]
+    telemetry:
+      temperature:
+        unit: celsius
+        normal_min: 15.0
+        normal_max: 30.0
+        low_alert_max: 40.0
+        medium_alert_max: 55.0
+        high_alert_max: 65.0
+        critical_above: 65.0
+      pressure:
+        unit: kPa
+        normal_min: 99.0
+        normal_max: 103.0
+        low_alert_min: 95.0
+        medium_alert_min: 90.0
+        high_alert_min: 85.0
+        critical_below: 85.0
+      oxygen:
+        unit: percent
+        normal_min: 19.5
+        normal_max: 23.5
+        low_alert_min: 18.0
+        medium_alert_min: 16.0
+        high_alert_min: 14.0
+        critical_below: 14.0
+      radiation:
+        unit: mSv_per_hour
+        normal_max: 0.5
+        low_alert_max: 1.0
+        medium_alert_max: 2.0
+        high_alert_max: 5.0
+        critical_above: 5.0
+      humidity:
+        unit: percent
+        normal_min: 40
+        normal_max: 60
+        low_alert_band: [30, 39]
+        low_alert_high_band: [61, 70]
+        medium_alert_band: [20, 29]
+        medium_alert_high_band: [71, 80]
+        high_alert_band: [15, 19]
+        high_alert_high_band: [81, 90]
+        critical_below: 15
+        critical_above: 90
+      power:
+        unit: percent_rated_capacity
+        normal_max: 80
+        low_alert_max: 88
+        medium_alert_max: 93
+        high_alert_max: 97
+        critical_above: 97
+
+  vicuna:
+    name: Vicuña
+    function: Storage and cargo
+    role: Primary cargo bay with external docking port
+    crew_capacity: 2
+    primary_crew: [specialist_1, specialist_2]
+    has_docking_port: true
+    systems: [ventilation, heating, lighting, cooling, filtration]
+    telemetry:
+      temperature:
+        unit: celsius
+        normal_min: 10.0
+        normal_max: 35.0
+        low_alert_max: 45.0
+        medium_alert_max: 55.0
+        high_alert_max: 65.0
+        critical_above: 65.0
+      pressure:
+        unit: kPa
+        normal_min: 99.0
+        normal_max: 103.0
+        low_alert_min: 95.0
+        medium_alert_min: 90.0
+        high_alert_min: 85.0
+        critical_below: 85.0
+      oxygen:
+        unit: percent
+        normal_min: 19.5
+        normal_max: 23.5
+        low_alert_min: 18.0
+        medium_alert_min: 16.0
+        high_alert_min: 14.0
+        critical_below: 14.0
+      radiation:
+        unit: mSv_per_hour
+        normal_max: 0.5
+        low_alert_max: 1.0
+        medium_alert_max: 2.0
+        high_alert_max: 5.0
+        critical_above: 5.0
+      humidity:
+        unit: percent
+        normal_min: 40
+        normal_max: 60
+        low_alert_band: [30, 39]
+        low_alert_high_band: [61, 70]
+        medium_alert_band: [20, 29]
+        medium_alert_high_band: [71, 80]
+        high_alert_band: [15, 19]
+        high_alert_high_band: [81, 90]
+        critical_below: 15
+        critical_above: 90
+      power:
+        unit: percent_rated_capacity
+        normal_max: 80
+        low_alert_max: 88
+        medium_alert_max: 93
+        high_alert_max: 97
+        critical_above: 97
+
+  tucan:
+    name: Tucán
+    function: Crew quarters and medical bay
+    role: Habitational module with individual cabins and medical facilities
+    crew_capacity: 6
+    cabins: 6
+    primary_crew: [medical_officer]
+    systems: [ventilation, heating, lighting, cooling, filtration]
+    telemetry:
+      temperature:
+        unit: celsius
+        normal_min: 20.0
+        normal_max: 25.0
+        low_alert_max: 30.0
+        medium_alert_max: 40.0
+        high_alert_max: 52.0
+        critical_above: 52.0
+      pressure:
+        unit: kPa
+        normal_min: 99.0
+        normal_max: 103.0
+        low_alert_min: 95.0
+        medium_alert_min: 90.0
+        high_alert_min: 85.0
+        critical_below: 85.0
+      oxygen:
+        unit: percent
+        normal_min: 19.5
+        normal_max: 23.5
+        low_alert_min: 18.0
+        medium_alert_min: 16.0
+        high_alert_min: 14.0
+        critical_below: 14.0
+      radiation:
+        unit: mSv_per_hour
+        normal_max: 0.5
+        low_alert_max: 1.0
+        medium_alert_max: 2.0
+        high_alert_max: 5.0
+        critical_above: 5.0
+      humidity:
+        unit: percent
+        normal_min: 40
+        normal_max: 60
+        low_alert_band: [30, 39]
+        low_alert_high_band: [61, 70]
+        medium_alert_band: [20, 29]
+        medium_alert_high_band: [71, 80]
+        high_alert_band: [15, 19]
+        high_alert_high_band: [81, 90]
+        critical_below: 15
+        critical_above: 90
+      power:
+        unit: percent_rated_capacity
+        normal_max: 80
+        low_alert_max: 88
+        medium_alert_max: 93
+        high_alert_max: 97
+        critical_above: 97
+
+# ==============================================================================
+# SECURITY PROTOCOLS — MASA-SEC-001 to MASA-SEC-020
+# severity: low | medium | high | critical
+# scope: module_only | station_wide
+# trigger_thresholds must map exactly to telemetry bands above.
+# ==============================================================================
+security_protocols:
+  MASA-SEC-001:
+    name: Rapid Decompression Response
+    description: Activated when pressure drops below critical threshold in any module.
+    trigger_condition: pressure < 85.0 kPa in affected module
+    trigger_thresholds:
+      metric: pressure
+      operator: less_than
+      value: 85.0
+      unit: kPa
+    severity: critical
+    scope: module_only
+    required_actions:
+      - Seal all adjacent inter-module hatches immediately
+      - Send critical alert from affected module
+      - Evacuate all crew from affected module
+      - Activate backup pressure systems
+      - Contact MASA ground control
+
+  MASA-SEC-002:
+    name: Oxygen Depletion Response
+    description: Activated when O2 concentration falls below critical threshold.
+    trigger_condition: oxygen < 14.0% in affected module
+    trigger_thresholds:
+      metric: oxygen
+      operator: less_than
+      value: 14.0
+      unit: percent
+    severity: critical
+    scope: module_only
+    required_actions:
+      - Evacuate crew from affected module immediately
+      - Activate emergency O2 supply from Jaguar reserves
+      - Send critical alert
+      - Seal affected module until O2 restored
+
+  MASA-SEC-003:
+    name: Fire and Thermal Runaway Suppression
+    description: Activated on confirmed fire detection or temperature rise exceeding 2.0 C/min.
+    trigger_condition: fire sensor positive OR temperature rise > 2.0 celsius per minute
+    trigger_thresholds:
+      metric: temperature
+      operator: rate_of_change_greater_than
+      value: 2.0
+      unit: celsius_per_minute
+    severity: critical
+    scope: module_only
+    required_actions:
+      - Activate fire suppression system immediately
+      - Cut ventilation to affected module
+      - Evacuate all crew
+      - Send critical alert
+      - Seal module
+
+  MASA-SEC-004:
+    name: Radiation Lockdown Protocol
+    description: Activated when radiation exceeds critical threshold station-wide.
+    trigger_condition: radiation > 5.0 mSv/hr in any module
+    trigger_thresholds:
+      metric: radiation
+      operator: greater_than
+      value: 5.0
+      unit: mSv_per_hour
+    severity: critical
+    scope: station_wide
+    required_actions:
+      - Move all crew to shielded modules Jaguar and Condor
+      - Cancel all EVA operations immediately
+      - Send critical alert station-wide
+      - Activate radiation shielding protocols
+      - Monitor individual exposure continuously
+
+  MASA-SEC-005:
+    name: Medical Emergency Response
+    description: Activated when a crew member requires immediate medical intervention.
+    trigger_condition: crew member vital signs critical OR medical emergency reported
+    trigger_thresholds:
+      metric: crew_vitals
+      operator: critical_event
+      value: null
+      unit: null
+    severity: high
+    scope: module_only
+    required_actions:
+      - Notify medical_officer immediately
+      - Send urgent message to medical_officer
+      - Prepare Tucan medical bay
+      - Contact MASA ground control medical team
+      - Restrict non-essential crew movement
+
+  MASA-SEC-006:
+    name: Power Grid Critical Failure
+    description: Activated when total power consumption exceeds 97% rated capacity or main bus voltage drops more than 15%.
+    trigger_condition: power > 97% rated capacity OR main bus voltage drop > 15%
+    trigger_thresholds:
+      metric: power
+      operator: greater_than
+      value: 97
+      unit: percent_rated_capacity
+    severity: critical
+    scope: station_wide
+    required_actions:
+      - Shed all non-essential loads immediately
+      - Activate backup power systems
+      - Send critical alert station-wide
+      - Restrict power to life support and communications only
+      - Contact MASA ground control
+
+  MASA-SEC-007:
+    name: Communication Blackout Protocol
+    description: Activated after 30 consecutive minutes without contact with MASA ground control.
+    trigger_condition: ground control contact lost > 30 minutes
+    trigger_thresholds:
+      metric: communication_uptime
+      operator: downtime_greater_than
+      value: 30
+      unit: minutes
+    severity: high
+    scope: station_wide
+    required_actions:
+      - Switch to backup antenna array in Colibri
+      - Attempt contact on all available frequencies
+      - Log blackout start time and conditions
+      - Increase telemetry beacon rate
+      - Commander assumes full autonomous authority
+
+  MASA-SEC-008:
+    name: Structural Integrity Alert
+    description: Activated when hull stress sensors exceed 85% rated capacity or micrometeorite impact confirmed.
+    trigger_condition: hull stress > 85% rated capacity OR impact sensor positive
+    trigger_thresholds:
+      metric: hull_stress
+      operator: greater_than
+      value: 85
+      unit: percent_rated_capacity
+    severity: high
+    scope: module_only
+    required_actions:
+      - Inspect affected hull section immediately
+      - Seal adjacent inter-module hatches as precaution
+      - Send high alert from affected module
+      - Prepare EVA team for external inspection if required
+      - Document all sensor readings
+
+  MASA-SEC-009:
+    name: Toxic Atmosphere Detection
+    description: Activated when CO2 concentration exceeds 1.5% or chemical contamination is detected.
+    trigger_condition: CO2 > 1.5% OR chemical contamination sensor positive
+    trigger_thresholds:
+      metric: co2_concentration
+      operator: greater_than
+      value: 1.5
+      unit: percent
+    severity: high
+    scope: module_only
+    required_actions:
+      - Evacuate all crew from affected module
+      - Activate emergency ventilation flush
+      - Don respirators before re-entry
+      - Send high alert from affected module
+      - Identify and neutralize contamination source
+
+  MASA-SEC-010:
+    name: Low Oxygen Warning Response
+    description: Activated when O2 concentration falls to high-alert band (14.0-15.9%).
+    trigger_condition: oxygen between 14.0% and 15.9% in affected module
+    trigger_thresholds:
+      metric: oxygen
+      operator: between
+      value_min: 14.0
+      value_max: 15.9
+      unit: percent
+    severity: high
+    scope: module_only
+    required_actions:
+      - Increase O2 supply flow rate to affected module
+      - Reduce crew physical activity level
+      - Send high alert from affected module
+      - Monitor O2 trend every 5 minutes
+      - Prepare evacuation if trend continues downward
+
+  MASA-SEC-011:
+    name: Moderate Pressure Drop Response
+    description: Activated when pressure is in the high-alert band (85.0-89.9 kPa).
+    trigger_condition: pressure between 85.0 kPa and 89.9 kPa
+    trigger_thresholds:
+      metric: pressure
+      operator: between
+      value_min: 85.0
+      value_max: 89.9
+      unit: kPa
+    severity: high
+    scope: module_only
+    required_actions:
+      - Identify probable leak source using pressure sensors
+      - Seal non-essential inter-module connections
+      - Send high alert from affected module
+      - Apply sealant to identified micro-leak
+      - Monitor pressure trend every 2 minutes
+
+  MASA-SEC-012:
+    name: Solar Flare Advisory
+    description: Activated when solar activity index reaches 7 or higher, placing radiation in medium-to-high alert range.
+    trigger_condition: solar activity index >= 7 OR radiation between 1.1 and 5.0 mSv/hr
+    trigger_thresholds:
+      metric: radiation
+      operator: between
+      value_min: 1.1
+      value_max: 5.0
+      unit: mSv_per_hour
+    severity: medium
+    scope: station_wide
+    required_actions:
+      - Cancel or postpone all scheduled EVA operations
+      - Move crew to lower-radiation modules Jaguar and Condor preferentially
+      - Send medium alert station-wide
+      - Increase radiation monitoring frequency to every 15 minutes
+      - Log cumulative exposure for all crew members
+
+  MASA-SEC-013:
+    name: Docking Bay Pressure Anomaly
+    description: Activated when pressure differential at Vicuna docking port exceeds 5.0 kPa during docking operations.
+    trigger_condition: docking port pressure differential > 5.0 kPa
+    trigger_thresholds:
+      metric: docking_pressure_differential
+      operator: greater_than
+      value: 5.0
+      unit: kPa
+    severity: high
+    scope: module_only
+    required_actions:
+      - Abort docking sequence immediately
+      - Seal Vicuna docking port inner hatch
+      - Send high alert from vicuna
+      - Contact incoming vessel to hold position
+      - Inspect docking collar seals before reattempting
+
+  MASA-SEC-014:
+    name: CO2 Scrubber Failure Protocol
+    description: Activated when CO2 scrubber efficiency drops below 60% of rated capacity.
+    trigger_condition: CO2 scrubber efficiency < 60% rated capacity
+    trigger_thresholds:
+      metric: scrubber_efficiency
+      operator: less_than
+      value: 60
+      unit: percent_rated_capacity
+    severity: high
+    scope: station_wide
+    required_actions:
+      - Switch to backup CO2 scrubber in Jaguar immediately
+      - Schedule emergency scrubber maintenance
+      - Send high alert station-wide
+      - Monitor CO2 levels every 10 minutes
+      - Request spare scrubber cartridges via supply request
+
+  MASA-SEC-015:
+    name: Water Recycling System Failure
+    description: Activated when water recycling output falls below 40% rated capacity for more than 2 hours.
+    trigger_condition: water recycling output < 40% rated capacity for > 2 hours
+    trigger_thresholds:
+      metric: water_recycling_output
+      operator: less_than
+      value: 40
+      unit: percent_rated_capacity
+      sustained_minutes: 120
+    severity: medium
+    scope: station_wide
+    required_actions:
+      - Switch crew to reserve water supply in Vicuna
+      - Send medium alert station-wide
+      - Schedule maintenance for water recycling unit
+      - Request emergency water resupply
+      - Implement water conservation measures
+
+  MASA-SEC-016:
+    name: Navigation Deviation Alert
+    description: Activated when orbital altitude deviates more than 5 km or velocity delta exceeds 10 m/s from planned trajectory.
+    trigger_condition: altitude deviation > 5 km OR velocity delta > 10 m/s
+    trigger_thresholds:
+      metric: orbital_deviation
+      operator: greater_than
+      value_altitude_km: 5.0
+      value_velocity_ms: 10.0
+      unit: km_and_ms
+    severity: high
+    scope: station_wide
+    required_actions:
+      - Calculate corrective trajectory maneuver immediately
+      - Notify pilot and commander
+      - Send high alert station-wide
+      - Prepare thruster burn within next orbital pass
+      - Report deviation to MASA ground control
+
+  MASA-SEC-017:
+    name: Airlock Seal Failure Protocol
+    description: Activated when airlock door seal fails pressure test or equalization rate exceeds 0.5 kPa/min.
+    trigger_condition: airlock seal test failure OR pressure equalization rate > 0.5 kPa/min
+    trigger_thresholds:
+      metric: airlock_equalization_rate
+      operator: greater_than
+      value: 0.5
+      unit: kPa_per_minute
+    severity: critical
+    scope: module_only
+    required_actions:
+      - Abort EVA immediately if in progress
+      - Do not open outer airlock door under any circumstances
+      - Seal airlock inner hatch
+      - Send critical alert from affected module
+      - Schedule emergency seal inspection and replacement
+
+  MASA-SEC-018:
+    name: Power Fluctuation Response
+    description: Activated when voltage fluctuation exceeds 10% of nominal 118V (above 129.8V or below 106.2V).
+    trigger_condition: voltage fluctuation > 10% nominal (outside 106.2V-129.8V range)
+    trigger_thresholds:
+      metric: voltage_fluctuation_percent
+      operator: greater_than
+      value: 10
+      unit: percent_nominal
+    severity: medium
+    scope: module_only
+    required_actions:
+      - Isolate fluctuating circuit from main power bus
+      - Switch affected module to backup power rail
+      - Send medium alert from affected module
+      - Identify fluctuation source using circuit diagnostics
+      - Schedule maintenance for identified faulty component
+
+  MASA-SEC-019:
+    name: Biological Contamination Containment
+    description: Activated when biological contamination sensor reads positive in Quetzal laboratory.
+    trigger_condition: biological contamination sensor positive in Quetzal
+    trigger_thresholds:
+      metric: bio_contamination_sensor
+      operator: positive_detection
+      value: null
+      unit: null
+    severity: high
+    scope: module_only
+    required_actions:
+      - Quarantine contaminated sample area immediately
+      - Don full PPE before any re-entry
+      - Notify medical_officer
+      - Halt all active experiments
+      - Send high alert from quetzal
+
+  MASA-SEC-020:
+    name: Emergency Station Evacuation
+    description: Activated when two or more critical systems fail simultaneously or a catastrophic structural breach is confirmed.
+    trigger_condition: simultaneous critical failures in >= 2 systems OR catastrophic structural breach confirmed
+    trigger_thresholds:
+      metric: critical_system_failures
+      operator: greater_than_or_equal
+      value: 2
+      unit: simultaneous_failures
+    severity: critical
+    scope: station_wide
+    required_actions:
+      - Initiate all-crew evacuation to emergency capsule immediately
+      - Transmit MAYDAY signal to MASA ground control via Colibri
+      - Secure mission-critical data to portable storage
+      - All crew don emergency suits
+      - Commander leads evacuation, medical_officer last to leave
+
+# ==============================================================================
+# OPERATIONAL PROCEDURES — MASA-OPS-001 to MASA-OPS-015
+# ==============================================================================
+operational_procedures:
+  MASA-OPS-001:
+    name: Daily System Health Check
+    description: Comprehensive daily inspection of all station systems and telemetry.
+    frequency: daily
+    schedule_utc: "06:00"
+    duration_minutes: 90
+    responsible: [engineer, commander]
+    scope: all_modules
+    systems_checked: [life_support, power, thermal, structural, communications]
+
+  MASA-OPS-002:
+    name: Scheduled Preventive Maintenance
+    description: Weekly preventive maintenance on life support filters, power cells, and cooling systems.
+    frequency: weekly
+    schedule_day: Sunday
+    duration_minutes: 240
+    responsible: [engineer]
+    scope: all_modules
+    systems_checked: [life_support, power, thermal]
+
+  MASA-OPS-003:
+    name: Docking and Undocking Procedure
+    description: Standard procedure for receiving or releasing supply vessels at Vicuna docking port.
+    frequency: as_needed
+    duration_minutes: 180
+    responsible: [pilot, commander]
+    scope: [vicuna, colibri]
+    systems_checked: [structural, communications]
+
+  MASA-OPS-004:
+    name: EVA Preparation and Execution
+    description: Full extravehicular activity protocol including suit-up, airlock cycling, and external operations.
+    frequency: as_needed
+    duration_minutes: 360
+    responsible: [specialist_1, specialist_2]
+    support_crew: [engineer]
+    scope: [jaguar, vicuna]
+    systems_checked: [structural, life_support, communications]
+
+  MASA-OPS-005:
+    name: Cargo Transfer and Inventory Update
+    description: Transfer of cargo from docked supply vessel to Vicuna storage and inventory reconciliation.
+    frequency: post_docking
+    duration_minutes: 180
+    responsible: [specialist_1, specialist_2]
+    scope: [vicuna]
+    systems_checked: [structural]
+
+  MASA-OPS-006:
+    name: Crew Shift Handoff
+    description: Formal handoff of station monitoring responsibilities between outgoing and incoming watch crew.
+    frequency: twice_daily
+    schedule_utc: ["06:00", "18:00"]
+    duration_minutes: 30
+    responsible: all_crew
+    scope: all_modules
+    systems_checked: all_systems
+
+  MASA-OPS-007:
+    name: Orbital Adjustment Maneuver
+    description: Planned or reactive thruster burn to correct orbital altitude or trajectory.
+    frequency: as_needed
+    trigger: altitude_deviation_gt_3km_or_scheduled_station_keeping
+    duration_minutes: 120
+    responsible: [pilot, commander]
+    scope: [colibri, condor]
+    systems_checked: [communications, structural]
+
+  MASA-OPS-008:
+    name: Communication Window Management
+    description: Management of scheduled ground station contact windows for data relay and crew communications.
+    frequency: three_times_daily
+    duration_minutes: 35
+    responsible: [pilot]
+    scope: [colibri]
+    systems_checked: [communications]
+
+  MASA-OPS-009:
+    name: Scientific Experiment Execution
+    description: Execution and monitoring of scheduled scientific experiments in the Quetzal laboratory.
+    frequency: per_experiment_schedule
+    duration_minutes: variable
+    responsible: [specialist_1, specialist_2]
+    scope: [quetzal]
+    systems_checked: [power, thermal]
+
+  MASA-OPS-010:
+    name: Life Support Maintenance
+    description: Bi-weekly deep maintenance of O2 generation, CO2 scrubbers, and water recycling systems.
+    frequency: bi_weekly
+    duration_minutes: 180
+    responsible: [engineer]
+    scope: [jaguar]
+    systems_checked: [life_support]
+
+  MASA-OPS-011:
+    name: Power Management and Load Balancing
+    description: Review and rebalance power distribution across all modules when consumption exceeds 75% rated capacity.
+    frequency: weekly_or_triggered
+    trigger: total_power_gt_75_percent_rated
+    duration_minutes: 60
+    responsible: [engineer]
+    scope: all_modules
+    systems_checked: [power]
+
+  MASA-OPS-012:
+    name: Crew Medical Examination
+    description: Weekly individual health examination of each crew member conducted by the medical officer.
+    frequency: weekly
+    duration_minutes: 60
+    responsible: [medical_officer]
+    scope: [tucan]
+    systems_checked: [life_support]
+
+  MASA-OPS-013:
+    name: Supply Request and Inventory Management
+    description: Monthly inventory audit and submission of supply requests to MASA ground control.
+    frequency: monthly_or_when_reserves_below_30_percent
+    duration_minutes: 120
+    responsible: [commander, specialist_2]
+    scope: [vicuna, colibri]
+    systems_checked: [communications]
+
+  MASA-OPS-014:
+    name: Software Update and System Calibration
+    description: Monthly software updates and sensor calibration with station in reduced operational mode.
+    frequency: monthly
+    duration_minutes: 240
+    responsible: [engineer, pilot]
+    scope: [condor, colibri]
+    systems_checked: [power, communications]
+
+  MASA-OPS-015:
+    name: Emergency Drill
+    description: Bi-weekly simulated emergency drill covering all active protocol scenarios.
+    frequency: bi_weekly
+    duration_minutes: 120
+    responsible: all_crew
+    director: commander
+    scope: all_modules
+    systems_checked: all_systems
+
+# ==============================================================================
+# CREW
+# Names must match tool enum: commander, pilot, specialist_1, specialist_2,
+# engineer, medical_officer
+# ==============================================================================
+crew:
+  commander:
+    name: Santiago Reyes
+    nationality: Colombian
+    age: 45
+    assigned_module: condor
+    specialization: Mission Command, Systems Engineering
+    experience_years: 18
+    previous_missions: [Condor-2, Condor-3, Condor-6]
+
+  pilot:
+    name: Ana Valdivia
+    nationality: Peruvian
+    age: 38
+    assigned_module: colibri
+    specialization: Orbital Navigation, Communications Systems
+    experience_years: 12
+    previous_missions: [Condor-5, Condor-6]
+
+  specialist_1:
+    name: Kai Nakamura
+    nationality: Japanese-Brazilian
+    age: 34
+    assigned_module: quetzal
+    specialization: Astrophysics, Materials Science
+    experience_years: 8
+    previous_missions: [Condor-6]
+
+  specialist_2:
+    name: Fátima Al-Hassan
+    nationality: Venezuelan
+    age: 31
+    assigned_module: quetzal
+    specialization: Biology, Environmental Systems
+    experience_years: 5
+    previous_missions: [Condor-6]
+
+  engineer:
+    name: Pavel Kozlov
+    nationality: Argentine-Russian
+    age: 42
+    assigned_module: jaguar
+    specialization: Mechanical Systems, Life Support Engineering
+    experience_years: 15
+    previous_missions: [Condor-3, Condor-5, Condor-6]
+
+  medical_officer:
+    name: Lucía Mendoza
+    nationality: Chilean
+    age: 37
+    assigned_module: tucan
+    specialization: Space Medicine, Emergency Surgery
+    experience_years: 10
+    previous_missions: [Condor-4, Condor-6]
+
+# ==============================================================================
+# PAST MISSIONS — Condor-1 to Condor-7
+# ==============================================================================
+missions:
+  Condor-1:
+    name: Initial Orbital Insertion
+    type: automated
+    start_date: "2029-03-15"
+    end_date: "2029-03-22"
+    duration_days: 7
+    crew: []
+    objective: Deploy Kuntur Station into target LEO orbit at 408 km altitude
+    outcome: success
+    notes: Fully automated. All six modules pressurized and functional post-deployment.
+
+  Condor-2:
+    name: First Crewed Mission
+    type: crewed
+    start_date: "2029-08-20"
+    end_date: "2030-02-18"
+    duration_days: 182
+    crew: [commander, pilot, engineer]
+    objective: Initial station commissioning, life support activation, baseline telemetry calibration
+    outcome: success
+    notes: Commander Reyes led commissioning. Minor CO2 scrubber calibration issue resolved in week 2.
+
+  Condor-3:
+    name: Full Crew Activation and Laboratory Commissioning
+    type: crewed
+    start_date: "2030-01-10"
+    end_date: "2030-07-08"
+    duration_days: 179
+    crew: [commander, pilot, specialist_1, specialist_2, engineer, medical_officer]
+    objective: Activate Quetzal laboratory, commission all 12 workstations, begin science program
+    outcome: success
+    notes: First full 6-person crew. Quetzal workstations 7-12 required recalibration.
+
+  Condor-4:
+    name: Emergency Thermal Repair Mission
+    type: emergency_repair
+    start_date: "2030-06-05"
+    end_date: "2030-06-19"
+    duration_days: 14
+    crew: [engineer, medical_officer]
+    objective: Emergency replacement of Jaguar thermal control unit after cooling system failure
+    outcome: success
+    notes: Jaguar temperature reached 47.3 C (high alert) before repair. Cooling unit replaced via EVA.
+
+  Condor-5:
+    name: Automated Cargo Resupply
+    type: cargo
+    start_date: "2030-11-22"
+    end_date: "2030-11-28"
+    duration_days: 6
+    crew: [pilot, engineer]
+    objective: Receive automated supply vessel at Vicuna docking port, transfer 2.4 tonnes of supplies
+    outcome: success
+    notes: Docking on first attempt. Minor pressure differential of 3.2 kPa resolved before transfer.
+
+  Condor-6:
+    name: Full Crew Rotation and Equipment Upgrade
+    type: crew_rotation
+    start_date: "2031-04-18"
+    end_date: "2031-10-15"
+    duration_days: 180
+    crew: [commander, pilot, specialist_1, specialist_2, engineer, medical_officer]
+    objective: Complete crew rotation and installation of upgraded Colibri antenna array
+    outcome: success
+    notes: Current crew assumed station on this mission. New antenna array increased comm bandwidth by 40%.
+
+  Condor-7:
+    name: Current Operational Mission
+    type: crewed_ongoing
+    start_date: "2031-09-01"
+    end_date: null
+    duration_days: null
+    crew: [commander, pilot, specialist_1, specialist_2, engineer, medical_officer]
+    objective: Continued scientific operations, station maintenance, and preparation for Condor-8 supply rendezvous
+    outcome: in_progress
+    notes: Ongoing. Primary focus on Quetzal microgravity biology experiments (Al-Hassan, Phase 3).

@@ -1,0 +1,18 @@
+{
+  "MASA-DOC-003": {
+    "title": "Jaguar Module — Life Support Systems Manual",
+    "type": "module_manual",
+    "file_path": "C:\\Users\\ASUS\\Desktop\\Andes\\Maestria\\MAIA\\MAPLN\\proyecto_artemis\\base_conocimiento\\MASA-DOC-003\\doc.md",
+    "word_count": 1640,
+    "status": "success",
+    "validation_passed": null
+  },
+  "MASA-DOC-050": {
+    "title": "MASA — Agency History and Founding Vision",
+    "type": "noise",
+    "file_path": "C:\\Users\\ASUS\\Desktop\\Andes\\Maestria\\MAIA\\MAPLN\\proyecto_artemis\\base_conocimiento\\MASA-DOC-050\\doc.md",
+    "word_count": 877,
+    "status": "success",
+    "validation_passed": null
+  }
+}
