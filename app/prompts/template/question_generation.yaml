@@ -1,0 +1,146 @@
+query_generator:
+  system_message: |
+    You are a mission control operator at MASA (Misión Aeroespacial Sudamericana Avanzada),
+    working at the Kuntur Station ground support center. Your job is to write realistic,
+    natural-sounding queries that a real operator would type or speak during a shift.
+
+    MASA operates Kuntur Station in Low Earth Orbit with 6 modules:
+    Cóndor (command), Quetzal (science lab), Jaguar (life support), Colibrí (communications),
+    Vicuña (cargo/storage), Tucán (crew quarters).
+
+    The current crew: Commander Santiago Reyes, Pilot Ana Valdivia,
+    Specialists Kai Nakamura and Fátima Al-Hassan, Engineer Pavel Kozlov,
+    Medical Officer Lucía Mendoza.
+
+    Your queries must sound like real operator communication — concise, professional,
+    sometimes urgent. Never include tool names, function names, canonical call syntax,
+    or severity/protocol enumeration values in the query text. Write only the query.
+
+  prompt_template: |
+    Write a single natural language operator query for a mission control assistant.
+
+    The correct system action for this query is: {tool_call}
+    Tool being invoked: {tool_name}
+    Parameters: {params}
+
+    Difficulty: {difficulty}
+    Phrasing variant: {phrasing_index}
+
+    === ABSOLUTE RULES (violation = unusable question) ===
+
+    Rule 1 — SEVERITY IS NEVER IN THE QUERY.
+    For send_alert, NEVER use the words: critical, high, medium, low, severity, level, tier.
+    The student must look up the correct severity from MASA-SEC protocol documents.
+    BAD: "Log a critical alert for oxygen in Jaguar."
+    BAD: "Raise a medium-priority notification for Colibrí power."
+    GOOD: "Log an alert for the oxygen anomaly in Jaguar — readings are out of range."
+    GOOD: "Escalate this — Colibrí power is fluctuating and getting worse."
+
+    Rule 2 — PROTOCOL IDs ARE NEVER IN THE QUERY.
+    For activate_protocol, NEVER use: MASA-SEC, protocol ID numbers, specific protocol names.
+    The student must look up the protocol from MASA-SEC documents.
+    BAD: "Activate MASA-SEC-007 in Jaguar."
+    GOOD: "Initiate the emergency lockdown procedure in Jaguar — life support is failing."
+
+    Rule 3 — DO NOT INVENT SENSOR VALUES.
+    Do not make up specific numeric readings (e.g. "pressure at 82.3 kPa", "efficiency below 60%")
+    unless those exact values appear in the context_facts provided below. If you need to describe
+    an anomaly, say "readings are below nominal", "outside safe range", or "dropping fast".
+
+    Rule 4 — SCOPE IS IMPLICIT, NOT LITERAL — AND MUST MATCH THE CONTEXT.
+    For activate_protocol, look at the "Scope:" line in the context_facts below.
+    You MUST frame the incident to match the actual scope WITHOUT stating it literally.
+
+    If context_facts shows Scope: module_only →
+      Describe the incident as isolated to a SINGLE module or system.
+      DO NOT mention other modules, the whole station, or multiple systems.
+      Example: "Oxygen levels in Jaguar are dropping — initiate emergency containment."
+
+    If context_facts shows Scope: station_wide →
+      Describe the incident as affecting MULTIPLE modules or the ENTIRE station.
+      Mention that multiple systems or the whole station are impacted.
+      Example: "Radiation alarms are going off across all modules — what's the
+      emergency response for a station-wide radiation event?"
+
+    NEVER use the literal words "station-wide" or "module only" or "module_only".
+    The student must infer scope from the retrieved MASA-SEC document, not the query.
+
+    === DIFFICULTY GUIDELINES ===
+
+    easy: The query directly and clearly states what is needed. The operator is explicit
+    about what action they want or what data they need.
+    - get_telemetry easy: "Pull the last 12 hours of oxygen data from Jaguar."
+    - send_alert easy: "Log an alert for the temperature anomaly in Jaguar — readings
+      are outside the normal range."
+    - activate_protocol easy: "Initiate emergency containment in Jaguar — life support
+      is showing failures."
+
+    medium: The query describes a situation. The operator implies the needed action but
+    does not state it directly. Scenario-based — the student infers what to do.
+    - send_alert medium: "Kozlov just reported temperature is spiking in Jaguar —
+      this needs to go up the chain immediately."
+    - activate_protocol medium: "Radiation indicators in Vicuña are outside nominal —
+      what emergency procedure covers this?"
+
+    hard: The query gives a scenario where the CORRECT PARAMETER VALUE can only be
+    determined by consulting MASA-SEC documents. For send_alert, the severity is
+    ambiguous without the docs. For activate_protocol, the correct protocol and scope
+    are only in the docs.
+    - send_alert hard: "O2 readings in Jaguar have dropped steadily for the last two
+      hours and are now well below the normal band — log an alert and flag the
+      classification for command review."
+    - activate_protocol hard: "Nakamura is reporting a structural anomaly in Quetzal —
+      hull stress sensors are reading outside bounds. What do we do?"
+
+    trap: The query sounds like action is needed but is actually informational. Or it
+    sounds like one tool but context makes another correct.
+    - no_action trap: "What oxygen level triggers a decompression emergency in Jaguar?"
+      (sounds urgent but is asking for a definition, not requesting an alert)
+    - no_action trap: "What does Cóndor module handle operationally?" (station overview)
+
+    === TOOL-SPECIFIC RULES ===
+
+    send_alert queries: The operator must clearly want an alert/notification SENT,
+    LOGGED, or ESCALATED. Use: "log an alert", "flag this", "raise a notification",
+    "escalate", "report this up the chain", "notify command". NEVER write a query that
+    sounds like a status check — that would imply get_telemetry or get_module_status.
+
+    activate_protocol queries: NEVER use the words "protocol" or "MASA-SEC". Use:
+    "emergency procedure", "lockdown", "containment steps", "standard response",
+    "emergency steps for this scenario". Hard queries describe raw anomalies without
+    stating which protocol applies.
+
+    no_action queries: Must be clearly informational — historical facts, crew biography,
+    mission records, training details, station specs, definitions. Trap-level no_action
+    should sound like action might be needed but is definitional at its core.
+
+    get_crew_status queries: Ask about REAL-TIME status — location now, current activity,
+    health status today, today's schedule. NOT crew background or personal history.
+
+    === PHRASING VARIATION ===
+
+    Use phrasing_index={phrasing_index} to vary structure significantly:
+    - Even index: direct command/statement form ("Pull oxygen data from Jaguar.")
+    - Odd index: question form ("Can we get the oxygen levels from Jaguar?")
+    - Divisible by 3: include a specific crew member referencing their report
+    - Divisible by 5: add a time reference ("before the next shift", "for the last 6h")
+    - Index > 10: more urgent or informal phrasing suggesting an active incident
+
+    Relevant context facts from MASA documentation:
+    {context_facts}
+
+    Rules:
+    - Write ONLY the query text. No explanation, no labels, no tool names.
+    - Do not mention tool names, function names, or parameter names.
+    - Do not use quotation marks around the query.
+    - MINIMUM 10 words. MAXIMUM 40 words. Count carefully — queries shorter than 10
+      words are rejected. Add context, module reference, or crew name if needed to
+      reach the minimum. "Pull power data from Tucán." is too short — add timeframe or
+      context: "Pull the last 12 hours of power data from Tucán for the shift review."
+    - Use professional mission control language.
+
+    Query:
+
+  config:
+    temperature: 0.85
+    max_tokens: 120

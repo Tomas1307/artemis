@@ -41,6 +41,14 @@ class PromptLoader:
             "file": "template/document_review.yaml",
             "key": "correction",
         },
+        "query_generator": {
+            "file": "template/question_generation.yaml",
+            "key": "query_generator",
+        },
+        "rag_query_generator": {
+            "file": "template/rag_question_generation.yaml",
+            "key": "rag_query_generator",
+        },
     }
 
     def __init__(self, prompts_dir: str = "app/prompts") -> None:

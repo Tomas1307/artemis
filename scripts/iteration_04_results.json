@@ -1,0 +1,128 @@
+[
+  {
+    "seed_id": "seed_00108",
+    "tool_name": "get_telemetry",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "get_telemetry(module='vicuna',metric='temperature',timeframe_hours=12)",
+    "generated_query": "Pull the temperature readings from Vicuña for the last 12 hours.",
+    "word_count": 11
+  },
+  {
+    "seed_id": "seed_00136",
+    "tool_name": "get_telemetry",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "get_telemetry(module='colibri',metric='humidity',timeframe_hours=24)",
+    "generated_query": "Can we pull the last 24 hours of humidity readings from Colibrí? Valdivia mentioned some fluctuations during her last check.",
+    "word_count": 20
+  },
+  {
+    "seed_id": "seed_00691",
+    "tool_name": "send_alert",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "send_alert(module='condor',severity='high',reason='structural_damage')",
+    "generated_query": "Notify command immediately—Reyes reports structural damage in Cóndor with visible stress fractures on the outer hull.",
+    "word_count": 16
+  },
+  {
+    "seed_id": "seed_00618",
+    "tool_name": "send_alert",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "send_alert(module='colibri',severity='high',reason='communication_loss')",
+    "generated_query": "Notify command immediately—Colibrí has lost all communication links with the station and ground. Pilot Valdivia’s last transmission cut off mid-sentence, and we’ve got no telemetry or voice.",
+    "word_count": 27
+  },
+  {
+    "seed_id": "seed_00754",
+    "tool_name": "send_alert",
+    "difficulty": "hard",
+    "phrasing_index": 0,
+    "tool_call": "send_alert(module='vicuna',severity='critical',reason='communication_loss')",
+    "generated_query": "We've lost all comms with Vicuña—no telemetry, no crew response. Log an alert and get command on the line immediately.",
+    "word_count": 20
+  },
+  {
+    "seed_id": "seed_01319",
+    "tool_name": "activate_protocol",
+    "difficulty": "easy",
+    "phrasing_index": 4,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-018',scope='module_only')",
+    "generated_query": "Execute the standard response for power fluctuations in Quetzal—readings are oscillating outside the safe voltage range.",
+    "word_count": 16
+  },
+  {
+    "seed_id": "seed_01373",
+    "tool_name": "activate_protocol",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-008',scope='module_only')",
+    "generated_query": "Can we initiate the standard response for structural integrity in Quetzal? Nakamura reported hull stress readings are approaching maximum.",
+    "word_count": 19
+  },
+  {
+    "seed_id": "seed_01369",
+    "tool_name": "activate_protocol",
+    "difficulty": "hard",
+    "phrasing_index": 0,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-003',scope='station_wide')",
+    "generated_query": "We have a fire alert in Colibrí—temperature is rising rapidly. Initiate the suppression procedure immediately.",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_02106",
+    "tool_name": "no_action",
+    "difficulty": "easy",
+    "phrasing_index": 4,
+    "tool_call": "no_action",
+    "generated_query": "Can you give me a quick overview of MASA's mission history and key achievements?",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_02099",
+    "tool_name": "no_action",
+    "difficulty": "medium",
+    "phrasing_index": 17,
+    "tool_call": "no_action",
+    "generated_query": "Can someone confirm the primary function of the Quetzal module?",
+    "word_count": 10
+  },
+  {
+    "seed_id": "seed_02141",
+    "tool_name": "no_action",
+    "difficulty": "hard",
+    "phrasing_index": 14,
+    "tool_call": "no_action",
+    "generated_query": "Can someone give me a quick overview of Kuntur Station's current module status and crew assignments before the next shift handover?",
+    "word_count": 21
+  },
+  {
+    "seed_id": "seed_01732",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')",
+    "generated_query": "We need an immediate trajectory calculation for an orbit adjustment—station altitude is 408 km.",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_01678",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "medium",
+    "phrasing_index": 17,
+    "tool_call": "calculate_trajectory(maneuver='reentry',urgency='planned')",
+    "generated_query": "Can we get the trajectory for a planned reentry maneuver from Kuntur Station's current orbit?",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_01660",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "hard",
+    "phrasing_index": 10,
+    "tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='planned')",
+    "generated_query": "We need to calculate a planned debris avoidance maneuver—station altitude currently 408 km LEO.",
+    "word_count": 14
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "seed_id": "seed_00052",
+    "tool_name": "get_telemetry",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "get_telemetry(module='tucan',metric='oxygen',timeframe_hours=24)",
+    "generated_query": "Can we pull the last 24 hours of oxygen telemetry from Tucán?",
+    "word_count": 12
+  },
+  {
+    "seed_id": "seed_00106",
+    "tool_name": "get_telemetry",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "get_telemetry(module='colibri',metric='pressure',timeframe_hours=6)",
+    "generated_query": "Can we pull the last six hours of pressure data from Colibrí? Pilot Valdivia mentioned a minor fluctuation during her last comms check.",
+    "word_count": 23
+  },
+  {
+    "seed_id": "seed_00760",
+    "tool_name": "send_alert",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "send_alert(module='tucan',severity='medium',reason='pressure_drop')",
+    "generated_query": "Check the current pressure reading in Tucán.",
+    "word_count": 7
+  },
+  {
+    "seed_id": "seed_00638",
+    "tool_name": "send_alert",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "send_alert(module='colibri',severity='medium',reason='power_fluctuation')",
+    "generated_query": "We’re seeing intermittent power spikes in Colibrí—Pilot Valdivia just flagged it. Can we get that logged and monitored?",
+    "word_count": 18
+  },
+  {
+    "seed_id": "seed_00783",
+    "tool_name": "send_alert",
+    "difficulty": "hard",
+    "phrasing_index": 0,
+    "tool_call": "send_alert(module='quetzal',severity='critical',reason='pressure_drop')",
+    "generated_query": "Pressure in Quetzal just dropped to 84 kPa and still falling—specialists Nakamura and Al-Hassan are inside. Initiate critical alert protocol immediately.",
+    "word_count": 21
+  },
+  {
+    "seed_id": "seed_01294",
+    "tool_name": "activate_protocol",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-018',scope='station_wide')",
+    "generated_query": "Execute station-wide power fluctuation protocol immediately, voltage deviation detected in multiple modules.",
+    "word_count": 12
+  },
+  {
+    "seed_id": "seed_01366",
+    "tool_name": "activate_protocol",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-012',scope='module_only')",
+    "generated_query": "We've got elevated solar activity — radiation at 1.2 mSv/hr. What's the next step for Kuntur Station?",
+    "word_count": 17
+  },
+  {
+    "seed_id": "seed_01265",
+    "tool_name": "activate_protocol",
+    "difficulty": "hard",
+    "phrasing_index": 2,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-004',scope='module_only')",
+    "generated_query": "Radiation levels in Vicuña just spiked to 5.2 mSv/hr—initiate module lockdown protocol immediately.",
+    "word_count": 13
+  },
+  {
+    "seed_id": "seed_02093",
+    "tool_name": "no_action",
+    "difficulty": "easy",
+    "phrasing_index": 24,
+    "tool_call": "no_action",
+    "generated_query": "Can you pull up the crew profile for Engineer Pavel Kozlov?",
+    "word_count": 11
+  },
+  {
+    "seed_id": "seed_02130",
+    "tool_name": "no_action",
+    "difficulty": "medium",
+    "phrasing_index": 21,
+    "tool_call": "no_action",
+    "generated_query": "Can you give me a quick overview of Kuntur Station's current mission and crew composition?",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_02028",
+    "tool_name": "no_action",
+    "difficulty": "hard",
+    "phrasing_index": 10,
+    "tool_call": "no_action",
+    "generated_query": "Can you give me a quick overview of Kuntur Station's current configuration and crew assignments for the Condor-7 mission?",
+    "word_count": 19
+  },
+  {
+    "seed_id": "seed_01730",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='planned')",
+    "generated_query": "Generate a planned debris avoidance trajectory for Kuntur Station at 408 km LEO.",
+    "word_count": 13
+  },
+  {
+    "seed_id": "seed_01632",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "calculate_trajectory(maneuver='station_keeping',urgency='immediate')",
+    "generated_query": "We’re showing orbital decay beyond nominal thresholds—need an immediate burn calculation to maintain altitude.",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_01618",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "hard",
+    "phrasing_index": 2,
+    "tool_call": "calculate_trajectory(maneuver='reentry',urgency='immediate')",
+    "generated_query": "We’ve got an uncontrolled descent scenario—station altitude dropping fast. Need immediate reentry trajectory calculated now.",
+    "word_count": 15
+  }
+]

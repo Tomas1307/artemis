@@ -1,0 +1,128 @@
+[
+  {
+    "seed_id": "seed_00126",
+    "tool_name": "get_telemetry",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "get_telemetry(module='colibri',metric='pressure',timeframe_hours=1)",
+    "generated_query": "Pull the last hour of pressure data from Colibrí.",
+    "word_count": 9
+  },
+  {
+    "seed_id": "seed_00083",
+    "tool_name": "get_telemetry",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "get_telemetry(module='colibri',metric='humidity',timeframe_hours=6)",
+    "generated_query": "Can we pull the humidity data from Colibrí for the last six hours?",
+    "word_count": 13
+  },
+  {
+    "seed_id": "seed_00600",
+    "tool_name": "send_alert",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "send_alert(module='vicuna',severity='medium',reason='radiation_spike')",
+    "generated_query": "Log a medium alert for Vicuña, radiation spike detected above normal levels.",
+    "word_count": 12
+  },
+  {
+    "seed_id": "seed_00795",
+    "tool_name": "send_alert",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "send_alert(module='condor',severity='medium',reason='system_failure')",
+    "generated_query": "Kozlov reported a system failure in Cóndor, should we flag this to the commander immediately?",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_00698",
+    "tool_name": "send_alert",
+    "difficulty": "hard",
+    "phrasing_index": 0,
+    "tool_call": "send_alert(module='tucan',severity='critical',reason='system_failure')",
+    "generated_query": "Tucán environmental systems are completely offline—no response from Mendoza. Log an alert immediately and escalate this to emergency response.",
+    "word_count": 19
+  },
+  {
+    "seed_id": "seed_01328",
+    "tool_name": "activate_protocol",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-014',scope='station_wide')",
+    "generated_query": "Initiate emergency response for station-wide CO2 scrubber failure—Jaguar reports efficiency below 60%.",
+    "word_count": 12
+  },
+  {
+    "seed_id": "seed_01379",
+    "tool_name": "activate_protocol",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-016',scope='module_only')",
+    "generated_query": "Can we confirm the emergency steps for a 15 m/s velocity delta reported by Valdivia?",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_01391",
+    "tool_name": "activate_protocol",
+    "difficulty": "hard",
+    "phrasing_index": 2,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-017',scope='station_wide')",
+    "generated_query": "Execute station-wide emergency containment steps — airlock seal failure detected with pressure equalization rate at 0.6 kPa/min and rising.",
+    "word_count": 19
+  },
+  {
+    "seed_id": "seed_02093",
+    "tool_name": "no_action",
+    "difficulty": "easy",
+    "phrasing_index": 24,
+    "tool_call": "no_action",
+    "generated_query": "Can someone pull up the background details on Engineer Pavel Kozlov before the next shift handover?",
+    "word_count": 16
+  },
+  {
+    "seed_id": "seed_02140",
+    "tool_name": "no_action",
+    "difficulty": "medium",
+    "phrasing_index": 21,
+    "tool_call": "no_action",
+    "generated_query": "What’s the official MASA procedure for responding to a micro-meteorite impact on Kuntur Station?",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_02170",
+    "tool_name": "no_action",
+    "difficulty": "hard",
+    "phrasing_index": 14,
+    "tool_call": "no_action",
+    "generated_query": "What’s the standard response time for crew to reach emergency stations during a drill, and how often do we run those simulations?",
+    "word_count": 22
+  },
+  {
+    "seed_id": "seed_01633",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "easy",
+    "phrasing_index": 16,
+    "tool_call": "calculate_trajectory(maneuver='docking',urgency='planned')",
+    "generated_query": "Generate the docking trajectory for Kuntur Station—planned maneuver, standard approach.",
+    "word_count": 10
+  },
+  {
+    "seed_id": "seed_01641",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "medium",
+    "phrasing_index": 13,
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='planned')",
+    "generated_query": "Can we get the trajectory for the planned orbit adjustment before the next shift handover?",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_01631",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "hard",
+    "phrasing_index": 14,
+    "tool_call": "calculate_trajectory(maneuver='docking',urgency='planned')",
+    "generated_query": "Can we get the trajectory for the planned docking maneuver at 408 km? Kozlov needs it before the next shift handover.",
+    "word_count": 21
+  }
+]

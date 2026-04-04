@@ -1,0 +1,128 @@
+[
+  {
+    "seed_id": "seed_00017",
+    "tool_name": "get_telemetry",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "get_telemetry(module='vicuna',metric='power',timeframe_hours=24)",
+    "generated_query": "Give me Vicuña's power telemetry for the last 24 hours.",
+    "word_count": 10
+  },
+  {
+    "seed_id": "seed_00038",
+    "tool_name": "get_telemetry",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "get_telemetry(module='vicuna',metric='pressure',timeframe_hours=24)",
+    "generated_query": "Can we pull the last 24 hours of pressure readings from Vicuña? Kozlov mentioned some fluctuations in his last report.",
+    "word_count": 20
+  },
+  {
+    "seed_id": "seed_00608",
+    "tool_name": "send_alert",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='abnormal_temperature')",
+    "generated_query": "Notify all stations of a high-severity temperature alert in Jaguar module immediately.",
+    "word_count": 12
+  },
+  {
+    "seed_id": "seed_00638",
+    "tool_name": "send_alert",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "send_alert(module='colibri',severity='medium',reason='power_fluctuation')",
+    "generated_query": "Can we raise a medium-level alert for Colibrí due to power fluctuations Valdivia just reported?",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_00764",
+    "tool_name": "send_alert",
+    "difficulty": "hard",
+    "phrasing_index": 0,
+    "tool_call": "send_alert(module='jaguar',severity='critical',reason='communication_loss')",
+    "generated_query": "Notify command immediately—Jaguar’s comms are completely down, no telemetry, no crew contact. This is a critical loss.",
+    "word_count": 17
+  },
+  {
+    "seed_id": "seed_01386",
+    "tool_name": "activate_protocol",
+    "difficulty": "easy",
+    "phrasing_index": 4,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-008',scope='station_wide')",
+    "generated_query": "Execute station-wide emergency response for structural integrity—this is time-sensitive.",
+    "word_count": 9
+  },
+  {
+    "seed_id": "seed_01378",
+    "tool_name": "activate_protocol",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-005',scope='module_only')",
+    "generated_query": "Can we initiate the medical emergency procedure for Quetzal module only? Mendoza just reported a critical situation.",
+    "word_count": 17
+  },
+  {
+    "seed_id": "seed_01247",
+    "tool_name": "activate_protocol",
+    "difficulty": "hard",
+    "phrasing_index": 2,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')",
+    "generated_query": "We've got a positive chemical contamination reading in Quetzal per Nakamura's last report—initiate the standard containment steps for that module immediately.",
+    "word_count": 21
+  },
+  {
+    "seed_id": "seed_02000",
+    "tool_name": "no_action",
+    "difficulty": "easy",
+    "phrasing_index": 16,
+    "tool_call": "no_action",
+    "generated_query": "What was the primary research focus of the Quetzal module during the Condor-6 mission?",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_02190",
+    "tool_name": "no_action",
+    "difficulty": "medium",
+    "phrasing_index": 5,
+    "tool_call": "no_action",
+    "generated_query": "What’s the nominal power output range for Quetzal’s primary science instruments during a standard experiment cycle?",
+    "word_count": 16
+  },
+  {
+    "seed_id": "seed_02144",
+    "tool_name": "no_action",
+    "difficulty": "hard",
+    "phrasing_index": 2,
+    "tool_call": "no_action",
+    "generated_query": "I need to verify the training protocols for handling a rapid decompression scenario in the Colibrí module—what’s the current procedure?",
+    "word_count": 20
+  },
+  {
+    "seed_id": "seed_01774",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "easy",
+    "phrasing_index": 16,
+    "tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='planned')",
+    "generated_query": "Kozlov reported possible debris near our altitude—plot a planned avoidance path before the next shift handover.",
+    "word_count": 16
+  },
+  {
+    "seed_id": "seed_01641",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "medium",
+    "phrasing_index": 13,
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='planned')",
+    "generated_query": "Can we run the numbers for the planned orbit adjustment before the next shift handover?",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_01771",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "hard",
+    "phrasing_index": 14,
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')",
+    "generated_query": "Condor, we need an immediate burn plan—station’s altitude just dropped below 408 km. What’s the quickest safe adjustment?",
+    "word_count": 18
+  }
+]

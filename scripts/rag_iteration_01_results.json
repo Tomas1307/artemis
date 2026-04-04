@@ -1,0 +1,251 @@
+[
+  {
+    "seed_id": "RAG-001",
+    "tool_name": "send_alert",
+    "module": "jaguar",
+    "metric": "pressure",
+    "sensor_reading": "83.7 kPa",
+    "expected_tool_call": "send_alert(module='jaguar',severity='critical',reason='pressure_drop')",
+    "phrasing_index": 11,
+    "generated_query": "We’ve got a live pressure drop in Jaguar—sensors just hit 83.7 kPa and still falling. Need to escalate this immediately.",
+    "word_count": 20,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-002",
+    "tool_name": "send_alert",
+    "module": "quetzal",
+    "metric": "pressure",
+    "sensor_reading": "87.2 kPa",
+    "expected_tool_call": "send_alert(module='quetzal',severity='high',reason='pressure_drop')",
+    "phrasing_index": 2,
+    "generated_query": "I need to log an alert — Quetzal's pressure sensors are showing 87.2 kPa. What's our next move?",
+    "word_count": 18,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-003",
+    "tool_name": "send_alert",
+    "module": "colibri",
+    "metric": "radiation",
+    "sensor_reading": "6.3 mSv/hr",
+    "expected_tool_call": "send_alert(module='colibri',severity='critical',reason='radiation_spike')",
+    "phrasing_index": 1,
+    "generated_query": "Radiation in Colibri module is reading 6.3 mSv/hr—what’s the next step here?",
+    "word_count": 12,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-004",
+    "tool_name": "send_alert",
+    "module": "tucan",
+    "metric": "radiation",
+    "sensor_reading": "2.8 mSv/hr",
+    "expected_tool_call": "send_alert(module='tucan',severity='medium',reason='radiation_spike')",
+    "phrasing_index": 12,
+    "generated_query": "Tucan crew quarters radiation sensors are reading 2.8 mSv/hr—what's the next step here?",
+    "word_count": 13,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-005",
+    "tool_name": "send_alert",
+    "module": "jaguar",
+    "metric": "oxygen",
+    "sensor_reading": "13.2%",
+    "expected_tool_call": "send_alert(module='jaguar',severity='critical',reason='oxygen_leak')",
+    "phrasing_index": 5,
+    "generated_query": "Ana Valdivia just reported oxygen concentration in Jaguar has dropped to 13.2%—how should we proceed?",
+    "word_count": 15,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-006",
+    "tool_name": "send_alert",
+    "module": "condor",
+    "metric": "oxygen",
+    "sensor_reading": "15.4%",
+    "expected_tool_call": "send_alert(module='condor',severity='high',reason='oxygen_leak')",
+    "phrasing_index": 4,
+    "generated_query": "Condor module oxygen levels have dropped to 15.4%—should we log an alert on this?",
+    "word_count": 14,
+    "violations": [
+      "SEVERITY_LEAK: contains 'level'"
+    ]
+  },
+  {
+    "seed_id": "RAG-007",
+    "tool_name": "send_alert",
+    "module": "quetzal",
+    "metric": "temperature",
+    "sensor_reading": "3.1 degrees per minute",
+    "expected_tool_call": "send_alert(module='quetzal',severity='critical',reason='abnormal_temperature')",
+    "phrasing_index": 4,
+    "generated_query": "We’ve got a rapid temperature rise in Quetzal, currently at 3.1 degrees per minute—what emergency procedure should we initiate for this?",
+    "word_count": 21,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-008",
+    "tool_name": "send_alert",
+    "module": "vicuna",
+    "metric": "power",
+    "sensor_reading": "104.8V",
+    "expected_tool_call": "send_alert(module='vicuna',severity='medium',reason='power_fluctuation')",
+    "phrasing_index": 3,
+    "generated_query": "Vicuna power bus voltage just hit 104.8V—should we log an alert on this fluctuation?",
+    "word_count": 14,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-009",
+    "tool_name": "activate_protocol",
+    "module": "colibri",
+    "metric": "radiation",
+    "sensor_reading": "6.8 mSv/hr",
+    "expected_tool_call": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "phrasing_index": 12,
+    "generated_query": "Radiation levels have spiked to 6.8 mSv/hr in Colibri and are rising across all modules—what emergency procedure should we initiate immediately?",
+    "word_count": 21,
+    "violations": [
+      "SEVERITY_LEAK: contains 'level'",
+      "SCOPE_LEAK: contains 'all modules'"
+    ]
+  },
+  {
+    "seed_id": "RAG-010",
+    "tool_name": "activate_protocol",
+    "module": "jaguar",
+    "metric": "pressure",
+    "sensor_reading": "78.3 kPa",
+    "expected_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "phrasing_index": 2,
+    "generated_query": "We’ve got a rapid pressure drop in Jaguar—sensors just hit 78.3 kPa and still falling. What emergency procedure should we initiate?",
+    "word_count": 21,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-011",
+    "tool_name": "activate_protocol",
+    "module": "quetzal",
+    "metric": "co2",
+    "sensor_reading": "1.8%",
+    "expected_tool_call": "activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')",
+    "phrasing_index": 11,
+    "generated_query": "Ana Valdivia just reported headaches from Quetzal, CO2 sensors are showing 1.8% and climbing—what emergency procedure should we initiate?",
+    "word_count": 19,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-012",
+    "tool_name": "activate_protocol",
+    "module": "condor",
+    "metric": "temperature",
+    "sensor_reading": "2.4 degrees per minute",
+    "expected_tool_call": "activate_protocol(protocol_id='MASA-SEC-003',scope='module_only')",
+    "phrasing_index": 12,
+    "generated_query": "Condor module temperature is rising at 2.4 degrees per minute—what emergency procedure should we initiate?",
+    "word_count": 15,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-013",
+    "tool_name": "send_alert",
+    "module": "vicuna",
+    "metric": "hull_stress",
+    "sensor_reading": "88%",
+    "expected_tool_call": "send_alert(module='vicuna',severity='high',reason='structural_damage')",
+    "phrasing_index": 15,
+    "generated_query": "I need to log an alert — Vicuna's docking module hull stress just hit 88% and it's still rising. What emergency steps should we take?",
+    "word_count": 25,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-014",
+    "tool_name": "activate_protocol",
+    "module": "tucan",
+    "metric": "radiation",
+    "sensor_reading": "3.2 mSv/hr",
+    "expected_tool_call": "activate_protocol(protocol_id='MASA-SEC-012',scope='station_wide')",
+    "phrasing_index": 9,
+    "generated_query": "Tucan radiation sensors are at 3.2 mSv/hr and rising—what emergency response should we initiate?",
+    "word_count": 14,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-015",
+    "tool_name": "send_alert",
+    "module": "condor",
+    "metric": "power",
+    "sensor_reading": "98.2%",
+    "expected_tool_call": "send_alert(module='condor',severity='critical',reason='power_fluctuation')",
+    "phrasing_index": 2,
+    "generated_query": "Condor is reporting station-wide power consumption at 98.2% capacity and still rising—how should we proceed?",
+    "word_count": 15,
+    "violations": [
+      "SCOPE_LEAK: contains 'station-wide'"
+    ]
+  },
+  {
+    "seed_id": "RAG-016",
+    "tool_name": "activate_protocol",
+    "module": "vicuna",
+    "metric": "docking_pressure",
+    "sensor_reading": "6.1 kPa",
+    "expected_tool_call": "activate_protocol(protocol_id='MASA-SEC-013',scope='module_only')",
+    "phrasing_index": 10,
+    "generated_query": "We’ve got a pressure differential at Vicuna’s docking port reading 6.1 kPa during active docking—what emergency procedure should we initiate for this scenario?",
+    "word_count": 23,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-017",
+    "tool_name": "send_alert",
+    "module": "jaguar",
+    "metric": "oxygen",
+    "sensor_reading": "14.8%",
+    "expected_tool_call": "send_alert(module='jaguar',severity='high',reason='oxygen_leak')",
+    "phrasing_index": 7,
+    "generated_query": "Ana Valdivia just reported oxygen in Jaguar is now at 14.8% and still dropping—should we escalate this to command?",
+    "word_count": 19,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-018",
+    "tool_name": "activate_protocol",
+    "module": "jaguar",
+    "metric": "oxygen",
+    "sensor_reading": "12.8%",
+    "expected_tool_call": "activate_protocol(protocol_id='MASA-SEC-002',scope='station_wide')",
+    "phrasing_index": 1,
+    "generated_query": "Oxygen levels in Jaguar have dropped to 12.8%—crew reports dizziness. What’s the emergency response for this scenario?",
+    "word_count": 17,
+    "violations": [
+      "SEVERITY_LEAK: contains 'level'"
+    ]
+  },
+  {
+    "seed_id": "RAG-019",
+    "tool_name": "send_alert",
+    "module": "colibri",
+    "metric": "communication",
+    "sensor_reading": "35 minutes",
+    "expected_tool_call": "send_alert(module='colibri',severity='high',reason='communication_loss')",
+    "phrasing_index": 1,
+    "generated_query": "We've lost contact with Colibri for 35 minutes now—should we flag this up the chain?",
+    "word_count": 15,
+    "violations": []
+  },
+  {
+    "seed_id": "RAG-020",
+    "tool_name": "activate_protocol",
+    "module": "quetzal",
+    "metric": "airlock",
+    "sensor_reading": "0.7 kPa per minute",
+    "expected_tool_call": "activate_protocol(protocol_id='MASA-SEC-017',scope='module_only')",
+    "phrasing_index": 2,
+    "generated_query": "Ana Valdivia just reported the Quetzal airlock equalization rate is holding at 0.7 kPa per minute — what emergency procedure should we initiate?",
+    "word_count": 23,
+    "violations": []
+  }
+]

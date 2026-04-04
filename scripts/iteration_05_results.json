@@ -1,0 +1,200 @@
+[
+  {
+    "seed_id": "seed_00162",
+    "tool_name": "get_telemetry",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "get_telemetry(module='tucan',metric='power',timeframe_hours=12)",
+    "generated_query": "Pull the last 12 hours of power data from Tucán.",
+    "word_count": 10
+  },
+  {
+    "seed_id": "seed_00124",
+    "tool_name": "get_telemetry",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "get_telemetry(module='jaguar',metric='oxygen',timeframe_hours=12)",
+    "generated_query": "Can we pull the last 12 hours of oxygen telemetry from Jaguar?",
+    "word_count": 12
+  },
+  {
+    "seed_id": "seed_00357",
+    "tool_name": "get_crew_status",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "get_crew_status(module='colibri',info='current_activity')",
+    "generated_query": "What is the current activity in Colibrí?",
+    "word_count": 7
+  },
+  {
+    "seed_id": "seed_00337",
+    "tool_name": "get_crew_status",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "get_crew_status(module='quetzal',info='current_activity')",
+    "generated_query": "Can we get the current activity status of the crew in Quetzal?",
+    "word_count": 12
+  },
+  {
+    "seed_id": "seed_00453",
+    "tool_name": "get_module_status",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "get_module_status(module='jaguar',system='communications')",
+    "generated_query": "Check the current communications status in the Jaguar module.",
+    "word_count": 9
+  },
+  {
+    "seed_id": "seed_00532",
+    "tool_name": "get_module_status",
+    "difficulty": "medium",
+    "phrasing_index": 5,
+    "tool_call": "get_module_status(module='colibri',system='power')",
+    "generated_query": "Check Colibrí's power status before the next shift—we need to confirm it's stable for comms.",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_00731",
+    "tool_name": "send_alert",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "send_alert(module='colibri',severity='medium',reason='communication_loss')",
+    "generated_query": "Notify command about the communication loss in Colibrí—we need this flagged and escalated immediately.",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_00682",
+    "tool_name": "send_alert",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "send_alert(module='condor',severity='high',reason='power_fluctuation')",
+    "generated_query": "Notify command immediately—Reyes reports severe power fluctuations in Cóndor with readings outside safe range.",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_00979",
+    "tool_name": "send_message",
+    "difficulty": "easy",
+    "phrasing_index": 4,
+    "tool_call": "send_message(recipient='commander',priority='urgent')",
+    "generated_query": "Notify Commander Reyes immediately—this can't wait.",
+    "word_count": 6
+  },
+  {
+    "seed_id": "seed_00826",
+    "tool_name": "send_message",
+    "difficulty": "medium",
+    "phrasing_index": 5,
+    "tool_call": "send_message(recipient='all_crew',priority='high')",
+    "generated_query": "All crew, this is Kuntur. We've got a high-priority message coming through—stand by for immediate action.",
+    "word_count": 16
+  },
+  {
+    "seed_id": "seed_01113",
+    "tool_name": "schedule_maintenance",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "schedule_maintenance(module='condor',task='hull_inspection',priority='routine')",
+    "generated_query": "Schedule a routine hull inspection for Cóndor module during the next maintenance window.",
+    "word_count": 13
+  },
+  {
+    "seed_id": "seed_01037",
+    "tool_name": "schedule_maintenance",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "schedule_maintenance(module='condor',task='hull_inspection',priority='routine')",
+    "generated_query": "Can we schedule a routine hull inspection for Cóndor during the next maintenance window?",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_01202",
+    "tool_name": "activate_protocol",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-018',scope='module_only')",
+    "generated_query": "Initiate the power fluctuation response procedure in Colibrí—voltage readings are outside the normal range.",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_01250",
+    "tool_name": "activate_protocol",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-012',scope='station_wide')",
+    "generated_query": "Can we initiate the solar flare advisory procedure station-wide? Radiation levels are climbing and approaching 1.1 mSv/hr.",
+    "word_count": 17
+  },
+  {
+    "seed_id": "seed_01470",
+    "tool_name": "control_system",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "control_system(module='colibri',system='cooling',action='activate')",
+    "generated_query": "Activate the cooling system in Colibrí—Pilot Valdivia just reported rising temperatures nearing the upper limit.",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_01477",
+    "tool_name": "control_system",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "control_system(module='condor',system='ventilation',action='decrease')",
+    "generated_query": "Condor, reduce the ventilation flow—Commander Reyes reports the air circulation is too high and needs adjustment.",
+    "word_count": 16
+  },
+  {
+    "seed_id": "seed_01691",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "easy",
+    "phrasing_index": 4,
+    "tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='immediate')",
+    "generated_query": "We need an immediate trajectory calculation to avoid incoming debris—Kozlov just reported a high-risk conjunction at our altitude.",
+    "word_count": 18
+  },
+  {
+    "seed_id": "seed_01684",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='planned')",
+    "generated_query": "Can we get a trajectory calculation for the planned orbit adjustment at 408 km?",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_01817",
+    "tool_name": "request_supply",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "request_supply(category='medical',urgency='routine')",
+    "generated_query": "Check the medical supply inventory and submit a routine resupply request.",
+    "word_count": 11
+  },
+  {
+    "seed_id": "seed_01974",
+    "tool_name": "request_supply",
+    "difficulty": "medium",
+    "phrasing_index": 9,
+    "tool_call": "request_supply(category='medical',urgency='expedited')",
+    "generated_query": "Can we expedite a medical supply request for Kuntur Station before the next resupply window?",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_02013",
+    "tool_name": "no_action",
+    "difficulty": "easy",
+    "phrasing_index": 24,
+    "tool_call": "no_action",
+    "generated_query": "Can you give me the overview of MASA's current mission profile and station modules?",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_02083",
+    "tool_name": "no_action",
+    "difficulty": "medium",
+    "phrasing_index": 5,
+    "tool_call": "no_action",
+    "generated_query": "Can someone pull the mission history for the Kuntur Station's deployment of the Colibrí module during the Condor-7 mission?",
+    "word_count": 19
+  }
+]

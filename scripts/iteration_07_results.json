@@ -1,0 +1,200 @@
+[
+  {
+    "seed_id": "seed_00059",
+    "tool_name": "get_telemetry",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "get_telemetry(module='colibri',metric='humidity',timeframe_hours=24)",
+    "generated_query": "Pull the 24-hour humidity readings from Colibrí for review—Valdivia noted fluctuations during her last systems check.",
+    "word_count": 16
+  },
+  {
+    "seed_id": "seed_00037",
+    "tool_name": "get_telemetry",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "get_telemetry(module='vicuna',metric='humidity',timeframe_hours=12)",
+    "generated_query": "Can we pull the humidity data from Vicuña for the last 12 hours? Kozlov mentioned it during the systems check.",
+    "word_count": 20
+  },
+  {
+    "seed_id": "seed_00316",
+    "tool_name": "get_crew_status",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "get_crew_status(module='condor',info='location')",
+    "generated_query": "Where is Commander Reyes currently located in the Cóndor module?",
+    "word_count": 10
+  },
+  {
+    "seed_id": "seed_00386",
+    "tool_name": "get_crew_status",
+    "difficulty": "medium",
+    "phrasing_index": 5,
+    "tool_call": "get_crew_status(module='tucan',info='health')",
+    "generated_query": "Check the current health status of the crew in Tucán before the next shift change.",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_00440",
+    "tool_name": "get_module_status",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "get_module_status(module='condor',system='structural')",
+    "generated_query": "Check the structural integrity status for Cóndor module—need current readings before the next shift handover.",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_00574",
+    "tool_name": "get_module_status",
+    "difficulty": "medium",
+    "phrasing_index": 5,
+    "tool_call": "get_module_status(module='vicuna',system='life_support')",
+    "generated_query": "Check the life support status in Vicuña—need to confirm it's stable before the next cargo transfer.",
+    "word_count": 16
+  },
+  {
+    "seed_id": "seed_00789",
+    "tool_name": "send_alert",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "send_alert(module='condor',severity='high',reason='system_failure')",
+    "generated_query": "Notify command immediately—Cóndor is reporting a total system failure, all primary functions are offline.",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_00722",
+    "tool_name": "send_alert",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "send_alert(module='quetzal',severity='low',reason='oxygen_leak')",
+    "generated_query": "Kai Nakamura just reported an oxygen leak in Quetzal with readings below the normal range — can we log an alert and notify command?",
+    "word_count": 24
+  },
+  {
+    "seed_id": "seed_00995",
+    "tool_name": "send_message",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "send_message(recipient='specialist_2',priority='medium')",
+    "generated_query": "Notify Fátima Al-Hassan about the scheduled calibration for Quetzal's spectroscopy equipment—coordinate timing before the next shift.",
+    "word_count": 16
+  },
+  {
+    "seed_id": "seed_00805",
+    "tool_name": "send_message",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "send_message(recipient='specialist_1',priority='medium')",
+    "generated_query": "Notify Specialist Nakamura that the sample analysis from Quetzal is ready for review and needs his input before the next shift.",
+    "word_count": 21
+  },
+  {
+    "seed_id": "seed_01191",
+    "tool_name": "schedule_maintenance",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "schedule_maintenance(module='quetzal',task='system_calibration',priority='urgent')",
+    "generated_query": "We need to schedule an urgent system calibration for Quetzal.",
+    "word_count": 10
+  },
+  {
+    "seed_id": "seed_01037",
+    "tool_name": "schedule_maintenance",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "schedule_maintenance(module='condor',task='hull_inspection',priority='routine')",
+    "generated_query": "Can we schedule a routine hull inspection for Cóndor module during the next maintenance window?",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_01335",
+    "tool_name": "activate_protocol",
+    "difficulty": "easy",
+    "phrasing_index": 4,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-012',scope='station_wide')",
+    "generated_query": "Initiate solar flare advisory procedure station-wide—radiation levels are climbing and solar activity index is high.",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_01249",
+    "tool_name": "activate_protocol",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-006',scope='module_only')",
+    "generated_query": "Can we initiate the emergency response for the power grid failure affecting multiple modules?",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_01577",
+    "tool_name": "control_system",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "control_system(module='tucan',system='lighting',action='decrease')",
+    "generated_query": "Dim the lights in Tucán to help Lucía Mendoza with the medical checks—she reported glare on the monitors.",
+    "word_count": 18
+  },
+  {
+    "seed_id": "seed_01478",
+    "tool_name": "control_system",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "control_system(module='vicuna',system='cooling',action='decrease')",
+    "generated_query": "Can we dial down the cooling in Vicuña? Storage temps are creeping up and Kozlov wants them stabilized before the next cargo transfer.",
+    "word_count": 23
+  },
+  {
+    "seed_id": "seed_01680",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "easy",
+    "phrasing_index": 8,
+    "tool_call": "calculate_trajectory(maneuver='docking',urgency='immediate')",
+    "generated_query": "We need an immediate trajectory calculation for the incoming docking maneuver—confirm parameters before the next shift.",
+    "word_count": 16
+  },
+  {
+    "seed_id": "seed_01769",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "medium",
+    "phrasing_index": 13,
+    "tool_call": "calculate_trajectory(maneuver='docking',urgency='planned')",
+    "generated_query": "Can we get the trajectory for the planned docking maneuver at 408 km LEO before the next shift?",
+    "word_count": 18
+  },
+  {
+    "seed_id": "seed_01999",
+    "tool_name": "request_supply",
+    "difficulty": "easy",
+    "phrasing_index": 8,
+    "tool_call": "request_supply(category='fuel',urgency='expedited')",
+    "generated_query": "Get us an expedited fuel resupply—Kozlov says reserves are running lower than expected after the last maneuver.",
+    "word_count": 17
+  },
+  {
+    "seed_id": "seed_01866",
+    "tool_name": "request_supply",
+    "difficulty": "medium",
+    "phrasing_index": 9,
+    "tool_call": "request_supply(category='medical',urgency='routine')",
+    "generated_query": "Check the medical supply inventory in Vicuña and flag any routine items that need restocking before the next resupply window.",
+    "word_count": 20
+  },
+  {
+    "seed_id": "seed_02039",
+    "tool_name": "no_action",
+    "difficulty": "easy",
+    "phrasing_index": 4,
+    "tool_call": "no_action",
+    "generated_query": "Can you pull up the training records for the current crew, specifically their emergency response drills from the last quarter?",
+    "word_count": 20
+  },
+  {
+    "seed_id": "seed_02159",
+    "tool_name": "no_action",
+    "difficulty": "medium",
+    "phrasing_index": 13,
+    "tool_call": "no_action",
+    "generated_query": "Can you give me a quick overview of MASA's mission history and the main objectives for the current Condor-7 mission?",
+    "word_count": 20
+  }
+]

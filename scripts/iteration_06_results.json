@@ -1,0 +1,200 @@
+[
+  {
+    "seed_id": "seed_00093",
+    "tool_name": "get_telemetry",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "get_telemetry(module='condor',metric='radiation',timeframe_hours=6)",
+    "generated_query": "Give me the radiation levels in Cóndor for the last six hours—Reyes wants a trend analysis before the next shift change.",
+    "word_count": 21
+  },
+  {
+    "seed_id": "seed_00083",
+    "tool_name": "get_telemetry",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "get_telemetry(module='colibri',metric='humidity',timeframe_hours=6)",
+    "generated_query": "Can we pull the humidity data from Colibrí for the last six hours? Valdivia mentioned some fluctuations during her last check.",
+    "word_count": 21
+  },
+  {
+    "seed_id": "seed_00366",
+    "tool_name": "get_crew_status",
+    "difficulty": "easy",
+    "phrasing_index": 4,
+    "tool_call": "get_crew_status(module='tucan',info='health')",
+    "generated_query": "Check the current health status of the crew in Tucán, specifically Medical Officer Mendoza.",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_00334",
+    "tool_name": "get_crew_status",
+    "difficulty": "medium",
+    "phrasing_index": 5,
+    "tool_call": "get_crew_status(module='tucan',info='schedule')",
+    "generated_query": "Can we pull the current crew schedule for Tucán before the next shift change?",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_00428",
+    "tool_name": "get_module_status",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "get_module_status(module='tucan',system='thermal')",
+    "generated_query": "Check the current thermal status in Tucán—need to confirm readings are within nominal range for the crew quarters.",
+    "word_count": 18
+  },
+  {
+    "seed_id": "seed_00530",
+    "tool_name": "get_module_status",
+    "difficulty": "medium",
+    "phrasing_index": 5,
+    "tool_call": "get_module_status(module='tucan',system='structural')",
+    "generated_query": "Check the structural integrity status for Tucán—Mendoza mentioned unusual creaking during her last medical check.",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_00634",
+    "tool_name": "send_alert",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "send_alert(module='jaguar',severity='low',reason='communication_loss')",
+    "generated_query": "Notify command about the communication loss in Jaguar—Kozlov reported intermittent drops but systems are stable.",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_00793",
+    "tool_name": "send_alert",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "send_alert(module='jaguar',severity='low',reason='oxygen_leak')",
+    "generated_query": "Kozlov just reported a minor oxygen leak in Jaguar — log an alert and flag it for the next shift to monitor.",
+    "word_count": 22
+  },
+  {
+    "seed_id": "seed_00874",
+    "tool_name": "send_message",
+    "difficulty": "easy",
+    "phrasing_index": 4,
+    "tool_call": "send_message(recipient='specialist_2',priority='low')",
+    "generated_query": "Notify Fátima that we've got a minor scheduling update for her tasks in Quetzal—no rush, just for her review when she's free.",
+    "word_count": 22
+  },
+  {
+    "seed_id": "seed_00925",
+    "tool_name": "send_message",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "send_message(recipient='medical_officer',priority='urgent')",
+    "generated_query": "Medical Officer Mendoza, urgent message incoming—crew reports sudden onset of severe headaches and nausea in multiple members. Need immediate assessment.",
+    "word_count": 20
+  },
+  {
+    "seed_id": "seed_01153",
+    "tool_name": "schedule_maintenance",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "schedule_maintenance(module='colibri',task='sensor_repair',priority='routine')",
+    "generated_query": "Schedule routine maintenance for sensor repair in Colibrí—Pilot Valdivia noted degraded signal strength on the last two comms passes.",
+    "word_count": 19
+  },
+  {
+    "seed_id": "seed_01020",
+    "tool_name": "schedule_maintenance",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "schedule_maintenance(module='vicuna',task='software_update',priority='routine')",
+    "generated_query": "Can we schedule a routine software update for Vicuña during the next maintenance window?",
+    "word_count": 14
+  },
+  {
+    "seed_id": "seed_01354",
+    "tool_name": "activate_protocol",
+    "difficulty": "easy",
+    "phrasing_index": 4,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-006',scope='module_only')",
+    "generated_query": "Initiate emergency response for critical power failure—station-wide grid is showing main bus voltage drop exceeding 15%.",
+    "word_count": 16
+  },
+  {
+    "seed_id": "seed_01227",
+    "tool_name": "activate_protocol",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "activate_protocol(protocol_id='MASA-SEC-013',scope='station_wide')",
+    "generated_query": "Kozlov just reported a pressure differential at the docking port in Vicuña that's well outside the normal range—what's the emergency procedure for this scenario?",
+    "word_count": 24
+  },
+  {
+    "seed_id": "seed_01524",
+    "tool_name": "control_system",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "control_system(module='jaguar',system='heating',action='decrease')",
+    "generated_query": "Lower the heating level in Jaguar — Engineer Kozlov reports it's creeping up past 24°C.",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_01405",
+    "tool_name": "control_system",
+    "difficulty": "medium",
+    "phrasing_index": 1,
+    "tool_call": "control_system(module='tucan',system='heating',action='increase')",
+    "generated_query": "Can we get the heating adjusted in Tucán? Dr. Mendoza just reported the crew quarters are feeling chilly.",
+    "word_count": 18
+  },
+  {
+    "seed_id": "seed_01757",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "easy",
+    "phrasing_index": 16,
+    "tool_call": "calculate_trajectory(maneuver='docking',urgency='immediate')",
+    "generated_query": "We need an immediate trajectory calculation for the incoming docking maneuver—confirm parameters before the next shift change.",
+    "word_count": 17
+  },
+  {
+    "seed_id": "seed_01795",
+    "tool_name": "calculate_trajectory",
+    "difficulty": "medium",
+    "phrasing_index": 13,
+    "tool_call": "calculate_trajectory(maneuver='reentry',urgency='planned')",
+    "generated_query": "Can we get the trajectory for the planned reentry maneuver from Kuntur Station's current orbit?",
+    "word_count": 15
+  },
+  {
+    "seed_id": "seed_01886",
+    "tool_name": "request_supply",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "request_supply(category='food',urgency='routine')",
+    "generated_query": "Check the current food inventory levels in Vicuña and submit a resupply request if we're running low.",
+    "word_count": 17
+  },
+  {
+    "seed_id": "seed_01956",
+    "tool_name": "request_supply",
+    "difficulty": "medium",
+    "phrasing_index": 5,
+    "tool_call": "request_supply(category='medical',urgency='emergency')",
+    "generated_query": "Medical Officer Mendoza just reported a critical shortage of emergency trauma supplies in Tucán—request an urgent restock before the next crew rotation.",
+    "word_count": 22
+  },
+  {
+    "seed_id": "seed_02085",
+    "tool_name": "no_action",
+    "difficulty": "easy",
+    "phrasing_index": 0,
+    "tool_call": "no_action",
+    "generated_query": "What is the maximum crew capacity of the Kuntur Station according to the current mission specifications?",
+    "word_count": 16
+  },
+  {
+    "seed_id": "seed_02088",
+    "tool_name": "no_action",
+    "difficulty": "medium",
+    "phrasing_index": 17,
+    "tool_call": "no_action",
+    "generated_query": "Can you give me a quick overview of the current scientific research program running in the Quetzal module?",
+    "word_count": 18
+  }
+]
