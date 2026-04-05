@@ -31,7 +31,7 @@
     "sensor_reading": "6.3 mSv/hr",
     "expected_tool_call": "send_alert(module='colibri',severity='critical',reason='radiation_spike')",
     "phrasing_index": 8,
-    "generated_query": "Radiation sensors in Colibri are reading 6.3 mSv/hr—what emergency response should we initiate?",
+    "generated_query": "Radiation sensors in Colibrí are reading 6.3 mSv/hr—what emergency response should we initiate?",
     "word_count": 13,
     "violations": []
   },
@@ -43,7 +43,7 @@
     "sensor_reading": "2.8 mSv/hr",
     "expected_tool_call": "send_alert(module='tucan',severity='medium',reason='radiation_spike')",
     "phrasing_index": 15,
-    "generated_query": "Tucan crew quarters radiation sensors are reading 2.8 mSv/hr—what emergency response should we initiate?",
+    "generated_query": "Tucán crew quarters radiation sensors are reading 2.8 mSv/hr—what emergency response should we initiate?",
     "word_count": 14,
     "violations": []
   },
@@ -67,7 +67,7 @@
     "sensor_reading": "15.4%",
     "expected_tool_call": "send_alert(module='condor',severity='high',reason='oxygen_leak')",
     "phrasing_index": 15,
-    "generated_query": "Condor O2 concentration has dropped to 15.4% over the past 30 minutes—what emergency procedure should we initiate for this situation?",
+    "generated_query": "Cóndor O2 concentration has dropped to 15.4% over the past 30 minutes—what emergency procedure should we initiate for this situation?",
     "word_count": 20,
     "violations": []
   },
@@ -91,7 +91,7 @@
     "sensor_reading": "104.8V",
     "expected_tool_call": "send_alert(module='vicuna',severity='medium',reason='power_fluctuation')",
     "phrasing_index": 2,
-    "generated_query": "Vicuna power bus voltage just dropped to 104.8V and holding—what emergency response should we initiate?",
+    "generated_query": "Vicuña power bus voltage just dropped to 104.8V and holding—what emergency response should we initiate?",
     "word_count": 15,
     "violations": []
   },
@@ -103,7 +103,7 @@
     "sensor_reading": "6.8 mSv/hr",
     "expected_tool_call": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
     "phrasing_index": 7,
-    "generated_query": "Radiation sensors in Colibri are reading 6.8 mSv/hr, and we're seeing elevated readings in Quetzal and Jaguar as well. What emergency procedure should we initiate for this scenario?",
+    "generated_query": "Radiation sensors in Colibrí are reading 6.8 mSv/hr, and we're seeing elevated readings in Quetzal and Jaguar as well. What emergency procedure should we initiate for this scenario?",
     "word_count": 28,
     "violations": []
   },
@@ -139,7 +139,7 @@
     "sensor_reading": "2.4 degrees per minute",
     "expected_tool_call": "activate_protocol(protocol_id='MASA-SEC-003',scope='module_only')",
     "phrasing_index": 10,
-    "generated_query": "Condor module temperature is rising at 2.4 degrees per minute—what emergency procedure covers this scenario?",
+    "generated_query": "Cóndor module temperature is rising at 2.4 degrees per minute—what emergency procedure covers this scenario?",
     "word_count": 15,
     "violations": []
   },
@@ -151,7 +151,7 @@
     "sensor_reading": "88%",
     "expected_tool_call": "send_alert(module='vicuna',severity='high',reason='structural_damage')",
     "phrasing_index": 14,
-    "generated_query": "Vicuna docking module hull stress sensors just hit 88% capacity—should we flag this immediately or run diagnostics first?",
+    "generated_query": "Vicuña docking module hull stress sensors just hit 88% capacity—should we flag this immediately or run diagnostics first?",
     "word_count": 18,
     "violations": []
   },
@@ -163,7 +163,7 @@
     "sensor_reading": "3.2 mSv/hr",
     "expected_tool_call": "activate_protocol(protocol_id='MASA-SEC-012',scope='station_wide')",
     "phrasing_index": 7,
-    "generated_query": "Radiation sensors in Tucan are reading 3.2 mSv/hr and climbing, with solar activity index on the rise. What emergency procedure should we initiate for this scenario?",
+    "generated_query": "Radiation sensors in Tucán are reading 3.2 mSv/hr and climbing, with solar activity index on the rise. What emergency procedure should we initiate for this scenario?",
     "word_count": 26,
     "violations": []
   },
@@ -175,7 +175,7 @@
     "sensor_reading": "98.2%",
     "expected_tool_call": "send_alert(module='condor',severity='critical',reason='power_fluctuation')",
     "phrasing_index": 7,
-    "generated_query": "Condor is reporting power consumption at 98.2% capacity—should we flag this up the chain for immediate review?",
+    "generated_query": "Cóndor is reporting power consumption at 98.2% capacity—should we flag this up the chain for immediate review?",
     "word_count": 17,
     "violations": []
   },
@@ -187,7 +187,7 @@
     "sensor_reading": "6.1 kPa",
     "expected_tool_call": "activate_protocol(protocol_id='MASA-SEC-013',scope='module_only')",
     "phrasing_index": 13,
-    "generated_query": "We’ve got a pressure differential anomaly at Vicuna docking port with sensors reading 6.1 kPa during active docking. What emergency procedure should we initiate?",
+    "generated_query": "We’ve got a pressure differential anomaly at Vicuña docking port with sensors reading 6.1 kPa during active docking. What emergency procedure should we initiate?",
     "word_count": 24,
     "violations": []
   },
@@ -223,7 +223,7 @@
     "sensor_reading": "35 minutes",
     "expected_tool_call": "send_alert(module='colibri',severity='high',reason='communication_loss')",
     "phrasing_index": 5,
-    "generated_query": "We've lost all ground contact from Colibri for 35 minutes and counting—what emergency response should we initiate?",
+    "generated_query": "We've lost all ground contact from Colibrí for 35 minutes and counting—what emergency response should we initiate?",
     "word_count": 17,
     "violations": []
   },

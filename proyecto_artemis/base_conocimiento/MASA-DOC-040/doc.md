@@ -32,7 +32,7 @@ Reactive maneuvers, triggered by MASA-SEC-016, are executed when unplanned devia
 
 Emergency avoidance maneuvers represent the highest urgency classification. These are executed when the station's collision avoidance system detects a potential conjunction with orbital debris or another spacecraft. While not explicitly covered by MASA-SEC-016, these maneuvers follow similar protocols but with even more compressed timelines, often requiring execution within minutes of detection.
 
-All maneuver types require coordination between Colibrí and Condor modules. The Condor module, under Commander Reyes' supervision, manages station-wide systems and crew safety during maneuvers. Environmental systems in both modules are monitored closely, as the thruster burns can temporarily affect the station's thermal balance. For example, if Colibrí's temperature approaches 55.0°C during a prolonged maneuver, a medium-severity alert would be triggered, potentially requiring adjustments to the cooling systems.
+All maneuver types require coordination between Colibrí and Cóndor modules. The Cóndor module, under Commander Reyes' supervision, manages station-wide systems and crew safety during maneuvers. Environmental systems in both modules are monitored closely, as the thruster burns can temporarily affect the station's thermal balance. For example, if Colibrí's temperature approaches 55.0°C during a prolonged maneuver, a medium-severity alert would be triggered, potentially requiring adjustments to the cooling systems.
 
 ## Debris Avoidance Protocols
 

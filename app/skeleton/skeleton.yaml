@@ -6,7 +6,7 @@ meta:
   agency_full: Misión Aeroespacial Sudamericana Avanzada
   founded: 2028
   headquarters: Bogotá, Colombia
-  current_mission: Condor-7
+  current_mission: Cóndor-7
   mission_start: "2031-09-01"
 
 # ==============================================================================
@@ -447,7 +447,7 @@ security_protocols:
     severity: critical
     scope: station_wide
     required_actions:
-      - Move all crew to shielded modules Jaguar and Condor
+      - Move all crew to shielded modules Jaguar and Cóndor
       - Cancel all EVA operations immediately
       - Send critical alert station-wide
       - Activate radiation shielding protocols
@@ -467,7 +467,7 @@ security_protocols:
     required_actions:
       - Notify medical_officer immediately
       - Send urgent message to medical_officer
-      - Prepare Tucan medical bay
+      - Prepare Tucán medical bay
       - Contact MASA ground control medical team
       - Restrict non-essential crew movement
 
@@ -501,7 +501,7 @@ security_protocols:
     severity: high
     scope: station_wide
     required_actions:
-      - Switch to backup antenna array in Colibri
+      - Switch to backup antenna array in Colibrí
       - Attempt contact on all available frequencies
       - Log blackout start time and conditions
       - Increase telemetry beacon rate
@@ -595,14 +595,14 @@ security_protocols:
     scope: station_wide
     required_actions:
       - Cancel or postpone all scheduled EVA operations
-      - Move crew to lower-radiation modules Jaguar and Condor preferentially
+      - Move crew to lower-radiation modules Jaguar and Cóndor preferentially
       - Send medium alert station-wide
       - Increase radiation monitoring frequency to every 15 minutes
       - Log cumulative exposure for all crew members
 
   MASA-SEC-013:
     name: Docking Bay Pressure Anomaly
-    description: Activated when pressure differential at Vicuna docking port exceeds 5.0 kPa during docking operations.
+    description: Activated when pressure differential at Vicuña docking port exceeds 5.0 kPa during docking operations.
     trigger_condition: docking port pressure differential > 5.0 kPa
     trigger_thresholds:
       metric: docking_pressure_differential
@@ -613,7 +613,7 @@ security_protocols:
     scope: module_only
     required_actions:
       - Abort docking sequence immediately
-      - Seal Vicuna docking port inner hatch
+      - Seal Vicuña docking port inner hatch
       - Send high alert from vicuna
       - Contact incoming vessel to hold position
       - Inspect docking collar seals before reattempting
@@ -649,7 +649,7 @@ security_protocols:
     severity: medium
     scope: station_wide
     required_actions:
-      - Switch crew to reserve water supply in Vicuna
+      - Switch crew to reserve water supply in Vicuña
       - Send medium alert station-wide
       - Schedule maintenance for water recycling unit
       - Request emergency water resupply
@@ -741,7 +741,7 @@ security_protocols:
     scope: station_wide
     required_actions:
       - Initiate all-crew evacuation to emergency capsule immediately
-      - Transmit MAYDAY signal to MASA ground control via Colibri
+      - Transmit MAYDAY signal to MASA ground control via Colibrí
       - Secure mission-critical data to portable storage
       - All crew don emergency suits
       - Commander leads evacuation, medical_officer last to leave
@@ -772,7 +772,7 @@ operational_procedures:
 
   MASA-OPS-003:
     name: Docking and Undocking Procedure
-    description: Standard procedure for receiving or releasing supply vessels at Vicuna docking port.
+    description: Standard procedure for receiving or releasing supply vessels at Vicuña docking port.
     frequency: as_needed
     duration_minutes: 180
     responsible: [pilot, commander]
@@ -791,7 +791,7 @@ operational_procedures:
 
   MASA-OPS-005:
     name: Cargo Transfer and Inventory Update
-    description: Transfer of cargo from docked supply vessel to Vicuna storage and inventory reconciliation.
+    description: Transfer of cargo from docked supply vessel to Vicuña storage and inventory reconciliation.
     frequency: post_docking
     duration_minutes: 180
     responsible: [specialist_1, specialist_2]
@@ -905,7 +905,7 @@ crew:
     assigned_module: condor
     specialization: Mission Command, Systems Engineering
     experience_years: 18
-    previous_missions: [Condor-2, Condor-3, Condor-6]
+    previous_missions: [Cóndor-2, Cóndor-3, Cóndor-6]
 
   pilot:
     name: Ana Valdivia
@@ -914,7 +914,7 @@ crew:
     assigned_module: colibri
     specialization: Orbital Navigation, Communications Systems
     experience_years: 12
-    previous_missions: [Condor-5, Condor-6]
+    previous_missions: [Cóndor-5, Cóndor-6]
 
   specialist_1:
     name: Kai Nakamura
@@ -923,7 +923,7 @@ crew:
     assigned_module: quetzal
     specialization: Astrophysics, Materials Science
     experience_years: 8
-    previous_missions: [Condor-6]
+    previous_missions: [Cóndor-6]
 
   specialist_2:
     name: Fátima Al-Hassan
@@ -932,7 +932,7 @@ crew:
     assigned_module: quetzal
     specialization: Biology, Environmental Systems
     experience_years: 5
-    previous_missions: [Condor-6]
+    previous_missions: [Cóndor-6]
 
   engineer:
     name: Pavel Kozlov
@@ -941,7 +941,7 @@ crew:
     assigned_module: jaguar
     specialization: Mechanical Systems, Life Support Engineering
     experience_years: 15
-    previous_missions: [Condor-3, Condor-5, Condor-6]
+    previous_missions: [Cóndor-3, Cóndor-5, Cóndor-6]
 
   medical_officer:
     name: Lucía Mendoza
@@ -950,13 +950,13 @@ crew:
     assigned_module: tucan
     specialization: Space Medicine, Emergency Surgery
     experience_years: 10
-    previous_missions: [Condor-4, Condor-6]
+    previous_missions: [Cóndor-4, Cóndor-6]
 
 # ==============================================================================
-# PAST MISSIONS — Condor-1 to Condor-7
+# PAST MISSIONS — Cóndor-1 to Cóndor-7
 # ==============================================================================
 missions:
-  Condor-1:
+  Cóndor-1:
     name: Initial Orbital Insertion
     type: automated
     start_date: "2029-03-15"
@@ -967,7 +967,7 @@ missions:
     outcome: success
     notes: Fully automated. All six modules pressurized and functional post-deployment.
 
-  Condor-2:
+  Cóndor-2:
     name: First Crewed Mission
     type: crewed
     start_date: "2029-08-20"
@@ -978,7 +978,7 @@ missions:
     outcome: success
     notes: Commander Reyes led commissioning. Minor CO2 scrubber calibration issue resolved in week 2.
 
-  Condor-3:
+  Cóndor-3:
     name: Full Crew Activation and Laboratory Commissioning
     type: crewed
     start_date: "2030-01-10"
@@ -989,7 +989,7 @@ missions:
     outcome: success
     notes: First full 6-person crew. Quetzal workstations 7-12 required recalibration.
 
-  Condor-4:
+  Cóndor-4:
     name: Emergency Thermal Repair Mission
     type: emergency_repair
     start_date: "2030-06-05"
@@ -1000,35 +1000,35 @@ missions:
     outcome: success
     notes: Jaguar temperature reached 47.3 C (high alert) before repair. Cooling unit replaced via EVA.
 
-  Condor-5:
+  Cóndor-5:
     name: Automated Cargo Resupply
     type: cargo
     start_date: "2030-11-22"
     end_date: "2030-11-28"
     duration_days: 6
     crew: [pilot, engineer]
-    objective: Receive automated supply vessel at Vicuna docking port, transfer 2.4 tonnes of supplies
+    objective: Receive automated supply vessel at Vicuña docking port, transfer 2.4 tonnes of supplies
     outcome: success
     notes: Docking on first attempt. Minor pressure differential of 3.2 kPa resolved before transfer.
 
-  Condor-6:
+  Cóndor-6:
     name: Full Crew Rotation and Equipment Upgrade
     type: crew_rotation
     start_date: "2031-04-18"
     end_date: "2031-10-15"
     duration_days: 180
     crew: [commander, pilot, specialist_1, specialist_2, engineer, medical_officer]
-    objective: Complete crew rotation and installation of upgraded Colibri antenna array
+    objective: Complete crew rotation and installation of upgraded Colibrí antenna array
     outcome: success
     notes: Current crew assumed station on this mission. New antenna array increased comm bandwidth by 40%.
 
-  Condor-7:
+  Cóndor-7:
     name: Current Operational Mission
     type: crewed_ongoing
     start_date: "2031-09-01"
     end_date: null
     duration_days: null
     crew: [commander, pilot, specialist_1, specialist_2, engineer, medical_officer]
-    objective: Continued scientific operations, station maintenance, and preparation for Condor-8 supply rendezvous
+    objective: Continued scientific operations, station maintenance, and preparation for Cóndor-8 supply rendezvous
     outcome: in_progress
     notes: Ongoing. Primary focus on Quetzal microgravity biology experiments (Al-Hassan, Phase 3).

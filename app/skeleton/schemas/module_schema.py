@@ -168,7 +168,7 @@ class ModuleSchema(BaseModel):
         workstations: Number of scientific workstations (Quetzal only).
         redundancy_class: Redundancy classification (Jaguar only).
         has_docking_port: Whether the module has an external docking port.
-        cabins: Number of individual crew cabins (Tucan only).
+        cabins: Number of individual crew cabins (Tucán only).
     """
 
     name: str

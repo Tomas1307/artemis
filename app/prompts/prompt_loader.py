@@ -49,6 +49,10 @@ class PromptLoader:
             "file": "template/rag_question_generation.yaml",
             "key": "rag_query_generator",
         },
+        "encoder_query_generator": {
+            "file": "template/encoder_training.yaml",
+            "key": "encoder_query_generator",
+        },
     }
 
     def __init__(self, prompts_dir: str = "app/prompts") -> None:

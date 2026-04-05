@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 
 class MissionSchema(BaseModel):
-    """Schema for a past or current MASA mission (Condor-N).
+    """Schema for a past or current MASA mission (Cóndor-N).
 
     Attributes:
         name: Human-readable mission name.

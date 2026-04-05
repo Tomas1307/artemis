@@ -16,7 +16,7 @@ One of the most popular programs is *“MASA en el Aula”* (MASA in the Classro
 
 Kuntur Station, orbiting at an altitude of 408 kilometers, serves as a dynamic platform for public engagement. Live stream events from the station are a highlight of MASA’s outreach, offering viewers a rare glimpse into life in low Earth orbit. These broadcasts are carefully planned to showcase not only the scientific work being conducted but also the human experience of living in space.
 
-Events such as *“Conversaciones desde el Cosmos”* (Conversations from the Cosmos) feature crew members from modules like Condor, Quetzal, and Jaguar discussing their research, daily routines, and the challenges of spaceflight. These sessions often include interactive Q&A segments, where students and the general public can submit questions in real time. The crew’s diverse backgrounds—representing nations from across Latin America and beyond—add a rich cultural dimension to these exchanges, reinforcing MASA’s role as a unifying force in the region.
+Events such as *“Conversaciones desde el Cosmos”* (Conversations from the Cosmos) feature crew members from modules like Cóndor, Quetzal, and Jaguar discussing their research, daily routines, and the challenges of spaceflight. These sessions often include interactive Q&A segments, where students and the general public can submit questions in real time. The crew’s diverse backgrounds—representing nations from across Latin America and beyond—add a rich cultural dimension to these exchanges, reinforcing MASA’s role as a unifying force in the region.
 
 ## Media Relations and Press Protocols
 
@@ -24,4 +24,4 @@ MASA maintains a proactive and collaborative relationship with the media to ensu
 
 Press protocols are designed to balance transparency with operational security. Journalists are granted access to controlled briefings and interviews with mission specialists, though certain sensitive details—such as crew schedules or station logistics—are omitted to respect privacy and safety. MASA also organizes periodic press tours of its ground facilities, offering media representatives an immersive look at the technology and teamwork behind its missions.
 
-During significant events, such as the launch of the Condor-7 mission in September 2031, MASA coordinates global press coverage, ensuring that the achievements of Kuntur Station and its crew are celebrated worldwide. By fostering a culture of openness, MASA strengthens public trust and reinforces its commitment to advancing space exploration for the benefit of all humanity.
+During significant events, such as the launch of the Cóndor-7 mission in September 2031, MASA coordinates global press coverage, ensuring that the achievements of Kuntur Station and its crew are celebrated worldwide. By fostering a culture of openness, MASA strengthens public trust and reinforces its commitment to advancing space exploration for the benefit of all humanity.

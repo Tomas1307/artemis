@@ -7,7 +7,7 @@ class CrewMemberSchema(BaseModel):
     Attributes:
         name: Full legal name of the crew member.
         nationality: Nationality or nationalities.
-        age: Age at mission start (Condor-7).
+        age: Age at mission start (Cóndor-7).
         assigned_module: Module identifier where this crew member is primarily stationed.
         specialization: Primary technical specializations.
         experience_years: Years of space mission experience.

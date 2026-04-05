@@ -10,13 +10,13 @@ The condor’s significance extends beyond its linguistic roots. In Andean mytho
 
 The modules of Kuntur Station are named after iconic fauna from Andean and Mesoamerican traditions, each carrying its own symbolic weight and cultural resonance. This naming convention is a deliberate celebration of the biodiversity and mythological significance of these creatures, reinforcing the station’s identity as a fusion of technological innovation and cultural pride.
 
-- **Condor**: As the namesake of the station itself, the *Condor* module embodies the spirit of leadership and exploration. It serves as the heart of Kuntur Station, symbolizing the station’s role as a beacon of scientific progress and international cooperation.
+- **Cóndor**: As the namesake of the station itself, the *Cóndor* module embodies the spirit of leadership and exploration. It serves as the heart of Kuntur Station, symbolizing the station’s role as a beacon of scientific progress and international cooperation.
 
 - **Quetzal**: Named after the resplendent quetzal, a bird sacred to Mesoamerican civilizations, this module reflects the vibrancy and beauty of Latin American heritage. The quetzal was revered by the Maya and Aztecs as a symbol of freedom and wealth, making it a fitting name for a module dedicated to advancing human knowledge in orbit.
 
 - **Jaguar**: The jaguar, a powerful and elusive predator of the Americas, represents strength, adaptability, and stealth. In many indigenous cultures, the jaguar is a guardian of the earth and a bridge between the physical and spiritual worlds. The *Jaguar* module embodies these qualities, serving as a robust and reliable component of the station’s infrastructure.
 
-- **Colibri**: The hummingbird, or *colibrí*, is a symbol of agility, resilience, and joy. In Andean and Mesoamerican traditions, hummingbirds are often seen as messengers between worlds, embodying the delicate balance between fragility and endurance. The *Colibri* module reflects these attributes, contributing to the station’s dynamic and adaptive operations.
+- **Colibrí**: The hummingbird, or *colibrí*, is a symbol of agility, resilience, and joy. In Andean and Mesoamerican traditions, hummingbirds are often seen as messengers between worlds, embodying the delicate balance between fragility and endurance. The *Colibrí* module reflects these attributes, contributing to the station’s dynamic and adaptive operations.
 
 - **Vicuña**: The vicuña, a graceful and endangered camelid of the Andes, represents sustainability and harmony with nature. Revered by the Inca for its fine wool and gentle demeanor, the vicuña symbolizes the careful stewardship of resources—a principle that guides the operations of the *Vicuña* module.
 

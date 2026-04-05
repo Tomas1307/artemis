@@ -362,11 +362,11 @@ MASA-DOC-022:
 
 # --- MISSION RECORDS (7 docs, 1-2 pages each) ---
 MASA-DOC-023:
-  title: "Mission Report: Condor-1 — Initial Orbital Insertion"
+  title: "Mission Report: Cóndor-1 — Initial Orbital Insertion"
   type: mission_record
   target_words: 600
   skeleton_refs:
-    - missions.Condor-1
+    - missions.Cóndor-1
   sections:
     - Mission Summary
     - Objectives and Outcomes
@@ -374,11 +374,11 @@ MASA-DOC-023:
     - Post-Deployment Assessment
 
 MASA-DOC-024:
-  title: "Mission Report: Condor-2 — First Crewed Mission"
+  title: "Mission Report: Cóndor-2 — First Crewed Mission"
   type: mission_record
   target_words: 800
   skeleton_refs:
-    - missions.Condor-2
+    - missions.Cóndor-2
   sections:
     - Mission Summary and Crew Manifest
     - Station Commissioning Activities
@@ -386,11 +386,11 @@ MASA-DOC-024:
     - Lessons Learned
 
 MASA-DOC-025:
-  title: "Mission Report: Condor-3 — Full Crew Activation"
+  title: "Mission Report: Cóndor-3 — Full Crew Activation"
   type: mission_record
   target_words: 800
   skeleton_refs:
-    - missions.Condor-3
+    - missions.Cóndor-3
   sections:
     - Mission Summary and Crew Manifest
     - Quetzal Laboratory Commissioning
@@ -398,11 +398,11 @@ MASA-DOC-025:
     - Science Program Inauguration
 
 MASA-DOC-026:
-  title: "Mission Report: Condor-4 — Emergency Thermal Repair"
+  title: "Mission Report: Cóndor-4 — Emergency Thermal Repair"
   type: mission_record
   target_words: 900
   skeleton_refs:
-    - missions.Condor-4
+    - missions.Cóndor-4
   sections:
     - Mission Summary and Emergency Timeline
     - Jaguar Thermal Failure Analysis
@@ -411,11 +411,11 @@ MASA-DOC-026:
     - Post-Repair Verification
 
 MASA-DOC-027:
-  title: "Mission Report: Condor-5 — Automated Cargo Resupply"
+  title: "Mission Report: Cóndor-5 — Automated Cargo Resupply"
   type: mission_record
   target_words: 600
   skeleton_refs:
-    - missions.Condor-5
+    - missions.Cóndor-5
   sections:
     - Mission Summary
     - Docking Sequence and Pressure Differential (3.2 kPa)
@@ -423,11 +423,11 @@ MASA-DOC-027:
     - Transfer Completion Report
 
 MASA-DOC-028:
-  title: "Mission Report: Condor-6 — Crew Rotation and Antenna Upgrade"
+  title: "Mission Report: Cóndor-6 — Crew Rotation and Antenna Upgrade"
   type: mission_record
   target_words: 800
   skeleton_refs:
-    - missions.Condor-6
+    - missions.Cóndor-6
   sections:
     - Mission Summary and Crew Roster
     - Personnel Rotation Details
@@ -435,16 +435,16 @@ MASA-DOC-028:
     - Transition to Current Operations
 
 MASA-DOC-029:
-  title: "Mission Report: Condor-7 — Current Operational Mission"
+  title: "Mission Report: Cóndor-7 — Current Operational Mission"
   type: mission_record
   target_words: 700
   skeleton_refs:
-    - missions.Condor-7
+    - missions.Cóndor-7
   sections:
     - Mission Summary and Active Crew
     - Current Objectives
     - Quetzal Microgravity Biology Experiments (Phase 3)
-    - Upcoming Condor-8 Supply Rendezvous Preparation
+    - Upcoming Cóndor-8 Supply Rendezvous Preparation
 
 # --- CREW PROFILES (6 docs, 1 page each) ---
 MASA-DOC-030:
@@ -749,7 +749,7 @@ MASA-DOC-060:
   target_words: 400
   skeleton_refs: []
   sections:
-    - Design Tradition for Condor Mission Patches
+    - Design Tradition for Cóndor Mission Patches
     - Symbolism and Artist Selection
     - Crew Involvement in Patch Design
     - Archive of Past Mission Insignia

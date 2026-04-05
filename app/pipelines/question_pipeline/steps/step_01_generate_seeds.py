@@ -268,7 +268,7 @@ class GenerateSeedsStep:
         elif tool_name == "no_action":
             facts.extend([
                 "no_action is the correct response when the query is informational, historical, or requires no system interaction.",
-                "MASA station: Kuntur, 6 modules, current mission Condor-7",
+                "MASA station: Kuntur, 6 modules, current mission Cóndor-7",
             ])
 
         return facts

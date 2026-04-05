@@ -1,6 +1,6 @@
 # Proyecto ARTEMIS — Enunciado de la Competencia Final
 
-**Asistente de Recuperacion y Toma de decisiones para Misiones Espaciales**
+**Asistente de Recuperación y Toma de decisiónes para Misiones Espaciales**
 
 Agencia MASA — Competencia Final MAPLN 2026 — Universidad de los Andes
 
@@ -8,22 +8,28 @@ Agencia MASA — Competencia Final MAPLN 2026 — Universidad de los Andes
 
 ## 1. Contexto
 
-La agencia MASA (Mision Aeroespacial Sudamericana Avanzada) opera la estacion Kuntur Station en orbita baja terrestre. La estacion cuenta con 6 modulos:
+El programa Artemis de la NASA está redefiniendo la exploración espacial humana. Mientras Artemis II órbita la Luna en este momento con astronautas a bordo por primera vez en más de medio siglo, y las misiónes Artemis III-V preparan el regreso a la superficie lunar y la construcción de una base permanente, queda claro que el futuro de la humanidad en el espacio depende de sistemas de soporte de decisión cada vez más sofisticados.
 
-| Modulo  | Funcion                          | Notas                     |
+En este contexto, la agencia MASA (Misión Aeroespacial Sudamericana Avanzada) — la contraparte sudamericana de la NASA dentro del universo del curso — opera la estación **Kuntur Station** en órbita baja terrestre. Inspirada en la arquitectura modular de programas como Gateway y la ISS, Kuntur Station representa la contribución latinoamericana a la nueva era de exploración espacial, con módulos bautizados en honor a la fauna emblemática del continente.
+
+La estación cuenta con 6 módulos:
+
+| Módulo  | Función                          | Notas                     |
 |---------|----------------------------------|---------------------------|
-| Condor  | Comando y control                | Modulo principal          |
-| Quetzal | Laboratorio cientifico           | 4 tripulantes, 12 estaciones |
-| Jaguar  | Soporte vital y sistemas criticos| Redundancia clase A       |
-| Colibri | Comunicaciones y navegacion      | Antenas de largo alcance  |
-| Vicuna  | Almacenamiento y carga           | Puerto de docking         |
-| Tucan   | Habitacional / dormitorios       | 6 cabinas individuales    |
+| Cóndor  | Comando y control                | Módulo principal          |
+| Quetzal | Laboratorio científico           | 4 tripulantes, 12 estaciónes |
+| Jaguar  | Soporte vital y sistemas críticos| Redundancia clase A       |
+| Colibrí | Comunicaciones y navegación      | Antenas de largo alcance  |
+| Vicuña  | Almacenamiento y carga           | Puerto de docking         |
+| Tucán   | Habitacional / dormitorios       | 6 cabinas individuales    |
 
-La tripulacion actual: Comandante Santiago Reyes, Piloto Ana Valdivia, Especialistas Kai Nakamura y Fatima Al-Hassan, Ingeniero Pavel Kozlov, Oficial Medico Lucia Mendoza.
+La tripulación actual: Comandante Santiago Reyes, Piloto Ana Valdivia, Especialistas Kai Nakamura y Fatima Al-Hassan, Ingeniero Pavel Kozlov, Oficial Médico Lucía Mendoza.
 
 ## 2. La Tarea
 
-Construir un sistema de **RAG + Tool Calling** que, dado un query en lenguaje natural de un operador del centro de control, prediga la tool call correcta en formato canonico.
+Así como los controladores de vuelo en Houston coordinan las misiónes Artemis en tiempo real — monitoreando telemetría, activando protocolos de emergencia y tomando decisiónes críticas basadas en documentación técnica — los operadores del centro de control de MASA necesitan un sistema inteligente que los asista.
+
+Su misión: construir un sistema de **RAG + Tool Calling** que, dado un query en lenguaje natural de un operador del centro de control, prediga la tool call correcta en formato canónico.
 
 ### Pipeline esperado:
 
@@ -40,23 +46,23 @@ FAISS --> busca documentos relevantes en la base de conocimiento
 DECODER (Llama-3.2-1B) recibe: query + contexto recuperado
        |
        v
-Genera tool call en formato canonico O "no_action"
+Genera tool call en formato canónico O "no_action"
 ```
 
-**Importante:** No todos los queries contienen suficiente informacion para determinar la tool call correcta por si solos. Algunos parametros — particularmente niveles de severidad y protocolos de emergencia — estan definidos exclusivamente en la documentacion tecnica de MASA. El decoder debe aprender a utilizar los documentos recuperados como contexto para determinar estos valores.
+**Importante:** No todos los queries contienen suficiente información para determinar la tool call correcta por sí solos. Algunos parámetros — particularmente niveles de severidad y protocolos de emergencia — están definidos exclusivamente en la documentación técnica de MASA. El decoder debe aprender a utilizar los documentos recuperados como contexto para determinar estos valores.
 
 ## 3. Las 10 Tools
 
-Todas las herramientas utilizan parametros enum (valores de un conjunto cerrado). No hay parametros de texto libre.
+Todas las herramientas utilizan parámetros enum (valores de un conjunto cerrado). No hay parámetros de texto libre.
 
-### 3.1 Monitoreo y telemetria
+### 3.1 Monitoreo y telemetría
 
 **get_telemetry** — Datos de sensores en tiempo real
 - `module`: condor | quetzal | jaguar | colibri | vicuna | tucan
 - `metric`: temperature | pressure | oxygen | radiation | humidity | power
 - `timeframe_hours`: 1 | 6 | 12 | 24
 
-**get_crew_status** — Estado de la tripulacion
+**get_crew_status** — Estado de la tripulación
 - `module`: condor | quetzal | jaguar | colibri | vicuna | tucan
 - `info`: health | location | current_activity | schedule
 
@@ -64,9 +70,9 @@ Todas las herramientas utilizan parametros enum (valores de un conjunto cerrado)
 - `module`: condor | quetzal | jaguar | colibri | vicuna | tucan
 - `system`: life_support | power | thermal | structural | communications
 
-### 3.2 Alertas y comunicacion
+### 3.2 Alertas y comunicación
 
-**send_alert** — Alerta a control de mision
+**send_alert** — Alerta a control de misión
 - `module`: condor | quetzal | jaguar | colibri | vicuna | tucan
 - `severity`: low | medium | high | critical
 - `reason`: abnormal_temperature | pressure_drop | oxygen_leak | radiation_spike | system_failure | power_fluctuation | communication_loss | structural_damage
@@ -86,14 +92,14 @@ Todas las herramientas utilizan parametros enum (valores de un conjunto cerrado)
 - `protocol_id`: MASA-SEC-001 ... MASA-SEC-020
 - `scope`: module_only | station_wide
 
-**control_system** — Controlar sistema especifico
+**control_system** — Controlar sistema específico
 - `module`: condor | quetzal | jaguar | colibri | vicuna | tucan
 - `system`: ventilation | heating | lighting | cooling | filtration
 - `action`: activate | deactivate | increase | decrease
 
-### 3.4 Navegacion y mision
+### 3.4 Navegación y misión
 
-**calculate_trajectory** — Calculo orbital
+**calculate_trajectory** — Cálculo orbital
 - `maneuver`: orbit_adjustment | docking | debris_avoidance | reentry | station_keeping
 - `urgency`: planned | immediate
 
@@ -101,7 +107,7 @@ Todas las herramientas utilizan parametros enum (valores de un conjunto cerrado)
 - `category`: medical | food | equipment | fuel | spare_parts | scientific
 - `urgency`: routine | expedited | emergency
 
-### 3.5 Accion especial
+### 3.5 Acción especial
 
 **no_action** — Cuando ninguna tool aplica a la consulta (preguntas informativas, historicas o de contexto general).
 
@@ -109,7 +115,7 @@ Todas las herramientas utilizan parametros enum (valores de un conjunto cerrado)
 
 Las respuestas deben seguir este formato exacto:
 
-- Sin espacios despues de comas
+- Sin espacios después de comas
 - Parametros en el orden definido por la tool
 - Strings con comillas simples
 - Todo en minusculas
@@ -125,75 +131,85 @@ no_action
 
 Post-procesamiento del output esta permitido para normalizar el formato.
 
-## 5. Datos Proporcionados
+## 5. Datos Proporciónados
 
-| Archivo | Descripcion |
+| Archivo | Descripción |
 |---------|-------------|
-| `train.csv` | Queries de operadores con la tool call correcta (para entrenamiento del decoder) |
-| `consultas_centro_control.json` | Consultas historicas del centro de control con documentos asociados |
-| `base_conocimiento/` | Documentos tecnicos de MASA (~54 documentos: manuales, protocolos, procedimientos) |
-| `tools_definition.json` | Definicion completa de las 10 tools con parametros validos |
-| `test_queries.csv` | Queries de evaluacion — predecir la tool call |
+| `data.csv` | Queries de operadores con la tool call correcta (para entrenamiento del decoder) |
+| `consultas_centro_control.json` | Consultas historicas del centro de control con documentos asociados (para entrenamiento del encoder) |
+| `base_conocimiento/` | Documentos tecnicos de MASA (~54 documentos: manuales, protocolos, procedimientos, perfiles) |
+| `tools_definition.json` | Definición completa de las 10 tools con parámetros válidos |
+| `test_queries.csv` | Queries de evaluación — predecir la tool call |
 | `sample_submission.csv` | Ejemplo del formato de entrega |
 
-### Formato de `train.csv`:
+### Formato de `data.csv`:
 ```csv
 id,query,tool_call
 Q-00001,"Pull the last 12 hours of oxygen data from Jaguar.",get_telemetry(module='jaguar',metric='oxygen',timeframe_hours=12)
 Q-00002,"Kozlov says the air feels heavy in life support — check what is going on.",get_telemetry(module='jaguar',metric='oxygen',timeframe_hours=6)
 ```
 
+### Formato de `consultas_centro_control.json`:
+```json
+[
+  {"query": "What are the backup activation thresholds for Jaguar's life support?", "doc_id": "MASA-DOC-003"},
+  {"query": "Which protocol governs radiation lockdown procedures?", "doc_id": "MASA-DOC-009"}
+]
+```
+
+Cada entrada asocia un query histórico del centro de control con el documento que contiene la respuesta. Útil para entrenar el encoder a recuperar documentos relevantes.
+
 ### Formato de `test_queries.csv`:
 ```csv
 id,query
-Q-02001,"Nakamura reports a chemical smell in the science lab."
-Q-02002,"What was the outcome of the Condor-5 mission?"
+T-00001,"Nakamura reports a chemical smell in the science lab."
+T-00002,"What was the outcome of the Cóndor-5 mission?"
 ```
 
 ### Formato de entrega (Kaggle):
 ```csv
-ID,answer
-Q-02001,activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')
-Q-02002,no_action
+id,tool_call
+T-00001,activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')
+T-00002,no_action
 ```
 
 ## 6. Evaluacion
 
-### 6.1 Metrica
+### 6.1 Métrica
 
 **Categorization Accuracy** — Exact match del string completo.
 
-Si el string generado coincide exactamente con el gold standard: 1. Si no: 0. No hay credito parcial.
+Si el string generado coincide exactamente con el gold standard: 1. Si no: 0. No hay crédito parcial.
 
-### 6.2 Tres capas de evaluacion
+### 6.2 Tres capas de evaluación
 
-| Capa | Porcentaje | Descripcion |
+| Capa | Porcentaje | Descripción |
 |------|-----------|-------------|
-| Tablero publico | ~60% | Visible durante la competencia en Kaggle |
+| Tablero público | ~60% | Visible durante la competencia en Kaggle |
 | Tablero privado | ~40% | Se revela al cerrar la competencia |
 | Preguntas ocultas | ~50-100 | El equipo docente ejecuta el notebook del estudiante |
 
 **Score final** = promedio de las tres capas.
 
-### 6.3 Rubrica
+### 6.3 Rúbrica
 
 | Item | Porcentaje | Detalle |
 |------|-----------|---------|
-| Participacion | 20% | Minimo 5 envios a Kaggle |
-| Superar baseline | 40% | Promedio de las 3 capas > modelo base (Llama sin fine-tuning). **Si no se supera el baseline, esta porcion es 0.0** |
+| Participación | 20% | Mínimo 5 envíos a Kaggle |
+| Superar baseline | 40% | Promedio de las 3 capas > modelo base (Llama sin fine-tuning). **Si no se supera el baseline, esta porción es 0.0** |
 | Percentil | 40% | < P25: 0% / >= P25: 50% / >= P50: 75% / >= P75: 100% |
 
-## 7. Configuracion Tecnica
+## 7. Configuración Técnica
 
-| Parametro | Valor |
+| Parámetro | Valor |
 |-----------|-------|
 | Decoder obligatorio | `meta-llama/Llama-3.2-1B` |
 | Encoder obligatorio | `BAAI/bge-small-en-v1.5` |
 | Equipos | 5 personas |
-| Duracion | ~2 semanas |
+| Duración | ~2 semanas |
 | GPU disponible | 24GB VRAM, 128GB RAM |
 | Framework | PyTorch |
-| Idioma del contenido | Ingles (nombres OOV en espanol/quechua) |
+| Idioma del contenido | Inglés (nombres OOV en español/quechua) |
 
 ## 8. Permitido y Prohibido
 
@@ -204,17 +220,17 @@ Si el string generado coincide exactamente con el gold standard: 1. Si no: 0. No
 - Data augmentation con LLMs open-source (ejecutados localmente)
 - Reranking y reprompting
 - Hybrid search (BM25 + embeddings)
-- Post-procesamiento del output (regex, normalizacion de formato)
+- Post-procesamiento del output (regex, normalización de formato)
 - Few-shot examples en el prompt
 - Curriculum learning, learning rate scheduling
-- Cualquier tecnica vista en el curso
+- Cualquier técnica vista en el curso
 
 ### Prohibido
 
 - Modelos pagos (OpenAI, Claude, Cohere, Gemini APIs u otros servicios de pago)
 - Datos externos no entregados por el equipo docente
-- Usar informacion del test set para entrenar (data leakage)
-- Clasificacion con otra red neuronal en lugar del LLM
+- Usar información del test set para entrenar (data leakage)
+- Clasificación con otra red neuronal en lugar del LLM
 - Solo prompt engineering sin fine-tuning del decoder
 - Usar un decoder diferente a Llama-3.2-1B
 - Usar un encoder diferente a bge-small-en-v1.5
@@ -224,7 +240,7 @@ Si el string generado coincide exactamente con el gold standard: 1. Si no: 0. No
 
 ### En Kaggle:
 - CSV con `ID,answer` (tool call como string)
-- Minimo 5 submissions durante la competencia
+- Mínimo 5 submissions durante la competencia
 
 ### En Coursera:
 - Notebook de entrenamiento (encoder + decoder)
@@ -238,10 +254,10 @@ Si el string generado coincide exactamente con el gold standard: 1. Si no: 0. No
 
 | Momento | Actividad |
 |---------|-----------|
-| Semana 7 — Anuncio | Publicacion del enunciado, entrega de materiales, apertura de Kaggle |
+| Semana 7 — Anuncio | Publicación del enunciado, entrega de materiales, apertura de Kaggle |
 | Semana 7-8 — Construccion | Chunking, FAISS, primeros fine-tuning del decoder, primeros submissions |
-| Semana 8 — Optimizacion | Mejorar retrieval, data augmentation, tecnicas avanzadas |
-| Fin Semana 8 — Cierre | Cierre Kaggle, entrega Coursera, evaluacion preguntas ocultas |
+| Semana 8 — Optimización | Mejorar retrieval, data augmentation, técnicas avanzadas |
+| Fin Semana 8 — Cierre | Cierre Kaggle, entrega Coursera, evaluación preguntas ocultas |
 
 ---
 

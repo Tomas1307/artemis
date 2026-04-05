@@ -77,7 +77,7 @@
     "difficulty": "easy",
     "phrasing_index": 16,
     "tool_call": "no_action",
-    "generated_query": "What was the primary research focus of the Quetzal module during the Condor-6 mission?",
+    "generated_query": "What was the primary research focus of the Quetzal module during the Cóndor-6 mission?",
     "word_count": 14
   },
   {
@@ -122,7 +122,7 @@
     "difficulty": "hard",
     "phrasing_index": 14,
     "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')",
-    "generated_query": "Condor, we need an immediate burn plan—station’s altitude just dropped below 408 km. What’s the quickest safe adjustment?",
+    "generated_query": "Cóndor, we need an immediate burn plan—station’s altitude just dropped below 408 km. What’s the quickest safe adjustment?",
     "word_count": 18
   }
 ]

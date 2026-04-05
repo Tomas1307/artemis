@@ -140,7 +140,7 @@
     "difficulty": "medium",
     "phrasing_index": 1,
     "tool_call": "control_system(module='condor',system='ventilation',action='decrease')",
-    "generated_query": "Condor, reduce the ventilation flow—Commander Reyes reports the air circulation is too high and needs adjustment.",
+    "generated_query": "Cóndor, reduce the ventilation flow—Commander Reyes reports the air circulation is too high and needs adjustment.",
     "word_count": 16
   },
   {
@@ -194,7 +194,7 @@
     "difficulty": "medium",
     "phrasing_index": 5,
     "tool_call": "no_action",
-    "generated_query": "Can someone pull the mission history for the Kuntur Station's deployment of the Colibrí module during the Condor-7 mission?",
+    "generated_query": "Can someone pull the mission history for the Kuntur Station's deployment of the Colibrí module during the Cóndor-7 mission?",
     "word_count": 19
   }
 ]

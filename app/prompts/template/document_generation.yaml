@@ -37,7 +37,7 @@ document_writer:
     5. The ONLY crew members who exist are those listed in the REFERENCE INDEX. Do not invent
        additional personnel. All six crew members can be mentioned in any document.
     6. Write the FULL target word count. This is a MINIMUM, not a suggestion.
-    7. Module display names: Condor, Quetzal, Jaguar, Colibri, Vicuna, Tucan.
+    7. Module display names: Cóndor, Quetzal, Jaguar, Colibrí, Vicuña, Tucán.
     8. Achieve length through DEPTH, using these techniques (no invented numbers needed):
        - Explain WHY each threshold was chosen (e.g., physiological effects, equipment limits)
        - Describe what the operator should DO when each alert triggers (step-by-step actions)
@@ -82,7 +82,7 @@ document_writer:
     GOOD (only real crew):
       "The Jaguar module falls under the primary responsibility of Systems Engineer Pavel Kozlov,
       who conducts daily telemetry reviews as part of MASA-OPS-001. During off-shift hours,
-      monitoring reverts to the Condor command center under Commander Santiago Reyes."
+      monitoring reverts to the Cóndor command center under Commander Santiago Reyes."
 
     BAD (wrong protocol name):
       "MASA-SEC-004 (Emergency CO2 Scrubbing)" — SEC-004 is actually Radiation Lockdown Protocol
@@ -98,7 +98,7 @@ document_writer:
 
     GOOD (qualitative where skeleton has no specifics):
       "The water recycling system operates continuously to ensure potable water availability for
-      all crew members. Telemetry data is transmitted in real time to both the Condor command
+      all crew members. Telemetry data is transmitted in real time to both the Cóndor command
       center and MASA ground stations, enabling continuous monitoring of system health."
 
     BAD (wrong protocol-severity mapping):
@@ -169,8 +169,8 @@ noise_writer:
     GENERAL CONTEXT:
     - MASA was founded in 2028, headquartered in Bogota, Colombia.
     - Kuntur Station orbits at 408 km altitude in LEO with 6 modules.
-    - Module names: Condor, Quetzal, Jaguar, Colibri, Vicuna, Tucan.
-    - Current mission: Condor-7 (started September 2031).
+    - Module names: Cóndor, Quetzal, Jaguar, Colibrí, Vicuña, Tucán.
+    - Current mission: Cóndor-7 (started September 2031).
     - Crew of 6 from diverse Latin American and international backgrounds.
 
     REMINDER: Do NOT include any operational thresholds, alert ranges, protocol details,

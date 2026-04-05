@@ -97,12 +97,12 @@ Station: Kuntur Station (LEO, 6 modules)
 
 | Module  | Function                        | Notes                    |
 |---------|---------------------------------|--------------------------|
-| Condor  | Command and control             | Main module              |
+| Cóndor  | Command and control             | Main module              |
 | Quetzal | Science laboratory              | 4 crew, 12 workstations  |
 | Jaguar  | Life support & critical systems | Class A redundancy       |
-| Colibri | Communications & navigation     | Long-range antennas      |
-| Vicuna  | Storage & cargo                 | Docking port             |
-| Tucan   | Crew quarters                   | 6 individual cabins      |
+| Colibrí | Communications & navigation     | Long-range antennas      |
+| Vicuña  | Storage & cargo                 | Docking port             |
+| Tucán   | Crew quarters                   | 6 individual cabins      |
 
 ## 10 Tools (all enum params, no free text)
 
@@ -137,17 +137,33 @@ Example: `get_telemetry(module='jaguar',metric='temperature',timeframe_hours=4)`
 ```
 proyecto_artemis/
   base_conocimiento/
-    documentos_masa.json              <- ~60-80 technical docs
+    documentos_masa.json              <- 54 technical docs index
+    MASA-DOC-XXX/doc.md              <- individual document files
   datos_entrenamiento/
-    train_tool_calls.json             <- query -> correct tool call
-    consultas_centro_control.json     <- (query, doc_id) pairs for encoder hints
-    bitacora_incidentes.json          <- complete incident scenarios
+    data.csv                          <- 2758 queries with tool_call (student training)
+    consultas_centro_control.json     <- 800 (query, doc_id) pairs for encoder training
+    gold_standard.json                <- internal answer key with metadata (not for students)
   evaluacion/
-    test_queries.csv                  <- Kaggle queries (~1000)
-    sample_submission.csv
+    test_queries.csv                  <- 307 queries without answers (Kaggle evaluation)
+    sample_submission.csv             <- example submission format
+    test_gold_standard.json           <- test answers for grading (not for students)
   tools_definition.json               <- 10 tools definition
   README.md
 ```
+
+## CRITICAL DESIGN RULES — QUESTION TYPES AND DOCUMENTS
+
+Two question types coexist by design (per preliminar_task.md):
+
+1. **RAG-dependent**: Query has sensor readings but NOT severity/protocol_id. Student MUST retrieve the correct MASA-SEC protocol doc to determine the answer (send_alert, activate_protocol). doc_id mapping is critical and must be saved.
+
+2. **Direct**: Query contains all params needed for the tool call. The doc doesn't determine the tool call — this is valid per the spec ("No todos los queries contienen suficiente informacion" = SOME need docs, not ALL).
+
+Direct questions CAN map to documents but the docs don't necessarily help determine the tool call. Don't conflate "encoder should learn to retrieve broadly" with "every question's answer depends on a doc." These are different training signals:
+- **consultas_centro_control.json** teaches the encoder to retrieve across ALL 60 docs
+- **gold_standard.json** doc_ids mark which docs the decoder actually needs for RAG-dependent answers
+
+Never again: generate questions without saving doc_id for RAG-dependent ones. Always save the seed metadata through to the output.
 
 ## Key Constraints
 

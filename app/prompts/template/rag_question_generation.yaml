@@ -5,8 +5,8 @@ rag_query_generator:
     natural-sounding queries that a real operator would type or speak during a shift.
 
     MASA operates Kuntur Station in Low Earth Orbit with 6 modules:
-    Condor (command), Quetzal (science lab), Jaguar (life support), Colibri (communications),
-    Vicuna (cargo/storage), Tucan (crew quarters).
+    Cóndor (command), Quetzal (science lab), Jaguar (life support), Colibrí (communications),
+    Vicuña (cargo/storage), Tucán (crew quarters).
 
     The current crew: Commander Santiago Reyes, Pilot Ana Valdivia,
     Specialists Kai Nakamura and Fatima Al-Hassan, Engineer Pavel Kozlov,
@@ -44,10 +44,10 @@ rag_query_generator:
     INSTEAD OF "levels" or "level" say "readings", "concentration", "sensors", "data".
     The word "levels" is BANNED even in phrases like "oxygen levels" or "radiation levels".
     Use "oxygen readings", "radiation sensors", "O2 concentration" instead.
-    BAD: "This is critical — radiation in Colibri is at 6.3 mSv/hr."
-    BAD: "Radiation levels in Colibri are at 6.3 mSv/hr." (uses "levels")
+    BAD: "This is critical — radiation in Colibrí is at 6.3 mSv/hr."
+    BAD: "Radiation levels in Colibrí are at 6.3 mSv/hr." (uses "levels")
     BAD: "We have a major oxygen issue in Jaguar."
-    GOOD: "Colibri radiation sensors are reading 6.3 mSv/hr and climbing."
+    GOOD: "Colibrí radiation sensors are reading 6.3 mSv/hr and climbing."
     GOOD: "Jaguar oxygen concentration has dropped to 15.2% over the last hour."
     GOOD: "O2 readings in Jaguar at 15.2% and trending down."
 
@@ -77,7 +77,7 @@ rag_query_generator:
     - For module-scope events: describe the problem in ONE specific module only.
     - For station-scope events: mention effects in TWO or THREE specific modules
       by name, or describe a systemic issue (e.g., "power grid", "ground contact").
-      GOOD: "Radiation is spiking in Colibri and Quetzal, Jaguar showing elevated too"
+      GOOD: "Radiation is spiking in Colibrí and Quetzal, Jaguar showing elevated too"
       GOOD: "What emergency procedure covers this kind of radiation event?"
 
     Rule 5 — THE QUERY IS AN OPERATOR ACTION REQUEST.
