@@ -1,0 +1,90 @@
+MASA-DOC-001|128|How does the Cóndor module ensure thermal management for both crew and electronics?
+MASA-DOC-001|223|What systems are integrated into the Cóndor module to support continuous operational readiness?
+MASA-DOC-001|238|Which control node within the Cóndor module handles orbital mechanics and attitude control?
+MASA-DOC-001|284|Which module serves as the central hub for station-wide monitoring and telemetry processing?
+MASA-DOC-001|285|Which crew roles are specifically assigned to operate within the Cóndor module?
+MASA-DOC-001|349|How many primary control nodes are part of the command architecture in the Cóndor module?
+MASA-DOC-001|411|What is the maximum crew capacity of the Cóndor module during normal operations?
+MASA-DOC-001|413|What are the key responsibilities of the Station Management control node in the Cóndor module?
+MASA-DOC-001|477|Which specific environmental systems are managed by the Cóndor module to maintain operational conditions?
+MASA-DOC-001|490|What is the primary function of the Cóndor module aboard Kuntur Station?
+MASA-DOC-001|502|What type of redundancy is implemented in the command pathways of the Cóndor module?
+MASA-DOC-001|619|What is the purpose of the triple-modular redundancy in the flight systems of the Cóndor module?
+MASA-DOC-001|730|Can you verify the altitude range for Kuntur Station’s orbital operations involving the Cóndor module?
+MASA-DOC-001|748|Which module is responsible for executing orbital maneuvers and coordinating communication windows?
+MASA-DOC-001|796|Can you confirm the redundancy level for flight control systems in the primary command module?
+MASA-DOC-002|41|What are the primary functions of the ventilation, heating, and cooling systems in Quetzal?
+MASA-DOC-002|177|Are there redundancy measures in place for Quetzal's environmental control systems?
+MASA-DOC-002|220|What kind of imaging systems are available in the fluid dynamics workstations?
+MASA-DOC-002|249|What is the role of MASA-OPS-009 in relation to the Quetzal module's research activities?
+MASA-DOC-002|295|What distinguishes the Quetzal module from the Jaguar module in terms of functionality?
+MASA-DOC-002|422|Which protocol governs the execution of scientific experiments in the Quetzal module?
+MASA-DOC-002|430|How does the Quetzal module ensure stable environmental conditions for biological studies?
+MASA-DOC-002|440|Can you verify if Research Specialist Kai Nakamura is currently assigned to the Quetzal module?
+MASA-DOC-002|514|How many workstations are available in the Quetzal module, and what is their general purpose?
+MASA-DOC-002|545|What is the maximum number of simultaneous experiments the Quetzal module can support?
+MASA-DOC-002|567|Which workstations are designated for fluid dynamics experiments in the Quetzal module?
+MASA-DOC-002|584|Can you confirm the optimal altitude for the Quetzal module's scientific operations?
+MASA-DOC-002|727|What measures are in place to prevent contamination or data corruption during experiments?
+MASA-DOC-002|736|Which disciplines are supported by the Quetzal module's experimental capabilities?
+MASA-DOC-002|743|What is the current crew capacity of the Quetzal module, and who are the assigned research specialists?
+MASA-DOC-003|126|Commander Alvez wants to know the exact parameters for temperature, pressure, and oxygen levels in Jaguar
+MASA-DOC-003|127|What are the minimum and maximum oxygen levels that Jaguar should maintain for crew safety and why?
+MASA-DOC-003|182|Commander Alvez reports the backup CO2 scrubber just activated. What's the failover threshold that would 
+MASA-DOC-003|200|We need to verify the redundancy architecture for the water recycling system. Is it also part of the dual
+MASA-DOC-003|292|Can you confirm if the Jaguar module has any crew workstations or if it's purely for life support operati
+MASA-DOC-003|368|Engineer Silva is reporting unusual temperature readings. Should we expect any automatic system response 
+MASA-DOC-003|534|What modules have docking ports, since we know Jaguar doesn’t have any?
+MASA-DOC-003|557|We're seeing a pressure fluctuation in Kuntur Station. What is the operational pressure range that Jaguar
+MASA-DOC-003|569|How many crew members can the Jaguar module support simultaneously according to its design specifications
+MASA-DOC-003|610|What's the redundancy class of the Jaguar module's life support systems and what does it entail?
+MASA-DOC-003|701|The lighting system in Jaguar seems to be malfunctioning. Is this part of the Class A redundancy or a sep
+MASA-DOC-003|719|What happens if the primary oxygen generation system fails? How quickly should the backup take over?
+MASA-DOC-003|770|What is the temperature range that the Jaguar module maintains to prevent condensation and optimize crew 
+MASA-DOC-003|776|The crew is concerned about potential altitude sickness. What pressure range does Jaguar maintain to prev
+MASA-DOC-003|789|We're preparing for an emergency scenario. How does Jaguar ensure uninterrupted life support during a sin
+MASA-DOC-004|5|What are the differences between the Colibrí module and other modules like Jaguar or Quetzal?
+MASA-DOC-004|129|What environmental thresholds are monitored in real time within the Colibrí module?
+MASA-DOC-004|230|Can you confirm the operational pressure thresholds for the Colibrí module to maintain structural integri
+MASA-DOC-004|234|What is the normal temperature range for the Colibrí module to ensure optimal antenna performance?
+MASA-DOC-004|252|Who is the primary crew member responsible for overseeing communication protocols in the Colibrí module?
+MASA-DOC-004|255|What is the frequency band used by the long-range antenna array in the Colibrí module?
+MASA-DOC-004|308|What are the consequences of temperature fluctuations outside the normal range in the Colibrí module?
+MASA-DOC-004|330|What is the role of the Colibrí module in Kuntur Station's operations?
+MASA-DOC-004|342|Can you explain the automated alert system for environmental deviations in the Colibrí module?
+MASA-DOC-004|403|What type of life support systems are integrated into the Colibrí module?
+MASA-DOC-004|511|What steps are taken to prevent system failures in the Colibrí module that could disrupt station operatio
+MASA-DOC-004|578|Does the Colibrí module have any docking ports or crew cabins?
+MASA-DOC-004|598|Why is the Colibrí module considered pivotal for station-wide connectivity and positional accuracy?
+MASA-DOC-004|627|How does the Colibrí module relay critical data between Kuntur Station and MASA’s ground control centers?
+MASA-DOC-004|629|How does the long-range antenna array in the Colibrí module handle high solar activity or orbital interfe
+MASA-DOC-005|84|Can you confirm the names of the specialists typically assigned to oversee Vicuña module operations?
+MASA-DOC-005|113|What is the primary function of the Vicuña module on Kuntur Station?
+MASA-DOC-005|146|Can you verify if the Vicuña module supports both automated and manual docking operations?
+MASA-DOC-005|259|How many external docking ports does the Vicuña module have, and what redundancy features do they include
+MASA-DOC-005|262|What role does the Vicuña module play in the distribution of supplies to other modules?
+MASA-DOC-005|306|What is the maximum crew capacity of the Vicuña module during active cargo operations?
+MASA-DOC-005|323|Does the Vicuña module house perishable scientific samples, and if so, how are they protected?
+MASA-DOC-005|358|What types of sensitive materials are commonly stored in the Vicuña module?
+MASA-DOC-005|476|Which MASA operational procedure governs docking and undocking for the Vicuña module?
+MASA-DOC-005|498|What is the compliance standard for the docking interface used by the Vicuña module?
+MASA-DOC-005|503|What environmental systems are calibrated in Vicuña to maintain stability for sensitive cargo?
+MASA-DOC-005|611|Which other modules on Kuntur Station are mentioned as having different functions compared to Vicuña?
+MASA-DOC-005|690|Does the Vicuña module have any permanent workstations or crew cabins?
+MASA-DOC-005|704|Which MASA operational procedure covers cargo transfers and inventory updates in Vicuña?
+MASA-DOC-005|761|Is the Vicuña module capable of maintaining environmental stability during undocked phases?
+MASA-DOC-006|180|We’ve got a report of uneven heating in Cabin 3—what’s the standard temperature range we should be mainta
+MASA-DOC-006|195|We need to verify the oxygen level range that the Tucán module is supposed to maintain for safe operation
+MASA-DOC-006|246|We’re preparing for a new crew rotation—how many individual cabins does the Tucán module have?
+MASA-DOC-006|298|We’re reviewing emergency protocols—at what radiation level does the module trigger a station-wide alert?
+MASA-DOC-006|299|A crew member is experiencing static shocks in their cabin—what’s the lower humidity limit we should chec
+MASA-DOC-006|363|The commander is asking about the design purpose of the Tucán module—can you summarize its primary functi
+MASA-DOC-006|482|One of the crew reported feeling cold in their cabin—what’s the minimum allowed temperature before we nee
+MASA-DOC-006|483|We're seeing a humidity reading of 65% in the Tucán module—should we adjust the system immediately?
+MASA-DOC-006|518|There’s a discrepancy in the environmental logs—what’s the exact upper limit for oxygen percentage in the
+MASA-DOC-006|552|What is the normal temperature range maintained in the Tucán module for crew comfort and safety?
+MASA-DOC-006|684|The medical officer wants to know the maximum normal radiation exposure level in the module before taking
+MASA-DOC-006|697|During a routine check, we noticed power consumption in Tucán is at 82%—is this within normal operational
+MASA-DOC-006|724|Can you confirm the atmospheric pressure thresholds the Tucán module is designed to maintain?
+MASA-DOC-006|741|The life support team needs to know the normal pressure range to calibrate the backup systems—can you pro
+MASA-DOC-006|766|The radiation monitor just alerted us to a spike—what’s the critical exposure threshold that triggers sta

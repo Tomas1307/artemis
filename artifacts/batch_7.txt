@@ -1,0 +1,90 @@
+MASA-DOC-037|19|What is the mandatory response protocol if radiation levels exceed safe thresholds on Kuntur Station?
+MASA-DOC-037|96|Are there any additional safety protocols besides MASA-SEC-001 and MASA-SEC-002 that apply to station hab
+MASA-DOC-037|106|What is the specific altitude of Kuntur Station’s orbit as mentioned in the regulations?
+MASA-DOC-037|162|Which modules on Kuntur Station are required to follow the uniform regulations outlined by MASA?
+MASA-DOC-037|212|Which protocol should be initiated in the event of a sudden pressure loss in the Jaguar module?
+MASA-DOC-037|328|Under what authority was the current regulatory framework for the Cóndor-7 mission established?
+MASA-DOC-037|400|Can you confirm the start date of the Cóndor-7 mission as referenced in the regulations?
+MASA-DOC-037|497|Who is responsible for ensuring compliance with the regulatory framework across all modules?
+MASA-DOC-037|499|What is the title of the protocol that governs preventive maintenance tasks on Kuntur Station?
+MASA-DOC-037|521|Can you clarify if the Radiation Lockdown Protocol applies to all modules or only specific ones?
+MASA-DOC-037|542|Can you confirm whether the Oxygen Depletion Response protocol applies to the Quetzal module?
+MASA-DOC-037|630|What are the primary environmental factors considered in the regulatory framework for LEO operations?
+MASA-DOC-037|675|How often are crew members required to perform the Daily System Health Check procedure?
+MASA-DOC-037|691|Which previous missions contributed to the lessons learned for the current regulatory framework?
+MASA-DOC-037|759|Are there any exceptions to the compliance requirements for crew members based on nationality?
+MASA-DOC-038|139|Are there any crew actions required beyond the automated response during a radiation lockdown?
+MASA-DOC-038|283|Why is the radiation threshold set at 5.0 mSv/hour—what’s the health impact above that level?
+MASA-DOC-038|287|What’s the worst-case timeline for losing consciousness if oxygen levels fall below 14% and we don’t resp
+MASA-DOC-038|372|Can you confirm whether the emergency oxygen comes from Jaguar or another module during a depletion event
+MASA-DOC-038|486|Is the oxygen depletion response activated immediately when we hit 14.0%, or is there a short buffer peri
+MASA-DOC-038|516|What’s the minimum pressure threshold that triggers the rapid decompression response protocol?
+MASA-DOC-038|519|Why does the rapid decompression protocol only affect the module where it’s detected instead of the whole
+MASA-DOC-038|549|Commander Rodriguez is reporting oxygen levels dropping fast in the Koda module—what’s the exact percenta
+MASA-DOC-038|585|We’re seeing a temperature spike in the lab—how many degrees per minute rise triggers the thermal runaway
+MASA-DOC-038|593|What’s the physiological reason we don’t let oxygen drop below 14% before responding?
+MASA-DOC-038|614|How does the station handle radiation events, and at what dose rate does it switch from module-specific t
+MASA-DOC-038|674|Commander Silva wants to know: once a rapid decompression is detected, how quickly do we need to seal the
+MASA-DOC-038|721|Why do we have an 85 kPa threshold for pressure drops instead of something higher or lower?
+MASA-DOC-038|773|We’ve got a steady temperature rise in the habitat module—how quickly must it be increasing to trigger SE
+MASA-DOC-038|774|What happens if both fire and thermal runaway are detected at the same time in the same module?
+MASA-DOC-039|36|What happens if humidity levels drop below 30% in the Vicuña module?
+MASA-DOC-039|98|Where are consumables like food and water stored in the Vicuña module?
+MASA-DOC-039|120|What measures are taken to prevent desiccation of food supplies in Vicuña?
+MASA-DOC-039|204|What is the purpose of the external docking port on the Vicuña module?
+MASA-DOC-039|242|At what temperature does the Vicuña module trigger a critical emergency alert?
+MASA-DOC-039|270|Which section of Vicuña houses scientific equipment and experiment materials?
+MASA-DOC-039|366|Where is the primary cargo bay and storage facility for Kuntur Station located?
+MASA-DOC-039|405|What type of supplies require the most stringent environmental parameters in Vicuña?
+MASA-DOC-039|425|What is the humidity range that prevents mold growth in food supplies?
+MASA-DOC-039|449|What is the normal operating temperature range for the Vicuña module?
+MASA-DOC-039|581|What are the designated storage zones for medical supplies in Vicuña?
+MASA-DOC-039|602|What is the normal humidity range for the Vicuña module?
+MASA-DOC-039|637|What is the maximum temperature before a low-severity alert is triggered in Vicuña?
+MASA-DOC-039|746|Which protocol is activated if temperatures exceed 65.0°C in the Vicuña module?
+MASA-DOC-039|787|What are the six primary supply categories in the Vicuña module?
+MASA-DOC-040|25|What’s the expected time for one complete orbit around Earth?
+MASA-DOC-040|77|Which module handles navigation and long-range communications?
+MASA-DOC-040|100|What’s the primary cause of orbital decay that requires station-keeping?
+MASA-DOC-040|172|How frequently are orbital adjustments usually required?
+MASA-DOC-040|265|What factors influence the station’s orbital plane inclination?
+MASA-DOC-040|326|Can you confirm the exact orbital inclination angle of the station?
+MASA-DOC-040|443|What’s the acceptable pressure range in the navigation module?
+MASA-DOC-040|510|At what altitude does Kuntur Station maintain its circular orbit?
+MASA-DOC-040|576|What’s the purpose of the Colibrí module’s thermal management range?
+MASA-DOC-040|582|How long is the typical communication window with Quito?
+MASA-DOC-040|607|How often does Kuntur pass over the Quito ground station?
+MASA-DOC-040|608|Who is responsible for overseeing trajectory calculations on board?
+MASA-DOC-040|618|What is the current nominal orbital velocity for Kuntur Station?
+MASA-DOC-040|717|What are the standard temperature limits for the Colibrí module?
+MASA-DOC-040|795|What are the oxygen level requirements for the Colibrí module?
+MASA-DOC-041|48|Can you confirm the humidity parameters that trigger a low-severity alert in the research module?
+MASA-DOC-041|131|What is the normal operating temperature range for the Quetzal module during scientific experiments?
+MASA-DOC-041|186|The plant growth study team wants to know if they can adjust the temperature outside the standard range—w
+MASA-DOC-041|193|We’ve got a medium-severity humidity alert—what range would that correspond to?
+MASA-DOC-041|207|Can you confirm whether the Quetzal module’s environmental control system handles humidity adjustments au
+MASA-DOC-041|241|We've got a temperature reading of 28.3°C in Quetzal—should we be concerned about the experiments?
+MASA-DOC-041|316|What’s the maximum temperature before we risk compromising the protein crystallization experiments?
+MASA-DOC-041|336|The crew wants to temporarily suspend an experiment due to a humidity alert—what’s the threshold for that
+MASA-DOC-041|388|We’re seeing humidity at 35% in Quetzal—does this require immediate action or just monitoring?
+MASA-DOC-041|389|The combustion study team reported condensation on their optical equipment—what’s the likely cause?
+MASA-DOC-041|464|The life support system just adjusted humidity to 65%—is this within normal operating limits?
+MASA-DOC-041|473|If the temperature hits 35.1°C, what’s the first step the research specialists should take?
+MASA-DOC-041|532|Are there any experiments currently running that require humidity below 40%?
+MASA-DOC-041|554|The crew reports fluctuating temperatures in Quetzal—what’s the acceptable stability range for biological
+MASA-DOC-041|790|What kind of experiments are most sensitive to deviations in the 18.0°C to 26.0°C temperature range?
+MASA-DOC-042|8|Which module does Commander Santiago Reyes oversee during a medical emergency response?
+MASA-DOC-042|110|Can you confirm the duration of each medical examination session and the key health aspects assessed?
+MASA-DOC-042|164|How does the crew's physical fitness program integrate with their medical examination schedule?
+MASA-DOC-042|206|Which module is designated as the primary medical hub for crew health examinations?
+MASA-DOC-042|236|How are the medical systems in the Tucán module integrated with station-wide life support?
+MASA-DOC-042|327|What is the role of the Cóndor command center in a medical emergency?
+MASA-DOC-042|390|Which protocol is activated in case of a medical emergency, and who leads the response?
+MASA-DOC-042|432|What is the focus of Pilot Ana Valdivia’s medical examinations given her duties in the Colibrí module?
+MASA-DOC-042|505|Can you verify the name of the medical officer and their role during a medical emergency?
+MASA-DOC-042|577|How long does each crew member's medical examination last, and what does it include?
+MASA-DOC-042|665|Who are the current crew members, and how are their medical examinations tailored to their roles?
+MASA-DOC-042|678|What specific evaluations does Engineer Pavel Kozlov undergo due to his role in the Jaguar module?
+MASA-DOC-042|679|What is the purpose of MASA-OPS-012, and how often is it conducted?
+MASA-DOC-042|696|What is the weekly schedule for medical examinations and who is responsible for conducting them?
+MASA-DOC-042|751|Which diagnostic systems are available in the Tucán module for medical examinations?

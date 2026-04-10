@@ -72,7 +72,7 @@ def load_data(sample_size: int | None, test_only: bool) -> tuple[list[dict], lis
 
     test_queries = []
     test_gold = json.loads(TEST_GOLD_PATH.read_text(encoding="utf-8"))
-    gold_by_id = {g["id"]: g["tool_call"] for g in test_gold}
+    gold_by_id = {g["question_id"]: g["tool_call"] for g in test_gold}
     with open(TEST_CSV_PATH, encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:

@@ -1,0 +1,90 @@
+MASA-DOC-025|44|Pilot Valdivia, please verify the last orbital adjustment you performed and the protocol you followed
+MASA-DOC-025|52|What was the specific role of Mission Specialist Fatima Al-Hassan during the Cóndor-3 activation?
+MASA-DOC-025|54|What is the full duration of the Cóndor-3 mission, and which crew members were assigned to the Quetzal mo
+MASA-DOC-025|67|Medical Officer Mendoza, when was the last bi-weekly health assessment conducted per standard protocol?
+MASA-DOC-025|99|Which MASA operations protocol governs the crew shift handoff procedures observed during this mission?
+MASA-DOC-025|133|What was the significance of the Cóndor-3 mission in terms of Kuntur Station’s operational transition?
+MASA-DOC-025|268|Commander Reyes, we need to know your shift partner for station-wide oversight during Cóndor-
+MASA-DOC-025|331|Can you confirm the exact start and end dates of the Cóndor-3 mission for log synchronization?
+MASA-DOC-025|380|How many crew members were part of the Cóndor-3 mission, and what was the breakdown of their nationalitie
+MASA-DOC-025|437|Commander Reyes, who shared primary responsibility with you for station-wide oversight?
+MASA-DOC-025|439|Systems Engineer Kozlov, which module were you primarily responsible for during the mission?
+MASA-DOC-025|509|Which protocol did Medical Officer Mendoza follow for conducting health assessments during the mission?
+MASA-DOC-025|551|Pilot Valdivia, which operational document outlines your communication window management procedures?
+MASA-DOC-025|559|Can you confirm the primary objectives achieved during the Cóndor-3 mission, specifically regarding the Q
+MASA-DOC-025|706|Which crew member was responsible for initiating the scientific program in the Quetzal laboratory?
+MASA-DOC-026|10|Can you confirm the start and end dates of the Cóndor-4 emergency thermal repair mission?
+MASA-DOC-026|122|What was the severity level of the alert when the Jaguar module's temperature first began to rise?
+MASA-DOC-026|187|What was the maximum temperature recorded in the Jaguar module before the emergency response was triggere
+MASA-DOC-026|210|What specific action did Engineer Kozlov take when the temperature reached medium-severity alert?
+MASA-DOC-026|218|Who were the two crew members responsible for executing the emergency thermal repair on the Jaguar module
+MASA-DOC-026|247|What was the primary objective of the Cóndor-4 mission, and which module was affected?
+MASA-DOC-026|269|What was the peak temperature recorded in the Jaguar module before the emergency repair mission was initi
+MASA-DOC-026|300|At what temperature threshold would MASA-SEC-003 have been activated during this incident?
+MASA-DOC-026|361|What was the initial cause suspected for the temperature rise in the Jaguar module before it escalated?
+MASA-DOC-026|365|How long did the entire Cóndor-4 emergency repair mission last, and what was the outcome?
+MASA-DOC-026|474|Which protocol governs the routine system health checks where the thermal instability was first noticed?
+MASA-DOC-026|540|What was the critical temperature threshold that would have triggered MASA-SEC-003 during the incident?
+MASA-DOC-026|612|Can you confirm whether the emergency repair mission was successful in restoring the Jaguar module to nor
+MASA-DOC-026|616|Why does the Jaguar module have a lower critical temperature threshold compared to the Quetzal module?
+MASA-DOC-026|745|What was the first operational procedure where the thermal instability in the Jaguar module was detected?
+MASA-DOC-027|101|Which procedure from MASA-OPS-003 was critical for the docking operation?
+MASA-DOC-027|158|Who were the crew members involved in the Cóndor-5 mission?
+MASA-DOC-027|168|What is the design purpose of the Vicuña docking port?
+MASA-DOC-027|178|What types of supplies were included in the 2.4 tonnes of cargo?
+MASA-DOC-027|192|What protocol was triggered by the pressure differential of 3.2 kPa?
+MASA-DOC-027|198|How does the success of Cóndor-5 impact the operational continuity of Kuntur Station?
+MASA-DOC-027|199|How does the minor pressure differential compare to acceptable limits?
+MASA-DOC-027|228|Which docking port was used for the automated supply vessel?
+MASA-DOC-027|351|Were there any incidents during the cargo transfer process?
+MASA-DOC-027|356|How did the crew resolve the minor pressure differential during docking?
+MASA-DOC-027|417|What was the date of the Cóndor-5 mission commencement?
+MASA-DOC-027|455|What role did Engineer Pavel Kozlov play in the mission?
+MASA-DOC-027|478|What was the total mass of supplies transferred during this mission?
+MASA-DOC-027|485|Were there any anomalies during the docking procedure, and how were they resolved?
+MASA-DOC-027|640|What was the total duration of the Cóndor-5 mission?
+MASA-DOC-028|2|Which module did Commander Santiago Reyes oversee, and what were his secondary responsibilities?
+MASA-DOC-028|4|Can you confirm the percentage increase in communication bandwidth achieved by the Colibrí antenna upgrad
+MASA-DOC-028|37|Which module was dedicated to biological research, and who managed it during this mission?
+MASA-DOC-028|60|Can you verify the nationality of Medical Officer Lucía Mendoza and her module assignment?
+MASA-DOC-028|196|Who was responsible for the Colibrí module during the Cóndor-6 mission, and what was their primary role?
+MASA-DOC-028|251|What was the launch date of the Cóndor-6 mission, and how many days did it last?
+MASA-DOC-028|267|How many specialists were part of the Cóndor-6 crew, and what were their cross-trained responsibilities?
+MASA-DOC-028|290|What was the specific role of Pilot Ana Valdivia during the antenna deployment phase?
+MASA-DOC-028|312|What was the primary objective of the Cóndor-6 mission besides the crew rotation?
+MASA-DOC-028|367|What was the exact duration of the crew overlap period during the Cóndor-6 mission transition?
+MASA-DOC-028|395|What was the background of Fatima Al-Hassan, and how did it contribute to the mission?
+MASA-DOC-028|489|Who served as the backup liaison with ground control if Commander Reyes was unavailable?
+MASA-DOC-028|615|When did the Cóndor-6 mission conclude, and what was the final status of the antenna upgrade?
+MASA-DOC-028|644|Who handled life support systems in the Jaguar module, and what’s their full name?
+MASA-DOC-028|651|Which two crew members were assigned to the Quetzal module, and what were their specialties?
+MASA-DOC-029|145|Can you provide the full name and nationality of the Pilot managing the Colibrí module?
+MASA-DOC-029|154|What is the role of Engineer Pavel Kozlov and which module is he assigned to?
+MASA-DOC-029|188|Which protocol ensures 24-hour operational coverage for the Cóndor-7 mission?
+MASA-DOC-029|239|Which protocol governs the daily system health checks for the Cóndor-7 mission?
+MASA-DOC-029|274|Which crew member is responsible for orbital adjustments and docking procedures?
+MASA-DOC-029|321|Who is the Medical Officer on board and which module are they operating from?
+MASA-DOC-029|344|What are the two main operational frameworks under which the Cóndor-7 mission operates?
+MASA-DOC-029|415|What is the central command hub for the Cóndor-7 mission and who is the Commander?
+MASA-DOC-029|433|What is the role of Specialist Kai Nakamura and which module are they assigned to?
+MASA-DOC-029|494|What is the current primary objective of the Cóndor-7 mission and which module is responsible for the mic
+MASA-DOC-029|560|Which specialist is leading the Phase 3 microgravity biology experiments?
+MASA-DOC-029|566|Who is responsible for maintaining the life support and power systems on the Jaguar module?
+MASA-DOC-029|586|Can you confirm the start date of the Cóndor-7 mission and the expected duration?
+MASA-DOC-029|732|Who oversees the crew shift handovers and under which operational protocol?
+MASA-DOC-029|779|Who is the Specialist of Venezuelan descent and what is their primary responsibility?
+MASA-DOC-030|32|How does Commander Reyes foster team cohesion while addressing complex technical challenges?
+MASA-DOC-030|93|Can you describe an instance where Commander Reyes demonstrated his capabilities in high-stakes environme
+MASA-DOC-030|226|What technical systems does Commander Reyes oversee to maintain station functionality?
+MASA-DOC-030|231|How does Commander Reyes integrate the station's modules to ensure seamless operations?
+MASA-DOC-030|244|What operational protocols is Commander Reyes responsible for ensuring compliance with?
+MASA-DOC-030|264|What is Commander Reyes' role in coordinating with MASA ground control?
+MASA-DOC-030|311|What are Commander Reyes' key responsibilities during crew rotations?
+MASA-DOC-030|335|What is Commander Reyes' nationality and how does his background influence his role on Kuntur Station?
+MASA-DOC-030|337|What makes Commander Reyes a cornerstone of Kuntur Station's command structure?
+MASA-DOC-030|370|Can you confirm Commander Reyes' age and his primary area of specialization?
+MASA-DOC-030|573|What university did Commander Reyes attend, and how has his education prepared him for his current role?
+MASA-DOC-030|649|How many years of aerospace experience does Commander Reyes have, and what is his specific expertise?
+MASA-DOC-030|659|How does Commander Reyes' systems engineering background contribute to managing station emergencies?
+MASA-DOC-030|667|In what ways does Commander Reyes maintain crew safety and operational excellence on Kuntur Station?
+MASA-DOC-030|723|What leadership qualities does Commander Reyes exhibit that are critical for Kuntur Station operations?

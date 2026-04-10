@@ -1,0 +1,90 @@
+MASA-DOC-050|68|How did MASA’s founding vision emphasize both independence and global integration in space exploration?
+MASA-DOC-050|104|What role does MASA play in coordinating the efforts of national space agencies across the continent?
+MASA-DOC-050|189|What specific challenges did MASA aim to address by consolidating regional space efforts?
+MASA-DOC-050|190|How did MASA’s creation reflect the continent’s cultural heritage while embracing future space exploratio
+MASA-DOC-050|329|Can you confirm the year MASA was officially founded and where its headquarters is located?
+MASA-DOC-050|431|Which countries were primarily involved in the early satellite programs that laid the foundation for MASA
+MASA-DOC-050|456|Can you outline the collaborative framework MASA established with existing national space agencies?
+MASA-DOC-050|465|What was the driving vision behind the creation of MASA in terms of regional collaboration?
+MASA-DOC-050|597|What symbolic significance did MASA’s founding hold for Latin America as a whole?
+MASA-DOC-050|683|How did MASA intend to amplify the impact of South American contributions to global space exploration?
+MASA-DOC-050|693|Why was Bogotá chosen as the location for MASA’s headquarters?
+MASA-DOC-050|700|Which South American country had made significant advancements in rocket technology before MASA’s formati
+MASA-DOC-050|744|How did MASA aim to change the dynamic of Latin America’s space exploration efforts compared to previous 
+MASA-DOC-050|793|What were the long-term aspirations of MASA in terms of Latin America’s presence in space?
+MASA-DOC-050|794|What were the key motivations behind uniting South America’s scientific and technological strengths under
+MASA-DOC-051|159|How does the condor’s role in *Hanan Pacha* align with the station’s orbital mission?
+MASA-DOC-051|296|Why does MASA emphasize the fusion of technology and cultural pride in the station’s naming?
+MASA-DOC-051|391|Why did MASA choose to name the station’s modules after Andean and Mesoamerican fauna?
+MASA-DOC-051|435|I need to confirm the cultural resonance of the fauna-based naming convention for the modules
+MASA-DOC-051|479|I’ve got a media inquiry—what’s the deeper significance of the condor in indigenous South American cultur
+MASA-DOC-051|571|A visitor asked about the spiritual symbolism of the condor in relation to the station’s purpose
+MASA-DOC-051|600|Can you explain the connection between the condor’s ability to soar and the station’s mission?
+MASA-DOC-051|601|What’s the reasoning behind embedding Quechua language and Andean mythology into the station’s identity?
+MASA-DOC-051|621|Can you summarize the symbolic weight of the quetzal module’s namesake for the press release?
+MASA-DOC-051|623|What is the cultural significance behind the name *Kuntur* for the orbital station?
+MASA-DOC-051|663|Can you remind me why the *Cóndor* module is considered the heart of Kuntur Station?
+MASA-DOC-051|669|During the cultural briefing, what’s the symbolic meaning of the quetzal bird in Mesoamerican traditions?
+MASA-DOC-051|722|I need a quick refresher on the Andean mythology tied to the condor’s association with the upper world
+MASA-DOC-051|735|What does *kuntur* translate to in Quechua, and why was it selected for the station?
+MASA-DOC-051|775|Why does the *Cóndor* module specifically represent leadership and exploration?
+MASA-DOC-052|3|What is the typical duration for completing the MASA Astronaut Training Program from selection to spacefl
+MASA-DOC-052|47|Is there a specific fitness assessment that candidates must pass to demonstrate endurance for spaceflight
+MASA-DOC-052|51|During the hands-on training phase, do trainees receive specific instruction on the Cóndor module’s life 
+MASA-DOC-052|111|How does the program ensure that trainees are adaptable to the emotional demands of long-duration mission
+MASA-DOC-052|136|What are the primary physical selection criteria that candidates must meet to qualify for the astronaut t
+MASA-DOC-052|225|How has the astronaut training program evolved since MASA’s founding in 2028 to address Kuntur Station’s 
+MASA-DOC-052|314|Which phase of the training program includes emergency protocols and microgravity adaptation exercises?
+MASA-DOC-052|452|What is the primary focus of the initial phase of the MASA Astronaut Training Program?
+MASA-DOC-052|558|Which module on Kuntur Station is typically introduced first during the theoretical training phase?
+MASA-DOC-052|579|How does the training program accommodate individuals with diverse professional backgrounds, such as engi
+MASA-DOC-052|580|Are there any simulations of microgravity dynamics included in the hands-on training phase?
+MASA-DOC-052|624|Are there any psychological resilience assessments included in the selection process for astronaut candid
+MASA-DOC-052|639|What theoretical subjects are covered in the foundational knowledge phase of the training program?
+MASA-DOC-052|668|Can you confirm the names of all six modules on Kuntur Station that trainees must study during their foun
+MASA-DOC-052|695|What kind of medical evaluations are required to ensure candidates can withstand the physical stresses of
+MASA-DOC-053|92|Which module was designed to house the life support systems, and which country led its construction?
+MASA-DOC-053|124|During the initial phase, which two modules were named after birds symbolizing cultural heritage from Mes
+MASA-DOC-053|150|The crew is asking about the original purpose of the Colibrí module—can you provide details on its microg
+MASA-DOC-053|216|We need to cross-check the manufacturing locations—was the Cóndor module built in Argentina or Peru?
+MASA-DOC-053|271|We're reviewing the manufacturing timeline—were the Vicuña and Tucán modules completed before the end of 
+MASA-DOC-053|276|Can you tell us which module was inspired by an Andean bird and served as the station's command center?
+MASA-DOC-053|341|The team wants to know which module was designed for scientific research and which country contributed to
+MASA-DOC-053|392|Which module was designated as the primary hub for command and control operations during Kuntur Station's
+MASA-DOC-053|424|Can you confirm the names of the two modules responsible for crew living quarters and logistics support?
+MASA-DOC-053|493|Can you confirm whether the manufacturing phase for all six modules was completed by the end of 2029?
+MASA-DOC-053|529|Between 2028 and 2029, which module was being constructed in Peru for crew accommodations?
+MASA-DOC-053|636|During the manufacturing phase, which country was responsible for the assembly of the Jaguar module?
+MASA-DOC-053|698|We need to verify the origin of the Tucán module's assembly—was it built in Colombia or Brazil?
+MASA-DOC-053|738|The Quetzal module was named after a significant cultural symbol—what was its primary function on Kuntur 
+MASA-DOC-053|753|What was the intended purpose of the Colibrí module when it was first designed?
+MASA-DOC-054|18|Can you confirm the three core principles of MASA's public communication strategy?
+MASA-DOC-054|42|What is the primary focus of MASA's educational initiatives in schools?
+MASA-DOC-054|88|Can you list the types of platforms MASA uses for public communication?
+MASA-DOC-054|116|Which languages are used in MASA's public updates and educational materials?
+MASA-DOC-054|215|What is the name of the educational program that provides free lesson plans to teachers?
+MASA-DOC-054|240|Which city serves as the headquarters for MASA's operations?
+MASA-DOC-054|258|What is the name of the space station mentioned in the educational outreach programs?
+MASA-DOC-054|286|What year was MASA founded according to our records?
+MASA-DOC-054|385|What is the intended tone of MASA's public communications?
+MASA-DOC-054|398|Which program is designed to bring MASA's mission into classrooms across Latin America?
+MASA-DOC-054|556|What is the name of the initiative that shares behind-the-scenes content from the space station?
+MASA-DOC-054|599|How many languages does MASA use to share updates and educational content?
+MASA-DOC-054|626|What is the official name of the South American advanced aerospace mission headquarters location?
+MASA-DOC-054|664|What is the main goal of MASA's educational outreach in Latin America?
+MASA-DOC-054|771|Which program includes lessons on microgravity physics and space biology?
+MASA-DOC-055|24|What safety protocols are followed when heating food in the galley?
+MASA-DOC-055|30|Are there any specific snacks provided to accommodate individual energy needs?
+MASA-DOC-055|35|What is the primary module where food preparation takes place on Kuntur Station?
+MASA-DOC-055|45|What factors influence the menu design process for long-duration missions?
+MASA-DOC-055|66|Can you describe the role of the *Colibrí* module in meal preparation?
+MASA-DOC-055|291|Can you confirm the caloric intake requirements for crew members during extravehicular operations?
+MASA-DOC-055|293|What modifications are made to traditional cooking methods in the galley?
+MASA-DOC-055|332|How often are meals scheduled to maintain balanced nutrition throughout the day?
+MASA-DOC-055|339|Are there any cultural considerations taken into account when planning meals?
+MASA-DOC-055|359|Which team members are involved in designing the dietary plans for the station?
+MASA-DOC-055|550|How does the station address variations in crew metabolism due to microgravity?
+MASA-DOC-055|605|How does the station ensure that meals support bone density and muscle mass in microgravity?
+MASA-DOC-055|631|What types of beverages are available to help crew members stay hydrated?
+MASA-DOC-055|673|What backup systems are in place if the primary food preparation equipment fails?
+MASA-DOC-055|762|What measures are in place to prevent food particles from escaping during meal preparation?

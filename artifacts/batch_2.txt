@@ -1,0 +1,90 @@
+MASA-DOC-007|15|According to the atmospheric emergency protocols, what threshold triggers MASA-SEC-009 for toxic atmosphe
+MASA-DOC-007|73|What is the role of Pavel Kozlov as primary atmospheric systems officer under the atmospheric emergency p
+MASA-DOC-007|83|The atmospheric emergency protocols mention a tiered response framework — what severity levels are define
+MASA-DOC-007|151|Per the atmospheric emergency protocols, at what oxygen concentration does MASA-SEC-010 activate versus M
+MASA-DOC-007|161|What is the CO2 concentration threshold that triggers MASA-SEC-009 under the atmospheric emergency protoc
+MASA-DOC-007|179|The atmospheric protocols reference testing at the Alto Atacama Simulation Facility — what thresholds wer
+MASA-DOC-007|219|Under the atmospheric emergency protocols, what is the high-alert pressure band that triggers MASA-SEC-01
+MASA-DOC-007|302|What corrective actions does MASA-SEC-010 require before potential evacuation according to the atmospheri
+MASA-DOC-007|416|The atmospheric emergency protocols define a critical pressure threshold of 85.0 kPa — what physiological
+MASA-DOC-007|496|Oxygen readings in Vicuña are at 15.7% and still dropping—what emergency response should we initiate?
+MASA-DOC-007|589|Which atmospheric emergency protocol addresses chemical contamination and what sensor triggers it?
+MASA-DOC-007|590|Under the atmospheric emergency protocols, what is the difference in scope between critical-severity and 
+MASA-DOC-007|603|The atmospheric protocols describe independent life support systems per module — how does this segmented 
+MASA-DOC-007|676|What monitoring transfer procedure does the atmospheric emergency protocol define for off-shift periods?
+MASA-DOC-007|739|Cóndor pressure sensors are showing 88.1 kPa and declining — Commander Reyes has confirmed the reading. W
+MASA-DOC-008|64|Cóndor's temperature is rising at 4.9 degrees per minute—what emergency procedure should we initiate? Com
+MASA-DOC-008|90|I need to log an alert — Quetzal's temperature is rising at 2.5 degrees per minute. What emergency proced
+MASA-DOC-008|155|Vicuña temperature rate just spiked to 3.5 degrees per minute and still climbing—how should we respond to
+MASA-DOC-008|165|I need to log an alert — Colibrí's temperature is rising at 4.1 degrees per minute. What emergency proced
+MASA-DOC-008|183|Cóndor's temperature is rising at 4.6 degrees per minute—what emergency procedure covers this kind of the
+MASA-DOC-008|184|Kai just reported a rapid temperature rise in Colibrí—sensors are showing 4.8 degrees per minute and clim
+MASA-DOC-008|378|We’ve got a rapid temperature rise in Vicuña—sensors are showing 4.4 degrees per minute and climbing. Wha
+MASA-DOC-008|406|Tucán temperature sensors showing a rise of 2.4 degrees per minute and climbing—what emergency procedure 
+MASA-DOC-008|471|Tucán temperature sensors showing a rise of 2.7 degrees per minute and climbing — what emergency procedur
+MASA-DOC-008|522|Cóndor's temperature is rising at 2.2 degrees per minute—what emergency procedure should we initiate?
+MASA-DOC-008|646|Tucán temperature sensors showing a rapid rise of 3.7 degrees per minute—what emergency response should w
+MASA-DOC-008|672|We’ve got a rapid temperature rise in Quetzal—2.4 degrees per minute and climbing. Kai just reported it—w
+MASA-DOC-008|680|Tucán temperature sensors are showing a rapid rise at 2.6 degrees per minute and still climbing—what emer
+MASA-DOC-008|718|Kai just reported Jaguar's temperature is rising at 4.7 degrees per minute—what emergency response should
+MASA-DOC-008|752|Kai just reported Jaguar's temperature is rising at 4.7 degrees per minute—what emergency response should
+MASA-DOC-009|7|Radiation sensors in Colibrí are reading 1.3 mSv/hr and rising—Commander Reyes wants to know what emergen
+MASA-DOC-009|74|I need to log an alert — Vicuña radiation sensors are reading 2.1 mSv/hr, and Commander Reyes just report
+MASA-DOC-009|107|Radiation sensors in Vicuña are reading 2.4 mSv/hr and climbing—Commander Reyes just reported it. What em
+MASA-DOC-009|118|Tucán radiation sensors are showing 3.9 mSv/hr and rising—what emergency response should we initiate? Com
+MASA-DOC-009|175|Radiation sensors in Vicuña are reading 2.1 mSv/hr and climbing; what emergency procedure do we initiate 
+MASA-DOC-009|354|Tucán radiation sensors are showing 3.9 mSv/hr and rising—Commander Reyes wants this logged as an alert i
+MASA-DOC-009|418|Radiation sensors in Colibrí are reading 3.7 mSv/hr and rising—should we escalate this to command?
+MASA-DOC-009|500|Radiation sensors in Quetzal just spiked to 9.8 mSv/hr—what emergency steps do we take for this scenario?
+MASA-DOC-009|524|Radiation sensors in Vicuña are reading 3.6 mSv/hr and climbing—Commander Reyes just reported it. What em
+MASA-DOC-009|565|Kai just reported radiation sensors in Quetzal are reading 4.4 mSv/hr and rising—should we escalate this 
+MASA-DOC-009|594|Tucán radiation sensors are showing 1.9 mSv/hr and rising—what emergency response should we initiate? Com
+MASA-DOC-009|604|Tucán radiation sensors are at 9.3 mSv/hr and rising—what emergency response should we initiate?
+MASA-DOC-009|645|Radiation sensors in Vicuña are reading 10.4 mSv/hr—what emergency response should we initiate?
+MASA-DOC-009|734|Radiation sensors in Colibrí are reading 6.3 mSv/hr and rising—should we escalate this to command?
+MASA-DOC-009|747|Tucán radiation sensors are at 8.6 mSv/hr and rising—what emergency response should we initiate?
+MASA-DOC-010|31|Tucán hull stress sensors are reading 94.9%—should we log an alert on this?
+MASA-DOC-010|91|Hull stress readings in Quetzal have hit 91.6% — Kai Nakamura reports possible micrometeorite impact. Wha
+MASA-DOC-010|121|Tucán hull stress sensors are reading 90.5%—Engineer Kozlov reports possible micrometeorite impact. What 
+MASA-DOC-010|123|Tucán hull stress sensors are reading 89.1%—what emergency procedure covers this kind of structural anoma
+MASA-DOC-010|157|Hull stress sensors in Colibrí are showing 90.9% and rising — what emergency procedure do we initiate for
+MASA-DOC-010|213|Vicuña hull stress sensors are reading 93.6%—Commander Reyes reports a potential micrometeorite impact. W
+MASA-DOC-010|227|Jaguar hull stress sensors are reading 90.1%—Kai Nakamura noticed it on his console. Should we escalate t
+MASA-DOC-010|320|Airlock equalization rate in Vicuña is now at 0.6 kPa per minute and rising—what emergency procedure shou
+MASA-DOC-010|386|Cóndor hull stress sensors just hit 92.1%—Commander Reyes reports a potential micrometeorite impact. What
+MASA-DOC-010|412|Cóndor hull stress sensors are reading 85.8% and climbing—Reyes just confirmed possible micrometeorite im
+MASA-DOC-010|420|Vicuña hull stress sensors are reading 91.4%—Commander Reyes just reported a possible micrometeorite impa
+MASA-DOC-010|438|Hull stress sensors in Quetzal are showing 91.5% and rising — what emergency procedure do we initiate for
+MASA-DOC-010|538|Ana Valdivia just reported the Quetzal airlock equalization rate is holding at 0.6 kPa per minute — what 
+MASA-DOC-010|606|Cóndor hull stress sensors are reading 91.6% and climbing—Commander Reyes just reported possible micromet
+MASA-DOC-010|756|Hull stress readings in Quetzal have hit 90.5% — Kai Nakamura reports possible micrometeorite impact. Wha
+MASA-DOC-011|78|What is the nominal voltage range defined in the system failure response protocols for MASA-SEC-018?
+MASA-DOC-011|130|According to the system failure protocols, what triggers MASA-SEC-006 for power grid critical failure?
+MASA-DOC-011|171|The system failure response protocols define MASA-SEC-015 for water recycling — what output threshold and
+MASA-DOC-011|248|Under the system failure protocols, what voltage fluctuation percentage triggers MASA-SEC-018?
+MASA-DOC-011|256|The system failure response protocols describe MASA-SEC-007 for communication blackout — how many minutes
+MASA-DOC-011|257|We’ve lost all ground contact through Colibrí—blackout now at 57 minutes and counting. What emergency ste
+MASA-DOC-011|303|What is the rated capacity threshold that triggers MASA-SEC-006 according to the system failure response 
+MASA-DOC-011|305|Per the system failure protocols, what is the minimum water recycling output before MASA-SEC-015 activate
+MASA-DOC-011|426|The system failure protocols specify load shedding as a required action for MASA-SEC-006 — what systems r
+MASA-DOC-011|530|What CO2 scrubber efficiency threshold triggers MASA-SEC-014 under the system failure response protocols?
+MASA-DOC-011|561|According to the system failure protocols, what backup systems are activated when power consumption excee
+MASA-DOC-011|666|The system failure response protocols describe MASA-SEC-017 for airlock failures — what equalization rate
+MASA-DOC-011|714|Under the system failure protocols, what is the scope of MASA-SEC-018 and why is it limited to the affect
+MASA-DOC-011|728|What emergency measures does MASA-SEC-007 require after 30 minutes of ground control communication blacko
+MASA-DOC-011|740|We’ve lost all ground contact through Colibrí—blackout now at 89 minutes and counting. What emergency pro
+MASA-DOC-012|50|Medical Officer Lucía Mendoza just reported crew vitals in Quetzal showing distress—what emergency proced
+MASA-DOC-012|272|Medical Officer Lucía Mendoza just reported crew vitals in Tucán showing distress—what emergency procedur
+MASA-DOC-012|508|Medical Officer Lucía Mendoza just reported crew vitals showing distress in Vicuña—what emergency procedu
+MASA-DOC-012|652|Biological contamination alarm just triggered in Quetzal—readings are showing contamination reported. Wha
+MASA-DOC-012|783|Medical Officer Lucía Mendoza just reported crew vitals showing distress in Cóndor—what emergency procedu
+MASA-DOC-012|800|Control just confirmed simultaneous failures in life support and power distribution — at what point do we
+MASA-DOC-012|801|If we need to evacuate Kuntur Station immediately, which module houses the primary evacuation capsule and
+MASA-DOC-012|802|During an evacuation scenario, who handles the MAYDAY signal transmission and from which module do they o
+MASA-DOC-012|803|Walk me through the crew evacuation order for MASA-SEC-020 — who leads the process and who performs the f
+MASA-DOC-012|804|What specific responsibility does Engineer Pavel Kozlov have during an emergency station evacuation?
+MASA-DOC-012|805|Can the evacuation capsules hold the entire six-person crew complement at once, and what independent syst
+MASA-DOC-012|806|We just got a positive biological contamination reading in the Quetzal lab — who needs to be notified and
+MASA-DOC-012|807|What standardized information is included in the MAYDAY transmission format broadcast during a MASA-SEC-0
+MASA-DOC-012|808|How frequently are the evacuation capsules inspected, and which specific systems receive particular atten
+MASA-DOC-012|809|If the Cóndor module is compromised during an emergency, what alternative evacuation path and capsule doe

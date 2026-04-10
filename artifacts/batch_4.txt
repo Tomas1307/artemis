@@ -1,0 +1,90 @@
+MASA-DOC-019|59|Which module's life support infrastructure is the focus of the bi-weekly MASA-OPS-010 procedure?
+MASA-DOC-019|134|What systems are evaluated for coolant levels and radiator performance during MASA-OPS-002?
+MASA-DOC-019|163|How does the weekly maintenance procedure help prevent oxygen depletion scenarios?
+MASA-DOC-019|209|Who is responsible for executing the weekly preventive maintenance protocol on the station?
+MASA-DOC-019|232|Why is the 240-minute duration considered optimal for the weekly maintenance procedure?
+MASA-DOC-019|348|How often is the MASA-OPS-002 procedure conducted, and what is its primary objective?
+MASA-DOC-019|394|What is the designated day and duration for the Kuntur Station's scheduled preventive maintenance procedu
+MASA-DOC-019|397|What are the risks if life support filter integrity is not verified during scheduled maintenance?
+MASA-DOC-019|454|What specific checks are performed on the life support systems during the weekly maintenance?
+MASA-DOC-019|495|Which emergency protocol could be triggered if power cell testing fails during preventive maintenance?
+MASA-DOC-019|513|Which systems are tested for voltage and capacity during the preventive maintenance checks?
+MASA-DOC-019|533|What are the potential consequences if the thermal systems are not properly maintained during MASA-OPS-00
+MASA-DOC-019|709|What is the frequency of the MASA-OPS-002 procedure, and how does it impact daily station operations?
+MASA-DOC-019|716|Which emergency response protocol would be required if oxygen levels drop due to inadequate maintenance?
+MASA-DOC-019|788|Which modules are covered under the MASA-OPS-002 maintenance procedure?
+MASA-DOC-020|233|What are the primary tasks that initiate an EVA procedure under MASA-OPS-004?
+MASA-DOC-020|282|Who is responsible for overseeing the technical readiness of the Jaguar module’s airlock?
+MASA-DOC-020|345|What is the standard duration for a typical EVA operation from Kuntur Station?
+MASA-DOC-020|407|Which modules house the airlock systems and external tooling required for EVA operations?
+MASA-DOC-020|409|What systems must be verified in the life support checks before an EVA begins?
+MASA-DOC-020|427|What role does the medical officer, Lucía Mendoza, play in the pre-EVA phase?
+MASA-DOC-020|512|During an EVA, what are the designated roles of the lead and support specialists?
+MASA-DOC-020|525|What is the operational scope of MASA-OPS-004 in terms of module involvement?
+MASA-DOC-020|536|What is the protocol for post-EVA debriefings according to the operational procedure?
+MASA-DOC-020|548|Who is the engineer responsible for the Jaguar module’s airlock during EVA preparations?
+MASA-DOC-020|592|How are communications tested to ensure uninterrupted links during an EVA?
+MASA-DOC-020|628|What are the key phases of EVA operations as outlined in the procedure?
+MASA-DOC-020|632|Can you confirm the pre-deployment checks required for structural integrity before an EVA?
+MASA-DOC-020|715|Who are the two specialists responsible for overseeing EVA procedures in the Quetzal module?
+MASA-DOC-020|780|Can you detail the responsibilities of Specialist 1 Kai Nakamura during an EVA?
+MASA-DOC-021|16|Who monitors the telemetry from the Colibrí's navigation systems during docking?
+MASA-DOC-021|40|What is the average duration of the docking procedure from initial approach to secure docking?
+MASA-DOC-021|137|Which module provides navigational support and communication relay during docking?
+MASA-DOC-021|176|What happens if there is a pressure deviation during the docking sequence?
+MASA-DOC-021|205|Who is the primary pilot responsible for overseeing the docking sequence from the Colibrí module?
+MASA-DOC-021|352|Which module serves as the primary docking interface for supply vessels?
+MASA-DOC-021|450|What role does the Colibrí module play in the docking procedure?
+MASA-DOC-021|453|What is the purpose of the pressure hold test conducted after docking?
+MASA-DOC-021|507|What is the backup plan if the docking collar alignment fails during the approach?
+MASA-DOC-021|596|What are the initial steps of the pre-docking checklist that need to be verified?
+MASA-DOC-021|634|What is the name of the commander who provides oversight from the Cóndor command center during docking?
+MASA-DOC-021|657|Which protocols are triggered if there are anomalies in structural or communication systems during dockin
+MASA-DOC-021|677|How is the relative velocity of the supply vessel maintained during the final approach phase?
+MASA-DOC-021|710|What is the maximum allowable pressure deviation before an abort is initiated?
+MASA-DOC-021|754|Which protocol is triggered in case of a communication blackout during docking?
+MASA-DOC-022|28|How frequently are the emergency drills conducted across all modules of Kuntur Station?
+MASA-DOC-022|82|How does the MASA-OPS-015 drill differ from the routine MASA-OPS-001 procedure?
+MASA-DOC-022|94|Which protocol does Systems Engineer Pavel Kozlov need to demonstrate proficiency in during the drills?
+MASA-DOC-022|115|Can you confirm if the MASA-OPS-015 drill includes simulations for module-specific emergencies in Cóndor?
+MASA-DOC-022|138|What is the role of Commander Santiago Reyes during the execution of MASA-OPS-015?
+MASA-DOC-022|149|What is the total duration allocated for each MASA-OPS-015 Emergency Drill session?
+MASA-DOC-022|153|Are crew members required to respond to emergencies in modules other than their primary assignment?
+MASA-DOC-022|217|Are there any exceptions to the bi-weekly frequency of the emergency drills?
+MASA-DOC-022|224|How does the MASA-SEC-006 protocol impact the commander's coordination during a power grid failure?
+MASA-DOC-022|343|Which crew member is responsible for overseeing and evaluating the performance during the emergency drill
+MASA-DOC-022|357|What is the primary objective of the bi-weekly emergency drill schedule mentioned in the procedures?
+MASA-DOC-022|460|What is the expected outcome of the 120-minute duration for each emergency drill session?
+MASA-DOC-022|553|Which emergency protocol involves a radiation lockdown scenario during the drills?
+MASA-DOC-022|641|Which module-specific protocol must Pavel Kozlov be proficient in for Jaguar module operations?
+MASA-DOC-022|763|Can you list the modules involved in the comprehensive emergency drill simulations?
+MASA-DOC-023|34|What systems were initialized following the deployment of the solar arrays?
+MASA-DOC-023|197|When did the Cóndor-1 mission officially conclude, and what was the final status?
+MASA-DOC-023|322|Why was the 408 km altitude specifically chosen for Kuntur Station’s deployment?
+MASA-DOC-023|373|What was the exact duration of the Cóndor-1 mission from start to finish?
+MASA-DOC-023|444|How many orbital adjustment maneuvers were performed during the automated sequence?
+MASA-DOC-023|475|At what altitude was Kuntur Station successfully deployed during the Initial Orbital Insertion?
+MASA-DOC-023|517|Did the Cóndor-1 mission encounter any unexpected issues during the pressurization phase?
+MASA-DOC-023|537|Were all six modules of Kuntur Station functional by the end of the Cóndor-1 mission?
+MASA-DOC-023|564|Were there any deviations from the pre-programmed sequence during the orbital insertion?
+MASA-DOC-023|575|Which modules were pressurized and activated during the Cóndor-1 mission?
+MASA-DOC-023|613|Was there any manual intervention required from the ground crew during the deployment phase?
+MASA-DOC-023|688|What was the first critical milestone after the separation of the Kuntur Station payload from the launch 
+MASA-DOC-023|758|How did the automated deployment sequence ensure the station’s operational integrity?
+MASA-DOC-023|778|What was the role of the solar arrays in the success of the Cóndor-1 mission?
+MASA-DOC-023|792|What was the primary objective of the Cóndor-1 mission, and was it achieved?
+MASA-DOC-024|43|How long after docking did Commander Reyes begin the initial system health check?
+MASA-DOC-024|76|Which module served as the central command hub during station operations?
+MASA-DOC-024|85|What was the rationale behind the lean crew composition for this mission?
+MASA-DOC-024|108|When did the Cóndor-2 mission officially conclude?
+MASA-DOC-024|294|What was the nationality of Engineer Pavel Kozlov, and which module was he assigned to?
+MASA-DOC-024|318|What was the primary objective of the Cóndor-2 mission according to the manifest?
+MASA-DOC-024|382|Which crew member was assigned to the Colibrí module, and what was their primary function?
+MASA-DOC-024|541|Can you confirm the orbital altitude range for Kuntur Station during Cóndor-2?
+MASA-DOC-024|543|What was the first operational procedure initiated by Commander Reyes upon docking?
+MASA-DOC-024|546|Were there any unplanned maintenance activities during the 182-day mission?
+MASA-DOC-024|638|How many crew members were assigned to the Cóndor-2 mission, and what were their roles?
+MASA-DOC-024|705|How many full preventive maintenance cycles were completed during this mission?
+MASA-DOC-024|731|What was the exact duration of the Cóndor-2 mission in days?
+MASA-DOC-024|760|Which document outlines the Daily System Health Check procedure referenced in the report?
+MASA-DOC-024|768|Which crew member was responsible for coordinating station commissioning activities?

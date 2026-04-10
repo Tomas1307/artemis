@@ -1,0 +1,90 @@
+MASA-DOC-031|0|What is Pilot Ana Valdivia's primary specialization that makes her critical for maintaining Kuntur Statio
+MASA-DOC-031|27|How does Valdivia's understanding of orbital mechanics impact docking procedures on Kuntur Station?
+MASA-DOC-031|33|What role did Valdivia play in managing gravitational and radiation conditions during her previous missio
+MASA-DOC-031|201|In what scenarios would Valdivia's expertise in life support systems integration be most critical?
+MASA-DOC-031|288|What is the name of the protocol that Valdivia is particularly vital for during station-wide communicatio
+MASA-DOC-031|289|Can you describe the operational rhythms Valdivia is familiar with from her Cóndor mission experience?
+MASA-DOC-031|399|Can you confirm Ana Valdivia's fluency in languages other than English and how that aids crew communicati
+MASA-DOC-031|436|What makes Valdivia's expertise in communications systems crucial for maintaining contact with ground sta
+MASA-DOC-031|488|During which previous missions did Ana Valdivia gain experience with long-duration spaceflight operations
+MASA-DOC-031|587|Which cultural background does Valdivia bring to the crew, and how does it enhance operational cohesion?
+MASA-DOC-031|681|What university did Ana Valdivia attend for her advanced studies in orbital mechanics?
+MASA-DOC-031|686|What is Ana Valdivia's nationality, and why is her inclusion significant for the MASA program?
+MASA-DOC-031|737|Can you verify Ana Valdivia's age and how it relates to her experience level in the crew?
+MASA-DOC-031|765|How many years of experience does Valdivia have in orbital navigation and communications systems?
+MASA-DOC-031|782|Which MASA protocol involving communication failures is Valdivia specifically trained to handle at high s
+MASA-DOC-032|86|What specific maintenance protocols has Kai Nakamura's research informed for station components?
+MASA-DOC-032|140|What is Science Specialist Nakamura's age and how might it relate to his mission experience?
+MASA-DOC-032|144|What was Kai Nakamura's previous orbital mission before joining Kuntur Station?
+MASA-DOC-032|174|What specific scientific research is supported by Nakamura's expertise in the Quetzal module?
+MASA-DOC-032|243|What is Science Specialist Kai Nakamura's current module assignment on Kuntur Station?
+MASA-DOC-032|253|Can you confirm the duration of Kai Nakamura's previous orbital research mission?
+MASA-DOC-032|319|How does Kai Nakamura's materials science background contribute to station maintenance?
+MASA-DOC-032|383|Can you confirm the nationalities represented in Kai Nakamura's background?
+MASA-DOC-032|421|How many years of professional experience does Kai Nakamura have in astrophysics?
+MASA-DOC-032|459|Which module's cosmic radiation studies benefit from Kai Nakamura's astrophysics specialization?
+MASA-DOC-032|461|Could you verify Kai Nakamura's educational background in both Brazil and Japan?
+MASA-DOC-032|480|Could you list the key areas where Kai Nakamura's dual expertise in astrophysics and materials science is
+MASA-DOC-032|572|How does Kai Nakamura's multicultural background enhance international collaboration on Kuntur Station?
+MASA-DOC-032|633|What are the primary functions of the Quetzal module where Kai Nakamura is currently assigned?
+MASA-DOC-032|769|Which languages is Science Specialist Nakamura fluent in for crew communications?
+MASA-DOC-033|132|How does Al-Hassan’s background in closed-loop ecosystems benefit the biological experiments on Kuntur St
+MASA-DOC-033|191|What is the significance of Al-Hassan’s role in maintaining experimental integrity during unexpected syst
+MASA-DOC-033|221|How does Al-Hassan’s work in the Quetzal module impact the overall life support systems of Kuntur Station
+MASA-DOC-033|263|What is Fatima Al-Hassan's nationality and how does her cultural background influence her work on Kuntur 
+MASA-DOC-033|301|What was the duration of her previous mission on Cóndor-6, and what were her key responsibilities?
+MASA-DOC-033|307|What is the primary research focus of the Quetzal module, and how does Al-Hassan contribute to it?
+MASA-DOC-033|309|How many years of experience does Al-Hassan have in biology and environmental systems?
+MASA-DOC-033|414|What kind of anomalies has Al-Hassan encountered in her past missions, and how did she resolve them?
+MASA-DOC-033|445|What was the focus of her experiments during the Cóndor-6 mission?
+MASA-DOC-033|527|What specific biological processes is Al-Hassan responsible for monitoring in the life support systems?
+MASA-DOC-033|547|How did Al-Hassan handle the environmental control anomaly during her time on Cóndor-6?
+MASA-DOC-033|650|Can you confirm the age of Science Specialist Fatima Al-Hassan and her role in the Quetzal module?
+MASA-DOC-033|712|What role does cultural diversity play in crew cohesion, and how does Al-Hassan contribute to this dynami
+MASA-DOC-033|755|Who is the other science specialist working alongside Al-Hassan in the Quetzal module?
+MASA-DOC-033|791|Can you describe Al-Hassan’s expertise in managing microgravity experiments, particularly with environmen
+MASA-DOC-034|6|What are the acceptable oxygen level ranges that Kozlov maintains in the Jaguar module?
+MASA-DOC-034|11|Can you describe the redundant CO2 scrubbing systems Kozlov designed for emergency scenarios?
+MASA-DOC-034|17|How does Kozlov's dual nationality benefit the crew dynamics on long-duration missions?
+MASA-DOC-034|254|What specific life support systems is Kozlov responsible for monitoring on Kuntur Station?
+MASA-DOC-034|304|Where was Pavel Kozlov born, and how did his upbringing influence his career in space engineering?
+MASA-DOC-034|353|During which mission did Pavel Kozlov successfully mitigate a CO2 scrubber failure?
+MASA-DOC-034|396|Can you confirm if Kozlov has any prior experience with water recycling systems in space?
+MASA-DOC-034|468|How many years of experience does Pavel Kozlov have in mechanical systems and life support engineering?
+MASA-DOC-034|526|Which module does Pavel Kozlov primarily oversee for environmental control systems?
+MASA-DOC-034|539|What is Pavel Kozlov's nationality and how does it influence his role on Kuntur Station?
+MASA-DOC-034|635|Can you confirm Pavel Kozlov's age and the number of previous Cóndor missions he has participated in?
+MASA-DOC-034|685|What is Pavel Kozlov's educational background, and how did it prepare him for his role at MASA?
+MASA-DOC-034|689|Commander Reyes has noted Kozlov's ability to integrate into multinational teams—can you provide an examp
+MASA-DOC-034|786|What are the critical atmospheric composition parameters Kozlov manages at 408 km altitude?
+MASA-DOC-034|799|What is Kozlov's role in maintaining thermal regulation aboard Kuntur Station?
+MASA-DOC-035|12|What are the limitations of medical evacuation options that Mendoza must account for on Kuntur Station?
+MASA-DOC-035|22|What are the specific medical specializations of the officer currently stationed in the Tucán module?
+MASA-DOC-035|56|What is the maximum severity level at which Mendoza can activate medical emergency protocols?
+MASA-DOC-035|142|What is the nationality and age of the current medical officer aboard Kuntur Station?
+MASA-DOC-035|250|Is Lucía Mendoza the only medical officer currently aboard Kuntur Station?
+MASA-DOC-035|273|How does Mendoza’s background in emergency surgery benefit the crew during high-altitude operations?
+MASA-DOC-035|325|Can you provide details on Mendoza’s role in developing in-flight medical diagnostics?
+MASA-DOC-035|362|How many crew members is Lucía Mendoza responsible for providing medical oversight to?
+MASA-DOC-035|401|What type of surgical procedures is Mendoza trained to perform in a microgravity environment?
+MASA-DOC-035|463|Can you verify if the medical officer has experience with telemedicine consultations during space mission
+MASA-DOC-035|506|Has Lucía Mendoza participated in any previous MASA missions before her current assignment?
+MASA-DOC-035|574|What emergency response protocols is Mendoza specifically trained to execute in confined spaces?
+MASA-DOC-035|617|What was the focus of Mendoza’s work during the Cóndor-4 mission?
+MASA-DOC-035|653|Can you confirm the module where Medical Officer Mendoza conducts her primary operations?
+MASA-DOC-035|654|Which MASA protocols does Lucía Mendoza have the authority to activate during a medical emergency?
+MASA-DOC-036|1|According to the complete systems overview, what is the star-like module configuration of Kuntur Station?
+MASA-DOC-036|13|Which systems are used for stabilizing the station’s orientation, and where are they located?
+MASA-DOC-036|65|In the Kuntur Station complete systems overview, what is the star-like module configuration and how are C
+MASA-DOC-036|71|Per the complete systems overview, why was 408 kilometers chosen as Kuntur Station’s orbital altitude?
+MASA-DOC-036|75|How many modules make up Kuntur Station, and what are their respective functions?
+MASA-DOC-036|261|What ground station in Bogotá, Colombia does the systems overview identify as MASA’s primary communicatio
+MASA-DOC-036|462|According to the systems overview, what procedure governs the regular communication windows with Bogotá g
+MASA-DOC-036|467|What is the current altitude of Kuntur Station and how often are orbital adjustments required?
+MASA-DOC-036|523|The Kuntur Station complete systems overview describes eclipse periods and solar arrays on extendable boo
+MASA-DOC-036|563|Can you confirm the deployment year of Kuntur Station and its current mission phase?
+MASA-DOC-036|658|According to the Kuntur Station complete systems overview, what year was the station deployed and when di
+MASA-DOC-036|699|The Kuntur Station complete systems overview mentions reaction wheels and magnetic torque rods — how do t
+MASA-DOC-036|711|In the Kuntur Station complete systems overview, how does the star-like configuration with Cóndor as cent
+MASA-DOC-036|764|The Kuntur Station complete systems overview describes rigid docking collars and flexible expansion joint
+MASA-DOC-036|784|According to the Kuntur Station complete systems overview, what navigation systems in Colibrí counteract 

@@ -1,0 +1,90 @@
+MASA-DOC-013|181|Pavel's reporting increased crew activity in the Cóndor module - what's the expected impact on temperatur
+MASA-DOC-013|194|We're seeing fluctuations in the thermal readings - what's the typical orbital pattern causing these?
+MASA-DOC-013|346|We've got a temperature reading of 26.5°C in the Cóndor module - should we be concerned?
+MASA-DOC-013|347|What's the altitude of Kuntur Station and how does it affect the thermal management system?
+MASA-DOC-013|360|Pavel's conducting the daily health check - what procedure covers the Thermal Management System review?
+MASA-DOC-013|371|What's the purpose of the passive radiators in the Thermal Management System?
+MASA-DOC-013|381|How many temperature sensors are monitoring the Cóndor module's environment?
+MASA-DOC-013|419|Pavel reported a slight temperature deviation in the command hub - what's the threshold for a low-severit
+MASA-DOC-013|466|How often does the Thermal Management System transmit telemetry data to ground control?
+MASA-DOC-013|515|We've got a reading of 54.5°C in the Cóndor module - what's the next step?
+MASA-DOC-013|520|What is the normal operating temperature range for the Cóndor module?
+MASA-DOC-013|595|What's the highest temperature the Cóndor module can reach before it's considered a critical emergency?
+MASA-DOC-013|625|How does the Thermal Management System compensate for thermal variations during eclipse phases?
+MASA-DOC-013|647|What's the role of the redundant heating elements in the Thermal Management System?
+MASA-DOC-013|798|We're seeing a temperature deviation in the command hub - what's the automated response at the low-severi
+MASA-DOC-014|38|How many Power Distribution Units are installed in the Cóndor module?
+MASA-DOC-014|39|What is the minimum state of charge the battery management system aims to maintain during eclipse periods
+MASA-DOC-014|63|How many BMS controllers are monitoring the battery bank, and what parameters do they track?
+MASA-DOC-014|89|What is the redundancy configuration of the power distribution system in case of a single-point failure?
+MASA-DOC-014|102|How many series-connected panels are there in each string of the solar panel arrays?
+MASA-DOC-014|117|What is the voltage level at which the primary power distribution system operates?
+MASA-DOC-014|211|How many lithium-ion battery cells are there in total, and how are they arranged?
+MASA-DOC-014|280|How many MPPT controllers are operational in the solar panel arrays?
+MASA-DOC-014|281|What is the duration of backup power provided by the battery bank during eclipse periods?
+MASA-DOC-014|423|What is the nominal storage capacity of the lithium-ion battery bank on Kuntur Station?
+MASA-DOC-014|428|Which subsystem is responsible for stepping down the primary voltage for other station modules?
+MASA-DOC-014|446|What is the response time for the solid-state circuit breakers to interrupt fault currents?
+MASA-DOC-014|451|What is the maximum power output capability of each independent solar panel array?
+MASA-DOC-014|720|Can you confirm the solar pointing accuracy tolerance of the two-axis gimbal system?
+MASA-DOC-014|725|Which module houses the Main Power Control Unit for the station?
+MASA-DOC-015|21|How many redundant oxygen storage tanks does the Jaguar module have, and where are they located?
+MASA-DOC-015|23|What’s the nominal pressure for the oxygen distribution network across the station?
+MASA-DOC-015|81|Can you confirm the oxygen percentage that triggers a low-severity alert in the life support system?
+MASA-DOC-015|237|What is the oxygen concentration range that the Jaguar module maintains under normal conditions?
+MASA-DOC-015|315|The secondary oxygen system is active—what’s the minimum oxygen level we should expect before stabilizati
+MASA-DOC-015|324|If the crew reports dizziness and oxygen reads 16.5%, what’s the next action we should take?
+MASA-DOC-015|379|What’s the first step in MASA-OPS-010 if oxygen drops below 18%?
+MASA-DOC-015|434|The system shows a pressure of 98 kPa—is this within nominal operating range or should we investigate?
+MASA-DOC-015|448|Commander Reyes is reporting a pressure drop to 92 kPa—what’s the appropriate response protocol?
+MASA-DOC-015|470|What’s the pressure threshold that would initiate a medium-severity alert for the distribution network?
+MASA-DOC-015|544|At what oxygen level should we activate the secondary generation systems according to standard procedures
+MASA-DOC-015|655|What’s the maximum oxygen concentration allowed before flammability becomes a concern?
+MASA-DOC-015|662|If oxygen levels reach 17%, should we start diagnostic checks immediately or wait for further decline?
+MASA-DOC-015|707|If pressure drops to 88 kPa, do we follow MASA-SEC-010 or a different emergency protocol?
+MASA-DOC-015|726|Can you verify the critical oxygen threshold that would trigger automatic module isolation?
+MASA-DOC-016|61|How does the antenna array ensure continuous coverage as Kuntur Station orbits the Earth?
+MASA-DOC-016|79|What’s the operational frequency of the phased array system, and how does it differ from the primary S-ba
+MASA-DOC-016|125|How many high-gain S-band antennas are installed on the Colibrí module, and what are their primary functi
+MASA-DOC-016|143|Can you confirm the slew rate capability of the gimbal system on Colibrí’s antenna array?
+MASA-DOC-016|148|Is the phased array system on Colibrí capable of electronic beam steering, and if so, what’s its maximum 
+MASA-DOC-016|214|Pilot Valdivia reports signal strength below optimal—what’s the threshold that triggers automatic switchi
+MASA-DOC-016|229|What is the maximum data transmission rate for the X-band antennas on Colibrí module?
+MASA-DOC-016|377|During orbital adjustments, how does the phased array system assist with communication stability?
+MASA-DOC-016|492|Ground station reports intermittent contact—what’s the minimum signal strength the antenna array is desig
+MASA-DOC-016|531|What’s the procedure initiated by Pilot Ana Valdivia when the signal strength drops below the minimum thr
+MASA-DOC-016|583|What’s the role of the redundant X-band antennas, and under what conditions would they be activated?
+MASA-DOC-016|694|We’re seeing fluctuations in signal—what’s the automatic response if the system detects a drop in signal 
+MASA-DOC-016|703|Pilot Valdivia needs to perform MASA-OPS-008—what does this procedure entail for communication window man
+MASA-DOC-016|713|We need to verify the frequency range for the primary S-band antenna—can you provide those details?
+MASA-DOC-016|772|Crew is prepping for high-bandwidth data transmission—what’s the expected data rate for X-band?
+MASA-DOC-017|87|How does the system respond to minor leaks to prevent inward contamination?
+MASA-DOC-017|97|What is the role of the ECLSS in managing airflow paths during normal operations?
+MASA-DOC-017|152|Which procedure is triggered if pressure differentials exceed the significant threshold?
+MASA-DOC-017|169|What is the normal airflow velocity through the primary ducts in the Kuntur Station ventilation system?
+MASA-DOC-017|185|Can you explain the redundancy in the ventilation system's star topology centered on Cóndor?
+MASA-DOC-017|222|Which module serves as the central mixing chamber for atmospheric redistribution?
+MASA-DOC-017|310|Which module is responsible for controlling the motorized dampers in the ventilation system?
+MASA-DOC-017|313|What is the purpose of the slight positive pressure gradient maintained from Cóndor outward?
+MASA-DOC-017|333|How often does the system complete a full atmospheric circulation under standard conditions?
+MASA-DOC-017|350|Can you confirm the names of all six modules connected by the primary duct network?
+MASA-DOC-017|375|What is the expected response when pressure differentials exceed the significant threshold in the ventila
+MASA-DOC-017|410|Can you confirm the airflow topology of the ventilation system and how the modules are interconnected?
+MASA-DOC-017|458|What are the airflow patterns designed to prevent within each module?
+MASA-DOC-017|642|How does the ventilation system handle contamination events in one module?
+MASA-DOC-017|797|What is the pressure gradient maintained between Cóndor and the peripheral modules during nominal operati
+MASA-DOC-018|55|Which modules are included in the scope of the Daily System Health Check?
+MASA-DOC-018|147|What protocol is activated if oxygen levels deviate from expected parameters?
+MASA-DOC-018|156|What specific parameters are monitored in the life support system check?
+MASA-DOC-018|173|How long does the Daily System Health Check typically take to complete?
+MASA-DOC-018|245|What components of the power system are inspected during the Daily System Health Check?
+MASA-DOC-018|266|How often is the Daily System Health Check conducted?
+MASA-DOC-018|393|What are the five primary systems evaluated during the Daily System Health Check?
+MASA-DOC-018|402|What could a notable drop in solar array output indicate?
+MASA-DOC-018|408|Why is it critical to ensure battery storage is functional during the health check?
+MASA-DOC-018|469|What are the consequences of elevated CO2 levels on the crew?
+MASA-DOC-018|568|What is the scheduled start time for the Daily System Health Check procedure?
+MASA-DOC-018|609|Which crew members are responsible for conducting MASA-OPS-001?
+MASA-DOC-018|682|What is the duration of the Daily System Health Check procedure?
+MASA-DOC-018|749|What are the potential risks if atmospheric pressure deviates beyond expected parameters?
+MASA-DOC-018|777|What is the purpose of having both the station engineer and commander perform the health check?

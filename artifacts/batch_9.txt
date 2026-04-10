@@ -1,0 +1,90 @@
+MASA-DOC-056|20|What are the guidelines for scheduling recreation time during a 12-hour work shift?
+MASA-DOC-056|49|Can you clarify if the observation windows in the *Colibrí* module are used for recreational Earth viewin
+MASA-DOC-056|80|Can you confirm the frequency and method for crew communication with family members?
+MASA-DOC-056|109|What procedures are in place for crew members requesting additional recreation time due to stress?
+MASA-DOC-056|260|Is there a specific protocol for virtual reality usage to prevent motion sickness in microgravity?
+MASA-DOC-056|334|How does the station accommodate cultural preferences in the entertainment options?
+MASA-DOC-056|338|How does the station ensure equitable access to the *Colibrí* module’s amenities during peak usage?
+MASA-DOC-056|340|What’s the maximum duration allowed for uninterrupted personal time in the daily schedule?
+MASA-DOC-056|376|What’s the backup plan if the primary communication system fails during a family video call?
+MASA-DOC-056|441|Are there designated quiet hours for crew members who prefer solitary recreation activities?
+MASA-DOC-056|442|Are there restrictions on crew gatherings in the communal area during high-workload periods?
+MASA-DOC-056|472|What is the designated module for communal relaxation activities on Kuntur Station?
+MASA-DOC-056|591|I need details on the types of entertainment available in the digital library
+MASA-DOC-056|648|How is the digital library content updated, and who curates the selections?
+MASA-DOC-056|781|Can you verify if live broadcasts of Earth events are pre-approved or ad-hoc for crew viewing?
+MASA-DOC-057|46|How does the Colibrí module facilitate data sharing with NASA’s deep space network?
+MASA-DOC-057|57|Are there any planned maintenance activities in the Vicuña module this week that involve international pa
+MASA-DOC-057|72|Who are the six crew members currently aboard Cóndor-7 and what are their nationalities?
+MASA-DOC-057|95|What are the symbolic and scientific advantages of Kuntur Station’s orbital position as mentioned in the 
+MASA-DOC-057|103|Has there been any recent personnel exchange with ESA, and if so, which module are they assigned to?
+MASA-DOC-057|135|What protocols are in place for emergency coordination between MASA and Roscosmos during Cóndor-7?
+MASA-DOC-057|170|What is the current altitude of Kuntur Station and how does it benefit scientific operations?
+MASA-DOC-057|203|Are there any upcoming video conferences scheduled between Kuntur Station and the Bogotá headquarters inv
+MASA-DOC-057|384|What was the start date of the Cóndor-7 mission and how long is it scheduled to last?
+MASA-DOC-057|404|What specific resources does JAXA provide to Kuntur Station under the current cooperation framework?
+MASA-DOC-057|562|Can you confirm which module of Kuntur Station is primarily used for international crew coordination?
+MASA-DOC-057|661|Which agency is leading the joint initiative in the Quetzal module this month?
+MASA-DOC-057|687|Can you verify if the recent experiment in the Jaguar module was conducted under a joint agreement with C
+MASA-DOC-057|750|How does the Tucán module support the shared infrastructure agreement with the Canadian Space Agency?
+MASA-DOC-057|767|What are the key objectives of the current partnership between MASA and ISRO regarding propulsion technol
+MASA-DOC-058|9|Are there any specific atmospheric composition changes that have been linked to MASA's launch operations?
+MASA-DOC-058|26|What measures are in place to mitigate noise pollution from launch operations, especially for nearby indi
+MASA-DOC-058|69|Has there been any unexpected wildlife behavior observed in the vicinity of the launch pad during the las
+MASA-DOC-058|167|What long-term environmental trends have been identified through consultations with the Wayuu communities
+MASA-DOC-058|202|What role do environmental agencies play in the independent verification of MASA's launch site data?
+MASA-DOC-058|208|Can you provide details on how MASA's propulsion technologies compare to early 21st-century rockets in te
+MASA-DOC-058|278|What specific exhaust byproducts are being monitored for their impact on the upper troposphere and lower 
+MASA-DOC-058|297|How frequently does MASA consult with the Wayuu communities regarding environmental trends around the lau
+MASA-DOC-058|369|What are the key environmental considerations that led to the selection of the Guajira Peninsula for MASA
+MASA-DOC-058|643|Are there any recent reports from local universities involved in verifying the launch site's soil quality
+MASA-DOC-058|656|Can you summarize the key components of the Carbon Offset Program mentioned in the environmental strategy
+MASA-DOC-058|671|How does MASA ensure transparency in its environmental monitoring efforts, particularly with regard to ex
+MASA-DOC-058|708|Can you confirm whether the environmental monitoring program includes real-time tracking of air quality d
+MASA-DOC-058|733|How does the arid climate of the Guajira Peninsula influence the ecological risks associated with launch 
+MASA-DOC-058|742|Are there any upcoming changes to the environmental monitoring program based on recent findings?
+MASA-DOC-059|14|What is the orbital path of Kuntur Station and how does it aid in monitoring environmental changes?
+MASA-DOC-059|105|What types of camera systems are available on Kuntur Station for capturing atmospheric phenomena?
+MASA-DOC-059|141|What training do crew members undergo to ensure their photographic techniques meet scientific standards?
+MASA-DOC-059|160|Which modules on Kuntur Station have observation windows that can be used for photography?
+MASA-DOC-059|275|What regions are currently prioritized for repeated observations due to their environmental significance?
+MASA-DOC-059|387|Can you confirm if the crew in the Quetzal module is trained to prioritize observation targets for climat
+MASA-DOC-059|429|Can you verify if the Vicuña module has been assigned any celestial event documentation tasks?
+MASA-DOC-059|447|How do the mounted camera systems differ from handheld devices in terms of photographic capabilities?
+MASA-DOC-059|484|What specific environmental changes are being monitored from the Jaguar module this week?
+MASA-DOC-059|501|How often are the observation windows in the Cóndor module used for monitoring deforestation in the Amazo
+MASA-DOC-059|528|What are the key features of the observation windows in the station that make them suitable for scientifi
+MASA-DOC-059|660|Are there any ongoing collaborations between the Tucán module and ground-based scientists for Earth obser
+MASA-DOC-059|702|Which module is best suited for tracking urban expansion in South America from the station?
+MASA-DOC-059|729|How does the station’s vantage point in Low Earth Orbit enhance the quality of images captured for climat
+MASA-DOC-059|757|Are there any scheduled high-resolution imaging tasks for the Colibrí module in the next 24 hours?
+MASA-DOC-060|29|How does the patch for the current mission differ from previous ones in terms of design elements?
+MASA-DOC-060|58|What is the traditional role of mission patches in MASA's cultural identity since its founding?
+MASA-DOC-060|62|Who is responsible for selecting the artists that design the MASA mission patches?
+MASA-DOC-060|70|Can you explain the narrative purpose behind the mission patches beyond their decorative function?
+MASA-DOC-060|112|Which mission patches have included representations of the Quetzal or Jaguar modules?
+MASA-DOC-060|166|What is the significance of the altitude of Kuntur Station in the context of the mission patch imagery?
+MASA-DOC-060|374|Can you confirm the primary symbolic bird featured in the Cóndor mission patches and its cultural signifi
+MASA-DOC-060|487|Are there any recurring themes in the symbolism of the patches, such as exploration or collaboration?
+MASA-DOC-060|504|How has the design tradition for mission patches evolved since the first Cóndor mission?
+MASA-DOC-060|535|Are there any specific elements in the patch designs that represent the crew’s cultural heritage?
+MASA-DOC-060|555|Can you describe the collaboration process between MASA and the artists during patch creation?
+MASA-DOC-060|620|What criteria are used to evaluate the artists chosen for creating the mission patch designs?
+MASA-DOC-060|670|How does the design process for the Cóndor mission patches reflect the unique goals of each crew?
+MASA-DOC-060|692|What modules of Kuntur Station are typically depicted on the commemorative mission patches?
+MASA-DOC-060|785|What steps are taken to ensure the mission patches resonate with both the crew and the public?
+MASA-DOC-061|53|How does the Quetzal module contribute to maintaining astronaut health in space?
+MASA-DOC-061|114|What is the typical altitude of Kuntur Station's orbit?
+MASA-DOC-061|119|Can you summarize the key physiological challenges faced by astronauts on Kuntur Station?
+MASA-DOC-061|235|How does the lack of gravity impact blood distribution in the body?
+MASA-DOC-061|277|Which specific bones are most affected by bone density loss in microgravity?
+MASA-DOC-061|279|What are the primary modules used by the Cóndor-7 crew for exercise routines?
+MASA-DOC-061|317|Which exercise equipment is available in the Jaguar module to combat microgravity effects?
+MASA-DOC-061|355|How does the cardiovascular system adapt to the absence of gravity?
+MASA-DOC-061|364|What countermeasures are implemented to prevent muscle atrophy during long-duration missions?
+MASA-DOC-061|457|What are the long-term implications of bone density loss for astronauts returning to Earth?
+MASA-DOC-061|481|What are the potential Earth-based applications of microgravity research on muscle atrophy?
+MASA-DOC-061|491|What scientific insights have been gained from the Cóndor-7 mission regarding bone density?
+MASA-DOC-061|570|Can you explain the effects of microgravity on muscle mass, particularly in the lower body?
+MASA-DOC-061|588|How does microgravity affect the overall well-being of astronauts during extended missions?
+MASA-DOC-061|622|How does the exercise regimen on Kuntur Station compare to previous missions?
