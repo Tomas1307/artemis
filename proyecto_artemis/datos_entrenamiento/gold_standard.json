@@ -839,7 +839,7 @@
   {
     "question_id": "Q-00094",
     "query": "Radiation sensors in Colibrí are reading 3.5 mSv/hr, and Fatima Al-Hassan just reported a possible uptick in solar activity—should we flag this with Commander Reyes?",
-    "tool_call": "send_alert(module='colibri',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -856,7 +856,7 @@
   },
   {
     "question_id": "Q-00096",
-    "query": "We’re getting reports from Lucia Mendoza that CO2 concentration in Colibrí has climbed to 2.6% and crew are experiencing headaches. What emergency procedure do we initiate here?",
+    "query": "We’re getting reports from Lucía Mendoza that CO2 concentration in Colibrí has climbed to 2.6% and crew are experiencing headaches. What emergency procedure do we initiate here?",
     "tool_call": "activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')",
     "tool_name": "activate_protocol",
     "seed_type": "rag",
@@ -992,7 +992,7 @@
   {
     "question_id": "Q-00111",
     "query": "Radiation sensors in Quetzal are reading 2.7 mSv/hr, and Fatima Al-Hassan just reported solar activity is picking up. Should I flag this with command?",
-    "tool_call": "send_alert(module='quetzal',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -1315,7 +1315,7 @@
   },
   {
     "question_id": "Q-00147",
-    "query": "Notify Fátima immediately—her attention is required on an urgent matter.",
+    "query": "Notify Fatima immediately—her attention is required on an urgent matter.",
     "tool_call": "send_message(recipient='specialist_2',priority='high')",
     "tool_name": "send_message",
     "seed_type": "direct",
@@ -2099,7 +2099,7 @@
   {
     "question_id": "Q-00235",
     "query": "Cóndor radiation sensors are showing 2.1 mSv/hr and climbing—Commander Reyes has flagged this. What emergency procedure should we initiate?",
-    "tool_call": "send_alert(module='condor',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -2675,7 +2675,7 @@
   {
     "question_id": "Q-00299",
     "query": "Cóndor radiation sensors are showing 3.2 mSv/hr and climbing — Kai noticed the spike while running diagnostics. What emergency procedure should we initiate for this scenario?",
-    "tool_call": "send_alert(module='condor',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -2864,7 +2864,7 @@
   {
     "question_id": "Q-00321",
     "query": "I need to log an alert — Vicuña radiation sensors are reading 3.1 mSv/hr and climbing. Santiago just reported possible solar activity increase.",
-    "tool_call": "send_alert(module='vicuna',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -3125,7 +3125,7 @@
   {
     "question_id": "Q-00350",
     "query": "Radiation sensors in Vicuña are reading 3.6 mSv/hr and climbing—Commander Reyes just reported it. What emergency steps should we take for this situation?",
-    "tool_call": "send_alert(module='vicuna',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -3206,7 +3206,7 @@
   {
     "question_id": "Q-00359",
     "query": "Radiation sensors in Colibrí are reading 2.5 mSv/hr and rising—Commander Reyes wants to know what emergency steps we take for this kind of event.",
-    "tool_call": "send_alert(module='colibri',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -3764,7 +3764,7 @@
   {
     "question_id": "Q-00422",
     "query": "Cóndor radiation sensors are showing 4.5 mSv/hr and climbing—should we escalate this to command?",
-    "tool_call": "send_alert(module='condor',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -3917,7 +3917,7 @@
   {
     "question_id": "Q-00439",
     "query": "Cóndor radiation sensors are showing 3.1 mSv/hr and climbing—Commander Reyes has requested we escalate this to the emergency response team immediately.",
-    "tool_call": "send_alert(module='condor',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -4124,7 +4124,7 @@
   {
     "question_id": "Q-00462",
     "query": "Radiation sensors in Quetzal are reading 3.3 mSv/hr and rising—Kai just reported it. What emergency steps should we take for this situation?",
-    "tool_call": "send_alert(module='quetzal',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -4187,7 +4187,7 @@
   {
     "question_id": "Q-00469",
     "query": "Cóndor radiation sensors are showing 3.5 mSv/hr and climbing—Commander Reyes just flagged it. What emergency steps should we take?",
-    "tool_call": "send_alert(module='condor',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -5356,7 +5356,7 @@
   },
   {
     "question_id": "Q-00599",
-    "query": "Notify Fátima that we've received her latest experiment logs from Quetzal and they're ready for review.",
+    "query": "Notify Fatima that we've received her latest experiment logs from Quetzal and they're ready for review.",
     "tool_call": "send_message(recipient='specialist_2',priority='low')",
     "tool_name": "send_message",
     "seed_type": "direct",
@@ -5689,7 +5689,7 @@
   },
   {
     "question_id": "Q-00638",
-    "query": "Medical Officer Lucia Mendoza just reported crew vitals showing distress in Cóndor—what emergency procedure do we follow?",
+    "query": "Medical Officer Lucía Mendoza just reported crew vitals showing distress in Cóndor—what emergency procedure do we follow?",
     "tool_call": "activate_protocol(protocol_id='MASA-SEC-005',scope='module_only')",
     "tool_name": "activate_protocol",
     "seed_type": "rag",
@@ -5915,7 +5915,7 @@
   {
     "question_id": "Q-00663",
     "query": "Can you pass a low-priority message to Specialist Nakamura about the scheduled calibration for Quetzal's spectrometer tomorrow?",
-    "tool_call": "send_message(recipient='specialist_2',priority='low')",
+    "tool_call": "send_message(recipient='specialist_1',priority='low')",
     "tool_name": "send_message",
     "seed_type": "direct",
     "doc_id": null,
@@ -6131,7 +6131,7 @@
   {
     "question_id": "Q-00688",
     "query": "Kai just reported Vicuña radiation sensors reading 2.4 mSv/hr and rising—how should we respond?",
-    "tool_call": "send_alert(module='vicuna',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -6185,7 +6185,7 @@
   {
     "question_id": "Q-00694",
     "query": "Cóndor radiation sensors are showing 2.1 mSv/hr and climbing—Commander Reyes has requested we flag this and check for any related system alerts. Solar activity reports indicate possible further increases.",
-    "tool_call": "send_alert(module='condor',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -6194,7 +6194,7 @@
   {
     "question_id": "Q-00695",
     "query": "Kai just reported Vicuña radiation sensors reading 4.0 mSv/hr—what emergency response should we initiate?",
-    "tool_call": "send_alert(module='vicuna',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -6913,7 +6913,7 @@
   },
   {
     "question_id": "Q-00775",
-    "query": "Notify Fátima that the latest atmospheric readings from Jaguar need review before the next shift change.",
+    "query": "Notify Fatima that the latest atmospheric readings from Jaguar need review before the next shift change.",
     "tool_call": "send_message(recipient='specialist_2',priority='medium')",
     "tool_name": "send_message",
     "seed_type": "direct",
@@ -7418,7 +7418,7 @@
   {
     "question_id": "Q-00831",
     "query": "Cóndor radiation sensors are showing 4.0 mSv/hr and climbing — how should we handle this?",
-    "tool_call": "send_alert(module='condor',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -8227,7 +8227,7 @@
   },
   {
     "question_id": "Q-00925",
-    "query": "Notify Fátima immediately—her latest Quetzal experiment telemetry is off-nominal and needs her attention.",
+    "query": "Notify Fatima immediately—her latest Quetzal experiment telemetry is off-nominal and needs her attention.",
     "tool_call": "send_message(recipient='specialist_2',priority='urgent')",
     "tool_name": "send_message",
     "seed_type": "direct",
@@ -8480,7 +8480,7 @@
   {
     "question_id": "Q-00953",
     "query": "Radiation sensors in Colibrí are reading 3.5 mSv/hr and rising—Commander Reyes reports solar activity may be increasing. Should we flag this and notify the crew immediately?",
-    "tool_call": "send_alert(module='colibri',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -9092,7 +9092,7 @@
   {
     "question_id": "Q-01022",
     "query": "Radiation sensors in Quetzal are reading 2.6 mSv/hr, and solar activity seems to be increasing—should we flag this for command?",
-    "tool_call": "send_alert(module='quetzal',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -9173,7 +9173,7 @@
   {
     "question_id": "Q-01031",
     "query": "Kai just reported Vicuña radiation sensors reading 4.1 mSv/hr and rising—how should we respond?",
-    "tool_call": "send_alert(module='vicuna',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -9371,7 +9371,7 @@
   {
     "question_id": "Q-01053",
     "query": "Notify Specialist Nakamura immediately—Quetzal's latest experiment data needs urgent review before the next downlink window.",
-    "tool_call": "send_message(recipient='specialist_2',priority='urgent')",
+    "tool_call": "send_message(recipient='specialist_1',priority='urgent')",
     "tool_name": "send_message",
     "seed_type": "direct",
     "doc_id": null,
@@ -9407,7 +9407,7 @@
   {
     "question_id": "Q-01058",
     "query": "Ana Valdivia just reported radiation sensors in Quetzal are reading 3.7 mSv/hr and climbing. What emergency procedure should we initiate for this?",
-    "tool_call": "send_alert(module='quetzal',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -9488,7 +9488,7 @@
   {
     "question_id": "Q-01067",
     "query": "Kai just reported Vicuña radiation sensors reading 3.6 mSv/hr and rising—how should we respond?",
-    "tool_call": "send_alert(module='vicuna',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -9542,7 +9542,7 @@
   {
     "question_id": "Q-01073",
     "query": "Cóndor radiation sensors are showing 3.5 mSv/hr and climbing—flag this immediately. Commander Reyes has noticed increasing solar activity.",
-    "tool_call": "send_alert(module='condor',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -9839,7 +9839,7 @@
   {
     "question_id": "Q-01107",
     "query": "Kai just reported Vicuña radiation sensors at 4.9 mSv/hr and rising—how should we respond?",
-    "tool_call": "send_alert(module='vicuna',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -10172,7 +10172,7 @@
   {
     "question_id": "Q-01144",
     "query": "Tucán radiation sensors are showing 3.9 mSv/hr and rising—Commander Reyes wants this logged as an alert immediately. Solar activity reports suggest this could worsen.",
-    "tool_call": "send_alert(module='tucan',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='tucan',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -10531,7 +10531,7 @@
   },
   {
     "question_id": "Q-01184",
-    "query": "Medical Officer Lucia Mendoza just reported crew vitals showing distress in Vicuña—what emergency procedure do we follow?",
+    "query": "Medical Officer Lucía Mendoza just reported crew vitals showing distress in Vicuña—what emergency procedure do we follow?",
     "tool_call": "activate_protocol(protocol_id='MASA-SEC-005',scope='module_only')",
     "tool_name": "activate_protocol",
     "seed_type": "rag",
@@ -11234,7 +11234,7 @@
   {
     "question_id": "Q-01263",
     "query": "Radiation sensors in Colibrí are reading 2.6 mSv/hr, and Fatima Al-Hassan just reported a possible uptick in solar activity—should we flag this with Commander Reyes?",
-    "tool_call": "send_alert(module='colibri',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -11350,7 +11350,7 @@
   },
   {
     "question_id": "Q-01276",
-    "query": "Medical Officer Lucia Mendoza reports CO2 concentration in Tucán has reached 2.5% and crew is experiencing headaches. Should we escalate this to command?",
+    "query": "Medical Officer Lucía Mendoza reports CO2 concentration in Tucán has reached 2.5% and crew is experiencing headaches. Should we escalate this to command?",
     "tool_call": "send_alert(module='tucan',severity='high',reason='oxygen_leak')",
     "tool_name": "send_alert",
     "seed_type": "rag",
@@ -11441,7 +11441,7 @@
   {
     "question_id": "Q-01286",
     "query": "Cóndor radiation sensors are showing 3.9 mSv/hr—should we log an alert and notify the Commander?",
-    "tool_call": "send_alert(module='condor',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -11540,7 +11540,7 @@
   {
     "question_id": "Q-01297",
     "query": "I need to log an alert — radiation sensors in Tucán are reading 4.7 mSv/hr, and solar activity may be increasing. What emergency procedure applies here?",
-    "tool_call": "send_alert(module='tucan',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='tucan',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -11689,15 +11689,6 @@
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
     "protocol_id": "MASA-SEC-004"
-  },
-  {
-    "question_id": "Q-01314",
-    "query": "Tucán CO2 sensors are reading 2.6% and climbing — crew reporting headaches. What emergency steps do we take for this scenario?",
-    "tool_call": "activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')",
-    "tool_name": "activate_protocol",
-    "seed_type": "rag",
-    "doc_id": "MASA-DOC-007",
-    "protocol_id": "MASA-SEC-009"
   },
   {
     "question_id": "Q-01315",
@@ -12674,7 +12665,7 @@
   {
     "question_id": "Q-01425",
     "query": "Radiation sensors in Colibrí are reading 3.7 mSv/hr and rising—should we escalate this to command?",
-    "tool_call": "send_alert(module='colibri',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -12836,7 +12827,7 @@
   {
     "question_id": "Q-01443",
     "query": "I need to log an alert — Vicuña radiation sensors are reading 2.1 mSv/hr, and Commander Reyes just reported solar activity is picking up. What emergency steps should we take?",
-    "tool_call": "send_alert(module='vicuna',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -13547,7 +13538,7 @@
   {
     "question_id": "Q-01525",
     "query": "Radiation sensors in Jaguar are showing 2.5 mSv/hr and rising—should we flag this for Commander Reyes and start emergency steps?",
-    "tool_call": "send_alert(module='jaguar',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -14177,7 +14168,7 @@
   {
     "question_id": "Q-01599",
     "query": "Cóndor radiation sensors are showing 2.9 mSv/hr—should we flag this up the chain given the current solar activity?",
-    "tool_call": "send_alert(module='condor',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -14248,7 +14239,7 @@
   },
   {
     "question_id": "Q-01607",
-    "query": "Notify Fátima Al-Hassan about the scheduled calibration for Quetzal's spectral analyzers before the next shift.",
+    "query": "Notify Fatima Al-Hassan about the scheduled calibration for Quetzal's spectral analyzers before the next shift.",
     "tool_call": "send_message(recipient='specialist_2',priority='medium')",
     "tool_name": "send_message",
     "seed_type": "direct",
@@ -14779,7 +14770,7 @@
   },
   {
     "question_id": "Q-01670",
-    "query": "Notify Fátima immediately—her latest Quetzal experiment telemetry shows anomalous readings, and we need her assessment before the next station-wide comms window.",
+    "query": "Notify Fatima immediately—her latest Quetzal experiment telemetry shows anomalous readings, and we need her assessment before the next station-wide comms window.",
     "tool_call": "send_message(recipient='specialist_2',priority='high')",
     "tool_name": "send_message",
     "seed_type": "direct",
@@ -15131,7 +15122,7 @@
   {
     "question_id": "Q-01709",
     "query": "Radiation sensors in Jaguar are showing 2.8 mSv/hr and rising—what emergency response should we initiate?",
-    "tool_call": "send_alert(module='jaguar',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -16067,7 +16058,7 @@
   {
     "question_id": "Q-01815",
     "query": "Ana Valdivia just reported Colibrí radiation sensors climbing to 2.9 mSv/hr — do we escalate this up the chain?",
-    "tool_call": "send_alert(module='colibri',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -16498,7 +16489,7 @@
   },
   {
     "question_id": "Q-01865",
-    "query": "Medical Officer Lucia Mendoza just reported crew vitals in Quetzal showing distress—what emergency procedure should we initiate for this situation?",
+    "query": "Medical Officer Lucía Mendoza just reported crew vitals in Quetzal showing distress—what emergency procedure should we initiate for this situation?",
     "tool_call": "activate_protocol(protocol_id='MASA-SEC-005',scope='module_only')",
     "tool_name": "activate_protocol",
     "seed_type": "rag",
@@ -16975,7 +16966,7 @@
   },
   {
     "question_id": "Q-01920",
-    "query": "Can you pull up the crew background profile for Fátima Al-Hassan? I need it for the pre-mission briefing.",
+    "query": "Can you pull up the crew background profile for Fatima Al-Hassan? I need it for the pre-mission briefing.",
     "tool_call": "no_action",
     "tool_name": "no_action",
     "seed_type": "direct",
@@ -17227,7 +17218,7 @@
   },
   {
     "question_id": "Q-01948",
-    "query": "Medical Officer Lucia Mendoza just reported crew vitals in Tucán showing distress—what emergency procedure do we initiate?",
+    "query": "Medical Officer Lucía Mendoza just reported crew vitals in Tucán showing distress—what emergency procedure do we initiate?",
     "tool_call": "activate_protocol(protocol_id='MASA-SEC-005',scope='module_only')",
     "tool_name": "activate_protocol",
     "seed_type": "rag",
@@ -17291,7 +17282,7 @@
   {
     "question_id": "Q-01955",
     "query": "Radiation sensors in Tucán are reading 3.6 mSv/hr and climbing; Medical Officer Mendoza noted the spike. What emergency steps should we take for this situation?",
-    "tool_call": "send_alert(module='tucan',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='tucan',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -18379,7 +18370,7 @@
   },
   {
     "question_id": "Q-02081",
-    "query": "Notify Fátima that her latest atmospheric sample results from Quetzal are ready for her review whenever she has a moment.",
+    "query": "Notify Fatima that her latest atmospheric sample results from Quetzal are ready for her review whenever she has a moment.",
     "tool_call": "send_message(recipient='specialist_2',priority='low')",
     "tool_name": "send_message",
     "seed_type": "direct",
@@ -18839,7 +18830,7 @@
   {
     "question_id": "Q-02134",
     "query": "I need to log an alert — radiation sensors in Jaguar are reading 3.4 mSv/hr, and Commander Reyes just reported possible increased solar activity.",
-    "tool_call": "send_alert(module='jaguar',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -20054,7 +20045,7 @@
   {
     "question_id": "Q-02275",
     "query": "Radiation sensors in Jaguar are showing 4.7 mSv/hr and rising—what emergency response should we initiate?",
-    "tool_call": "send_alert(module='jaguar',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -20180,7 +20171,7 @@
   {
     "question_id": "Q-02289",
     "query": "Tucán radiation sensors are at 3.4 mSv/hr and rising—what emergency response should we initiate?",
-    "tool_call": "send_alert(module='tucan',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='tucan',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -20495,7 +20486,7 @@
   {
     "question_id": "Q-02325",
     "query": "Radiation sensors in Quetzal are reading 3.2 mSv/hr and rising—should we escalate this to command?",
-    "tool_call": "send_alert(module='quetzal',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -20540,7 +20531,7 @@
   {
     "question_id": "Q-02330",
     "query": "Radiation sensors in Colibrí are reading 2.6 mSv/hr, and solar activity reports suggest it might climb. Should we flag this to Commander Reyes and start any emergency measures?",
-    "tool_call": "send_alert(module='colibri',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -20549,7 +20540,7 @@
   {
     "question_id": "Q-02331",
     "query": "I need to log an alert — Vicuña radiation sensors are reading 2.5 mSv/hr, and Commander Reyes just reported solar activity is picking up. What emergency steps should we take?",
-    "tool_call": "send_alert(module='vicuna',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -20594,7 +20585,7 @@
   {
     "question_id": "Q-02336",
     "query": "Kai just reported Vicuña radiation sensors reading 4.0 mSv/hr—what emergency response should we initiate?",
-    "tool_call": "send_alert(module='vicuna',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -20711,7 +20702,7 @@
   {
     "question_id": "Q-02349",
     "query": "I need to log an alert — radiation sensors in Jaguar are reading 4.0 mSv/hr, and Commander Reyes just reported possible increased solar activity.",
-    "tool_call": "send_alert(module='jaguar',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -20890,7 +20881,7 @@
   },
   {
     "question_id": "Q-02369",
-    "query": "We’re getting reports from Lucia Mendoza that CO₂ concentration in Jaguar has hit 2.7% and crew members are complaining of headaches. What’s the appropriate emergency response procedure here?",
+    "query": "We’re getting reports from Lucía Mendoza that CO₂ concentration in Jaguar has hit 2.7% and crew members are complaining of headaches. What’s the appropriate emergency response procedure here?",
     "tool_call": "activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')",
     "tool_name": "activate_protocol",
     "seed_type": "rag",
@@ -21017,7 +21008,7 @@
   {
     "question_id": "Q-02383",
     "query": "Cóndor radiation sensors are showing 2.2 mSv/hr and climbing—Commander Reyes has requested we escalate this immediately.",
-    "tool_call": "send_alert(module='condor',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -21377,7 +21368,7 @@
   {
     "question_id": "Q-02425",
     "query": "Radiation sensors in Jaguar are showing 2.4 mSv/hr and rising—what emergency response should we initiate?",
-    "tool_call": "send_alert(module='jaguar',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -21394,7 +21385,7 @@
   },
   {
     "question_id": "Q-02428",
-    "query": "Notify Fátima Al-Hassan about the scheduled calibration for Quetzal’s spectroscopy equipment—she’ll need to prep the lab before the next shift.",
+    "query": "Notify Fatima Al-Hassan about the scheduled calibration for Quetzal’s spectroscopy equipment—she’ll need to prep the lab before the next shift.",
     "tool_call": "send_message(recipient='specialist_2',priority='medium')",
     "tool_name": "send_message",
     "seed_type": "direct",
@@ -21430,7 +21421,7 @@
   },
   {
     "question_id": "Q-02432",
-    "query": "Notify Fátima Al-Hassan about the scheduled calibration for Quetzal’s spectroscopy equipment—ensure she acknowledges before the next shift change.",
+    "query": "Notify Fatima Al-Hassan about the scheduled calibration for Quetzal’s spectroscopy equipment—ensure she acknowledges before the next shift change.",
     "tool_call": "send_message(recipient='specialist_2',priority='medium')",
     "tool_name": "send_message",
     "seed_type": "direct",
@@ -21440,7 +21431,7 @@
   {
     "question_id": "Q-02433",
     "query": "Radiation sensors in Quetzal are reading 3.8 mSv/hr and rising—should we escalate this to command?",
-    "tool_call": "send_alert(module='quetzal',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -21629,7 +21620,7 @@
   {
     "question_id": "Q-02454",
     "query": "Kai just reported Jaguar radiation sensors at 3.2 mSv/hr and rising — should we log an alert?",
-    "tool_call": "send_alert(module='jaguar',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -21638,7 +21629,7 @@
   {
     "question_id": "Q-02455",
     "query": "Radiation sensors in Tucán are reading 4.0 mSv/hr and climbing—should we flag this up the chain? Commander Reyes noted it during his last module check.",
-    "tool_call": "send_alert(module='tucan',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='tucan',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -21692,7 +21683,7 @@
   {
     "question_id": "Q-02461",
     "query": "Kai just reported Vicuña radiation sensors reading 4.3 mSv/hr — what emergency response should we initiate?",
-    "tool_call": "send_alert(module='vicuna',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -21935,7 +21926,7 @@
   {
     "question_id": "Q-02489",
     "query": "Kai just reported radiation sensors in Quetzal are reading 4.5 mSv/hr and rising—should we escalate this to command immediately?",
-    "tool_call": "send_alert(module='quetzal',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -22842,15 +22833,6 @@
     "protocol_id": "MASA-SEC-002"
   },
   {
-    "question_id": "Q-02593",
-    "query": "Notify Fátima immediately—her latest Quetzal experiment telemetry shows anomalous readings, and we need her assessment before the next station-wide comms window.",
-    "tool_call": "send_message(recipient='specialist_2',priority='high')",
-    "tool_name": "send_message",
-    "seed_type": "direct",
-    "doc_id": null,
-    "protocol_id": null
-  },
-  {
     "question_id": "Q-02594",
     "query": "We’ve got a rapid pressure drop in Vicuña—sensors just hit 84.7 kPa and still falling. What emergency steps do we initiate for this scenario?",
     "tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
@@ -23015,7 +22997,7 @@
   {
     "question_id": "Q-02612",
     "query": "Radiation sensors in Quetzal are reading 3.7 mSv/hr and rising—Nakamura reports solar activity may be increasing. Should we flag this up the chain immediately?",
-    "tool_call": "send_alert(module='quetzal',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -23078,7 +23060,7 @@
   {
     "question_id": "Q-02620",
     "query": "Notify Specialist Nakamura immediately—Quetzal's latest experiment data needs his review before the next shift.",
-    "tool_call": "send_message(recipient='specialist_2',priority='high')",
+    "tool_call": "send_message(recipient='specialist_1',priority='high')",
     "tool_name": "send_message",
     "seed_type": "direct",
     "doc_id": null,
@@ -23411,7 +23393,7 @@
   {
     "question_id": "Q-02659",
     "query": "Kai just reported radiation sensors in Quetzal are reading 4.4 mSv/hr and rising—should we escalate this to command?",
-    "tool_call": "send_alert(module='quetzal',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -23636,7 +23618,7 @@
   {
     "question_id": "Q-02684",
     "query": "Radiation sensors in Tucán are reading 3.8 mSv/hr and climbing—should we flag this up the chain given the solar activity increase?",
-    "tool_call": "send_alert(module='tucan',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='tucan',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -23852,7 +23834,7 @@
   {
     "question_id": "Q-02708",
     "query": "Kai just reported Jaguar radiation sensors at 2.4 mSv/hr and rising — should we log an alert?",
-    "tool_call": "send_alert(module='jaguar',severity='medium',reason='radiation_spike')",
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='radiation_spike')",
     "tool_name": "send_alert",
     "seed_type": "rag",
     "doc_id": "MASA-DOC-009",
@@ -24094,7 +24076,7 @@
   },
   {
     "question_id": "Q-02736",
-    "query": "Notify Fátima that we've got a minor scheduling conflict for her experiment in Quetzal—can she adjust the timeline after her next comms window?",
+    "query": "Notify Fatima that we've got a minor scheduling conflict for her experiment in Quetzal—can she adjust the timeline after her next comms window?",
     "tool_call": "send_message(recipient='specialist_2',priority='low')",
     "tool_name": "send_message",
     "seed_type": "direct",
@@ -26862,6 +26844,1833 @@
     "tool_name": "no_action",
     "seed_type": "direct",
     "doc_id": null,
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03045",
+    "query": "Specialist Nakamura noticed the O2 sensor in Jaguar is drifting—it’s at 20.7% now, but it’s been climbing steadily. No alarms yet, but it’s outside the usual stability. Thoughts?",
+    "tool_call": "schedule_maintenance(module='jaguar',task='sensor_repair',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03046",
+    "query": "Station telemetry indicates we're holding at 410.5 km; is that 2.5 km overshoot within acceptable limits?",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03047",
+    "query": "Medical Officer Mendoza just reported our food reserves are down to 27%—should we adjust rations or request a resupply?",
+    "tool_call": "request_supply(category='food',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03048",
+    "query": "The Jaguar's power load is at 94% according to the latest sensor readings, how should I proceed?",
+    "tool_call": "control_system(module='jaguar',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03049",
+    "query": "The Vicuña module’s medical inventory just dropped to 29%. Pilot Valdivia is asking for guidance on resupply",
+    "tool_call": "request_supply(category='medical',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03050",
+    "query": "Commander Reyes reports a debris alert on the long-range scanners; probability of impact is now 2.3 × 10⁻⁴. What's the next move?",
+    "tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03051",
+    "query": "Cóndor’s thermal sensor just went off—can we get real-time temperature values and crew checks?",
+    "tool_call": "get_telemetry(module='condor',metric='temperature',timeframe_hours=1)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-001",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03052",
+    "query": "Tucán’s sensor array is showing 43°C in the crew quarters. What’s the next step here?",
+    "tool_call": "control_system(module='tucan',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03053",
+    "query": "Reyes wants to confirm the power load numbers in Cóndor are stable before the software update—what are we seeing?",
+    "tool_call": "get_module_status(module='condor',system='power')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-001",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03054",
+    "query": "VOC levels in Cóndor just hit 218 ppm—Specialist Al-Hassan reports the odor started near the life-support rack; what’s the next step?",
+    "tool_call": "control_system(module='condor',system='filtration',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03055",
+    "query": "Medical Officer Mendoza just reported the Quetzal module feels unusually warm—her console shows 48°C. What's the next step?",
+    "tool_call": "control_system(module='quetzal',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03056",
+    "query": "Engineer Kozlov noted Cóndor's systems are running at 94% capacity—how should we proceed?",
+    "tool_call": "control_system(module='condor',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03057",
+    "query": "We've got a request from Reyes to verify Cóndor's power system balance before proceeding with the update window—can you check?",
+    "tool_call": "get_module_status(module='condor',system='power')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-001",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03058",
+    "query": "We're getting a temperature alert from Quetzal at 48°C. Commander Reyes wants to know if we should adjust systems or investigate further",
+    "tool_call": "control_system(module='quetzal',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03059",
+    "query": "We're getting a reading of 16°C in the Jaguar module—should we be concerned about this sudden drop?",
+    "tool_call": "control_system(module='jaguar',system='heating',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03060",
+    "query": "Engineer Kozlov just radioed in—he's asking for Jaguar's O₂ generation efficiency data from the past 12 hours to cross-check against his manual readings",
+    "tool_call": "get_telemetry(module='jaguar',metric='oxygen',timeframe_hours=12)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-003",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03061",
+    "query": "Engineer Kozlov flagged a temperature spike in Cóndor—it’s hit 42°C. Should we initiate any countermeasures?",
+    "tool_call": "control_system(module='condor',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03062",
+    "query": "The Colibrí module’s temperature is climbing—it’s at 57°C now. What’s the protocol here?",
+    "tool_call": "control_system(module='colibri',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03063",
+    "query": "Vicuña’s power levels just hit 94% according to Specialist Nakamura—what’s the protocol here?",
+    "tool_call": "control_system(module='vicuna',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03064",
+    "query": "Colibrí’s environmental panel is flagging a humidity reading of 72%; Specialist Nakamura says the walls feel clammy to the touch",
+    "tool_call": "control_system(module='colibri',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03065",
+    "query": "Medical Officer Mendoza just mentioned the medical bay in Tucán feels unusually warm—can you pull the temperature logs for the last six hours so I can check?",
+    "tool_call": "get_telemetry(module='tucan',metric='temperature',timeframe_hours=6)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-006",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03066",
+    "query": "Medical Officer Mendoza just reported the air feels unusually dry—Vicuña's humidity gauge is holding steady at 28%",
+    "tool_call": "control_system(module='vicuna',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03067",
+    "query": "The telemetry just updated—Cóndor's main power cell is at 18%, under the minimum. Any immediate actions we should take?",
+    "tool_call": "schedule_maintenance(module='condor',task='power_cell_swap',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03068",
+    "query": "Quetzal’s experiment is picking up radiation interference, per Nakamura. Mind grabbing the last six hours of data from that module’s sensors?",
+    "tool_call": "get_telemetry(module='quetzal',metric='radiation',timeframe_hours=6)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-002",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03069",
+    "query": "Commander Reyes noted spare parts across Cóndor are at 25% of projected use—what actions do we take?",
+    "tool_call": "request_supply(category='spare_parts',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03070",
+    "query": "Commander Reyes just flagged that spare parts are at 10% after back-to-back repairs on Jaguar’s comms array—how should we handle this?",
+    "tool_call": "request_supply(category='spare_parts',urgency='emergency')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03071",
+    "query": "Medical Officer Mendoza just reported the air in Quetzal feels unusually damp—sensors confirm humidity holding steady at 73%",
+    "tool_call": "control_system(module='quetzal',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03072",
+    "query": "Commander Reyes is confirming a 218 ppm VOC spike in Cóndor module; Engineer Kozlov says it’s coming from the aft maintenance panel, how do you want us to proceed?",
+    "tool_call": "control_system(module='condor',system='filtration',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03073",
+    "query": "Commander Reyes is asking about Colibrí’s comms—it’s on 2.1.3, and the 2.1.4 patch is available. What’s the call?",
+    "tool_call": "schedule_maintenance(module='colibri',task='software_update',priority='routine')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03074",
+    "query": "Engineer Kozlov just called in—Jaguar’s temperature is climbing and sitting at 41°C. What’s the protocol here?",
+    "tool_call": "control_system(module='jaguar',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03075",
+    "query": "Commander Reyes is asking for guidance—Colibrí's medical stores are at 12% post-emergency. What’s the call?",
+    "tool_call": "request_supply(category='medical',urgency='emergency')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03076",
+    "query": "We’ve got a radiation concern in Quetzal. Nakamura says the experiment is reacting to fluctuations, and they need the past six hours of readings to assess",
+    "tool_call": "get_telemetry(module='quetzal',metric='radiation',timeframe_hours=6)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-002",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03077",
+    "query": "Commander Reyes reports the Jaguar module feels unusually warm, and our sensors confirm it’s at 41°C. How should we respond?",
+    "tool_call": "control_system(module='jaguar',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03078",
+    "query": "Medical Officer Mendoza just reported the Colibrí module's temperature gauge is reading 57°C—what's our next move?",
+    "tool_call": "control_system(module='colibri',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03079",
+    "query": "The Jaguar module’s temp is at 16°C, outside the usual range—how should we respond to this?",
+    "tool_call": "control_system(module='jaguar',system='heating',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03080",
+    "query": "I’m seeing Vicuña’s ambient humidity stuck at 28%—Specialist Al-Hassan mentioned static shocks near the workstation",
+    "tool_call": "control_system(module='vicuna',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03081",
+    "query": "Commander Reyes just flagged Vicuña’s power at 94%—do we need to reroute or intervene?",
+    "tool_call": "control_system(module='vicuna',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03082",
+    "query": "Engineer Kozlov says we’ve only got 10% of our spare parts left after fixing the thermal control in Quetzal—what’s the next move here?",
+    "tool_call": "request_supply(category='spare_parts',urgency='emergency')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03083",
+    "query": "Medical Officer Mendoza just noted Colibrí’s inertial reference is off by 0.8 degrees—has anyone else noticed this degradation?",
+    "tool_call": "schedule_maintenance(module='colibri',task='system_calibration',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03084",
+    "query": "Specialist Nakamura noted Vicuña’s medical stock is critically low—only 29% remaining. How do we address this?",
+    "tool_call": "request_supply(category='medical',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03085",
+    "query": "Commander Reyes is asking about the low moisture levels; Vicuña module shows 28% humidity on the display",
+    "tool_call": "control_system(module='vicuna',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03086",
+    "query": "We're seeing 57°C on the Colibrí thermal sensors—should we alert Commander Reyes or take immediate action?",
+    "tool_call": "control_system(module='colibri',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03087",
+    "query": "Jaguar’s life support is due for its bi-weekly maintenance, and Kozlov wants a complete status report before proceeding. What are the systems showing right now?",
+    "tool_call": "get_module_status(module='jaguar',system='life_support')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-003",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03088",
+    "query": "Commander Reyes is asking about the 68% humidity reading in Cóndor—what's the protocol here?",
+    "tool_call": "control_system(module='condor',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03089",
+    "query": "Engineer Kozlov just flagged that Jaguar’s oxygen sensor is showing unusual drift. It’s reading 20.6% and still rising. No crew reports of issues, but the trend’s concerning. What’s the protocol here?",
+    "tool_call": "schedule_maintenance(module='jaguar',task='sensor_repair',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03090",
+    "query": "We're getting a temperature alert from Cóndor—it's reading 42°C and climbing. What's the next step?",
+    "tool_call": "control_system(module='condor',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03091",
+    "query": "Commander Reyes just called in—Tucán medical bay temp reading is unstable, ranging from 16°C to 22°C—what’s the protocol?",
+    "tool_call": "schedule_maintenance(module='tucan',task='sensor_repair',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03092",
+    "query": "Jaguar module's HEPA filter differential pressure is reading 12.5 kPa—Kozlov reports it's beyond service life, what's our next step?",
+    "tool_call": "schedule_maintenance(module='jaguar',task='filter_replacement',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03093",
+    "query": "Orbit data just updated—station altitude reading 409.2 km, that's 1.2 above nominal 408 km. Should we flag this?",
+    "tool_call": "calculate_trajectory(maneuver='station_keeping',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03094",
+    "query": "Commander Reyes just reported the Jaguar's temperature is down to 16°C—what’s the next step here?",
+    "tool_call": "control_system(module='jaguar',system='heating',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03095",
+    "query": "We’ve got a thermal alert from Cóndor—need current temperature readings and crew status",
+    "tool_call": "get_telemetry(module='condor',metric='temperature',timeframe_hours=1)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-001",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03096",
+    "query": "We’ve got a rationing alert from Commander Reyes—food levels are at 13%. Any protocols to activate?",
+    "tool_call": "request_supply(category='food',urgency='emergency')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03097",
+    "query": "We’re seeing Tucán’s environmental controls at 17°C, well below the safe range—how should we respond?",
+    "tool_call": "control_system(module='tucan',system='heating',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03098",
+    "query": "Specialist Nakamura just reported Cóndor's main power cell is reading 18% capacity—way below our 25% minimum threshold. What's our next move?",
+    "tool_call": "schedule_maintenance(module='condor',task='power_cell_swap',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03099",
+    "query": "We've got a 6 km overshoot in altitude — station sitting at 414 km. How do we proceed?",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03100",
+    "query": "Pilot Valdivia just radioed in asking for the current status of the Colibrí comms system—he needs it before the next ground contact window in 12 minutes",
+    "tool_call": "get_module_status(module='colibri',system='communications')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-004",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03101",
+    "query": "We’re seeing a sustained 18.7 kW draw from Quetzal’s lab rack—can you confirm if we’re still within DOC-014 load limits?",
+    "tool_call": "get_module_status(module='quetzal',system='power')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03102",
+    "query": "Specialist Nakamura called in from Tucán—temperature’s up to 28°C. What’s the next step?",
+    "tool_call": "control_system(module='tucan',system='cooling',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03103",
+    "query": "Colibrí’s comms system is showing intermittent signals on the dashboard, and Valdivia wants to confirm its operational status before the upcoming ground contact window",
+    "tool_call": "get_module_status(module='colibri',system='communications')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-004",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03104",
+    "query": "We’re showing a velocity delta of 12.3 m/s off nominal in the Cóndor module—should we hold or adjust?",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03105",
+    "query": "Pilot Valdivia noted a 3.8 m/s delta-v on the flight path monitors—what’s the correct procedure here?",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03106",
+    "query": "Commander Reyes is asking about the 95% power usage in Quetzal—how do you want to proceed?",
+    "tool_call": "control_system(module='quetzal',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03107",
+    "query": "Orbit data shows station altitude at 410.5 km—should we be concerned about the 2.5 km deviation from nominal?",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03108",
+    "query": "Engineer Kozlov says the food storage in Quetzal is reading 27%—what’s the protocol here?",
+    "tool_call": "request_supply(category='food',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03109",
+    "query": "Engineer Kozlov flagged Tucán’s moisture levels hitting 66%; Specialist Nakamura mentioned the ventilation smells musty",
+    "tool_call": "control_system(module='tucan',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03110",
+    "query": "Valdivia’s flagged a spike in Colibrí’s power consumption, likely the antenna array. Need the past 24 hours of data to confirm—how do I access that?",
+    "tool_call": "get_telemetry(module='colibri',metric='power',timeframe_hours=24)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-004",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03111",
+    "query": "Medical Officer Mendoza asked about the slight altitude shift; station logged at 409.2 km vs planned 408 km. How should we respond?",
+    "tool_call": "calculate_trajectory(maneuver='station_keeping',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03112",
+    "query": "Engineer Kozlov’s diagnostics show the Jaguar’s primary docking magnet reserves are at 26%—what’s the best course of action to avoid a delay in the upcoming rendezvous?",
+    "tool_call": "request_supply(category='equipment',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-021",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03113",
+    "query": "Specialist Nakamura flagged that food reserves are sitting at 27%—any immediate actions needed?",
+    "tool_call": "request_supply(category='food',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03114",
+    "query": "The Vicuña module’s storage area is showing 58°C. Any protocols we need to follow?",
+    "tool_call": "control_system(module='vicuna',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03115",
+    "query": "Pilot Valdivia mentioned during the shift handover that spare parts in Quetzal are at 25%—what's the next step?",
+    "tool_call": "request_supply(category='spare_parts',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03116",
+    "query": "Pilot Valdivia just reported the antenna array in Colibrí is pulling a lot more power than usual—can you pull up the last 24 hours of consumption data?",
+    "tool_call": "get_telemetry(module='colibri',metric='power',timeframe_hours=24)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-004",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03117",
+    "query": "The post-docking sensors on Vicuña are indicating a 0.75% differential in the structural load readings. What does the protocol require us to do now?",
+    "tool_call": "get_module_status(module='vicuna',system='structural')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-005",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03118",
+    "query": "The automated collision warning just flagged a debris object—2.3 × 10⁻⁴ chance of impact. How should we proceed?",
+    "tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03119",
+    "query": "Humidity in Cóndor is holding steady at 68%—do we need to take any action?",
+    "tool_call": "control_system(module='condor',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03120",
+    "query": "Specialist Nakamura just reported that the Quetzal workstation sensors are showing inconsistent readings—last calibrated 14 days ago",
+    "tool_call": "schedule_maintenance(module='quetzal',task='system_calibration',priority='routine')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03121",
+    "query": "Commander Reyes reports that the Vicuña module's docking clamps show a 0.75% deviation from nominal stress levels. How should we proceed?",
+    "tool_call": "get_module_status(module='vicuna',system='structural')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-005",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03122",
+    "query": "Medical Officer Mendoza just reported Quetzal's power levels are at 95%—what should we do?",
+    "tool_call": "control_system(module='quetzal',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03123",
+    "query": "Commander Reyes just reported that the Jaguar is showing a power load of 94%, what's the next step?",
+    "tool_call": "control_system(module='jaguar',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03124",
+    "query": "Pilot Valdivia reports the oxygen levels in Jaguar are creeping up. Started at 21.0% an hour ago, now sitting at 20.9%. No leaks detected. How should we proceed?",
+    "tool_call": "schedule_maintenance(module='jaguar',task='sensor_repair',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03125",
+    "query": "Tucán’s power draw is sitting at 96% according to the latest telemetry; is this expected or do we need to investigate?",
+    "tool_call": "control_system(module='tucan',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03126",
+    "query": "We've got a fuel warning light on—readings show 11% remaining in the Cóndor module after that last maneuver",
+    "tool_call": "request_supply(category='fuel',urgency='emergency')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-021",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03127",
+    "query": "We've got a new debris object on the vicinity plot, Commander Reyes just confirmed—collision probability is sitting at 5.7 × 10⁻⁴. What's the next move?",
+    "tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03128",
+    "query": "Commander Reyes is asking why the Quetzal module’s sensor data seems slightly off—calibration was done two weeks back",
+    "tool_call": "schedule_maintenance(module='quetzal',task='system_calibration',priority='routine')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03129",
+    "query": "Commander Reyes is asking about the 27% food reserves reading—what’s the next step here?",
+    "tool_call": "request_supply(category='food',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03130",
+    "query": "Engineer Kozlov just requested a full status check on Jaguar's life support systems before we kick off the bi-weekly maintenance—what’s the current readout showing?",
+    "tool_call": "get_module_status(module='jaguar',system='life_support')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-003",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03131",
+    "query": "Pilot Valdivia notes the Cóndor thrusters are responding sluggishly with a 2.1-second delay—could this be related to the upcoming calibration cycle?",
+    "tool_call": "schedule_maintenance(module='condor',task='system_calibration',priority='routine')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03132",
+    "query": "Orbital tracking just updated—there's a debris object with a 2.3 × 10⁻⁴ collision probability approaching our trajectory",
+    "tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03133",
+    "query": "Orbit data shows station altitude at 414 km — that's 6 km above nominal. What’s the recommended course of action?",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03134",
+    "query": "Medical Officer Mendoza just reported Tucán’s temperature is reading 17°C and dropping—what’s the next step?",
+    "tool_call": "control_system(module='tucan',system='heating',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03135",
+    "query": "Kozlov’s on the line wanting the 12-hour efficiency stats for Jaguar’s O₂ generator—says he’s seeing inconsistent trends and wants to verify",
+    "tool_call": "get_telemetry(module='jaguar',metric='oxygen',timeframe_hours=12)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-003",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03136",
+    "query": "Medical Officer Mendoza just reported that the Vicuña module's spare parts are down to 25% of annual consumption—how should we proceed?",
+    "tool_call": "request_supply(category='spare_parts',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03137",
+    "query": "Commander Reyes just radioed in from Colibrí—humidity gauge is stuck at 72% and the crew’s noticing condensation on the equipment",
+    "tool_call": "control_system(module='colibri',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03138",
+    "query": "Medical Officer Mendoza reports Tucán medical bay temp fluctuating between 18°C and 24°C—what's the next step?",
+    "tool_call": "schedule_maintenance(module='tucan',task='sensor_repair',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03139",
+    "query": "We've got a request from Kozlov—he needs the O₂ output metrics from Jaguar for the last half-day to confirm system performance",
+    "tool_call": "get_telemetry(module='jaguar',metric='oxygen',timeframe_hours=12)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-003",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03140",
+    "query": "Cóndor module just reported humidity at 68%; is this within acceptable range?",
+    "tool_call": "control_system(module='condor',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03141",
+    "query": "Engineer Kozlov flagged that the Jaguar module's spare parts inventory is only 25%—any guidance?",
+    "tool_call": "request_supply(category='spare_parts',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03142",
+    "query": "Engineer Kozlov flagged Vicuña’s medical supplies at 29% capacity. Should we initiate a restock procedure?",
+    "tool_call": "request_supply(category='medical',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03143",
+    "query": "Commander Reyes just asked for the current power load distribution in Cóndor before they start the software update—what's the status?",
+    "tool_call": "get_module_status(module='condor',system='power')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-001",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03144",
+    "query": "Specialist Nakamura reports the orbit solution shows 12.3 m/s deviation—how should we respond?",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03145",
+    "query": "Engineer Kozlov mentioned the Quetzal workstation’s diagnostics flagged a minor drift in readings—calibration was last confirmed on day",
+    "tool_call": "schedule_maintenance(module='quetzal',task='system_calibration',priority='routine')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03146",
+    "query": "Engineer Kozlov flagged that Jaguar module humidity just dipped to 34%—what’s the protocol here?",
+    "tool_call": "control_system(module='jaguar',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03147",
+    "query": "We’re seeing Colibrí’s position telemetry fluctuating by 0.8 degrees compared to ground truth—should we recalibrate or check for interference?",
+    "tool_call": "schedule_maintenance(module='colibri',task='system_calibration',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03148",
+    "query": "Pilot Valdivia just called in—supply vessel *Tucán-7* is holding at 1.8 kilometers from Vicuña, requesting clearance. Do we grant docking?",
+    "tool_call": "calculate_trajectory(maneuver='docking',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03149",
+    "query": "We're seeing a gradual rise in the Jaguar module—just hit 30°C, and it's still climbing. Normal range is 19-23°C. What should we do?",
+    "tool_call": "control_system(module='jaguar',system='cooling',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03150",
+    "query": "Medical Officer Mendoza just reported Vicuña’s storage temperature hitting 58°C—should we be concerned?",
+    "tool_call": "control_system(module='vicuna',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03151",
+    "query": "Medical Officer Mendoza just reported our spare parts inventory is down to 10% after replacing the oxygen regulator in Cóndor—should we prioritize resupply?",
+    "tool_call": "request_supply(category='spare_parts',urgency='emergency')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03152",
+    "query": "Jaguar module's O2 sensor is showing a slow drift—current reading 20.8%, but it was 21.1% ten minutes ago. Commander Reyes just confirmed it’s not a crew activity spike. What’s the next step?",
+    "tool_call": "schedule_maintenance(module='jaguar',task='sensor_repair',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03153",
+    "query": "Medical Officer Mendoza just reported the air in Colibrí feels unusually damp—sensors confirm humidity holding steady at 72%",
+    "tool_call": "control_system(module='colibri',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03154",
+    "query": "Tucán’s med bay temp is feeling off to Mendoza. Mind grabbing the last six hours of readings to see if there’s a trend?",
+    "tool_call": "get_telemetry(module='tucan',metric='temperature',timeframe_hours=6)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-006",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03155",
+    "query": "Commander Reyes just radioed in; they’re showing 11% fuel left following an unplanned burn",
+    "tool_call": "request_supply(category='fuel',urgency='emergency')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-021",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03156",
+    "query": "Specialist Nakamura noted the Colibrí module's temperature just hit 57°C—how should we respond?",
+    "tool_call": "control_system(module='colibri',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03157",
+    "query": "We’re getting VOC readings in Cóndor peaking at 218 parts per million—crew reports a faint solvent smell near the starboard storage lockers, what’s the call here?",
+    "tool_call": "control_system(module='condor',system='filtration',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03158",
+    "query": "Commander Reyes just reported a thermal spike in Cóndor—what’s the temperature data showing?",
+    "tool_call": "get_telemetry(module='condor',metric='temperature',timeframe_hours=1)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-001",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03159",
+    "query": "Pilot Valdivia noticed condensation forming on Quetzal’s viewports—current humidity is 73%. Should we be concerned?",
+    "tool_call": "control_system(module='quetzal',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03160",
+    "query": "Pilot Valdivia just radioed that the Jaguar's spectrograph coolants are reading 75 days of life—need guidance on next steps",
+    "tool_call": "request_supply(category='scientific',urgency='routine')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03161",
+    "query": "Engineer Kozlov’s checking Vicuña’s hull after sensors detected a 0.3 kPa anomaly post-impact. Crew reports no immediate issues—what’s our next move?",
+    "tool_call": "schedule_maintenance(module='vicuna',task='hull_inspection',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03162",
+    "query": "Commander Reyes is asking about the low backup fuel level at 28% in the Quetzal module, what's the plan?",
+    "tool_call": "request_supply(category='fuel',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03163",
+    "query": "Specialist Nakamura reports Quetzal’s experiment array is pulling 18.7 kW—what’s our current power reserve margin against DOC-014 thresholds?",
+    "tool_call": "get_module_status(module='quetzal',system='power')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03164",
+    "query": "Medical Officer Mendoza just reported our medical supplies in the Colibrí module are down to 12%—what's our next move?",
+    "tool_call": "request_supply(category='medical',urgency='emergency')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03165",
+    "query": "We're seeing 94% power load on Cóndor's main bus—what's the recommended response here?",
+    "tool_call": "control_system(module='condor',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03166",
+    "query": "Commander Reyes is asking about the Vicuña storage bay; it’s reading 58°C. How should we respond?",
+    "tool_call": "control_system(module='vicuna',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03167",
+    "query": "Quetzal’s environmental display is flagging 73% humidity; Specialist Nakamura says it’s been like that for the last 20 minutes",
+    "tool_call": "control_system(module='quetzal',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03168",
+    "query": "Medical Officer Mendoza just reported Tucán’s battery level is reading 96%—should we be concerned about the spike?",
+    "tool_call": "control_system(module='tucan',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03169",
+    "query": "We've got a HEPA filter issue in Jaguar; differential pressure just hit 12.5 kPa, and Kozlov says it's past service life. How should we proceed?",
+    "tool_call": "schedule_maintenance(module='jaguar',task='filter_replacement',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03170",
+    "query": "Commander Reyes just reported Cóndor's navigation array is showing a 3.7% drift in alignment—should we hold for the monthly calibration window or initiate early recalibration?",
+    "tool_call": "schedule_maintenance(module='condor',task='system_calibration',priority='routine')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03171",
+    "query": "Our sensors are showing the temperature in the Cóndor module at 17°C, below the usual 20-24°C. What's the next step?",
+    "tool_call": "control_system(module='condor',system='heating',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03172",
+    "query": "Jaguar's HEPA filter differential pressure spiked to 12.5 kPa. Kozlov says it's past service life—what actions should we take?",
+    "tool_call": "schedule_maintenance(module='jaguar',task='filter_replacement',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03173",
+    "query": "Vicuña's hull integrity sensors just flagged a micro-debris impact—pressure drop of 0.3 kPa in sector 4. Commander Reyes reports a faint metallic ping but no visible damage. How should we proceed?",
+    "tool_call": "schedule_maintenance(module='vicuna',task='hull_inspection',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03174",
+    "query": "Engineer Kozlov noticed the altimeter in Cóndor module showing 409.2 km—nominal was 408. Need to take any steps?",
+    "tool_call": "calculate_trajectory(maneuver='station_keeping',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03175",
+    "query": "Pilot Valdivia reports an unclassified debris object on the Quetzal module's trajectory sensors, showing a 5.7 × 10⁻⁴ chance of impact. How should we proceed?",
+    "tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03176",
+    "query": "Commander Reyes just reported that Cóndor's temperature is climbing to 32°C, which is higher than the usual 20-24°C. How should we proceed?",
+    "tool_call": "control_system(module='condor',system='cooling',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03177",
+    "query": "Medical Officer Mendoza just reported the humidity gauge in Vicuña is reading 18% higher than usual—can you pull the 12-hour trend for that storage module?",
+    "tool_call": "get_telemetry(module='vicuna',metric='humidity',timeframe_hours=12)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-005",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03178",
+    "query": "Ground tracking shows us steady at 410.5 km. That's 2.5 km higher than nominal—do we need to adjust?",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03179",
+    "query": "Medical Officer Mendoza just reported the air in Tucán feels unusually thick—humidity gauge is reading 66% and still rising",
+    "tool_call": "control_system(module='tucan',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03180",
+    "query": "Colibrí's power load is at 95% according to the latest telemetry. How do you want to proceed?",
+    "tool_call": "control_system(module='colibri',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03181",
+    "query": "Pilot Valdivia's just confirmed debris on an intersecting path; tracking shows a 2.3 × 10⁻⁴ probability. What's the protocol?",
+    "tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03182",
+    "query": "We’re seeing Vicuña storage readings climb to 58°C on the thermal sensors. What’s the next step?",
+    "tool_call": "control_system(module='vicuna',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03183",
+    "query": "We're seeing a spike in Quetzal's power draw, hitting 95%—any immediate steps we should take?",
+    "tool_call": "control_system(module='quetzal',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03184",
+    "query": "Specialist Nakamura just reported backup fuel reserves in the Colibrí module are down to 28%, should we take any action?",
+    "tool_call": "request_supply(category='fuel',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03185",
+    "query": "HEPA filter in Jaguar showing 12.5 kPa differential pressure. Kozlov insists it's beyond service life. What do you recommend?",
+    "tool_call": "schedule_maintenance(module='jaguar',task='filter_replacement',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03186",
+    "query": "Engineer Kozlov reports the tanks are down to 11% after the unscheduled trajectory adjustment—what’s the next move?",
+    "tool_call": "request_supply(category='fuel',urgency='emergency')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-021",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03187",
+    "query": "I’m seeing a 6 km drift in altitude — station is currently at 414 km. How should we respond?",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03188",
+    "query": "Tucán’s environmental panel shows humidity at 66%—Commander Reyes says the crew’s noticing condensation on the walls",
+    "tool_call": "control_system(module='tucan',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03189",
+    "query": "Specialist Nakamura just confirmed the food inventory is down to 13%. What’s the next step here?",
+    "tool_call": "request_supply(category='food',urgency='emergency')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03190",
+    "query": "Medical Officer Mendoza just reported Tucán’s temperature hitting 43°C—should we check the environmental controls?",
+    "tool_call": "control_system(module='tucan',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03191",
+    "query": "Specialist Nakamura flagged Cóndor’s environmental controls fluctuating by 4.3°C—is this tied to the monthly calibration window starting in 6 hours?",
+    "tool_call": "schedule_maintenance(module='condor',task='system_calibration',priority='routine')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03192",
+    "query": "We’re seeing Tucán’s thermal telemetry hit 28°C; that’s outside the 20-25°C envelope. Should we alert the crew?",
+    "tool_call": "control_system(module='tucan',system='cooling',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03193",
+    "query": "We've got a critical alert from Colibrí: medical supplies are sitting at 12% after that emergency. How should we proceed?",
+    "tool_call": "request_supply(category='medical',urgency='emergency')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03194",
+    "query": "Pilot Valdivia just called in—Vicuña’s external sensors show a 0.3 kPa pressure fluctuation after a suspected micro-debris hit. No alarms yet, but should we take action?",
+    "tool_call": "schedule_maintenance(module='vicuna',task='hull_inspection',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03195",
+    "query": "The thermal monitors are flagging Jaguar at 41°C. Crew hasn’t noticed anything yet, but should we take action?",
+    "tool_call": "control_system(module='jaguar',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03196",
+    "query": "We’re seeing a persistent 73% humidity reading in Quetzal; Commander Reyes wants to know if that’s within normal range",
+    "tool_call": "control_system(module='quetzal',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03197",
+    "query": "We're seeing elevated power draw on Colibrí’s antenna array—Valdivia wants to know the usage trend over the past day. What’s the best way to get that?",
+    "tool_call": "get_telemetry(module='colibri',metric='power',timeframe_hours=24)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-004",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03198",
+    "query": "We’ve got a chemical odor report in Quetzal from Specialist Nakamura, and the air quality monitor shows 17 PPM. What’s the protocol?",
+    "tool_call": "control_system(module='quetzal',system='filtration',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03199",
+    "query": "Kozlov just called in—Jaguar's HEPA filter differential pressure is at 12.5 kPa, way past service life. What's the plan?",
+    "tool_call": "schedule_maintenance(module='jaguar',task='filter_replacement',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03200",
+    "query": "We're getting readings from Cóndor showing a temperature spike to 32°C, well above the normal range of 20-24°C. What's the next step?",
+    "tool_call": "control_system(module='condor',system='cooling',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03201",
+    "query": "Medical Officer Mendoza mentioned the crew’s biosign monitors in Cóndor are reading 5.2% higher than baseline—could the impending calibration be affecting sensor accuracy?",
+    "tool_call": "schedule_maintenance(module='condor',task='system_calibration',priority='routine')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03202",
+    "query": "Commander Reyes noticed the cargo humidity in Vicuña seems unstable—can you verify the trend over the past 12 hours?",
+    "tool_call": "get_telemetry(module='vicuna',metric='humidity',timeframe_hours=12)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-005",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03203",
+    "query": "Valdivia’s requesting an immediate check on the Colibrí comms system—he’s got a ground contact window coming up and needs to know if it’s fully operational",
+    "tool_call": "get_module_status(module='colibri',system='communications')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-004",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03204",
+    "query": "Specialist Nakamura just called in—there's a strong chemical smell in Quetzal, and the air quality sensors are reading 17 PPM for volatile compounds. What’s the next step?",
+    "tool_call": "control_system(module='quetzal',system='filtration',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03205",
+    "query": "We're getting inconsistent moisture readings from Vicuña; Engineer Kozlov wants the last 12 hours of humidity data to cross-check the sensors",
+    "tool_call": "get_telemetry(module='vicuna',metric='humidity',timeframe_hours=12)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-005",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03206",
+    "query": "We're getting a temperature reading of 17°C in the Cóndor module, which is below the normal range. What should we do?",
+    "tool_call": "control_system(module='condor',system='heating',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03207",
+    "query": "Commander Reyes reports a supply vessel is 5 minutes from Vicuña docking bay, but its cargo manifest hasn’t been verified. How should we proceed?",
+    "tool_call": "calculate_trajectory(maneuver='docking',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03208",
+    "query": "Quetzal’s air sensors just spiked to 17 PPM, and Specialist Nakamura reports a chemical odor. How should we proceed?",
+    "tool_call": "control_system(module='quetzal',system='filtration',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03209",
+    "query": "Mendoza says it’s getting warm in the medical bay on Tucán. Could you pull the temperature data from the past six hours to verify?",
+    "tool_call": "get_telemetry(module='tucan',metric='temperature',timeframe_hours=6)",
+    "tool_name": "get_telemetry",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-006",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03210",
+    "query": "Commander Reyes just reported an unplanned velocity change, telemetry shows a 3.8 m/s delta—what’s our next move?",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03211",
+    "query": "Commander Reyes just reported that the Cóndor module's temperature has dropped to 17°C. How should we proceed?",
+    "tool_call": "control_system(module='condor',system='heating',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03212",
+    "query": "Commander Reyes just reported the Cóndor module feels unusually warm, and the sensors confirm it's at 42°C. How should we proceed?",
+    "tool_call": "control_system(module='condor',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03213",
+    "query": "Pilot Valdivia reports Jaguar’s humidity is down to 34% and wants to know if we need to intervene",
+    "tool_call": "control_system(module='jaguar',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03214",
+    "query": "Medical Officer Mendoza reports the Colibrí module's research freezer just hit 75 days of remaining cryo-preservant—should we adjust supply runs?",
+    "tool_call": "request_supply(category='scientific',urgency='routine')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03215",
+    "query": "Tucán's medical bay sensor shows temp at 21°C but keeps jumping to 15°C—how should we proceed?",
+    "tool_call": "schedule_maintenance(module='tucan',task='sensor_repair',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03216",
+    "query": "Medical Officer Mendoza just reported Colibrí's power load is reading 95%—what should we do about that?",
+    "tool_call": "control_system(module='colibri',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03217",
+    "query": "We've got an alert from the weekly systems check: Cóndor's primary power cell is sitting at 18%. Should we initiate any protocols?",
+    "tool_call": "schedule_maintenance(module='condor',task='power_cell_swap',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03218",
+    "query": "Kozlov’s prepping for Jaguar’s bi-weekly maintenance and needs a full life support status check. Can you pull up the latest readings for him?",
+    "tool_call": "get_module_status(module='jaguar',system='life_support')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-003",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03219",
+    "query": "Cóndor module’s velocity sensors indicate a 3.8 m/s deviation from projected. How should we respond?",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03220",
+    "query": "Commander Reyes just confirmed altitude at 410.5 km—what's the protocol for being 2.5 km above planned orbit?",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03221",
+    "query": "Pilot Valdivia just called down; telemetry confirms we're sitting at 409.2 km instead of the usual 408. What's the play?",
+    "tool_call": "calculate_trajectory(maneuver='station_keeping',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03222",
+    "query": "Jaguar module's power load is reading 94%, should I be concerned about this level?",
+    "tool_call": "control_system(module='jaguar',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03223",
+    "query": "The supply logs show food reserves at 13%, and Pilot Valdivia says the crew’s already cutting portions. How do we handle this?",
+    "tool_call": "request_supply(category='food',urgency='emergency')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03224",
+    "query": "We've just completed docking with Vicuña, and I'm seeing a 0.75% variance in the structural integrity readings from the expected baseline. What's the next step?",
+    "tool_call": "get_module_status(module='vicuna',system='structural')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-005",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03225",
+    "query": "Pilot Valdivia's just flagged that the Quetzal's secondary docking thrusters are reading 26% capacity left—how do we want to handle this before the next supply vessel arrives?",
+    "tool_call": "request_supply(category='equipment',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-021",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03226",
+    "query": "Pilot Valdivia noticed the food reserves in Vicuña module are at 27%—how should we handle this?",
+    "tool_call": "request_supply(category='food',urgency='expedited')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03227",
+    "query": "Medical Officer Mendoza reports Vicuña module is drawing 94% power—should we investigate further?",
+    "tool_call": "control_system(module='vicuna',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03228",
+    "query": "Specialist Nakamura flagged that Tucán’s consumption is holding steady at 96%—what’s the next step here?",
+    "tool_call": "control_system(module='tucan',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03229",
+    "query": "The thermal readings from Tucán just spiked to 43°C. Need guidance on handling this",
+    "tool_call": "control_system(module='tucan',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03230",
+    "query": "The thermal sensors in Quetzal are flagging 48°C. Engineer Kozlov is asking for guidance on whether to initiate cooling protocols",
+    "tool_call": "control_system(module='quetzal',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03231",
+    "query": "We're getting a high-temperature alert from the Jaguar module—readings just hit 41°C. What’s the next step?",
+    "tool_call": "control_system(module='jaguar',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03232",
+    "query": "Commander Reyes is on comms saying Cóndor's power cell capacity has dropped to 18% during the routine check. How do you want to handle this?",
+    "tool_call": "schedule_maintenance(module='condor',task='power_cell_swap',priority='urgent')",
+    "tool_name": "schedule_maintenance",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-019",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03233",
+    "query": "Engineer Kozlov flagged the Vicuña lab's reagent stock is now projected to last exactly 75 operational days; what's the plan?",
+    "tool_call": "request_supply(category='scientific',urgency='routine')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03234",
+    "query": "Commander Reyes is asking about Tucán’s temperature spike to 43°C. How should we proceed?",
+    "tool_call": "control_system(module='tucan',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03235",
+    "query": "Specialist Nakamura flagged it during inventory: Colibrí’s medical supplies are now at 12%. Need direction on this",
+    "tool_call": "request_supply(category='medical',urgency='emergency')",
+    "tool_name": "request_supply",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-039",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03236",
+    "query": "Commander Reyes just flagged Quetzal’s power usage at 18.7 kW—how close are we to breaching the DOC-014 operational ceiling?",
+    "tool_call": "get_module_status(module='quetzal',system='power')",
+    "tool_name": "get_module_status",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03237",
+    "query": "We've got a debris object with a 2.3 × 10⁻⁴ collision probability heading toward our orbit. How do we handle this?",
+    "tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03238",
+    "query": "The temperature in Cóndor has reached 32°C, exceeding the normal operating range of 20-24°C. What action should we take?",
+    "tool_call": "control_system(module='condor',system='cooling',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03239",
+    "query": "Specialist Nakamura just flagged a debris object with a collision probability of 5.7 × 10⁻⁴ on the Jaguar module's external scans. What’s the recommended action here?",
+    "tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03240",
+    "query": "Commander Reyes flagged Tucán module temperature at 17°C and still falling—what’s the protocol here?",
+    "tool_call": "control_system(module='tucan',system='heating',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03241",
+    "query": "We're seeing a 95% power load on Colibrí's systems. Should we adjust anything?",
+    "tool_call": "control_system(module='colibri',system='lighting',action='deactivate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-014",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03242",
+    "query": "We're showing 68% humidity in Cóndor—should I be concerned about this level?",
+    "tool_call": "control_system(module='condor',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03243",
+    "query": "We’re getting a reading of 34% humidity in Jaguar—Commander Reyes just asked if we should adjust environmental controls",
+    "tool_call": "control_system(module='jaguar',system='ventilation',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-017",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03244",
+    "query": "Vicuña port radar shows an unmarked supply vessel approaching, currently 2.5 kilometers out—no IFF transponder detected. What’s the protocol?",
+    "tool_call": "calculate_trajectory(maneuver='docking',urgency='planned')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03245",
+    "query": "Specialist Nakamura just called in—Quetzal's ambient temp is reading 48°C on his panel. How should we proceed?",
+    "tool_call": "control_system(module='quetzal',system='cooling',action='increase')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03246",
+    "query": "Commander Reyes just reported the Jaguar module is running hot at 30°C. That's way above the usual 19-23°C. How do you want us to proceed?",
+    "tool_call": "control_system(module='jaguar',system='cooling',action='activate')",
+    "tool_name": "control_system",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-013",
+    "protocol_id": null
+  },
+  {
+    "question_id": "Q-03247",
+    "query": "Altitude readings just hit 414 km, which is 6 km above nominal. What’s the protocol here?",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')",
+    "tool_name": "calculate_trajectory",
+    "seed_type": "rag",
+    "doc_id": "MASA-DOC-040",
     "protocol_id": null
   }
 ]

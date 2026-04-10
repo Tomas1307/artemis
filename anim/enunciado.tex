@@ -1,0 +1,153 @@
+\documentclass{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{tikz}
+\title{
+\includegraphics[width=16cm]{FNLP_Banner.jpg}\\
+Instrucciones de Competencia Final
+}
+
+ \date{}
+\author{Curso Modelos Avanzados de Procesamiento de Lenguaje Natural}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+Bienvenido a la competencia final del curso \textbf{Fundamentos de Procesamiento de Lenguaje Natural}. En este desafío, los participantes deberán construir un sistema de \textbf{clasificación de cadenas de ADN}. El objetivo es diseñar un modelo capaz de detectar, en una secuencia de ADN, si esta ha sido mutada de forma artificial.
+
+\section{Resultados de Aprendizaje}
+Con esta actividad se busca que el estudiante pueda poner en práctica el desarrollo de una solución completa
+de \textit{machine learning} para un problema de clasificación de cadenas de caracteres. Tras realizar esta actividad, se espera que
+el estudiante esté en capacidad de:
+
+\begin{enumerate}
+    \item Proponer y seleccionar modelos de \textit{machine learning} que permitan resolver un problema de clasificación de cadenas de caracteres.
+    \item Identificar y aplicar diferentes técnicas de procesamiento de cadenas de caracteres.
+    \item Representar cadenas de caracteres de manera que permita el uso de modelos de \textit{machine learning}.
+    \item Hacer uso de los datos para entrenar y evaluar el desempeño del modelo.
+    \item Probar distintos modelos para encontrar la mejor solución para el problema particular. 
+\end{enumerate}
+
+\section{Descripción de la Competencia}
+Usted y su grupo deberán participar en una competencia en Kaggle diseñada para este curso. La competencia consiste en clasificar cadenas de ADN en dos categorías: mutadas y no mutadas. Una cadena de ADN se considera mutada cuando se han cambiado algunos de los nucleótidos de esta.  El reto es construir un modelo que, dada una cadena de nucleótidos (A, C, G, T) de entrada, prediga correctamente si la secuencia ha sido alterada.  La competencia es exclusiva para estudiantes de la Maestría en Inteligencia Artificial de la Universidad de los Andes inscritos en el primer ciclo de 2026-10 en la materia de Fundamentos de Procesamiento de Lenguaje Natural.
+
+\subsection{Requisitos técnicos}
+
+Recuerde que su modelo no tendrá validez si no cumple los requisitos que se mencionan a
+continuación. Por lo tanto, obtendrá una calificación de 0 en la actividad correspondiente al
+proyecto final.  Los requisitos son los siguientes:
+
+\begin{itemize}
+    \item No se permite el uso de técnicas de aprendizaje profundo. No está permitido el uso de modelos de lenguaje de tipo transformer.
+    \item Solo podrá usar modelos de clasificación desarrollados con la librería \texttt{scikit-learn} y que no violen otros de los requisitos aquí establecidos.
+    \item La competencia debe resolverse exclusivamente con modelos clásicos de aprendizaje de máquina y técnicas de PLN vistas en este curso. El uso de incrustaciones como Word2Vec o Glove está permitido.
+    \item Para la revisión en Coursera debe subir un solo modelo, el cual debe corresponder al modelo que obtuvo    el mejor resultado en la competencia de Kaggle.
+    \item Está prohibido utilizar los datos de prueba para entrenar modelos.
+    \item Los resultados deben ser replicables a partir de los entregables en la plataforma de Coursera.
+\end{itemize}
+
+
+\section{Envío de resultados por la plataforma Kaggle}
+Para enviar los resultados, genere un archivo CSV en el formato especificado y súbalo en la plataforma Kaggle. Una parte de los resultados se usará para el \textbf{score público} y otra parte para el \textbf{score privado}, que determinará el resultado final.
+
+\section{Entregables en Coursera}
+
+En la semana 8 del curso se habilitará una actividad en donde usted y su grupo deben subir los siguientes
+entregables correspondientes únicamente al modelo final con el que obtuvieron los mejores resultados en la
+tabla de líderes pública de la competencia de Kaggle:
+
+\begin{enumerate}
+    \item Jupyter Notebook que se utilizó para realizar la implementación y el entrenamiento del clasificador de cadenas de caracteres.
+    \item Si utilizo mas datos debe referenciarlos claramente, incluyendo la página donde los encontró y la licencia explicita. 
+    \item El archivo donde se guardó el modelo de \texttt{scikit-learn} entrenado. El modelo debe guardarse haciendo uso de las librerías \texttt{pickle} o \texttt{joblib}.
+\end{enumerate}
+
+
+\section{Rúbrica de Evaluación}
+La nota del proyecto se compone de los siguientes criterios:
+
+\begin{table}[H]
+\begin{center}
+\caption{Composición de la nota del proyecto final}
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Item}                        & \textbf{Porcentaje de la nota} \\ \hline
+    Participación en la competencia      & 20\%                         \\ \hline
+    Superar la línea base  (ver en Kaggle)              & 40\%                         \\ \hline
+    Percentil obtenido en la competencia & 40\%                         \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Participación en la competencia}
+Para que sea considerada su participación en la competencia, debe realizar al menos 5 envíos \texttt{diferentes} en la plataforma de Kaggle. La idea es evidenciar que el grupo trató de mejorar su enfoque inicial. Tiene dos semanas para cumplir con ese número mínimo de envíos. No hay límite máximo de envíos. 
+
+\subsection{Superar la línea base}
+El equipo del curso preparó una línea base (i.e. modelo) que debe superar. Esta línea base la encuentra en el leaderboard de la competencia en Kaggle. 
+
+\subsection{Percentil obtenido en la competencia}
+El 40\% restante de la nota final se obtiene de acuerdo al desempeño del modelo desarrollado con su grupo en la competencia de Kaggle. Al cerrar la competencia se generan unos puntajes finales, y su nota en este rubro dependerá del desempeño obtenido. El porcentaje obtenido de este rubro se calcula de la siguiente manera:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Desempeño obtenido} & \textbf{Porcentaje del rubro} \\ \hline
+$<$ percentil 25 & 0\% \\ \hline
+$\geq$ percentil 25 y $<$ percentil 50 & 50\% \\ \hline
+$\geq$ percentil 50 y $<$ percentil 75 & 75\% \\ \hline
+$>$ percentil 75 & 100\% \\ \hline
+\end{tabular}
+\caption{Distribución del porcentaje del rubro según desempeño obtenido}
+\end{table}
+
+
+
+\subsection{Fechas Importantes}
+\begin{itemize}
+    \item Fecha de apertura de la competencia: \textbf{02/03/2026 00:00 AM}
+    \item Fecha de finalización: \textbf{15/03/2026 11:59 PM}
+\end{itemize}
+
+\section{Descripción de los Datos}
+Se proporcionan los siguientes archivos:
+
+\begin{itemize}
+    \item \textbf{train.csv}: contiene 46\,674 ejemplos de entrenamiento correspondientes a secuencias biológicas, con las siguientes columnas:
+    \begin{itemize}
+        \item \texttt{sequence}: secuencia biológica representada como una cadena de caracteres.
+        \item \texttt{original\_label}: clase taxonómica original a la que pertenece la secuencia (información biológica).
+        \item \texttt{is\_mutated}: variable binaria que indica si la secuencia ha sido mutada (\texttt{1}) o no (\texttt{0}).
+    \end{itemize}
+
+    \item \textbf{eval.csv}: archivo de evaluación que contiene 5\,186 secuencias a clasificar, con las siguientes columnas:
+    \begin{itemize}
+        \item \texttt{sequence}: clase taxonómica original a la que pertenece la secuencia (información biológica).
+        \item \texttt{original\_label}: clase original asociada a la secuencia.
+    \end{itemize}
+\end{itemize} 
+
+\subsection{Archivo de respuesta}
+El archivo de respuesta debe contener el siguiente formato:
+\begin{verbatim}
+id,answer
+2,1
+5,0
+6,1
+...
+\end{verbatim}
+Cada \texttt{id} en el conjunto de prueba debe tener un valor en la columna \texttt{answer}, indicando si se detectaron mutaciones.
+
+
+\section{Enlaces de la Competencia}
+\begin{itemize}
+    \item \textbf{Enlace de Invitación}: \href{https://www.kaggle.com/t/e7bf9e2a56f242d8ac4443e2bfc1565f}{Kaggle Invitation}
+\end{itemize}
+
+\end{document}

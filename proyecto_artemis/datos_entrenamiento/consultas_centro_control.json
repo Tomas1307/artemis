@@ -4,7 +4,7 @@
     "doc_id": "MASA-DOC-031"
   },
   {
-    "query": "How many solar arrays are deployed on the extendable booms, and what’s their primary function?",
+    "query": "According to the complete systems overview, what is the star-like module configuration of Kuntur Station?",
     "doc_id": "MASA-DOC-036"
   },
   {
@@ -60,7 +60,7 @@
     "doc_id": "MASA-DOC-059"
   },
   {
-    "query": "Ana Valdivia just reported headaches from the crew in Colibrí—CO2 concentration is at 2.6% and still rising. Should we flag this and notify Commander Reyes immediately?",
+    "query": "According to the atmospheric emergency protocols, what threshold triggers MASA-SEC-009 for toxic atmosphere detection?",
     "doc_id": "MASA-DOC-007"
   },
   {
@@ -200,7 +200,7 @@
     "doc_id": "MASA-DOC-056"
   },
   {
-    "query": "Medical Officer Lucia Mendoza just reported crew vitals in Quetzal showing distress—what emergency procedure should we initiate for this situation?",
+    "query": "Medical Officer Lucía Mendoza just reported crew vitals in Quetzal showing distress—what emergency procedure should we initiate for this situation?",
     "doc_id": "MASA-DOC-012"
   },
   {
@@ -208,7 +208,7 @@
     "doc_id": "MASA-DOC-052"
   },
   {
-    "query": "What was the specific role of Mission Specialist Fátima Al-Hassan during the Cóndor-3 activation?",
+    "query": "What was the specific role of Mission Specialist Fatima Al-Hassan during the Cóndor-3 activation?",
     "doc_id": "MASA-DOC-025"
   },
   {
@@ -260,7 +260,7 @@
     "doc_id": "MASA-DOC-008"
   },
   {
-    "query": "What’s the purpose of the pressurized corridor between Cóndor and Quetzal modules?",
+    "query": "In the Kuntur Station complete systems overview, what is the star-like module configuration and how are Cóndor and Quetzal interconnected?",
     "doc_id": "MASA-DOC-036"
   },
   {
@@ -284,7 +284,7 @@
     "doc_id": "MASA-DOC-060"
   },
   {
-    "query": "How does the station’s altitude balance atmospheric drag with operational advantages?",
+    "query": "Per the complete systems overview, why was 408 kilometers chosen as Kuntur Station’s orbital altitude?",
     "doc_id": "MASA-DOC-036"
   },
   {
@@ -292,7 +292,7 @@
     "doc_id": "MASA-DOC-057"
   },
   {
-    "query": "I need to log an alert — oxygen sensors in Jaguar just hit 14.2% and are still dropping.",
+    "query": "What is the role of Pavel Kozlov as primary atmospheric systems officer under the atmospheric emergency protocols?",
     "doc_id": "MASA-DOC-007"
   },
   {
@@ -312,7 +312,7 @@
     "doc_id": "MASA-DOC-040"
   },
   {
-    "query": "We’re seeing a voltage fluctuation on the Colibrí power bus—current reading is 131.4 V. This has been trending upward since 0300. Should we flag this for immediate review?",
+    "query": "What is the nominal voltage range defined in the system failure response protocols for MASA-SEC-018?",
     "doc_id": "MASA-DOC-011"
   },
   {
@@ -332,7 +332,7 @@
     "doc_id": "MASA-DOC-022"
   },
   {
-    "query": "Oxygen readings in Jaguar have dropped to 15.5% over the past 30 minutes—what emergency procedure should we initiate for this?",
+    "query": "The atmospheric emergency protocols mention a tiered response framework — what severity levels are defined and how do they differ?",
     "doc_id": "MASA-DOC-007"
   },
   {
@@ -520,7 +520,7 @@
     "doc_id": "MASA-DOC-004"
   },
   {
-    "query": "We’re seeing a voltage fluctuation on Quetzal’s power bus—current reading is 139.5 V. This has been trending upward since Commander Reyes reported it during the last systems check. Should we escalate this?",
+    "query": "According to the system failure protocols, what triggers MASA-SEC-006 for power grid critical failure?",
     "doc_id": "MASA-DOC-011"
   },
   {
@@ -604,7 +604,7 @@
     "doc_id": "MASA-DOC-053"
   },
   {
-    "query": "Cóndor's oxygen concentration has dropped to 14.2% and is still falling—should we log an alert on this? Commander Reyes just reported it from the flight deck.",
+    "query": "Per the atmospheric emergency protocols, at what oxygen concentration does MASA-SEC-010 activate versus MASA-SEC-002?",
     "doc_id": "MASA-DOC-007"
   },
   {
@@ -644,7 +644,7 @@
     "doc_id": "MASA-DOC-059"
   },
   {
-    "query": "Cóndor module is showing CO2 concentration at 2.9% and climbing, crew reports headaches. What emergency steps should we take for this scenario?",
+    "query": "What is the CO2 concentration threshold that triggers MASA-SEC-009 under the atmospheric emergency protocols?",
     "doc_id": "MASA-DOC-007"
   },
   {
@@ -684,7 +684,7 @@
     "doc_id": "MASA-DOC-057"
   },
   {
-    "query": "Water recycling in Jaguar is down to 28.6% and has been dropping for hours—what emergency steps do we take for this scenario?",
+    "query": "The system failure response protocols define MASA-SEC-015 for water recycling — what output threshold and duration trigger it?",
     "doc_id": "MASA-DOC-011"
   },
   {
@@ -716,7 +716,7 @@
     "doc_id": "MASA-DOC-027"
   },
   {
-    "query": "Tucán CO2 sensors hit 2.7% and rising—crew reporting headaches since 0400. What emergency procedure covers this?",
+    "query": "The atmospheric protocols reference testing at the Alto Atacama Simulation Facility — what thresholds were established there?",
     "doc_id": "MASA-DOC-007"
   },
   {
@@ -876,7 +876,7 @@
     "doc_id": "MASA-DOC-026"
   },
   {
-    "query": "Tucán oxygen concentration has dropped to 15.8% and is still falling — what emergency procedure do we initiate?",
+    "query": "Under the atmospheric emergency protocols, what is the high-alert pressure band that triggers MASA-SEC-011?",
     "doc_id": "MASA-DOC-007"
   },
   {
@@ -992,7 +992,7 @@
     "doc_id": "MASA-DOC-026"
   },
   {
-    "query": "Vicuña power bus voltage just hit 103.8 V—should we log an alert on this fluctuation?",
+    "query": "Under the system failure protocols, what voltage fluctuation percentage triggers MASA-SEC-018?",
     "doc_id": "MASA-DOC-011"
   },
   {
@@ -1024,7 +1024,7 @@
     "doc_id": "MASA-DOC-004"
   },
   {
-    "query": "Kai just reported voltage fluctuations in Quetzal—power bus sensors are reading 100.4 V. What emergency procedure should we initiate for this?",
+    "query": "The system failure response protocols describe MASA-SEC-007 for communication blackout — how many minutes of lost contact trigger activation?",
     "doc_id": "MASA-DOC-011"
   },
   {
@@ -1044,7 +1044,7 @@
     "doc_id": "MASA-DOC-056"
   },
   {
-    "query": "Can you verify the orbital parameters ensuring regular ground track consistency?",
+    "query": "What ground station in Bogotá, Colombia does the systems overview identify as MASA’s primary communication hub?",
     "doc_id": "MASA-DOC-036"
   },
   {
@@ -1052,7 +1052,7 @@
     "doc_id": "MASA-DOC-005"
   },
   {
-    "query": "What is Fátima Al-Hassan's nationality and how does her cultural background influence her work on Kuntur Station?",
+    "query": "What is Fatima Al-Hassan's nationality and how does her cultural background influence her work on Kuntur Station?",
     "doc_id": "MASA-DOC-033"
   },
   {
@@ -1088,7 +1088,7 @@
     "doc_id": "MASA-DOC-053"
   },
   {
-    "query": "Medical Officer Lucia Mendoza just reported crew vitals in Tucán showing distress—what emergency procedure do we initiate?",
+    "query": "Medical Officer Lucía Mendoza just reported crew vitals in Tucán showing distress—what emergency procedure do we initiate?",
     "doc_id": "MASA-DOC-012"
   },
   {
@@ -1208,11 +1208,11 @@
     "doc_id": "MASA-DOC-033"
   },
   {
-    "query": "Oxygen concentration in Vicuña just dropped to 10.9% and still falling — should we flag this to Commander Reyes immediately?",
+    "query": "What corrective actions does MASA-SEC-010 require before potential evacuation according to the atmospheric protocols?",
     "doc_id": "MASA-DOC-007"
   },
   {
-    "query": "We’ve got a voltage fluctuation on the Colibrí power bus—sensors showing 95.0 V. What emergency procedure should we initiate for this?",
+    "query": "What is the rated capacity threshold that triggers MASA-SEC-006 according to the system failure response protocols?",
     "doc_id": "MASA-DOC-011"
   },
   {
@@ -1220,7 +1220,7 @@
     "doc_id": "MASA-DOC-034"
   },
   {
-    "query": "Water recycling in Jaguar has been dropping for hours—now at 38.9%. What emergency response should we initiate?",
+    "query": "Per the system failure protocols, what is the minimum water recycling output before MASA-SEC-015 activates?",
     "doc_id": "MASA-DOC-011"
   },
   {
@@ -1580,7 +1580,7 @@
     "doc_id": "MASA-DOC-019"
   },
   {
-    "query": "What was the background of Fátima Al-Hassan, and how did it contribute to the mission?",
+    "query": "What was the background of Fatima Al-Hassan, and how did it contribute to the mission?",
     "doc_id": "MASA-DOC-028"
   },
   {
@@ -1664,7 +1664,7 @@
     "doc_id": "MASA-DOC-029"
   },
   {
-    "query": "Tucán oxygen concentration has dropped to 13.4% — Engineer Kozlov reports crew is experiencing lightheadedness. What emergency steps should we initiate?",
+    "query": "The atmospheric emergency protocols define a critical pressure threshold of 85.0 kPa — what physiological effects justify this value?",
     "doc_id": "MASA-DOC-007"
   },
   {
@@ -1704,7 +1704,7 @@
     "doc_id": "MASA-DOC-039"
   },
   {
-    "query": "Jaguar power grid showing 98.2% consumption—this is approaching maximum capacity. Should we escalate this to command for immediate action?",
+    "query": "The system failure protocols specify load shedding as a required action for MASA-SEC-006 — what systems receive priority power?",
     "doc_id": "MASA-DOC-011"
   },
   {
@@ -1848,7 +1848,7 @@
     "doc_id": "MASA-DOC-032"
   },
   {
-    "query": "What’s the primary ground station for communication, and what governs the communication windows?",
+    "query": "According to the systems overview, what procedure governs the regular communication windows with Bogotá ground station?",
     "doc_id": "MASA-DOC-036"
   },
   {
@@ -2032,7 +2032,7 @@
     "doc_id": "MASA-DOC-021"
   },
   {
-    "query": "Medical Officer Lucia Mendoza just reported crew vitals showing distress in Vicuña—what emergency procedure do we follow?",
+    "query": "Medical Officer Lucía Mendoza just reported crew vitals showing distress in Vicuña—what emergency procedure do we follow?",
     "doc_id": "MASA-DOC-012"
   },
   {
@@ -2092,7 +2092,7 @@
     "doc_id": "MASA-DOC-008"
   },
   {
-    "query": "What’s the duration of eclipse periods per orbit, and which systems ensure power continuity?",
+    "query": "The Kuntur Station complete systems overview describes eclipse periods and solar arrays on extendable booms — what is the power continuity design?",
     "doc_id": "MASA-DOC-036"
   },
   {
@@ -2120,7 +2120,7 @@
     "doc_id": "MASA-DOC-053"
   },
   {
-    "query": "Kai Nakamura just reported CO2 scrubber efficiency in Jaguar is down to 34.9% — what emergency procedure should we initiate for this?",
+    "query": "What CO2 scrubber efficiency threshold triggers MASA-SEC-014 under the system failure response protocols?",
     "doc_id": "MASA-DOC-011"
   },
   {
@@ -2244,7 +2244,7 @@
     "doc_id": "MASA-DOC-029"
   },
   {
-    "query": "Cóndor's power grid is at 98.4% capacity with stress indicators active—what emergency measures should we initiate based on current readings?",
+    "query": "According to the system failure protocols, what backup systems are activated when power consumption exceeds 97% capacity?",
     "doc_id": "MASA-DOC-011"
   },
   {
@@ -2356,11 +2356,11 @@
     "doc_id": "MASA-DOC-061"
   },
   {
-    "query": "Cóndor's CO2 sensors are reading 1.9% and climbing—Commander Reyes reports headaches in the crew. What emergency procedure should we initiate?",
+    "query": "Which atmospheric emergency protocol addresses chemical contamination and what sensor triggers it?",
     "doc_id": "MASA-DOC-007"
   },
   {
-    "query": "I need to log an alert — CO2 concentration in Jaguar is reading 2.4% and climbing, crew reports headaches. What emergency steps should we take?",
+    "query": "Under the atmospheric emergency protocols, what is the difference in scope between critical-severity and high-severity protocols?",
     "doc_id": "MASA-DOC-007"
   },
   {
@@ -2412,7 +2412,7 @@
     "doc_id": "MASA-DOC-039"
   },
   {
-    "query": "Jaguar oxygen concentration has dropped to 14.3% over the past 30 minutes—what emergency procedure should we initiate for this scenario?",
+    "query": "The atmospheric protocols describe independent life support systems per module — how does this segmented architecture affect protocol scope?",
     "doc_id": "MASA-DOC-007"
   },
   {
@@ -2600,7 +2600,7 @@
     "doc_id": "MASA-DOC-030"
   },
   {
-    "query": "Can you confirm the age of Science Specialist Fátima Al-Hassan and her role in the Quetzal module?",
+    "query": "Can you confirm the age of Science Specialist Fatima Al-Hassan and her role in the Quetzal module?",
     "doc_id": "MASA-DOC-033"
   },
   {
@@ -2632,7 +2632,7 @@
     "doc_id": "MASA-DOC-021"
   },
   {
-    "query": "Can you confirm the start date of the Cóndor-7 mission and its operational objectives?",
+    "query": "According to the Kuntur Station complete systems overview, what year was the station deployed and when did Cóndor-7 commence?",
     "doc_id": "MASA-DOC-036"
   },
   {
@@ -2664,7 +2664,7 @@
     "doc_id": "MASA-DOC-042"
   },
   {
-    "query": "Jaguar power grid showing 97.3% consumption and climbing rapidly — Kozlov reports stress alarms. What emergency procedure covers this scenario?",
+    "query": "The system failure response protocols describe MASA-SEC-017 for airlock failures — what equalization rate triggers it?",
     "doc_id": "MASA-DOC-011"
   },
   {
@@ -2704,7 +2704,7 @@
     "doc_id": "MASA-DOC-037"
   },
   {
-    "query": "Cóndor's oxygen concentration has dropped to 11.7%—what emergency procedure should we initiate? Commander Reyes just reported crew members are experiencing shortness of breath.",
+    "query": "What monitoring transfer procedure does the atmospheric emergency protocol define for off-shift periods?",
     "doc_id": "MASA-DOC-007"
   },
   {
@@ -2796,7 +2796,7 @@
     "doc_id": "MASA-DOC-053"
   },
   {
-    "query": "Which module is responsible for real-time attitude adjustments to counteract orbital perturbations?",
+    "query": "The Kuntur Station complete systems overview mentions reaction wheels and magnetic torque rods — how do these stabilize the station’s orientation?",
     "doc_id": "MASA-DOC-036"
   },
   {
@@ -2844,7 +2844,7 @@
     "doc_id": "MASA-DOC-021"
   },
   {
-    "query": "Which module serves as the central hub for crew movement between command and science sections?",
+    "query": "In the Kuntur Station complete systems overview, how does the star-like configuration with Cóndor as central hub enable module interconnection?",
     "doc_id": "MASA-DOC-036"
   },
   {
@@ -2856,7 +2856,7 @@
     "doc_id": "MASA-DOC-016"
   },
   {
-    "query": "We’re seeing a voltage fluctuation on Quetzal’s power bus—current reading is 99.6 V. Should we flag this for engineering review?",
+    "query": "Under the system failure protocols, what is the scope of MASA-SEC-018 and why is it limited to the affected module?",
     "doc_id": "MASA-DOC-011"
   },
   {
@@ -2912,7 +2912,7 @@
     "doc_id": "MASA-DOC-002"
   },
   {
-    "query": "We’re seeing a voltage fluctuation on Jaguar’s power bus, currently reading 104.4 V. Should we flag this for further review?",
+    "query": "What emergency measures does MASA-SEC-007 require after 30 minutes of ground control communication blackout?",
     "doc_id": "MASA-DOC-011"
   },
   {
@@ -3056,7 +3056,7 @@
     "doc_id": "MASA-DOC-022"
   },
   {
-    "query": "What’s the structural mechanism that prevents stress fractures due to thermal expansion?",
+    "query": "The Kuntur Station complete systems overview describes rigid docking collars and flexible expansion joints — how do they manage thermal stress?",
     "doc_id": "MASA-DOC-036"
   },
   {
@@ -3132,11 +3132,11 @@
     "doc_id": "MASA-DOC-031"
   },
   {
-    "query": "Medical Officer Lucia Mendoza just reported crew vitals showing distress in Cóndor—what emergency procedure do we follow?",
+    "query": "Medical Officer Lucía Mendoza just reported crew vitals showing distress in Cóndor—what emergency procedure do we follow?",
     "doc_id": "MASA-DOC-012"
   },
   {
-    "query": "What’s the role of the Colibrí module in maintaining station stability?",
+    "query": "According to the Kuntur Station complete systems overview, what navigation systems in Colibrí counteract orbital perturbations?",
     "doc_id": "MASA-DOC-036"
   },
   {

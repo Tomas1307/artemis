@@ -1,0 +1,285 @@
+\documentclass{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    columns=fullflexible
+}
+
+\title{
+\includegraphics[width=16cm]{FNLP_Banner.jpg}\\
+Instrucciones de Competencia Final --- Proyecto ARTEMIS
+}
+
+ \date{}
+\author{Curso Modelos Avanzados de Procesamiento de Lenguaje Natural}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+Bienvenido a la competencia final del curso \textbf{Modelos Avanzados de Procesamiento de Lenguaje Natural}. En este desafío, los participantes deberán construir un sistema de \textbf{Retrieval-Augmented Generation (RAG) con \textit{Tool Calling}}. El objetivo es diseñar un sistema capaz de, dado un \textit{query} en lenguaje natural emitido por un operador del centro de control de la agencia espacial ficticia \textbf{MASA}, predecir la \textit{tool call} correcta en formato canónico, utilizando documentación técnica recuperada como contexto.
+
+\section{Resultados de Aprendizaje}
+Con esta actividad se busca que el estudiante pueda poner en práctica el desarrollo de una solución completa
+de \textit{NLP} para un problema de \textit{retrieval} y generación condicionada. Tras realizar esta actividad, se espera que
+el estudiante esté en capacidad de:
+
+\begin{enumerate}
+    \item Diseñar e implementar sistemas de \textit{retrieval} densos basados en \textit{encoders} pre-entrenados.
+    \item Realizar \textit{fine-tuning} de modelos de lenguaje de tipo \textit{decoder} para tareas de generación estructurada.
+    \item Construir \textit{pipelines} de RAG que combinan \textit{retrieval} (FAISS) con generación condicionada por contexto recuperado.
+    \item Aplicar técnicas de \textit{data augmentation}, \textit{hybrid search} y \textit{reranking} para mejorar el desempeño.
+    \item Diseñar estrategias de \textit{prompting}, post-procesamiento y normalización de \textit{output} para tareas con formato estricto.
+    \item Evaluar sistemáticamente el desempeño de un sistema de generación contra un \textit{gold standard} con métrica de \textit{exact match}.
+\end{enumerate}
+
+\section{Descripción de la Competencia}
+Usted y su grupo deberán participar en una competencia en Kaggle diseñada para este curso. La competencia consiste en predecir la \textit{tool call} correcta para cada \textit{query} de un operador del centro de control de la estación espacial \textbf{Kuntur Station}, operada por la agencia ficticia \textbf{MASA} (Misión Aeroespacial Sudamericana Avanzada). Cada \textit{query} puede requerir información presente en los documentos técnicos del centro de control para determinar parámetros como severidad o protocolos de emergencia. El reto es construir un sistema que, dada una consulta en inglés, recupere los documentos relevantes y genere la \textit{tool call} canónica correspondiente. La competencia es exclusiva para estudiantes de la Maestría en Inteligencia Artificial de la Universidad de los Andes inscritos en el primer ciclo de 2026-10 en la materia de Modelos Avanzados de Procesamiento de Lenguaje Natural.
+
+\subsection{Contexto de la misión}
+Estamos en 2026. Hace apenas unos días, la misión \textbf{Artemis II} de la NASA sobrevoló la Luna con cuatro astronautas a bordo, marcando el regreso de la humanidad a la órbita lunar después de más de 50 años. El programa Artemis avanza hacia el alunizaje tripulado y, eventualmente, hacia la presencia humana permanente en el espacio profundo.
+
+En este contexto, la \textbf{Misión Aeroespacial Sudamericana Avanzada (MASA)} --- la primera agencia espacial latinoamericana --- ha puesto en órbita la estación \textbf{Kuntur Station}. A bordo viajan seis tripulantes en una misión de larga duración: el Comandante Santiago Reyes, la Piloto Ana Valdivia, los Especialistas Kai Nakamura y Fatima Al-Hassan, el Ingeniero Pavel Kozlov y la Oficial Médico Lucía Mendoza. Están solos a 400\,km sobre la Tierra, y cualquier decisión equivocada puede poner en riesgo sus vidas.
+
+La estación cuenta con 6 módulos, cada uno bautizado con fauna emblemática de Sudamérica:
+\begin{itemize}[noitemsep]
+    \item \textbf{Cóndor} --- Comando y control (el cerebro de la estación).
+    \item \textbf{Quetzal} --- Laboratorio científico (4 tripulantes, 12 estaciones de trabajo).
+    \item \textbf{Jaguar} --- Soporte vital y sistemas críticos (redundancia Clase A).
+    \item \textbf{Colibrí} --- Comunicaciones y navegación (antenas de largo alcance).
+    \item \textbf{Vicuña} --- Almacenamiento, carga y puerto de acoplamiento.
+    \item \textbf{Tucán} --- Habitacional (6 cabinas individuales para la tripulación).
+\end{itemize}
+
+Desde el centro de control en tierra, los operadores envían consultas al sistema para monitorear la estación, ejecutar protocolos de emergencia, coordinar a la tripulación y mantener los sistemas funcionando. \textbf{Su tarea es construir el agente inteligente que interprete esas consultas y ejecute la acción correcta.} Un operador podría preguntar sobre lecturas anómalas de oxígeno en Jaguar, solicitar activar un protocolo de emergencia por radiación en Quetzal, o pedir la ubicación actual de un tripulante. Su sistema debe entender la consulta, recuperar la documentación técnica relevante y generar la \textit{tool call} precisa que resuelve la situación. La tripulación de Kuntur Station cuenta con ustedes.
+
+\subsection{Las 10 Tools Disponibles}
+El sistema cuenta con 10 \textit{tools} disponibles, todas con parámetros tipo \texttt{enum} (sin texto libre). A continuación se listan junto con sus parámetros y valores válidos:
+
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Tool} & \textbf{Parámetro} & \textbf{Valores válidos} \\ \hline
+\multirow{3}{*}{\texttt{get\_telemetry}}
+    & \texttt{module}          & \texttt{condor, quetzal, jaguar, colibri, vicuna, tucan} \\
+    & \texttt{metric}          & \texttt{temperature, pressure, oxygen, radiation, humidity, power} \\
+    & \texttt{timeframe\_hours} & \texttt{1, 6, 12, 24} \\ \hline
+\multirow{2}{*}{\texttt{get\_crew\_status}}
+    & \texttt{module}          & \texttt{condor, quetzal, jaguar, colibri, vicuna, tucan} \\
+    & \texttt{info}            & \texttt{health, location, current\_activity, schedule} \\ \hline
+\multirow{2}{*}{\texttt{get\_module\_status}}
+    & \texttt{module}          & \texttt{condor, quetzal, jaguar, colibri, vicuna, tucan} \\
+    & \texttt{system}          & \texttt{life\_support, power, thermal, structural, communications} \\ \hline
+\multirow{3}{*}{\texttt{send\_alert}}
+    & \texttt{module}          & \texttt{condor, quetzal, jaguar, colibri, vicuna, tucan} \\
+    & \texttt{severity}        & \texttt{low, medium, high, critical} \\
+    & \texttt{reason}          & \texttt{abnormal\_temperature, pressure\_drop, oxygen\_leak,} \\
+    &                          & \texttt{radiation\_spike, system\_failure, power\_fluctuation,} \\
+    &                          & \texttt{communication\_loss, structural\_damage} \\ \hline
+\multirow{2}{*}{\texttt{send\_message}}
+    & \texttt{recipient}       & \texttt{commander, pilot, specialist\_1, specialist\_2,} \\
+    &                          & \texttt{engineer, medical\_officer, all\_crew} \\
+    & \texttt{priority}        & \texttt{low, medium, high, urgent} \\ \hline
+\multirow{3}{*}{\texttt{schedule\_maintenance}}
+    & \texttt{module}          & \texttt{condor, quetzal, jaguar, colibri, vicuna, tucan} \\
+    & \texttt{task}            & \texttt{sensor\_repair, filter\_replacement, system\_calibration,} \\
+    &                          & \texttt{hull\_inspection, power\_cell\_swap, software\_update} \\
+    & \texttt{priority}        & \texttt{routine, urgent} \\ \hline
+\multirow{2}{*}{\texttt{activate\_protocol}}
+    & \texttt{protocol\_id}    & \texttt{MASA-SEC-001} \ldots \texttt{MASA-SEC-020} \\
+    & \texttt{scope}           & \texttt{module\_only, station\_wide} \\ \hline
+\multirow{3}{*}{\texttt{control\_system}}
+    & \texttt{module}          & \texttt{condor, quetzal, jaguar, colibri, vicuna, tucan} \\
+    & \texttt{system}          & \texttt{ventilation, heating, lighting, cooling, filtration} \\
+    & \texttt{action}          & \texttt{activate, deactivate, increase, decrease} \\ \hline
+\multirow{2}{*}{\texttt{calculate\_trajectory}}
+    & \texttt{maneuver}        & \texttt{orbit\_adjustment, docking, debris\_avoidance,} \\
+    &                          & \texttt{reentry, station\_keeping} \\
+    & \texttt{urgency}         & \texttt{planned, immediate} \\ \hline
+\multirow{2}{*}{\texttt{request\_supply}}
+    & \texttt{category}        & \texttt{medical, food, equipment, fuel, spare\_parts, scientific} \\
+    & \texttt{urgency}         & \texttt{routine, expedited, emergency} \\ \hline
+\texttt{no\_action} & --- & Sin parámetros (consultas informativas / históricas) \\ \hline
+\end{tabular}
+\caption{Definición completa de las 10 tools disponibles}
+\end{table}
+
+La misma definición se entrega como archivo procesable en \texttt{tools\_definition.json}.
+
+\subsection{Requisitos técnicos}
+
+Recuerde que su modelo no tendrá validez si no cumple los requisitos que se mencionan a
+continuación. Por lo tanto, obtendrá una calificación de 0 en la actividad correspondiente al
+proyecto final.  Los requisitos son los siguientes:
+
+\begin{itemize}
+    \item El \textit{decoder} obligatorio es \texttt{meta-llama/Llama-3.2-1B}. No se permite usar otro \textit{decoder}.
+    \item El \textit{encoder} obligatorio es \texttt{BAAI/bge-small-en-v1.5}. No se permite usar otro \textit{encoder}.
+    \item Está prohibido el uso de modelos pagos (OpenAI, Claude, Cohere, Gemini APIs u otros servicios de pago).
+    \item Está prohibido usar datos externos no entregados por el equipo docente.
+    \item Está prohibido utilizar los datos de prueba para entrenar (\textit{data leakage}).
+    \item Está prohibido reemplazar el LLM por otra red neuronal de clasificación.
+    \item Es obligatorio realizar \textit{fine-tuning} del \textit{decoder}; no se acepta solo \textit{prompt engineering}.
+    \item El entrenamiento debe realizarse en PyTorch.
+    \item Los resultados deben ser replicables a partir de los entregables en la plataforma de Coursera, partiendo del conjunto de entrenamiento original entregado.
+\end{itemize}
+
+
+\section{Envío de resultados por la plataforma Kaggle}
+Para enviar los resultados, genere un archivo CSV en el formato especificado y súbalo en la plataforma Kaggle. Una parte de los resultados se usará para el \textbf{score público} y otra parte para el \textbf{score privado}, que determinará el resultado final.
+
+\section{Entregables en Coursera}
+
+En la semana 8 del curso se habilitará una actividad en donde usted y su grupo deben subir los siguientes
+entregables correspondientes únicamente al modelo final con el que obtuvieron los mejores resultados en la
+tabla de líderes pública de la competencia de Kaggle:
+
+\begin{enumerate}
+    \item \textbf{Notebook único} con el \textit{pipeline} completo, organizado en secciones claramente diferenciadas: (1) carga y exploración de datos, (2) entrenamiento del o los modelos, (3) construcción del índice de \textit{retrieval}, (4) inferencia, y (5) generación del archivo de respuesta. Toda \textit{data augmentation} o generación adicional de texto debe quedar dentro del mismo \textit{notebook} para garantizar la reproducibilidad.
+    \item \textbf{Checkpoint(s) del decoder} (\texttt{Llama-3.2-1B} \textit{fine-tuneado}). Si realizaron \textit{fine-tuning} adicional sobre otros componentes del \textit{pipeline}, deben incluir también esos \textit{checkpoints}.
+    \item \textbf{Índice de retrieval} en formato JSON con la siguiente estructura por cada \textit{chunk} indexado:
+    \begin{lstlisting}
+[
+  {
+    "doc_id": "MASA-DOC-007",
+    "chunk_id": 0,
+    "text": "...contenido del chunk...",
+    "vector": [0.123, -0.456, ...]
+  },
+  {
+    "doc_id": "MASA-DOC-007",
+    "chunk_id": 1,
+    "text": "...siguiente chunk del mismo documento...",
+    "vector": [0.789, -0.012, ...]
+  }
+]
+    \end{lstlisting}
+    Si un documento se divide en múltiples \textit{chunks}, el \texttt{doc\_id} se repite y cada \texttt{chunk\_id} es único dentro de ese documento.
+\end{enumerate}
+
+\subsection{Sobre el uso de modelos adicionales para data augmentation}
+Si el grupo decide generar datos sintéticos adicionales para mejorar el entrenamiento, puede utilizar modelos de lenguaje \textit{open-source} disponibles en \href{https://huggingface.co/}{Hugging Face} (descargados localmente) o a través del \textit{endpoint} gratuito de \href{https://build.nvidia.com/models}{NVIDIA Build} (\texttt{build.nvidia.com/models}). En ambos casos, el grupo \textbf{debe justificar la elección del modelo} (capacidades, licencia, motivación) dentro del mismo \textit{notebook} entregado. No se aceptan modelos pagos ni datos externos no generados por el grupo.
+
+
+\section{Rúbrica de Evaluación}
+La nota del proyecto se compone de los siguientes criterios:
+
+\begin{table}[H]
+\begin{center}
+\caption{Composición de la nota del proyecto final}
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Item}                        & \textbf{Porcentaje de la nota} \\ \hline
+    Participación en la competencia      & 20\%                         \\ \hline
+    Superar la línea base  (ver en Kaggle)              & 40\%                         \\ \hline
+    Percentil obtenido en la competencia & 40\%                         \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Participación en la competencia}
+Para que sea considerada su participación en la competencia, debe realizar al menos 5 envíos \texttt{diferentes} en la plataforma de Kaggle. La idea es evidenciar que el grupo trató de mejorar su enfoque inicial. Tiene dos semanas para cumplir con ese número mínimo de envíos. No hay límite máximo de envíos.
+
+\subsection{Superar la línea base}
+El equipo del curso preparó una línea base que debe superar. Esta línea base la encuentra publicada en el \textit{leaderboard} de la competencia en Kaggle. \textbf{Si no se supera la línea base, esta porción de la nota es 0.0.}
+
+\subsection{Percentil obtenido en la competencia}
+El 40\% restante de la nota final se obtiene de acuerdo al desempeño del modelo desarrollado con su grupo en la competencia de Kaggle. Al cerrar la competencia se generan unos puntajes finales, y su nota en este rubro dependerá del desempeño obtenido. El porcentaje obtenido de este rubro se calcula de la siguiente manera:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Desempeño obtenido} & \textbf{Porcentaje del rubro} \\ \hline
+$<$ percentil 25 & 0\% \\ \hline
+$\geq$ percentil 25 y $<$ percentil 50 & 50\% \\ \hline
+$\geq$ percentil 50 y $<$ percentil 75 & 75\% \\ \hline
+$>$ percentil 75 & 100\% \\ \hline
+\end{tabular}
+\caption{Distribución del porcentaje del rubro según desempeño obtenido}
+\end{table}
+
+
+
+\subsection{Fechas Importantes}
+\begin{itemize}
+    \item Fecha de apertura de la competencia: \textbf{02/03/2026 00:00 AM}
+    \item Fecha de finalización: \textbf{15/03/2026 11:59 PM}
+\end{itemize}
+
+\section{Descripción de los Datos}
+Se proporcionan los siguientes archivos:
+
+\begin{itemize}
+    \item \textbf{train.csv}: contiene 3\,186 ejemplos de entrenamiento correspondientes a consultas de operadores del centro de control, con las siguientes columnas:
+    \begin{itemize}
+        \item \texttt{id}: identificador único de la consulta (formato \texttt{Q-XXXXX}).
+        \item \texttt{query}: consulta en lenguaje natural emitida por un operador.
+        \item \texttt{tool\_call}: \textit{tool call} correcta en formato canónico (variable objetivo).
+    \end{itemize}
+
+    \item \textbf{test.csv}: archivo de evaluación que contiene 354 consultas a clasificar, con las siguientes columnas:
+    \begin{itemize}
+        \item \texttt{id}: identificador único de la consulta (formato \texttt{T-XXXXX}).
+        \item \texttt{query}: consulta en lenguaje natural a la cual se debe predecir la \textit{tool call}.
+    \end{itemize}
+
+    \item \textbf{consultas\_centro\_control.json}: archivo con 800 pares \texttt{(query, doc\_id)} que registran consultas históricas del centro de control junto con el documento técnico que las responde. Cada entrada tiene la forma:
+    \begin{lstlisting}
+{"query": "Which protocol governs radiation lockdown procedures?",
+ "doc_id": "MASA-DOC-009"}
+    \end{lstlisting}
+
+    \item \textbf{base\_conocimiento.zip}: archivo comprimido que contiene los 54 documentos técnicos de MASA (manuales de módulos, protocolos de seguridad, procedimientos operacionales y guías de sistemas) que conforman el \textit{corpus} de \textit{retrieval}. Cada documento se entrega como archivo Markdown bajo una carpeta nombrada con su identificador (\texttt{MASA-DOC-XXX/doc.md}).
+
+    \item \textbf{tools\_definition.json}: definición completa de las 10 \textit{tools} disponibles en formato JSON procesable, incluyendo todos los parámetros válidos por enumeración. Corresponde a la tabla presentada en la Sección 3.2.
+
+    \item \textbf{sample\_submission.csv}: ejemplo del formato de entrega esperado en Kaggle. Contiene una fila por cada \texttt{id} del archivo \texttt{test.csv} con un valor \textit{placeholder} en la columna \texttt{tool\_call}, que el estudiante debe reemplazar con la predicción de su modelo.
+\end{itemize}
+
+\subsection{Formato de respuesta canónico}
+Las respuestas deben seguir un formato estricto de \textit{tool call}: sin espacios después de comas, parámetros en el orden definido por la \textit{tool}, \textit{strings} con comillas simples, todo en minúsculas y números sin comillas. La métrica de evaluación es \textit{exact match} del \textit{string} completo. Se permite post-procesamiento del \textit{output} (regex, normalización de formato).
+
+\textbf{Ejemplos de tool calls válidos:}
+\begin{lstlisting}
+send_alert(module='quetzal',severity='critical',reason='abnormal_temperature')
+get_telemetry(module='condor',metric='pressure',timeframe_hours=1)
+calculate_trajectory(maneuver='docking',urgency='planned')
+no_action
+\end{lstlisting}
+
+\subsection{Archivo de respuesta}
+El archivo de respuesta debe contener el siguiente formato:
+\begin{verbatim}
+id,tool_call
+T-00001,activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')
+T-00002,no_action
+T-00003,get_telemetry(module='jaguar',metric='oxygen',timeframe_hours=12)
+...
+\end{verbatim}
+Cada \texttt{id} en el conjunto de prueba debe tener un valor en la columna \texttt{tool\_call}, indicando la \textit{tool call} predicha.
+
+
+\section{Enlaces de la Competencia}
+\begin{itemize}
+    \item \textbf{Enlace de Invitación}: \href{https://www.kaggle.com/}{Kaggle Invitation (TBD)}
+\end{itemize}
+
+\end{document}
