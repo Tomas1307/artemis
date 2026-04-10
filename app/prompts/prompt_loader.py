@@ -61,6 +61,18 @@ class PromptLoader:
             "file": "template/chunk_summarization.yaml",
             "key": "parent_summarizer",
         },
+        "query_reprompt": {
+            "file": "template/rag_validation.yaml",
+            "key": "query_reprompt",
+        },
+        "tool_reason_direct": {
+            "file": "template/rag_validation.yaml",
+            "key": "tool_reason_direct",
+        },
+        "tool_reason_cot": {
+            "file": "template/rag_validation.yaml",
+            "key": "tool_reason_cot",
+        },
     }
 
     def __init__(self, prompts_dir: str = "app/prompts") -> None:
