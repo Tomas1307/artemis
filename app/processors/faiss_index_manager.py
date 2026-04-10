@@ -81,7 +81,7 @@ class FaissIndexManager:
                     "rank": rank + 1,
                     "chunk_global_index": chunk_idx,
                     "doc_id": chunk.doc_id,
-                    "section_title": chunk.section_title,
+                    "subtopic": chunk.subtopic,
                     "score": float(scores[query_idx][rank]),
                     "content_preview": chunk.content[:200],
                 })
