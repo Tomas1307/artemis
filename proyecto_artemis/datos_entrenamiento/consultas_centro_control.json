@@ -94,7 +94,7 @@
     "doc_id": "MASA-DOC-037"
   },
   {
-    "query": "What are the guidelines for scheduling recreation time during a 12-hour work shift?",
+    "query": "Which module on Kuntur Station serves as the hub for communal relaxation, and what features make it special for crew downtime?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-018"
   },
@@ -218,7 +218,7 @@
     "hard_negative_doc_id": "MASA-DOC-024"
   },
   {
-    "query": "How does the Colibrí module facilitate data sharing with NASA’s deep space network?",
+    "query": "Which international space agencies has MASA established partnership agreements with under its cooperation framework?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-004"
   },
@@ -233,7 +233,7 @@
     "hard_negative_doc_id": "MASA-DOC-005"
   },
   {
-    "query": "Can you clarify if the observation windows in the *Colibrí* module are used for recreational Earth viewing?",
+    "query": "What can crew members see through the observation windows in the Colibrí module during their recreation time?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-004"
   },
@@ -271,7 +271,7 @@
     "hard_negative_doc_id": "MASA-DOC-012"
   },
   {
-    "query": "Are there any planned maintenance activities in the Vicuña module this week that involve international partners?",
+    "query": "What is the ADCO project, which agencies are involved, and which module hosts the research?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-005"
   },
@@ -344,7 +344,7 @@
     "hard_negative_doc_id": "MASA-DOC-040"
   },
   {
-    "query": "Who are the six crew members currently aboard Cóndor-7 and what are their nationalities?",
+    "query": "When was MASA founded, where is its headquarters, and what is its flagship achievement?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-029"
   },
@@ -381,7 +381,7 @@
     "doc_id": "MASA-DOC-016"
   },
   {
-    "query": "Can you confirm the frequency and method for crew communication with family members?",
+    "query": "What types of communication does MASA provide for crew members to stay in contact with their families on Earth?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-018"
   },
@@ -452,7 +452,7 @@
     "doc_id": "MASA-DOC-022"
   },
   {
-    "query": "What are the symbolic and scientific advantages of Kuntur Station’s orbital position as mentioned in the cooperation framework?",
+    "query": "What are the three major joint research initiatives conducted on Kuntur Station under the inter-agency cooperation framework?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-040"
   },
@@ -489,7 +489,7 @@
     "hard_negative_doc_id": "MASA-DOC-002"
   },
   {
-    "query": "Has there been any recent personnel exchange with ESA, and if so, which module are they assigned to?",
+    "query": "Where do MASA astronauts train under the personnel exchange programs — which specific facilities are mentioned?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-020"
   },
@@ -519,7 +519,7 @@
     "hard_negative_doc_id": "MASA-DOC-027"
   },
   {
-    "query": "What procedures are in place for crew members requesting additional recreation time due to stress?",
+    "query": "Which cultural holidays are celebrated aboard Kuntur Station, and how are they adapted for the space environment?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-006"
   },
@@ -643,7 +643,7 @@
     "hard_negative_doc_id": "MASA-DOC-013"
   },
   {
-    "query": "What protocols are in place for emergency coordination between MASA and Roscosmos during Cóndor-7?",
+    "query": "What is the HECP project, which agencies participate, and what high-energy cosmic phenomena does it study?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-007"
   },
@@ -809,7 +809,7 @@
     "hard_negative_doc_id": "MASA-DOC-040"
   },
   {
-    "query": "What is the current altitude of Kuntur Station and how does it benefit scientific operations?",
+    "query": "Which ground stations form the shared communication network, and what are their locations?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-040"
   },
@@ -974,7 +974,7 @@
     "hard_negative_doc_id": "MASA-DOC-059"
   },
   {
-    "query": "Are there any upcoming video conferences scheduled between Kuntur Station and the Bogotá headquarters involving international agency representatives?",
+    "query": "What role does the Bogotá ground station play in the shared ground station network?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-054"
   },
@@ -1243,7 +1243,7 @@
     "hard_negative_doc_id": "MASA-DOC-027"
   },
   {
-    "query": "Is there a specific protocol for virtual reality usage to prevent motion sickness in microgravity?",
+    "query": "What virtual reality experiences are available to crew members as part of the digital entertainment options?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-061"
   },
@@ -1594,7 +1594,7 @@
     "hard_negative_doc_id": "MASA-DOC-002"
   },
   {
-    "query": "How does the station accommodate cultural preferences in the entertainment options?",
+    "query": "How does the station accommodate the diverse cultural backgrounds of crew members in its entertainment and celebration programs?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-055"
   },
@@ -1613,7 +1613,7 @@
     "hard_negative_doc_id": "MASA-DOC-037"
   },
   {
-    "query": "How does the station ensure equitable access to the *Colibrí* module’s amenities during peak usage?",
+    "query": "What role does the Quetzal module play in team-building activities aboard Kuntur Station?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-004"
   },
@@ -1623,7 +1623,7 @@
     "hard_negative_doc_id": "MASA-DOC-056"
   },
   {
-    "query": "What’s the maximum duration allowed for uninterrupted personal time in the daily schedule?",
+    "query": "Which module hosts physical fitness group activities, and what types of exercises do crew members do together?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-018"
   },
@@ -1797,7 +1797,7 @@
     "hard_negative_doc_id": "MASA-DOC-004"
   },
   {
-    "query": "What’s the backup plan if the primary communication system fails during a family video call?",
+    "query": "How do crew members share traditions from their home countries during cultural celebrations on the station?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-011"
   },
@@ -1836,7 +1836,7 @@
     "doc_id": "MASA-DOC-032"
   },
   {
-    "query": "What was the start date of the Cóndor-7 mission and how long is it scheduled to last?",
+    "query": "When did the Cóndor-7 mission commence according to the inter-agency cooperation framework document?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-029"
   },
@@ -1932,7 +1932,7 @@
     "hard_negative_doc_id": "MASA-DOC-013"
   },
   {
-    "query": "What specific resources does JAXA provide to Kuntur Station under the current cooperation framework?",
+    "query": "What specific collaborative research does JAXA conduct with MASA, and which project is it part of?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-016"
   },
@@ -2104,12 +2104,12 @@
     "doc_id": "MASA-DOC-002"
   },
   {
-    "query": "Are there designated quiet hours for crew members who prefer solitary recreation activities?",
+    "query": "What traditional foods from Latin American holidays are adapted for consumption in microgravity aboard Kuntur Station?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-006"
   },
   {
-    "query": "Are there restrictions on crew gatherings in the communal area during high-workload periods?",
+    "query": "What collaborative problem-solving activities does the crew engage in during team-building sessions?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-006"
   },
@@ -2253,7 +2253,7 @@
     "hard_negative_doc_id": "MASA-DOC-006"
   },
   {
-    "query": "What is the designated module for communal relaxation activities on Kuntur Station?",
+    "query": "Which module serves as the heart of cultural festivities on Kuntur Station, and what celebrations take place there?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-042"
   },
@@ -2687,7 +2687,7 @@
     "hard_negative_doc_id": "MASA-DOC-014"
   },
   {
-    "query": "Can you confirm which module of Kuntur Station is primarily used for international crew coordination?",
+    "query": "Which module hosts the MBS program, and which agencies collaborate on biological and medical research there?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-036"
   },
@@ -2821,7 +2821,7 @@
     "doc_id": "MASA-DOC-007"
   },
   {
-    "query": "I need details on the types of entertainment available in the digital library",
+    "query": "What types of media content are available in the digital library — does it include literature, films, and music from Latin America?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-006"
   },
@@ -3096,7 +3096,7 @@
     "hard_negative_doc_id": "MASA-DOC-003"
   },
   {
-    "query": "How is the digital library content updated, and who curates the selections?",
+    "query": "How do shared meals aboard Kuntur Station celebrate the crew members home countries and cultural heritage?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-041"
   },
@@ -3158,7 +3158,7 @@
     "hard_negative_doc_id": "MASA-DOC-057"
   },
   {
-    "query": "Which agency is leading the joint initiative in the Quetzal module this month?",
+    "query": "What research areas does the ADCO project focus on in the Quetzal module — ozone, aerosols, or solar radiation?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-002"
   },
@@ -3279,7 +3279,7 @@
     "doc_id": "MASA-DOC-031"
   },
   {
-    "query": "Can you verify if the recent experiment in the Jaguar module was conducted under a joint agreement with CNSA?",
+    "query": "What does the MBS program study regarding long-duration spaceflight effects on human physiology?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-026"
   },
@@ -3583,7 +3583,7 @@
     "hard_negative_doc_id": "MASA-DOC-002"
   },
   {
-    "query": "How does the Tucán module support the shared infrastructure agreement with the Canadian Space Agency?",
+    "query": "What research is conducted in the Tucán module under the HECP project with Roscosmos and ISRO?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-016"
   },
@@ -3664,7 +3664,7 @@
     "doc_id": "MASA-DOC-006"
   },
   {
-    "query": "What are the key objectives of the current partnership between MASA and ISRO regarding propulsion technology?",
+    "query": "What role does the Alcântara launch center in Brazil play in the inter-agency cooperation framework?",
     "doc_id": "MASA-DOC-057",
     "hard_negative_doc_id": "MASA-DOC-058"
   },
@@ -3728,7 +3728,7 @@
     "doc_id": "MASA-DOC-020"
   },
   {
-    "query": "Can you verify if live broadcasts of Earth events are pre-approved or ad-hoc for crew viewing?",
+    "query": "Does the station broadcast special events from Earth for the crew, and what communication methods support this?",
     "doc_id": "MASA-DOC-056",
     "hard_negative_doc_id": "MASA-DOC-054"
   },

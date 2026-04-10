@@ -221,9 +221,64 @@ def evaluate(predictions: list[str], gold: list[str]) -> dict:
     }
 
 
+def save_checkpoint(
+    dataset: str,
+    strategy: str,
+    predictions: list[str],
+    queries: list[dict],
+    index: int,
+) -> None:
+    """Save intermediate predictions to a checkpoint file.
+
+    Args:
+        dataset: 'train' or 'test'.
+        strategy: Strategy name.
+        predictions: List of predictions so far.
+        queries: Full query list.
+        index: Number of queries processed.
+    """
+    checkpoint = {
+        "dataset": dataset,
+        "strategy": strategy,
+        "processed": index,
+        "total": len(queries),
+        "predictions": predictions,
+    }
+    path = RESULTS_DIR / f"checkpoint_{dataset}_{strategy}.json"
+    path.write_text(json.dumps(checkpoint, ensure_ascii=False, indent=2), encoding="utf-8")
+    logger.info(f"Checkpoint saved: {index}/{len(queries)} -> {path.name}")
+
+
+def load_checkpoint(dataset: str, strategy: str, total: int) -> tuple[list[str], int]:
+    """Load predictions from a checkpoint if it exists and matches.
+
+    Args:
+        dataset: 'train' or 'test'.
+        strategy: Strategy name.
+        total: Expected total query count.
+
+    Returns:
+        Tuple of (predictions list, resume index). Returns ([], 0) if no valid checkpoint.
+    """
+    path = RESULTS_DIR / f"checkpoint_{dataset}_{strategy}.json"
+    if not path.exists():
+        return [], 0
+    checkpoint = json.loads(path.read_text(encoding="utf-8"))
+    if checkpoint["total"] != total or checkpoint["strategy"] != strategy:
+        return [], 0
+    predictions = checkpoint["predictions"]
+    resume_from = checkpoint["processed"]
+    logger.info(f"Resuming from checkpoint: {resume_from}/{total}")
+    return predictions, resume_from
+
+
+CHECKPOINT_EVERY = 50
+
+
 def run_strategy(
     strategy: str,
     queries: list[dict],
+    dataset: str,
     collection: ChunkCollection,
     embedder: ChunkEmbedder,
     index_manager: FaissIndexManager,
@@ -233,11 +288,15 @@ def run_strategy(
     rrf: RRFReranker | None = None,
     reasoner: LLMToolReasoner | None = None,
 ) -> dict:
-    """Run a single RAG strategy on a set of queries.
+    """Run a single RAG strategy on a set of queries with checkpointing.
+
+    Saves a checkpoint every 50 queries. On restart, resumes from the
+    last checkpoint automatically.
 
     Args:
         strategy: One of 'basic', 'rrf', 'full'.
         queries: List of query dicts with 'id', 'query', 'gold_tool_call'.
+        dataset: 'train' or 'test' (for checkpoint naming).
         collection: Chunk collection for enrichment.
         embedder: Loaded encoder.
         index_manager: FAISS index.
@@ -256,15 +315,18 @@ def run_strategy(
     query_texts = [q["query"] for q in queries]
     gold_calls = [q["gold_tool_call"] for q in queries]
 
+    predictions, resume_from = load_checkpoint(dataset, strategy, len(queries))
+
     if strategy == "basic":
         results = retrieve_basic(query_texts, embedder, index_manager, top_k=5)
         results = enrich_chunks(results, collection)
-        predictions = []
-        for i, (q, chunks) in enumerate(zip(query_texts, results)):
+        for i in range(resume_from, len(query_texts)):
             if (i + 1) % 25 == 0:
                 logger.info(f"[basic] Processing {i + 1}/{len(query_texts)}")
-            pred = reasoner.reason_direct(q, chunks, tools_json)
+            pred = reasoner.reason_direct(query_texts[i], results[i], tools_json)
             predictions.append(pred)
+            if (i + 1) % CHECKPOINT_EVERY == 0:
+                save_checkpoint(dataset, strategy, predictions, queries, i + 1)
 
     elif strategy == "rrf":
         logger.info("Generating query variations...")
@@ -275,12 +337,13 @@ def run_strategy(
             retrieve_k=20, final_k=5,
         )
         results = enrich_chunks(results, collection)
-        predictions = []
-        for i, (q, chunks) in enumerate(zip(query_texts, results)):
+        for i in range(resume_from, len(query_texts)):
             if (i + 1) % 25 == 0:
                 logger.info(f"[rrf] Processing {i + 1}/{len(query_texts)}")
-            pred = reasoner.reason_direct(q, chunks, tools_json)
+            pred = reasoner.reason_direct(query_texts[i], results[i], tools_json)
             predictions.append(pred)
+            if (i + 1) % CHECKPOINT_EVERY == 0:
+                save_checkpoint(dataset, strategy, predictions, queries, i + 1)
 
     elif strategy == "full":
         logger.info("Generating query variations...")
@@ -292,13 +355,18 @@ def run_strategy(
         )
         results = enrich_chunks(results, collection)
         logger.info("Running CoT reasoning...")
-        cot_results = reasoner.reason_batch(
-            query_texts, results, tools_json, use_cot=True,
-        )
-        predictions = [r["tool_call"] for r in cot_results]
+        for i in range(resume_from, len(query_texts)):
+            if (i + 1) % 25 == 0:
+                logger.info(f"[full] Processing {i + 1}/{len(query_texts)}")
+            result = reasoner.reason_cot(query_texts[i], results[i], tools_json)
+            predictions.append(result["tool_call"])
+            if (i + 1) % CHECKPOINT_EVERY == 0:
+                save_checkpoint(dataset, strategy, predictions, queries, i + 1)
 
     else:
         raise ValueError(f"Unknown strategy: {strategy}")
+
+    save_checkpoint(dataset, strategy, predictions, queries, len(queries))
 
     elapsed = time.time() - start_time
     metrics = evaluate(predictions, gold_calls)
@@ -369,14 +437,14 @@ def main() -> None:
         if train_queries:
             logger.info(f"\n{'='*60}\nTRAIN SET — Strategy: {strategy}\n{'='*60}")
             train_result = run_strategy(
-                strategy, train_queries, collection, embedder, index_manager,
+                strategy, train_queries, "train", collection, embedder, index_manager,
                 tools_json, llm, reprompt, rrf, reasoner,
             )
             all_results[f"train_{strategy}"] = train_result
 
         logger.info(f"\n{'='*60}\nTEST SET — Strategy: {strategy}\n{'='*60}")
         test_result = run_strategy(
-            strategy, test_queries, collection, embedder, index_manager,
+            strategy, test_queries, "test", collection, embedder, index_manager,
             tools_json, llm, reprompt, rrf, reasoner,
         )
         all_results[f"test_{strategy}"] = test_result
