@@ -3198,5 +3198,45 @@
   {
     "query": "What is Kozlov's role in maintaining thermal regulation aboard Kuntur Station?",
     "doc_id": "MASA-DOC-034"
+  },
+  {
+    "query": "Control just confirmed simultaneous failures in life support and power distribution — at what point do we trigger full station evacuation under MASA-SEC-020?",
+    "doc_id": "MASA-DOC-012"
+  },
+  {
+    "query": "If we need to evacuate Kuntur Station immediately, which module houses the primary evacuation capsule and where is the backup located?",
+    "doc_id": "MASA-DOC-012"
+  },
+  {
+    "query": "During an evacuation scenario, who handles the MAYDAY signal transmission and from which module do they operate?",
+    "doc_id": "MASA-DOC-012"
+  },
+  {
+    "query": "Walk me through the crew evacuation order for MASA-SEC-020 — who leads the process and who performs the final module sweep?",
+    "doc_id": "MASA-DOC-012"
+  },
+  {
+    "query": "What specific responsibility does Engineer Pavel Kozlov have during an emergency station evacuation?",
+    "doc_id": "MASA-DOC-012"
+  },
+  {
+    "query": "Can the evacuation capsules hold the entire six-person crew complement at once, and what independent systems do they carry?",
+    "doc_id": "MASA-DOC-012"
+  },
+  {
+    "query": "We just got a positive biological contamination reading in the Quetzal lab — who needs to be notified and what immediate quarantine steps are required under MASA-SEC-019?",
+    "doc_id": "MASA-DOC-012"
+  },
+  {
+    "query": "What standardized information is included in the MAYDAY transmission format broadcast during a MASA-SEC-020 evacuation?",
+    "doc_id": "MASA-DOC-012"
+  },
+  {
+    "query": "How frequently are the evacuation capsules inspected, and which specific systems receive particular attention during maintenance checks?",
+    "doc_id": "MASA-DOC-012"
+  },
+  {
+    "query": "If the Cóndor module is compromised during an emergency, what alternative evacuation path and capsule does the crew use?",
+    "doc_id": "MASA-DOC-012"
   }
 ]

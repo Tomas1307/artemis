@@ -8,3 +8,5 @@ build/
 proyecto_artemis/logs/
 proyecto_artemis/base_conocimiento/generation_progress.json
 venv/
+artifacts/*.npy
+artifacts/*.bin

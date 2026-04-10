@@ -53,6 +53,14 @@ class PromptLoader:
             "file": "template/encoder_training.yaml",
             "key": "encoder_query_generator",
         },
+        "chunk_summarizer": {
+            "file": "template/chunk_summarization.yaml",
+            "key": "chunk_summarizer",
+        },
+        "parent_summarizer": {
+            "file": "template/chunk_summarization.yaml",
+            "key": "parent_summarizer",
+        },
     }
 
     def __init__(self, prompts_dir: str = "app/prompts") -> None:

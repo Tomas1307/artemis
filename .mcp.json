@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "engram": {
-      "command": "C:/Users/ASUS/tools/engram.exe",
+      "command": "C:/Users/acost/tools/engram.exe",
       "args": ["mcp", "--tools=agent"]
     }
   }
