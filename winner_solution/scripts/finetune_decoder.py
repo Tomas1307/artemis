@@ -29,7 +29,7 @@ from loguru import logger
 from peft import LoraConfig, get_peft_model, TaskType
 from sentence_transformers import SentenceTransformer
 from torch.utils.data import Dataset
-from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments, Trainer
+from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments, Trainer, EarlyStoppingCallback
 
 from winner_solution.prompts.prompt_loader import prompt_loader
 from winner_solution.utils.formatter import build_rich_context
@@ -237,7 +237,7 @@ def main() -> None:
     """Fine-tune Llama-3.2-1B with LoRA on retrieved context + tool calls."""
     args = sys.argv[1:]
     device = "cuda"
-    epochs = 5
+    epochs = 25
     batch_size = 2
     lr = 1e-4
 
@@ -326,6 +326,7 @@ def main() -> None:
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=val_dataset,
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=5)],
     )
 
     logger.info(
