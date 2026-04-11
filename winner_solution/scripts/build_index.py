@@ -13,10 +13,8 @@ import numpy as np
 from loguru import logger
 from sentence_transformers import SentenceTransformer
 
-from winner_solution.utils.chunker import chunk_all_documents
-
 PROJECT_ROOT = Path(__file__).parent.parent
-DOCS_DIR = PROJECT_ROOT / "data"
+CHUNKS_PATH = PROJECT_ROOT / "artifacts" / "winner" / "chunks.json"
 ENCODER_PATH = PROJECT_ROOT / "artifacts" / "winner" / "encoder" / "finetuned_encoder"
 OUTPUT_DIR = PROJECT_ROOT / "artifacts" / "winner"
 
@@ -30,12 +28,14 @@ def main() -> None:
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    logger.info("Chunking documents...")
-    chunks = chunk_all_documents(DOCS_DIR)
+    if not CHUNKS_PATH.exists():
+        raise FileNotFoundError(
+            f"chunks.json not found at {CHUNKS_PATH}. "
+            "Run generate_chunks.py first."
+        )
+    logger.info(f"Loading chunks from {CHUNKS_PATH}...")
+    chunks = json.loads(CHUNKS_PATH.read_text(encoding="utf-8"))
     logger.info(f"Total chunks: {len(chunks)}")
-
-    chunks_path = OUTPUT_DIR / "chunks.json"
-    chunks_path.write_text(json.dumps(chunks, ensure_ascii=False, indent=2), encoding="utf-8")
 
     logger.info(f"Loading fine-tuned encoder from {ENCODER_PATH}...")
     model = SentenceTransformer(str(ENCODER_PATH), device=device)

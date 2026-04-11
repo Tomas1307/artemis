@@ -1,8 +1,13 @@
 """Run inference with fine-tuned encoder + decoder — winner solution.
 
+Retrieves top-5 chunks per query using fine-tuned encoder + FAISS,
+formats rich context with tool definitions, generates tool calls
+with LoRA-fine-tuned Llama-3.2-1B, and post-processes with
+extract_tool_call canonicalization.
+
 Usage:
-    python -m app.winner_solution.scripts.run_inference --device cuda
-    python -m app.winner_solution.scripts.run_inference --device cuda --split train --sample 100
+    python -m winner_solution.scripts.run_inference --device cuda
+    python -m winner_solution.scripts.run_inference --device cuda --split train --sample 100
 """
 
 import csv
@@ -19,6 +24,7 @@ from peft import PeftModel
 from sentence_transformers import SentenceTransformer
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+from winner_solution.prompts.prompt_loader import prompt_loader
 from winner_solution.utils.formatter import build_rich_context, extract_tool_call
 
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -35,17 +41,6 @@ OUTPUT_DIR = WINNER_DIR
 
 DECODER_BASE = "meta-llama/Llama-3.2-1B-Instruct"
 
-SYSTEM_PROMPT = """You are the MASA Kuntur Station operations assistant. Given an operator query and retrieved document context, output the single correct tool call in canonical format.
-
-Canonical format: no spaces after commas, parameters in defined order, single quotes for strings, all lowercase, numeric values unquoted."""
-
-USER_TEMPLATE = """CONTEXT:
-{context}
-
-QUERY: {query}
-
-TOOL CALL:"""
-
 
 def main() -> None:
     """Run winner solution inference pipeline."""
@@ -61,6 +56,12 @@ def main() -> None:
     if "--sample" in args:
         sample_size = int(args[args.index("--sample") + 1])
 
+    system_prompt = prompt_loader.get_system_message_by_type("decoder_system")
+    user_template = prompt_loader.get_prompt_template_by_type("decoder_user")
+    if not user_template:
+        raise ValueError("No prompt template found for 'decoder_user'.")
+
+    tools_json = TOOLS_PATH.read_text(encoding="utf-8")
     chunks = json.loads(CHUNKS_PATH.read_text(encoding="utf-8"))
     index = faiss.read_index(str(INDEX_PATH))
 
@@ -73,16 +74,21 @@ def main() -> None:
             gold_map = {g["question_id"]: g["tool_call"] for g in gold}
             logger.info("Gold standard loaded — accuracy will be computed.")
         else:
-            logger.warning("test_gold_standard.json not found — skipping accuracy computation.")
+            logger.warning("test_gold_standard.json not found — skipping accuracy.")
     else:
         with open(DATA_CSV_PATH, encoding="utf-8") as f:
-            queries = [{"id": r["id"], "query": r["query"], "gold": r["tool_call"]} for r in csv.DictReader(f)]
+            queries = [
+                {"id": r["id"], "query": r["query"], "gold": r["tool_call"]}
+                for r in csv.DictReader(f)
+            ]
         gold_map = {q["id"]: q["gold"] for q in queries}
 
     if sample_size and sample_size < len(queries):
         rng = np.random.default_rng(42)
         indices = rng.choice(len(queries), sample_size, replace=False)
         queries = [queries[i] for i in sorted(indices)]
+
+    logger.info(f"Queries: {len(queries)} ({split})")
 
     logger.info(f"Loading fine-tuned encoder from {ENCODER_PATH}...")
     encoder = SentenceTransformer(str(ENCODER_PATH), device=device)
@@ -106,7 +112,7 @@ def main() -> None:
         query_texts, batch_size=64, normalize_embeddings=True, show_progress_bar=True,
     )
 
-    scores_all, indices_all = index.search(query_embeddings.astype(np.float32), 5)
+    _, indices_all = index.search(query_embeddings.astype(np.float32), 5)
 
     predictions = []
     start_time = time.time()
@@ -119,16 +125,25 @@ def main() -> None:
         retrieved = [chunks[idx] for idx in indices_all[i] if idx >= 0]
         context = build_rich_context(retrieved)
 
+        user_content = user_template.format(
+            tools=tools_json,
+            context=context,
+            query=q["query"],
+        )
         messages = [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": USER_TEMPLATE.format(context=context, query=q["query"])},
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_content},
         ]
 
-        text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        text = tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True,
+        )
         inputs = tokenizer(text, return_tensors="pt").to(device)
 
         with torch.no_grad():
-            outputs = model.generate(**inputs, max_new_tokens=128, temperature=0.0, do_sample=False)
+            outputs = model.generate(
+                **inputs, max_new_tokens=128, temperature=0.0, do_sample=False,
+            )
 
         generated_ids = outputs[0][inputs["input_ids"].shape[1]:]
         raw_output = tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
@@ -136,14 +151,19 @@ def main() -> None:
         predictions.append(tool_call)
 
     if gold_map:
-        correct = sum(1 for q, p in zip(queries, predictions) if p.strip() == gold_map.get(q["id"], "").strip())
+        correct = sum(
+            1 for q, p in zip(queries, predictions)
+            if p.strip() == gold_map.get(q["id"], "").strip()
+        )
         total = len(queries)
         logger.info(f"Accuracy: {correct}/{total} = {correct/total:.4f}")
 
     results = [{"id": q["id"], "tool_call": p} for q, p in zip(queries, predictions)]
 
     predictions_path = OUTPUT_DIR / f"predictions_{split}.json"
-    predictions_path.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
+    predictions_path.write_text(
+        json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8",
+    )
 
     submission_path = OUTPUT_DIR / f"submission_{split}.csv"
     with open(submission_path, "w", encoding="utf-8", newline="") as f:
@@ -151,8 +171,8 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(results)
 
-    logger.info(f"Predictions saved to {predictions_path}")
-    logger.info(f"Submission saved to {submission_path}")
+    logger.info(f"Predictions: {predictions_path}")
+    logger.info(f"Submission: {submission_path}")
 
 
 if __name__ == "__main__":

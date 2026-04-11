@@ -21,7 +21,7 @@ from loguru import logger
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from baseline_solution.utils.embedder import embed_texts, load_encoder
-from baseline_solution.utils.formatter import extract_tool_call
+from baseline_solution.utils.formatter import extract_tool_call, format_context
 
 PROJECT_ROOT = Path(__file__).parent.parent
 ARTIFACTS_DIR = PROJECT_ROOT / "artifacts" / "baseline"
@@ -103,25 +103,6 @@ def generate_tool_call(model, tokenizer, messages: list[dict], device: str) -> s
     generated_ids = outputs[0][inputs["input_ids"].shape[1]:]
     return tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
 
-
-def format_context(chunks: list[dict], results_indices: list[int], scores: list[float]) -> str:
-    """Format retrieved chunks as plain text context.
-
-    Args:
-        chunks: All chunk dicts.
-        results_indices: Indices of top-K chunks from FAISS.
-        scores: Similarity scores for each result.
-
-    Returns:
-        Formatted context string.
-    """
-    parts = []
-    for rank, (idx, score) in enumerate(zip(results_indices, scores), 1):
-        if idx < 0:
-            continue
-        chunk = chunks[idx]
-        parts.append(f"[{chunk['doc_id']}] {chunk['content'][:400]}")
-    return "\n\n".join(parts)
 
 
 def main() -> None:

@@ -1,34 +1,60 @@
-"""Markdown-aware document chunker for winner RAG solution.
+"""Markdown-aware document chunker with on-the-fly LLM summarization.
 
-Splits documents by H2/H3 headers, preserving topic/subtopic/keypoint
-hierarchy. Each chunk includes the document title and section path
-for richer embedding signal.
+Splits MASA technical documents by H2/H3 headers. Sections exceeding
+max_words are split into subchunks and assigned a shared parent_id UUID.
+The parent summary is generated first from the full section body, then
+each subchunk summary is generated conditioned on the parent summary.
+
+Regular chunk embedding_text:  topic + subtopic + keypoint + content + summary
+Subchunk embedding_text:        topic + subtopic + keypoint + content + summary + parent_summary
 """
 
-import json
 import re
+import uuid
 from pathlib import Path
 
+from loguru import logger
 
-def parse_hierarchy(content: str, doc_title: str) -> list[dict]:
-    """Parse markdown into sections with topic/subtopic/keypoint hierarchy.
+from winner_solution.schemas.chunk import Chunk, ChunkMetadata
+from winner_solution.utils.metadata_extractor import metadata_extractor
+from winner_solution.utils.summarizer import summary_generator
+
+
+def _extract_title(content: str) -> str:
+    """Extract the H1 title from markdown content.
 
     Args:
-        content: Full markdown text.
-        doc_title: Document title for the topic field.
+        content: Full markdown document text.
 
     Returns:
-        List of dicts with topic, subtopic, keypoint, body.
+        H1 header text, or empty string if not found.
+    """
+    match = re.match(r'^#\s+(.+)$', content, re.MULTILINE)
+    return match.group(1).strip() if match else ""
+
+
+def _parse_hierarchy(content: str, doc_title: str) -> list[dict]:
+    """Parse markdown into sections preserving H2/H3 hierarchy.
+
+    Accumulates body lines between headers. H1 updates the topic.
+    H2 opens a new section. H3 opens a nested section within H2.
+
+    Args:
+        content: Full markdown document text.
+        doc_title: Fallback topic if no H1 is found.
+
+    Returns:
+        List of dicts with keys: topic, subtopic, keypoint, body.
     """
     lines = content.split("\n")
-    sections = []
+    sections: list[dict] = []
 
     current_topic = doc_title
     current_subtopic = ""
-    current_keypoint = None
-    current_body_lines = []
+    current_keypoint: str | None = None
+    current_body_lines: list[str] = []
 
-    def flush():
+    def flush() -> None:
         body = "\n".join(current_body_lines).strip()
         if body:
             sections.append({
@@ -67,141 +93,207 @@ def parse_hierarchy(content: str, doc_title: str) -> list[dict]:
     return sections
 
 
-def build_embedding_text(topic: str, subtopic: str, keypoint: str | None, content: str) -> str:
-    """Build contextualized text for encoder input.
+def _split_body(body: str, max_words: int) -> list[str]:
+    """Split a body text into subchunk texts not exceeding max_words.
 
-    Format: topic -> subtopic -> keypoint -> content.
+    Splits on sentence boundaries (after . ! ?) to avoid cutting mid-sentence.
+    Any remaining sentences form the last subchunk even if under max_words.
 
     Args:
-        topic: Document title.
-        subtopic: Section header.
-        keypoint: Subsection header or None.
-        content: Chunk body text.
+        body: Full section body text.
+        max_words: Maximum words allowed per subchunk.
 
     Returns:
-        Newline-joined contextualized text.
+        List of subchunk text strings, each within max_words.
+    """
+    sentences = re.split(r'(?<=[.!?])\s+', body)
+    subchunks: list[str] = []
+    current: list[str] = []
+    current_count = 0
+
+    for sentence in sentences:
+        s_count = len(sentence.split())
+        if current_count + s_count > max_words and current:
+            subchunks.append(" ".join(current))
+            current = []
+            current_count = 0
+        current.append(sentence)
+        current_count += s_count
+
+    if current:
+        subchunks.append(" ".join(current))
+
+    return subchunks
+
+
+def _build_embedding_text(
+    topic: str,
+    subtopic: str,
+    keypoint: str | None,
+    content: str,
+    summary: str,
+    parent_summary: str | None = None,
+) -> str:
+    """Construct the text used for encoder embedding.
+
+    Format for regular chunks:  topic + subtopic + keypoint + content + summary
+    Format for subchunks:       topic + subtopic + keypoint + content + summary + parent_summary
+
+    Args:
+        topic: Document title (H1).
+        subtopic: Section name (H2).
+        keypoint: Subsection name (H3), or None.
+        content: Chunk body text.
+        summary: LLM-generated chunk summary.
+        parent_summary: Parent section summary for subchunks, or None.
+
+    Returns:
+        Newline-joined embedding text string.
     """
     parts = [
         topic.strip(),
         subtopic.strip(),
         keypoint.strip() if keypoint else "",
         content.strip(),
+        summary.strip(),
     ]
+    if parent_summary:
+        parts.append(parent_summary.strip())
     return "\n".join(p for p in parts if p)
 
 
-def chunk_document(doc_id: str, content: str, doc_title: str, max_words: int = 300) -> list[dict]:
-    """Chunk a single document using markdown hierarchy.
+def chunk_document(
+    doc_id: str,
+    content: str,
+    doc_title: str,
+    max_words: int = 300,
+) -> list[Chunk]:
+    """Chunk a single document with LLM summaries generated on the fly.
+
+    For each section:
+    - If body <= max_words: generate chunk summary → create one Chunk.
+    - If body > max_words: generate parent summary from full body first,
+      split into subchunks, then generate each subchunk summary conditioned
+      on parent_summary. All subchunks share a parent_id UUID.
 
     Args:
-        doc_id: Document identifier.
-        content: Full markdown content.
-        doc_title: Document title from index.
+        doc_id: Document identifier (e.g., MASA-DOC-007).
+        content: Full markdown document text.
+        doc_title: Document title used as the topic field.
         max_words: Maximum words per chunk before splitting.
 
     Returns:
-        List of chunk dicts with doc_id, chunk_index, topic, subtopic,
-        keypoint, content, and embedding_text.
+        List of Chunk objects for this document.
     """
-    sections = parse_hierarchy(content, doc_title)
-    chunks = []
+    sections = _parse_hierarchy(content, doc_title)
+    chunks: list[Chunk] = []
     chunk_index = 0
 
     for section in sections:
-        body = section["body"]
+        body: str = section["body"]
+        topic: str = section["topic"]
+        subtopic: str = section["subtopic"]
+        keypoint: str | None = section["keypoint"]
         words = body.split()
 
         if len(words) <= max_words:
-            embedding_text = build_embedding_text(
-                section["topic"], section["subtopic"], section["keypoint"], body,
+            summary = summary_generator.generate_chunk_summary(
+                content=body,
+                doc_id=doc_id,
+                topic=topic,
+                subtopic=subtopic,
+                keypoint=keypoint,
             )
-            chunks.append({
-                "doc_id": doc_id,
-                "chunk_index": chunk_index,
-                "topic": section["topic"],
-                "subtopic": section["subtopic"],
-                "keypoint": section["keypoint"],
-                "content": body,
-                "embedding_text": embedding_text,
-            })
+            meta: ChunkMetadata = metadata_extractor.extract(body, doc_id)
+            embedding_text = _build_embedding_text(topic, subtopic, keypoint, body, summary)
+            chunks.append(Chunk(
+                doc_id=doc_id,
+                chunk_index=chunk_index,
+                topic=topic,
+                subtopic=subtopic,
+                keypoint=keypoint,
+                content=body,
+                summary=summary,
+                parent_id=None,
+                is_subchunk=False,
+                parent_summary=None,
+                embedding_text=embedding_text,
+                metadata=meta,
+            ))
             chunk_index += 1
+
         else:
-            sentences = re.split(r'(?<=[.!?])\s+', body)
-            current = []
-            current_count = 0
-            for sentence in sentences:
-                s_count = len(sentence.split())
-                if current_count + s_count > max_words and current:
-                    sub_text = " ".join(current)
-                    embedding_text = build_embedding_text(
-                        section["topic"], section["subtopic"], section["keypoint"], sub_text,
-                    )
-                    chunks.append({
-                        "doc_id": doc_id,
-                        "chunk_index": chunk_index,
-                        "topic": section["topic"],
-                        "subtopic": section["subtopic"],
-                        "keypoint": section["keypoint"],
-                        "content": sub_text,
-                        "embedding_text": embedding_text,
-                    })
-                    chunk_index += 1
-                    current = []
-                    current_count = 0
-                current.append(sentence)
-                current_count += s_count
-            if current:
-                sub_text = " ".join(current)
-                embedding_text = build_embedding_text(
-                    section["topic"], section["subtopic"], section["keypoint"], sub_text,
+            logger.debug(
+                f"{doc_id} [{subtopic}]: {len(words)} words — generating parent summary then splitting."
+            )
+            parent_summary = summary_generator.generate_parent_summary(
+                full_section_content=body,
+                doc_id=doc_id,
+                topic=topic,
+                subtopic=subtopic,
+                keypoint=keypoint,
+            )
+            parent_id = str(uuid.uuid4())
+            subchunk_texts = _split_body(body, max_words)
+
+            for sub_text in subchunk_texts:
+                sub_summary = summary_generator.generate_subchunk_summary(
+                    content=sub_text,
+                    doc_id=doc_id,
+                    topic=topic,
+                    subtopic=subtopic,
+                    keypoint=keypoint,
+                    parent_summary=parent_summary,
                 )
-                chunks.append({
-                    "doc_id": doc_id,
-                    "chunk_index": chunk_index,
-                    "topic": section["topic"],
-                    "subtopic": section["subtopic"],
-                    "keypoint": section["keypoint"],
-                    "content": sub_text,
-                    "embedding_text": embedding_text,
-                })
+                meta = metadata_extractor.extract(sub_text, doc_id)
+                embedding_text = _build_embedding_text(
+                    topic, subtopic, keypoint, sub_text, sub_summary, parent_summary
+                )
+                chunks.append(Chunk(
+                    doc_id=doc_id,
+                    chunk_index=chunk_index,
+                    topic=topic,
+                    subtopic=subtopic,
+                    keypoint=keypoint,
+                    content=sub_text,
+                    summary=sub_summary,
+                    parent_id=parent_id,
+                    is_subchunk=True,
+                    parent_summary=parent_summary,
+                    embedding_text=embedding_text,
+                    metadata=meta,
+                ))
                 chunk_index += 1
 
+    logger.info(f"{doc_id}: {chunk_index} chunks generated.")
     return chunks
 
 
-def extract_title(content: str) -> str:
-    """Extract H1 title from markdown content.
+def chunk_all_documents(docs_dir: Path, max_words: int = 300) -> list[Chunk]:
+    """Chunk all MASA-DOC-* documents in docs_dir with LLM summaries.
+
+    Discovers documents by scanning for MASA-DOC-*/doc.md paths.
+    The LLM must be loaded (llm_manager.load()) before calling this.
 
     Args:
-        content: Full markdown text.
+        docs_dir: Directory containing MASA-DOC-XXX subdirectories.
+        max_words: Maximum words per chunk before splitting.
 
     Returns:
-        H1 title or empty string.
+        List of all Chunk objects across all documents, sorted by doc_id
+        and chunk_index.
     """
-    match = re.match(r'^#\s+(.+)$', content, re.MULTILINE)
-    return match.group(1).strip() if match else ""
+    all_chunks: list[Chunk] = []
 
+    doc_paths = sorted(docs_dir.glob("MASA-DOC-*/doc.md"))
+    logger.info(f"Found {len(doc_paths)} documents in {docs_dir}")
 
-def chunk_all_documents(docs_dir: Path, max_words: int = 300) -> list[dict]:
-    """Chunk all documents with markdown-aware splitting.
-
-    Discovers documents by scanning for MASA-DOC-* directories.
-    Extracts the title from the H1 header of each document.
-
-    Args:
-        docs_dir: Path to directory containing MASA-DOC-XXX folders.
-        max_words: Maximum words per chunk.
-
-    Returns:
-        List of all chunk dicts.
-    """
-    all_chunks = []
-
-    for doc_path in sorted(docs_dir.glob("MASA-DOC-*/doc.md")):
+    for doc_path in doc_paths:
         doc_id = doc_path.parent.name
         content = doc_path.read_text(encoding="utf-8")
-        title = extract_title(content)
+        title = _extract_title(content)
         chunks = chunk_document(doc_id, content, title, max_words)
         all_chunks.extend(chunks)
 
+    logger.info(f"Total chunks generated: {len(all_chunks)}")
     return all_chunks
