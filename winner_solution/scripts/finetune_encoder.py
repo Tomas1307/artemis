@@ -13,6 +13,7 @@ import json
 import sys
 from pathlib import Path
 
+from loguru import logger
 from sentence_transformers import SentenceTransformer, InputExample, losses
 from sentence_transformers.evaluation import InformationRetrievalEvaluator
 from torch.utils.data import DataLoader
@@ -141,29 +142,30 @@ def main() -> None:
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    print("Loading model...")
+    logger.info("Loading model...")
     model = SentenceTransformer(ENCODER_MODEL, device=device)
 
-    print("Chunking documents...")
-    print(f"Total chunks: {len(chunks)}")
+    logger.info("Chunking documents...")
+    chunks = chunk_all_documents(DOCS_DIR)
+    logger.info(f"Total chunks: {len(chunks)}")
 
-    print("Loading consultas...")
+    logger.info("Loading consultas...")
     consultas = json.loads(CONSULTAS_PATH.read_text(encoding="utf-8"))
-    print(f"Total consultas: {len(consultas)}")
+    logger.info(f"Total consultas: {len(consultas)}")
 
-    print("Building training examples...")
+    logger.info("Building training examples...")
     examples = build_training_examples(consultas, chunks)
     has_negatives = sum(1 for e in examples if len(e.texts) == 3)
-    print(f"Training examples: {len(examples)} ({has_negatives} with hard negatives)")
+    logger.info(f"Training examples: {len(examples)} ({has_negatives} with hard negatives)")
 
     train_dataloader = DataLoader(examples, shuffle=True, batch_size=batch_size)
 
     train_loss = losses.MultipleNegativesRankingLoss(model)
 
-    print("Building evaluator...")
+    logger.info("Building evaluator...")
     evaluator = build_evaluator(consultas, chunks)
 
-    print(f"Training: {epochs} epochs, batch_size={batch_size}, lr={lr}")
+    logger.info(f"Training: {epochs} epochs, batch_size={batch_size}, lr={lr}")
     model.fit(
         train_objectives=[(train_dataloader, train_loss)],
         evaluator=evaluator,
@@ -175,7 +177,7 @@ def main() -> None:
         show_progress_bar=True,
     )
 
-    print(f"Fine-tuned encoder saved to {OUTPUT_DIR / 'finetuned_encoder'}")
+    logger.info(f"Fine-tuned encoder saved to {OUTPUT_DIR / 'finetuned_encoder'}")
 
 
 if __name__ == "__main__":

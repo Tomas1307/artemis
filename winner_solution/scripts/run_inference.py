@@ -14,6 +14,7 @@ from pathlib import Path
 import faiss
 import numpy as np
 import torch
+from loguru import logger
 from peft import PeftModel
 from sentence_transformers import SentenceTransformer
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -62,13 +63,17 @@ def main() -> None:
 
     chunks = json.loads(CHUNKS_PATH.read_text(encoding="utf-8"))
     index = faiss.read_index(str(INDEX_PATH))
-    tools_json = TOOLS_PATH.read_text(encoding="utf-8")
 
     if split == "test":
         with open(TEST_CSV_PATH, encoding="utf-8") as f:
             queries = [{"id": r["id"], "query": r["query"]} for r in csv.DictReader(f)]
-        gold = json.loads(TEST_GOLD_PATH.read_text(encoding="utf-8"))
-        gold_map = {g["question_id"]: g["tool_call"] for g in gold}
+        gold_map = {}
+        if TEST_GOLD_PATH.exists():
+            gold = json.loads(TEST_GOLD_PATH.read_text(encoding="utf-8"))
+            gold_map = {g["question_id"]: g["tool_call"] for g in gold}
+            logger.info("Gold standard loaded — accuracy will be computed.")
+        else:
+            logger.warning("test_gold_standard.json not found — skipping accuracy computation.")
     else:
         with open(DATA_CSV_PATH, encoding="utf-8") as f:
             queries = [{"id": r["id"], "query": r["query"], "gold": r["tool_call"]} for r in csv.DictReader(f)]
@@ -79,10 +84,10 @@ def main() -> None:
         indices = rng.choice(len(queries), sample_size, replace=False)
         queries = [queries[i] for i in sorted(indices)]
 
-    print(f"Loading fine-tuned encoder from {ENCODER_PATH}...")
+    logger.info(f"Loading fine-tuned encoder from {ENCODER_PATH}...")
     encoder = SentenceTransformer(str(ENCODER_PATH), device=device)
 
-    print(f"Loading fine-tuned decoder from {DECODER_PATH}...")
+    logger.info(f"Loading fine-tuned decoder from {DECODER_PATH}...")
     tokenizer = AutoTokenizer.from_pretrained(str(DECODER_PATH), trust_remote_code=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
@@ -95,7 +100,7 @@ def main() -> None:
     model = PeftModel.from_pretrained(base_model, str(DECODER_PATH))
     model.eval()
 
-    print(f"Embedding {len(queries)} queries...")
+    logger.info(f"Embedding {len(queries)} queries...")
     query_texts = [q["query"] for q in queries]
     query_embeddings = encoder.encode(
         query_texts, batch_size=64, normalize_embeddings=True, show_progress_bar=True,
@@ -109,7 +114,7 @@ def main() -> None:
     for i, q in enumerate(queries):
         if (i + 1) % 25 == 0:
             elapsed = time.time() - start_time
-            print(f"Processing {i+1}/{len(queries)} ({elapsed:.0f}s)")
+            logger.info(f"Processing {i+1}/{len(queries)} ({elapsed:.0f}s)")
 
         retrieved = [chunks[idx] for idx in indices_all[i] if idx >= 0]
         context = build_rich_context(retrieved)
@@ -130,18 +135,24 @@ def main() -> None:
         tool_call = extract_tool_call(raw_output)
         predictions.append(tool_call)
 
-    correct = sum(1 for q, p in zip(queries, predictions) if p.strip() == gold_map.get(q["id"], "").strip())
-    total = len(queries)
-    print(f"\nAccuracy: {correct}/{total} = {correct/total:.4f}")
+    if gold_map:
+        correct = sum(1 for q, p in zip(queries, predictions) if p.strip() == gold_map.get(q["id"], "").strip())
+        total = len(queries)
+        logger.info(f"Accuracy: {correct}/{total} = {correct/total:.4f}")
+
+    results = [{"id": q["id"], "tool_call": p} for q, p in zip(queries, predictions)]
+
+    predictions_path = OUTPUT_DIR / f"predictions_{split}.json"
+    predictions_path.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
 
     submission_path = OUTPUT_DIR / f"submission_{split}.csv"
     with open(submission_path, "w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["id", "tool_call"])
         writer.writeheader()
-        for q, p in zip(queries, predictions):
-            writer.writerow({"id": q["id"], "tool_call": p})
+        writer.writerows(results)
 
-    print(f"Submission saved to {submission_path}")
+    logger.info(f"Predictions saved to {predictions_path}")
+    logger.info(f"Submission saved to {submission_path}")
 
 
 if __name__ == "__main__":

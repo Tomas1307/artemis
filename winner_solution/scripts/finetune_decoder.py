@@ -17,6 +17,7 @@ from pathlib import Path
 import faiss
 import numpy as np
 import torch
+from loguru import logger
 from peft import LoraConfig, get_peft_model, TaskType
 from sentence_transformers import SentenceTransformer
 from torch.utils.data import Dataset, DataLoader
@@ -68,15 +69,23 @@ class ToolCallDataset(Dataset):
     def __getitem__(self, idx: int) -> dict:
         example = self.examples[idx]
 
-        messages = [
+        prompt_messages = [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": example["input"]},
+        ]
+        prompt_text = self.tokenizer.apply_chat_template(
+            prompt_messages, tokenize=False, add_generation_prompt=True,
+        )
+        prompt_len = len(self.tokenizer(prompt_text, add_special_tokens=False)["input_ids"])
+
+        full_messages = [
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": example["input"]},
             {"role": "assistant", "content": example["output"]},
         ]
-
-        text = self.tokenizer.apply_chat_template(messages, tokenize=False)
+        full_text = self.tokenizer.apply_chat_template(full_messages, tokenize=False)
         encoded = self.tokenizer(
-            text,
+            full_text,
             truncation=True,
             max_length=self.max_length,
             padding="max_length",
@@ -86,6 +95,7 @@ class ToolCallDataset(Dataset):
         input_ids = encoded["input_ids"].squeeze()
         attention_mask = encoded["attention_mask"].squeeze()
         labels = input_ids.clone()
+        labels[:prompt_len] = -100
         labels[attention_mask == 0] = -100
 
         return {
@@ -118,7 +128,7 @@ def build_training_data(
         train_data = list(csv.DictReader(f))
 
     query_texts = [row["query"] for row in train_data]
-    print(f"Embedding {len(query_texts)} training queries...")
+    logger.info(f"Embedding {len(query_texts)} training queries...")
     query_embeddings = encoder.encode(
         query_texts, batch_size=64, normalize_embeddings=True, show_progress_bar=True,
     )
@@ -161,14 +171,14 @@ def main() -> None:
     embeddings = np.load(str(EMBEDDINGS_PATH))
     index = faiss.read_index(str(INDEX_PATH))
 
-    print(f"Loading fine-tuned encoder from {ENCODER_PATH}...")
+    logger.info(f"Loading fine-tuned encoder from {ENCODER_PATH}...")
     encoder = SentenceTransformer(str(ENCODER_PATH), device=device)
 
-    print("Building training data with retrieved context...")
+    logger.info("Building training data with retrieved context...")
     examples = build_training_data(encoder, chunks, index, tools_json, device)
-    print(f"Training examples: {len(examples)}")
+    logger.info(f"Training examples: {len(examples)}")
 
-    print(f"Loading decoder: {DECODER_MODEL}")
+    logger.info(f"Loading decoder: {DECODER_MODEL}")
     tokenizer = AutoTokenizer.from_pretrained(DECODER_MODEL, trust_remote_code=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
@@ -212,12 +222,12 @@ def main() -> None:
         train_dataset=dataset,
     )
 
-    print(f"Training: {epochs} epochs, batch_size={batch_size}, lr={lr}")
+    logger.info(f"Training: {epochs} epochs, batch_size={batch_size}, lr={lr}")
     trainer.train()
 
     model.save_pretrained(str(OUTPUT_DIR / "finetuned_decoder"))
     tokenizer.save_pretrained(str(OUTPUT_DIR / "finetuned_decoder"))
-    print(f"Fine-tuned decoder saved to {OUTPUT_DIR / 'finetuned_decoder'}")
+    logger.info(f"Fine-tuned decoder saved to {OUTPUT_DIR / 'finetuned_decoder'}")
 
 
 if __name__ == "__main__":

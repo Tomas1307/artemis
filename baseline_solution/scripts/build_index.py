@@ -10,6 +10,7 @@ from pathlib import Path
 
 import faiss
 import numpy as np
+from loguru import logger
 
 from baseline_solution.utils.chunker import chunk_all_documents
 from baseline_solution.utils.embedder import embed_texts, load_encoder
@@ -28,19 +29,20 @@ def main() -> None:
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    print("Chunking documents...")
-    print(f"Total chunks: {len(chunks)}")
+    logger.info("Chunking documents...")
+    chunks = chunk_all_documents(DOCS_DIR)
+    logger.info(f"Total chunks: {len(chunks)}")
 
     chunks_path = OUTPUT_DIR / "chunks.json"
     chunks_path.write_text(json.dumps(chunks, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    print("Loading encoder...")
+    logger.info("Loading encoder...")
     model = load_encoder(device=device)
 
-    print("Embedding chunks...")
+    logger.info("Embedding chunks...")
     texts = [c["content"] for c in chunks]
     embeddings = embed_texts(model, texts)
-    print(f"Embeddings shape: {embeddings.shape}")
+    logger.info(f"Embeddings shape: {embeddings.shape}")
 
     np.save(str(OUTPUT_DIR / "embeddings.npy"), embeddings)
 
@@ -48,8 +50,8 @@ def main() -> None:
     index.add(embeddings.astype(np.float32))
     faiss.write_index(index, str(OUTPUT_DIR / "faiss_index.bin"))
 
-    print(f"Index built: {index.ntotal} vectors")
-    print(f"Artifacts saved to {OUTPUT_DIR}")
+    logger.info(f"Index built: {index.ntotal} vectors")
+    logger.info(f"Artifacts saved to {OUTPUT_DIR}")
 
 
 if __name__ == "__main__":
