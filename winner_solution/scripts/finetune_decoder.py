@@ -84,16 +84,18 @@ class ToolCallDataset(Dataset):
         self.max_length = self._detect_max_length()
 
     def _detect_max_length(self) -> int:
-        """Scan all examples and return the required max_length.
+        """Scan all examples and set max_length to 95th percentile + buffer.
 
         Tokenizes each example's full chat sequence (system + user + assistant)
-        without truncation to measure actual token counts. Returns the maximum
-        found plus a 64-token safety buffer.
+        without truncation to measure actual token counts. Uses the 95th
+        percentile plus a 128-token buffer to balance memory efficiency
+        against truncation. Examples exceeding this threshold are logged
+        as truncated.
 
         Returns:
-            Computed max_length (max token count + 64).
+            Computed max_length (p95 token count + 128).
         """
-        max_tokens = 0
+        all_lengths = []
         for example in self.examples:
             full_messages = [
                 {"role": "system", "content": self.system_prompt},
@@ -106,9 +108,27 @@ class ToolCallDataset(Dataset):
             n_tokens = len(
                 self.tokenizer(full_text, add_special_tokens=False)["input_ids"]
             )
-            max_tokens = max(max_tokens, n_tokens)
-        result = max_tokens + 64
-        logger.info(f"Auto-detected max_length: {result} (longest example: {max_tokens} tokens)")
+            all_lengths.append(n_tokens)
+
+        lengths = np.array(all_lengths)
+        p50 = int(np.percentile(lengths, 50))
+        p95 = int(np.percentile(lengths, 95))
+        p99 = int(np.percentile(lengths, 99))
+        max_tokens = int(lengths.max())
+        result = p95 + 128
+
+        n_truncated = int((lengths > result).sum())
+        logger.info(
+            f"Token length stats — min: {int(lengths.min())}, "
+            f"mean: {int(lengths.mean())}, p50: {p50}, p95: {p95}, "
+            f"p99: {p99}, max: {max_tokens}"
+        )
+        logger.info(f"Auto-detected max_length: {result} (p95={p95} + 128 buffer)")
+        if n_truncated > 0:
+            logger.warning(
+                f"{n_truncated}/{len(lengths)} examples ({n_truncated/len(lengths)*100:.1f}%) "
+                f"exceed {result} tokens and will be truncated."
+            )
         return result
 
     def __len__(self) -> int:
