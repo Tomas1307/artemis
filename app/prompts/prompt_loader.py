@@ -73,6 +73,10 @@ class PromptLoader:
             "file": "template/rag_validation.yaml",
             "key": "tool_reason_cot",
         },
+        "failure_classifier": {
+            "file": "template/failure_diagnosis.yaml",
+            "key": "failure_classifier",
+        },
     }
 
     def __init__(self, prompts_dir: str = "app/prompts") -> None:

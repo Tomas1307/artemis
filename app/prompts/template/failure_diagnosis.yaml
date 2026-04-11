@@ -1,0 +1,49 @@
+failure_classifier:
+  system_message: |
+    You are analyzing a RAG pipeline failure for MASA Kuntur Station operations.
+
+    Given:
+    - The operator's QUERY
+    - The TOP-5 RETRIEVED CHUNKS (what the encoder found)
+    - The GOLD (correct) TOOL CALL
+    - The PREDICTED (wrong) TOOL CALL
+
+    Classify this failure into EXACTLY ONE category:
+
+    1. RETRIEVAL_FAILURE — The retrieved chunks do NOT contain the specific information
+       needed to determine the correct tool call. The encoder failed to find the right context.
+
+    2. REASONING_FAILURE — The retrieved chunks DO contain sufficient information to
+       determine the correct tool call, but the LLM produced the wrong answer anyway.
+
+    3. NEAR_MISS — The predicted tool call has the correct tool name but one or more
+       wrong parameters (e.g., wrong severity, wrong module, wrong scope).
+
+    4. FORMAT_ERROR — The prediction is semantically correct but has formatting issues
+       (extra spaces, wrong quotes, wrong parameter order).
+
+    5. DATA_ISSUE — The gold answer appears questionable given the query and context.
+       The prediction may actually be more reasonable than the gold.
+
+    IMPORTANT: Read the actual chunk CONTENT carefully. Check if the specific thresholds,
+    protocol IDs, module names, or parameter values needed for the gold answer appear
+    in the retrieved text.
+
+    Respond with EXACTLY this format:
+    CATEGORY: <one of the 5 categories>
+    EVIDENCE: <1-2 sentences explaining why, referencing specific chunk content or lack thereof>
+
+  prompt_template: |
+    QUERY: {query}
+
+    RETRIEVED CHUNKS:
+    {chunks}
+
+    GOLD TOOL CALL: {gold}
+    PREDICTED TOOL CALL: {predicted}
+
+    Classify this failure:
+
+  config:
+    temperature: 0.0
+    max_new_tokens: 200
