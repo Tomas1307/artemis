@@ -1,0 +1,3062 @@
+[
+  {
+    "id": "T-00001",
+    "query": "Radiation sensors in Colibrí are reading 3.2 mSv/hr, and Fatima Al-Hassan just reported a possible uptick in solar activity—should we flag this with Commander Reyes?",
+    "gold_tool_call": "send_alert(module='colibri',severity='high',reason='radiation_spike')",
+    "predicted": "send_alert(module='colibri',severity='medium',reason='radiation_spike')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-009",
+      "MASA-DOC-028",
+      "MASA-DOC-009",
+      "MASA-DOC-004",
+      "MASA-DOC-040"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information to determine that a medium-severity alert should be sent due to the radiation level of 3.2 mSv/hr falling within the specified range (1.1 to 5.0 mSv/hour). However, the LLM incorrectly classified the severity as 'high' instead of 'medium'. Chunk 3 "
+  },
+  {
+    "id": "T-00002",
+    "query": "Vicuña temperature sensors are showing a rapid rise of 3.0 degrees per minute—what emergency response should we initiate?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-003',scope='module_only')",
+    "predicted": "send_alert(module='vicuna',severity='medium',reason='temperature_spike')",
+    "gold_doc_id": "MASA-DOC-008",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-036",
+      "MASA-DOC-013",
+      "MASA-DOC-039",
+      "MASA-DOC-026"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about temperature thresholds and alert severities, including the fact that temperatures exceeding 35.0°C trigger low-severity deviations and rising to 55.0°C triggers a medium-severity alert. However, the LLM predicted a medium alert without activating the cr"
+  },
+  {
+    "id": "T-00003",
+    "query": "Notify Fatima immediately—we have an urgent situation that needs her attention in Quetzal.",
+    "gold_tool_call": "send_message(recipient='specialist_2',priority='urgent')",
+    "predicted": "send_message(recipient='specialist_1',priority='urgent')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-033",
+      "MASA-DOC-033",
+      "MASA-DOC-012",
+      "MASA-DOC-012",
+      "MASA-DOC-005"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct tool name `send_message` and the correct parameter `priority='urgent'`, but it incorrectly specifies the recipient as 'specialist_1' instead of 'specialist_2'. The retrieved chunks mention Fátima Al-Hassan multiple times, indicating she is a key figure in Quet"
+  },
+  {
+    "id": "T-00004",
+    "query": "Ana Valdivia just reported oxygen concentration in Colibrí is down to 15.9% and still dropping—should we flag this for emergency response?",
+    "gold_tool_call": "send_alert(module='colibri',severity='high',reason='oxygen_leak')",
+    "predicted": "send_alert(module='colibri',severity='critical',reason='oxygen_depletion')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-006",
+      "MASA-DOC-031",
+      "MASA-DOC-015",
+      "MASA-DOC-004"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that an oxygen concentration below 16.0% triggers a medium-severity alert, while below 14.0% triggers a critical alert (MASA-SEC-002). The prediction of a 'critical' severity is incorrect based on the provided context, which only mentions a 'high' severity thres"
+  },
+  {
+    "id": "T-00008",
+    "query": "Radiation sensors in Colibrí are reading 2.5 mSv/hr and rising—what emergency steps do we take for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-012',scope='station_wide')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-040",
+      "MASA-DOC-004"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks do not mention radiation levels or any specific protocol related to radiation sensors. The LLM likely inferred that since the radiation levels are rising, a security protocol should be activated, but it chose the wrong protocol ID (MASA-SEC-004 instead of MASA-SEC-012)."
+  },
+  {
+    "id": "T-00012",
+    "query": "Kai Nakamura just reported a voltage fluctuation on the Jaguar power bus, with readings dropping to 96.4 V. What emergency steps should we take for this?",
+    "gold_tool_call": "send_alert(module='jaguar',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='jaguar',severity='medium',reason='voltage_fluctuation')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-003",
+      "MASA-DOC-026",
+      "MASA-DOC-026",
+      "MASA-DOC-026"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct tool name and severity but uses 'voltage_fluctuation' instead of 'power_fluctuation' for the reason parameter. The retrieved chunks mention \"Power Fluctuation Response\" and \"voltage fluctuation,\" indicating that both terms are relevant to the situation, but th"
+  },
+  {
+    "id": "T-00015",
+    "query": "Can we get the current thermal status of Tucán? Lucía mentioned the med bay feels warmer than usual.",
+    "gold_tool_call": "get_module_status(module='tucan',system='thermal')",
+    "predicted": "get_telemetry(module='tucan',metric='temperature',timeframe_hours=6)",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-039",
+      "MASA-DOC-013",
+      "MASA-DOC-006"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide information about the Tucán module's thermal management systems and operational temperature ranges. However, the LLM predicted a tool call for retrieving telemetry data specifically for temperature over a 6-hour timeframe, which is not aligned with the gold answer that c"
+  },
+  {
+    "id": "T-00016",
+    "query": "Ana, urgent message from Kuntur—radiation spike detected in Vicuña, need immediate crew response.",
+    "gold_tool_call": "send_message(recipient='pilot',priority='urgent')",
+    "predicted": "send_message(recipient='medical_officer',priority='urgent')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-036",
+      "MASA-DOC-036",
+      "MASA-DOC-005",
+      "MASA-DOC-038",
+      "MASA-DOC-009"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct tool name `send_message` and the correct parameter `priority='urgent'`, but it incorrectly specifies the recipient as 'medical_officer' instead of 'pilot'. This can be inferred from the context where the radiation spike is detected and an immediate crew respon"
+  },
+  {
+    "id": "T-00017",
+    "query": "We’ve got a voltage fluctuation on Quetzal’s power bus—Commander Reyes just reported it hitting 139.8 V and still unstable. Should we escalate this or follow module-specific containment?",
+    "gold_tool_call": "send_alert(module='quetzal',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='quetzal',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-014",
+      "MASA-DOC-025",
+      "MASA-DOC-008",
+      "MASA-DOC-041"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the power fluctuation threshold of 129.8V, indicating that the current voltage of 139.8V exceeds this threshold. However, the LLM incorrectly identified the severity as 'critical' instead of 'medium', suggesting a reasoning error rather than a retrieval issue."
+  },
+  {
+    "id": "T-00018",
+    "query": "Get the current food inventory levels from Vicuña and escalate a resupply request—crew reports indicate we're running low.",
+    "gold_tool_call": "request_supply(category='food',urgency='expedited')",
+    "predicted": "get_telemetry(module='vicuna',metric='oxygen',timeframe_hours=24)",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-011"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any specific information about food inventory levels or the need to escalate a resupply request for food. The chunks focus on resupply procedures, urgency levels, and other operational protocols, but there is no mention of food inventory thresholds or the exact st"
+  },
+  {
+    "id": "T-00019",
+    "query": "Cóndor oxygen concentration just dropped to 14.5% and is still falling—what emergency response should we initiate? Commander Reyes reported the trend started ten minutes ago.",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-010',scope='module_only')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-002',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-001",
+      "MASA-DOC-024",
+      "MASA-DOC-026"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention that an oxygen concentration below 18.0% generates a low-severity alert, and at 16.0%, the alert escalates to medium severity, requiring immediate corrective action through MASA-OPS-010 (Life Support Maintenance). The oxygen concentration in the query is 14.5%, w"
+  },
+  {
+    "id": "T-00020",
+    "query": "Check if we have spare EVA tools in Vicuña storage—Nakamura mentioned low stock during last crew report.",
+    "gold_tool_call": "request_supply(category='equipment',urgency='routine')",
+    "predicted": "no_action",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-021",
+      "MASA-DOC-021",
+      "MASA-DOC-039",
+      "MASA-DOC-005",
+      "MASA-DOC-005"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information about spare EVA tools or the Vicuña storage inventory levels, which are necessary to determine the correct tool call. The chunks focus on cargo transfer, structural integrity, and inventory management systems, but do not mention the specific issue "
+  },
+  {
+    "id": "T-00021",
+    "query": "Radiation sensors in Tucán are reading 8.2 mSv/hr and climbing — what emergency procedure do we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-012',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-009"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks do not mention radiation levels exceeding critical thresholds that would trigger MASA-SEC-004. Instead, they discuss other parameters and protocols. The LLM likely chose MASA-SEC-012 based on the general context of radiation monitoring, but it incorrectly identified the specific"
+  },
+  {
+    "id": "T-00022",
+    "query": "We’ve lost all ground contact through Colibrí—blackout now at 38 minutes and counting. Should we escalate this up the chain?",
+    "gold_tool_call": "send_alert(module='colibri',severity='high',reason='communication_loss')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-007',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-004",
+      "MASA-DOC-011",
+      "MASA-DOC-016",
+      "MASA-DOC-036"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the Communication Blackout Protocol (MASA-SEC-007) and the need to escalate the situation, which should have led the model to predict the correct `send_alert` function with the specified parameters. However, the model predicted `activate_protocol`, indicating a r"
+  },
+  {
+    "id": "T-00024",
+    "query": "Jaguar oxygen concentration has dropped to 13.7% — Engineer Kozlov reports crew symptoms. What emergency procedure do we initiate?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-002',scope='station_wide')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-002',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-003",
+      "MASA-DOC-034",
+      "MASA-DOC-015",
+      "MASA-DOC-007",
+      "MASA-DOC-007"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct protocol ID 'MASA-SEC-002' but specifies a 'module_only' scope instead of the required 'station_wide' scope. The retrieved chunks clearly indicate that the oxygen concentration in the Jaguar module has dropped below the critical threshold, necessitating a 'sta"
+  },
+  {
+    "id": "T-00026",
+    "query": "I need to log an alert — pressure sensors in Jaguar are showing 85.3 kPa and still dropping. What emergency procedure should we initiate for this situation?",
+    "gold_tool_call": "send_alert(module='jaguar',severity='high',reason='pressure_drop')",
+    "predicted": "send_alert(module='jaguar',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-003",
+      "MASA-DOC-007",
+      "MASA-DOC-003",
+      "MASA-DOC-015",
+      "MASA-DOC-003"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention that a pressure drop below 85.0 kPa triggers the MASA-SEC-001 (Rapid Decompression Response), which is a high-severity alert, not a critical one. The LLM incorrectly interpreted the severity as 'critical' based on the mention of 'critical threshold' in the contex"
+  },
+  {
+    "id": "T-00027",
+    "query": "We’ve got a pressure anomaly in Quetzal—readings are at 85.5 kPa and still declining. What emergency steps should we take for this situation?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-011',scope='module_only')",
+    "predicted": "send_alert(module='quetzal',severity='critical',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-041",
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-002",
+      "MASA-DOC-005"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention pressure thresholds and the consequences of dropping below certain levels, but they do not specify the exact protocol 'MASA-SEC-011' or the scope 'module_only'. The LLM correctly identified the need for an alert due to the pressure drop but misinterpreted the protocol an"
+  },
+  {
+    "id": "T-00028",
+    "query": "Ana Valdivia just reported oxygen concentration in Colibrí is down to 15.9% — what emergency procedure should we initiate for this?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-010',scope='module_only')",
+    "predicted": "send_alert(module='colibri',severity='critical',reason='oxygen_depletion_response')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-031",
+      "MASA-DOC-004",
+      "MASA-DOC-031",
+      "MASA-DOC-015"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention oxygen concentration thresholds and protocols, but the LLM predicted a send_alert action instead of activating a specific security protocol. The chunks provide enough context about oxygen levels and protocols, yet the model chose to generate a different type of response."
+  },
+  {
+    "id": "T-00031",
+    "query": "Cóndor pressure just dropped to 73.3 kPa and is still falling—what emergency response should we initiate? Commander Reyes reports possible hull breach.",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "send_alert(module='condor',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-007",
+      "MASA-DOC-027",
+      "MASA-DOC-027"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information about abnormal temperature or the specific protocol ID 'MASA-SEC-001' with the required 'station_wide' scope. Instead, they discuss pressure thresholds and the Rapid Decompression Response protocol, which aligns with the gold answer."
+  },
+  {
+    "id": "T-00035",
+    "query": "Medical Officer Mendoza, urgency on this—crew reporting sudden onset of severe headaches and nausea, need your immediate assessment.",
+    "gold_tool_call": "send_message(recipient='medical_officer',priority='high')",
+    "predicted": "send_alert(module='tucan',severity='high',reason='abnormal_temperature')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-035",
+      "MASA-DOC-035",
+      "MASA-DOC-012"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information about Dr. Mendoza's responsibilities and the protocols related to medical emergencies. However, the LLM predicted an incorrect tool call involving an 'abnormal_temperature' alert, which is not mentioned in the context of the sudden onset of severe "
+  },
+  {
+    "id": "T-00037",
+    "query": "Vicuña power bus voltage just hit 131.0 V—should we flag this immediately or run diagnostics first?",
+    "gold_tool_call": "send_alert(module='vicuna',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='vicuna',severity='medium',reason='voltage_fluctuation')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-011",
+      "MASA-DOC-014",
+      "MASA-DOC-039",
+      "MASA-DOC-014"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about voltage fluctuation thresholds and response protocols, which are relevant to the situation. However, the LLM predicted 'voltage_fluctuation' instead of 'power_fluctuation', indicating a reasoning error despite having the necessary context."
+  },
+  {
+    "id": "T-00038",
+    "query": "Cóndor power bus voltage just hit 105.5 V—should we log an alert on this fluctuation?",
+    "gold_tool_call": "send_alert(module='condor',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='condor',severity='medium',reason='voltage_fluctuation')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-014",
+      "MASA-DOC-001",
+      "MASA-DOC-014",
+      "MASA-DOC-026"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct tool name and module but uses 'voltage_fluctuation' instead of 'power_fluctuation' for the reason parameter. While the chunk content does not explicitly mention 'power_fluctuation', the context around power voltage thresholds and the nature of the query sugges"
+  },
+  {
+    "id": "T-00039",
+    "query": "Hull stress readings in Colibrí have spiked to 94.6% — what emergency measures do we need to take for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-008',scope='module_only')",
+    "predicted": "no_action",
+    "gold_doc_id": "MASA-DOC-010",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-040",
+      "MASA-DOC-004",
+      "MASA-DOC-008"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information related to hull stress readings or the specific actions needed for such a scenario. There is no mention of hull stress, critical thresholds for hull integrity, or any emergency measures to be taken when hull stress readings spike."
+  },
+  {
+    "id": "T-00040",
+    "query": "Notify Fatima Al-Hassan about the scheduled calibration for Quetzal’s spectroscopy equipment before the next shift.",
+    "gold_tool_call": "send_message(recipient='specialist_2',priority='medium')",
+    "predicted": "send_message(recipient='specialist_1',priority='high')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-033",
+      "MASA-DOC-033",
+      "MASA-DOC-033",
+      "MASA-DOC-033",
+      "MASA-DOC-041"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information to determine that Fatima Al-Hassan is the correct recipient ('specialist_2') and that the message should be of medium priority. However, the LLM incorrectly identified 'specialist_1' as the recipient and set the priority to 'high' instead of 'mediu"
+  },
+  {
+    "id": "T-00041",
+    "query": "Vicuña temperature rate just spiked to 4.1 degrees per minute and still climbing—Commander Reyes wants to know if we should flag this as a thermal emergency right now.",
+    "gold_tool_call": "send_alert(module='vicuna',severity='critical',reason='abnormal_temperature')",
+    "predicted": "send_alert(module='vicuna',severity='high',reason='temperature_spike')",
+    "gold_doc_id": "MASA-DOC-008",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-026",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-013"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide information about temperature thresholds and alert severities, including the critical threshold of 55.0°C. However, the LLM predicted a 'high' severity alert instead of 'critical,' indicating a reasoning error despite having the necessary context."
+  },
+  {
+    "id": "T-00043",
+    "query": "I need to log an alert — Quetzal pressure sensors are reading 89.3 kPa and dropping. What emergency steps should we initiate for this situation?",
+    "gold_tool_call": "send_alert(module='quetzal',severity='high',reason='pressure_drop')",
+    "predicted": "send_alert(module='quetzal',severity='medium',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-002",
+      "MASA-DOC-007",
+      "MASA-DOC-003"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention that a pressure drop below 85.0 kPa triggers MASA-SEC-011, which indicates a high-severity alert. However, the LLM predicted a medium-severity alert instead, showing a reasoning error despite having the necessary information."
+  },
+  {
+    "id": "T-00044",
+    "query": "Cóndor pressure sensors just dropped to 81.0 kPa—what emergency procedure do we need to activate here?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-001',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-026",
+      "MASA-DOC-001",
+      "MASA-DOC-026"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct tool name 'MASA-SEC-001' but specifies the wrong scope ('module_only' instead of 'station_wide'). The relevant information about the critical pressure threshold triggering MASA-SEC-001 is present in the retrieved chunks, indicating that the retrieval was succe"
+  },
+  {
+    "id": "T-00045",
+    "query": "Get the medical supply inventory from Vicuña and flag this as expedited—we need to restock before the next resupply window.",
+    "gold_tool_call": "request_supply(category='medical',urgency='expedited')",
+    "predicted": "send_message(recipient='medical_officer',priority='urgent')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-021",
+      "MASA-DOC-039"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information related to medical supply inventory or the specific urgency level \"expedited.\" The chunks discuss general procedures, safety requirements, and resupply request processes, but none of them mention medical supplies or the exact urgency level required"
+  },
+  {
+    "id": "T-00048",
+    "query": "Tucán power bus showing 100.8 V voltage fluctuation — should we log an alert?",
+    "gold_tool_call": "send_alert(module='tucan',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='tucan',severity='medium',reason='voltage_fluctuation')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-011",
+      "MASA-DOC-014",
+      "MASA-DOC-006",
+      "MASA-DOC-006"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call uses the correct tool name and module ('tucan') and severity ('medium'), but it incorrectly specifies 'voltage_fluctuation' instead of 'power_fluctuation' as the reason for the alert. The retrieved chunks discuss voltage fluctuation as a medium-severity issue, which supports "
+  },
+  {
+    "id": "T-00049",
+    "query": "We’re seeing a voltage fluctuation on Jaguar’s power bus, currently reading 99.4 V. Engineer Kozlov just flagged it—should we escalate this to command?",
+    "gold_tool_call": "send_alert(module='jaguar',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='jaguar',severity='medium',reason='voltage_fluctuation')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-003",
+      "MASA-DOC-026",
+      "MASA-DOC-026",
+      "MASA-DOC-014"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct tool name and module but uses 'voltage_fluctuation' instead of 'power_fluctuation' for the reason parameter. The retrieved chunks discuss voltage and power fluctuations, indicating that the correct term should be 'power_fluctuation' based on the context."
+  },
+  {
+    "id": "T-00052",
+    "query": "Decrease ventilation in Cóndor to stabilize the temperature readings.",
+    "gold_tool_call": "control_system(module='condor',system='ventilation',action='decrease')",
+    "predicted": "control_system(module='condor',system='cooling',action='decrease')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-001",
+      "MASA-DOC-001",
+      "MASA-DOC-001",
+      "MASA-DOC-024"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide information about temperature and cooling systems, but the LLM incorrectly focused on the cooling system instead of the ventilation system as indicated in the gold answer. Specifically, Chunk 2 mentions the cooling system and its activation at higher temperatures, which "
+  },
+  {
+    "id": "T-00053",
+    "query": "We’ve got a pressure anomaly in Colibrí—readings are at 87.7 kPa and still declining. What emergency steps should we take for this situation?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-011',scope='module_only')",
+    "predicted": "send_alert(module='colibri',severity='medium',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-010",
+      "MASA-DOC-040"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks do not mention any pressure anomaly or the specific protocol MASA-SEC-011. Instead, they discuss temperature, humidity, and other unrelated aspects. The LLM likely inferred a medium-severity alert due to the pressure drop, but it incorrectly specified the module and severity lev"
+  },
+  {
+    "id": "T-00055",
+    "query": "Tucán power bus showing voltage fluctuations—reading just hit 134.9 V. What emergency steps do we take for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-018',scope='module_only')",
+    "predicted": "send_alert(module='tucan',severity='medium',reason='voltage_fluctuation')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-011",
+      "MASA-DOC-014",
+      "MASA-DOC-006"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the voltage fluctuation threshold for activating the MASA-SEC-018 protocol, which is relevant to the query. However, the LLM predicted sending an alert instead of activating the specific protocol, indicating a reasoning error despite having the necessary context."
+  },
+  {
+    "id": "T-00056",
+    "query": "We’re seeing a voltage fluctuation on Quetzal’s power bus—current reading is 99.6 V. What emergency procedure should we initiate for this?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-018',scope='module_only')",
+    "predicted": "send_alert(module='quetzal',severity='medium',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-041",
+      "MASA-DOC-002",
+      "MASA-DOC-002",
+      "MASA-DOC-014"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks do contain information about voltage fluctuation thresholds, but the LLM incorrectly identified an abnormal temperature as the cause for the voltage fluctuation, leading to the wrong tool call. Specifically, Chunk 1 mentions the voltage fluctuation response protocol, but the LLM"
+  },
+  {
+    "id": "T-00057",
+    "query": "We’ve got a rapid pressure drop in Jaguar—sensors just hit 78.2 kPa and still falling. Commander Reyes reports possible hull breach. What emergency procedure do we initiate here?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-001',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-026",
+      "MASA-DOC-015",
+      "MASA-DOC-007",
+      "MASA-DOC-003",
+      "MASA-DOC-007"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct tool name `MASA-SEC-001` but specifies the wrong scope (`module_only` instead of `station_wide`). The relevant chunk [Chunk 3] mentions the moderate pressure drop response (MASA-SEC-011) and [Chunk 5] discusses the rapid decompression response (MASA-SEC-001), "
+  },
+  {
+    "id": "T-00061",
+    "query": "Cóndor pressure sensors just dropped to 70.4 kPa—what emergency procedure covers this kind of rapid decompression?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "send_alert(module='condor',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-026",
+      "MASA-DOC-038",
+      "MASA-DOC-024"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information about pressure sensors or the specific action to activate MASA-SEC-001 in response to a pressure drop. Instead, they discuss general telemetry specifications, mission summaries, and other protocols, which are insufficient to determine the correct t"
+  },
+  {
+    "id": "T-00065",
+    "query": "We’ve got a pressure anomaly in Jaguar—readings just hit 85.3 kPa and still dropping. What emergency procedure should we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-011',scope='module_only')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-001',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-003",
+      "MASA-DOC-015",
+      "MASA-DOC-026",
+      "MASA-DOC-007",
+      "MASA-DOC-003"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the threshold of 85.0 kPa for initiating MASA-SEC-011, yet the LLM incorrectly predicted MASA-SEC-001, which is associated with a lower pressure threshold of 85.0 kPa to 89.9 kPa. This indicates a reasoning error despite having the necessary context."
+  },
+  {
+    "id": "T-00067",
+    "query": "Cóndor's temperature is rising at 4.9 degrees per minute—should we flag this immediately?",
+    "gold_tool_call": "send_alert(module='condor',severity='critical',reason='abnormal_temperature')",
+    "predicted": "send_alert(module='condor',severity='high',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-008",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-001",
+      "MASA-DOC-026",
+      "MASA-DOC-026",
+      "MASA-DOC-001"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide information about temperature thresholds and the potential consequences of exceeding them. However, the LLM predicted a 'high' severity alert instead of the required 'critical' severity, despite the temperature rise being described as dangerously close to a critical thre"
+  },
+  {
+    "id": "T-00071",
+    "query": "Check Ana Valdivia's current schedule and location—she's assigned to Colibrí today, and I need to confirm her comms duties for the next pass.",
+    "gold_tool_call": "get_crew_status(module='colibri',info='schedule')",
+    "predicted": "get_crew_status(module='colibri',info='current_activity')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-031",
+      "MASA-DOC-031",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-012"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information about Ana Valdivia's responsibilities and schedule, including her role in communication and navigation. However, the LLM predicted \"current_activity\" instead of \"schedule,\" indicating a reasoning error despite having the necessary context."
+  },
+  {
+    "id": "T-00072",
+    "query": "Cóndor pressure sensors just dropped to 79.5 kPa—Reyes is reporting a possible hull breach. How should we handle this?",
+    "gold_tool_call": "send_alert(module='condor',severity='critical',reason='pressure_drop')",
+    "predicted": "send_alert(module='condor',severity='high',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-024",
+      "MASA-DOC-026",
+      "MASA-DOC-001",
+      "MASA-DOC-027"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about pressure thresholds and the potential consequences of pressure drops, including the critical threshold of 85.0 kPa. However, the LLM predicted a 'high' severity alert instead of the correct 'critical' severity, indicating a reasoning error despite havin"
+  },
+  {
+    "id": "T-00073",
+    "query": "Ana Valdivia just reported oxygen concentration in Colibrí is reading 10.3% on her console—how should we handle this?",
+    "gold_tool_call": "send_alert(module='colibri',severity='critical',reason='oxygen_leak')",
+    "predicted": "send_alert(module='colibri',severity='critical',reason='oxygen_depletion')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-031",
+      "MASA-DOC-031",
+      "MASA-DOC-015",
+      "MASA-DOC-004"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide the necessary information about oxygen concentration thresholds and the specific module mentioned in the query. However, the LLM predicted 'oxygen_depletion' instead of 'oxygen_leak' as the reason for the alert, even though both are critical conditions. The chunks mentio"
+  },
+  {
+    "id": "T-00074",
+    "query": "We've got a debris threat on approach—calculate an immediate evasive trajectory to avoid collision.",
+    "gold_tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='immediate')",
+    "predicted": "calculate_trajectory(maneuver='docking',urgency='immediate')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-040",
+      "MASA-DOC-040",
+      "MASA-DOC-058",
+      "MASA-DOC-020",
+      "MASA-DOC-020"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the need to calculate an avoidance maneuver for debris, which aligns with the gold answer. However, the LLM incorrectly predicted 'docking' instead of 'debris_avoidance'. This suggests a reasoning error rather than a retrieval issue."
+  },
+  {
+    "id": "T-00075",
+    "query": "Oxygen readings in Quetzal have dropped to 15.2% and are still falling. Kai just reported it—should I flag this for command?",
+    "gold_tool_call": "send_alert(module='quetzal',severity='high',reason='oxygen_leak')",
+    "predicted": "send_alert(module='quetzal',severity='critical',reason='oxygen_depletion')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-029",
+      "MASA-DOC-041",
+      "MASA-DOC-002",
+      "MASA-DOC-002",
+      "MASA-DOC-041"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about oxygen levels and their critical thresholds, which should have guided the model to predict a 'high' severity alert rather than 'critical'. Specifically, Chunk 2 mentions that oxygen levels below 18.0% trigger a low-severity alert, and there is no mentio"
+  },
+  {
+    "id": "T-00079",
+    "query": "Pressure in Vicuña is dropping — just hit 86.1 kPa and still falling. What emergency steps do we take for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-011',scope='module_only')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-039",
+      "MASA-DOC-011",
+      "MASA-DOC-010",
+      "MASA-DOC-039"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about pressure thresholds and critical conditions, which indicate that a pressure drop below 85.0 kPa would trigger a critical response. However, the LLM predicted an \"send_alert\" action instead of activating the appropriate protocol, suggesting a reasoning e"
+  },
+  {
+    "id": "T-00083",
+    "query": "Vicuña pressure sensors just dropped to 78.3 kPa—Kai Nakamura reports a possible hull breach. What emergency procedure should we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-010",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-027"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information related to the critical pressure threshold or the MASA-SEC-001 protocol, which is necessary to determine the correct tool call. The chunks focus on other aspects like telemetry specifications, docking bay pressure anomalies, and cargo transfer safe"
+  },
+  {
+    "id": "T-00089",
+    "query": "We’ve got a rapid pressure drop in Vicuña—sensors just hit 80.2 kPa and still falling. What emergency steps do we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-039",
+      "MASA-DOC-007",
+      "MASA-DOC-011",
+      "MASA-DOC-039"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information about the critical pressure threshold of 80.2 kPa, which is necessary to trigger the MASA-SEC-001 protocol. Instead, the chunks discuss different protocols and operational ranges that do not match the specific situation described in the query."
+  },
+  {
+    "id": "T-00095",
+    "query": "Ana Valdivia just reported headaches from Quetzal, CO2 concentration climbing to 2.0%—should we log an alert for this?",
+    "gold_tool_call": "send_alert(module='quetzal',severity='high',reason='oxygen_leak')",
+    "predicted": "send_alert(module='quetzal',severity='high',reason='co2_concentration')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-024",
+      "MASA-DOC-002",
+      "MASA-DOC-017"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information about CO2 concentration reaching 2.0% or oxygen levels dropping below 18.0%. The closest relevant information is in Chunk 3, which discusses CO2 scrubber calibration anomalies but does not mention the current CO2 concentration reaching a critical l"
+  },
+  {
+    "id": "T-00098",
+    "query": "Cóndor airlock equalization rate is reading 0.9 kPa per minute—what emergency response should we initiate?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-017',scope='module_only')",
+    "predicted": "no_action",
+    "gold_doc_id": "MASA-DOC-010",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-007",
+      "MASA-DOC-001",
+      "MASA-DOC-001"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information related to the equalization rate of 0.9 kPa per minute or the specific protocol MASA-SEC-017. The chunks discuss general operational ranges, critical thresholds, and escalation procedures but fail to provide the exact context needed to determine th"
+  },
+  {
+    "id": "T-00099",
+    "query": "Tucán hull stress sensors are reading 89.2%—should we flag this as a possible micrometeorite impact for Commander Reyes to assess?",
+    "gold_tool_call": "send_alert(module='tucan',severity='high',reason='structural_damage')",
+    "predicted": "send_alert(module='tucan',severity='medium',reason='micrometeorite_impact')",
+    "gold_doc_id": "MASA-DOC-010",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-010",
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-010"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information to determine the correct tool call, including the 85% threshold for hull stress sensors and the need to flag readings above this level. However, the LLM predicted a medium-severity alert instead of a high-severity one, likely due to misinterpretati"
+  },
+  {
+    "id": "T-00101",
+    "query": "Cóndor radiation sensors just spiked to 10.2 mSv/hr—Commander Reyes is reporting this now. What emergency steps do we initiate for this situation?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "predicted": "send_alert(module='condor',severity='critical',reason='radiation_spike')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-026",
+      "MASA-DOC-024",
+      "MASA-DOC-024",
+      "MASA-DOC-009"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about the radiation levels and the critical threshold for activating MASA-SEC-004. However, the LLM predicted sending an alert instead of activating the protocol, indicating a reasoning error despite having the necessary context."
+  },
+  {
+    "id": "T-00102",
+    "query": "We’ve got a rapid pressure drop in Vicuña—just hit 81.6 kPa and still falling. Commander Reyes reported possible hull breach. What emergency procedure do we initiate here?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-001',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-005",
+      "MASA-DOC-011",
+      "MASA-DOC-010"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct tool name 'activate_protocol' and the correct protocol ID 'MASA-SEC-001'. However, the scope parameter is incorrect; it should be 'station_wide' according to the gold answer, but the prediction suggests 'module_only'. The retrieved chunks mention critical pres"
+  },
+  {
+    "id": "T-00103",
+    "query": "Crew in Vicuña reporting headaches, CO2 concentration just hit 2.8% and still climbing—what emergency procedure should we initiate for this?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='co2_concentration')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-005",
+      "MASA-DOC-015",
+      "MASA-DOC-024"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks discuss CO2 concentration monitoring and thresholds but do not mention the specific protocol MASA-SEC-009 or a critical severity level. The LLM likely inferred a critical alert based on the CO2 concentration reaching 2.8%, but it failed to correctly identify the specific protoco"
+  },
+  {
+    "id": "T-00105",
+    "query": "Vicuña power bus voltage just hit 135.0 V—should we flag this as an active anomaly or run diagnostics first?",
+    "gold_tool_call": "send_alert(module='vicuna',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='vicuna',severity='medium',reason='voltage_fluctuation')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-011",
+      "MASA-DOC-014",
+      "MASA-DOC-014",
+      "MASA-DOC-005"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention that a medium-severity alert is triggered when the voltage fluctuates beyond 10% of the nominal 118V, which corresponds to voltages above 129.8V or below 106.2V. Since the query mentions the voltage hitting 135.0V, it falls into this category. However, the LLM predicted "
+  },
+  {
+    "id": "T-00108",
+    "query": "Jaguar's CO2 scrubber efficiency just dropped to 53.3% and is still falling—what emergency procedure should we initiate for this?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-014',scope='station_wide')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-014',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-003",
+      "MASA-DOC-011",
+      "MASA-DOC-015",
+      "MASA-DOC-003",
+      "MASA-DOC-003"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct tool name 'activate_protocol' and the correct protocol ID 'MASA-SEC-014'. However, the scope is incorrect; it should be 'station_wide' instead of 'module_only'. The retrieved chunks clearly indicate that the CO2 scrubber efficiency dropping below 60% triggers "
+  },
+  {
+    "id": "T-00110",
+    "query": "Tucán power bus showing voltage fluctuations—reading 105.7 V and holding. What emergency steps do we take for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-018',scope='module_only')",
+    "predicted": "send_alert(module='tucan',severity='medium',reason='voltage_fluctuation')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-011",
+      "MASA-DOC-006",
+      "MASA-DOC-014",
+      "MASA-DOC-011"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the voltage fluctuation threshold and the corresponding protocol (MASA-SEC-018), yet the LLM predicted an action to send an alert instead of activating the protocol. The chunks provide enough context to determine the correct tool call, but the LLM made a reasonin"
+  },
+  {
+    "id": "T-00111",
+    "query": "We’ve got a voltage fluctuation on Jaguar’s power bus, currently reading 137.8 V. What emergency procedure should we initiate for this?",
+    "gold_tool_call": "send_alert(module='jaguar',severity='medium',reason='power_fluctuation')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-018',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-003",
+      "MASA-DOC-003",
+      "MASA-DOC-003",
+      "MASA-DOC-026"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the voltage fluctuation threshold of 129.8V, indicating that the current voltage of 137.8V meets the criteria for activating the Power Fluctuation Response Protocol. However, the LLM predicted an activation of a different protocol (MASA-SEC-018) with a scope of '"
+  },
+  {
+    "id": "T-00113",
+    "query": "Kai just reported radiation sensors in Quetzal are reading 3.7 mSv/hr and rising—what emergency procedure should we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-012',scope='station_wide')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-002",
+      "MASA-DOC-032",
+      "MASA-DOC-041"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention that radiation levels above 5.0 mSv/hour trigger MASA-SEC-012 (Solar Flare Advisory), yet the LLM predicted MASA-SEC-004, which is not mentioned in the context. The correct protocol ID is present in the retrieved text, indicating that the retrieval was successful"
+  },
+  {
+    "id": "T-00115",
+    "query": "Cóndor pressure sensors just dropped to 76.3 kPa — what emergency procedure do we need to activate here?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "send_alert(module='condor',severity='high',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-026",
+      "MASA-DOC-001",
+      "MASA-DOC-026"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that the pressure drop below 85.0 kPa triggers the MASA-SEC-001 protocol, yet the LLM predicted a high-severity alert instead of activating the specific protocol. The chunks provide enough context about the critical threshold and the associated protocol, but the"
+  },
+  {
+    "id": "T-00116",
+    "query": "Cóndor's oxygen concentration has dropped to 14.3% over the past 30 minutes—what emergency procedure should we initiate for this scenario? Commander Reyes noted the trend on the latest telemetry.",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-010',scope='module_only')",
+    "predicted": "send_alert(module='condor',severity='critical',reason='oxygen_leak')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-026",
+      "MASA-DOC-001"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about oxygen concentration thresholds and the corresponding protocols, specifically mentioning that an oxygen concentration of 14.0% would trigger MASA-SEC-002 (Oxygen Depletion Response). However, the LLM predicted a send_alert action instead of activating t"
+  },
+  {
+    "id": "T-00117",
+    "query": "Radiation sensors in Jaguar are showing 9.1 mSv/hr and rising—what emergency response should we initiate? Engineer Kozlov reported the spike ten minutes ago.",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "predicted": "send_alert(module='jaguar',severity='high',reason='radiation_spike')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-003",
+      "MASA-DOC-026",
+      "MASA-DOC-011",
+      "MASA-DOC-036",
+      "MASA-DOC-026"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain the specific threshold information needed to determine the correct tool call. Chunk 1 mentions the critical threshold of 5.0 mSv/hour for MASA-SEC-004 (Radiation Lockdown Protocol), but it is not directly referenced in the other chunks, leading to the incorrect pr"
+  },
+  {
+    "id": "T-00118",
+    "query": "Kai just reported Quetzal’s temp is climbing at 3.1 degrees per minute—what emergency steps do we take for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-003',scope='module_only')",
+    "predicted": "send_alert(module='quetzal',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-008",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-029",
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-036",
+      "MASA-DOC-041"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about temperature thresholds and the Quetzal module's temperature range, but the LLM did not correctly infer that the appropriate action is to activate a protocol rather than sending a critical alert. The chunks mention temperature deviations and alerts but d"
+  },
+  {
+    "id": "T-00119",
+    "query": "Radiation sensors in Tucán are reading 8.6 mSv/hr and still rising—Commander Reyes has confirmed the spike. What’s the emergency procedure here?",
+    "gold_tool_call": "send_alert(module='tucan',severity='critical',reason='radiation_spike')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-012',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-009"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information about radiation levels exceeding critical thresholds or the specific protocol MASA-SEC-012. There is no mention of critical radiation spikes or the need to send a critical alert, which are key elements for determining the correct tool call."
+  },
+  {
+    "id": "T-00120",
+    "query": "We’ve got a rapid pressure drop in Quetzal, currently reading 70.1 kPa—what emergency procedure should we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-001',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-041",
+      "MASA-DOC-002",
+      "MASA-DOC-017",
+      "MASA-DOC-007",
+      "MASA-DOC-005"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct tool name `MASA-SEC-001` but specifies a `scope` of 'module_only' instead of 'station_wide'. The relevant chunk [Chunk 4] discusses the moderate pressure drop response but does not explicitly mention the scope; however, the gold answer suggests a broader impac"
+  },
+  {
+    "id": "T-00121",
+    "query": "We’ve got a voltage fluctuation in Quetzal—power bus sensors just hit 130.9 V and holding. What emergency steps do we need to take on this?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-018',scope='module_only')",
+    "predicted": "send_alert(module='quetzal',severity='medium',reason='power_fluctuation')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-002",
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-008"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the voltage fluctuation threshold of 129.8V, which matches the situation described in the query. However, the LLM predicted an \"send_alert\" action instead of \"activate_protocol\", even though the context provided enough information to determine the correct protoco"
+  },
+  {
+    "id": "T-00123",
+    "query": "Kai Nakamura just reported CO2 concentration in Quetzal is reading 2.4% and climbing—crew has headaches. What emergency steps do we initiate?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')",
+    "predicted": "send_alert(module='quetzal',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-041",
+      "MASA-DOC-032",
+      "MASA-DOC-024",
+      "MASA-DOC-012",
+      "MASA-DOC-002"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information about CO2 concentration levels, critical thresholds related to CO2, or the specific protocol MASA-SEC-009. The closest relevant chunk discusses CO2 scrubber calibration but does not mention the current CO2 concentration or the need to activate a sp"
+  },
+  {
+    "id": "T-00126",
+    "query": "Cóndor radiation sensors just spiked to 11.5 mSv/hr—Commander Reyes is reporting this now. What emergency steps do we initiate for this situation?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "predicted": "send_alert(module='condor',severity='critical',reason='radiation_spike')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-026",
+      "MASA-DOC-009",
+      "MASA-DOC-009",
+      "MASA-DOC-024"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the critical threshold of 5.0 mSv/hour and the MASA-SEC-004 protocol, which should have guided the LLM to predict the correct tool call. However, the LLM incorrectly suggested sending an alert instead of activating the protocol, indicating a reasoning error despi"
+  },
+  {
+    "id": "T-00127",
+    "query": "Jaguar hull stress sensors are reading 92.5%—Engineer Kozlov reports possible micrometeorite impact. Should we flag this for immediate review?",
+    "gold_tool_call": "send_alert(module='jaguar',severity='high',reason='structural_damage')",
+    "predicted": "send_alert(module='jaguar',severity='high',reason='micrometeorite_impact')",
+    "gold_doc_id": "MASA-DOC-010",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-010",
+      "MASA-DOC-010",
+      "MASA-DOC-026",
+      "MASA-DOC-026",
+      "MASA-DOC-036"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention that a structural integrity alert is activated at 85% hull stress, and the current reading is 92.5%, indicating structural damage rather than just a micrometeorite impact. However, the LLM predicted \"micrometeorite_impact\" as the reason for the alert instead of \""
+  },
+  {
+    "id": "T-00130",
+    "query": "We’ve got a rapid pressure drop in Quetzal, currently reading 73.3 kPa—what emergency procedure should we initiate for this?",
+    "gold_tool_call": "send_alert(module='quetzal',severity='critical',reason='pressure_drop')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-001',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-041",
+      "MASA-DOC-002",
+      "MASA-DOC-017",
+      "MASA-DOC-005",
+      "MASA-DOC-002"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention pressure drop alerts for Quetzal, but the LLM failed to correctly infer that a critical pressure drop would trigger MASA-SEC-001 (Rapid Decompression Response) rather than just a module-specific protocol. The chunks provide the necessary context about pressure ranges and"
+  },
+  {
+    "id": "T-00131",
+    "query": "We’ve got a rapid pressure drop in Colibrí, currently reading 84.0 kPa—what emergency procedure should we initiate for this?",
+    "gold_tool_call": "send_alert(module='colibri',severity='critical',reason='pressure_drop')",
+    "predicted": "send_alert(module='colibri',severity='medium',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-038",
+      "MASA-DOC-004",
+      "MASA-DOC-010"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks do not mention any specific pressure drop thresholds or critical alerts related to Colibrí. The closest relevant information is in Chunk 1, which discusses general telemetry specifications but does not specify a critical pressure drop threshold. Given this, the LLM likely inferr"
+  },
+  {
+    "id": "T-00132",
+    "query": "Radiation sensors in Jaguar are showing 3.9 mSv/hr and rising—Commander Reyes wants this logged as an alert immediately. Solar activity may be increasing.",
+    "gold_tool_call": "send_alert(module='jaguar',severity='high',reason='radiation_spike')",
+    "predicted": "send_alert(module='jaguar',severity='medium',reason='radiation_spike')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-003",
+      "MASA-DOC-026",
+      "MASA-DOC-009",
+      "MASA-DOC-009",
+      "MASA-DOC-009"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that a radiation level of 3.9 mSv/hr exceeds the medium-severity threshold of 2.0 mSv/hr, thus justifying a high-severity alert. However, the LLM incorrectly classified the severity as 'medium' instead of 'high'. Specific thresholds and protocol IDs related to h"
+  },
+  {
+    "id": "T-00136",
+    "query": "Oxygen concentration in Colibrí just dropped to 12.3%—should we escalate this to command?",
+    "gold_tool_call": "send_alert(module='colibri',severity='critical',reason='oxygen_leak')",
+    "predicted": "send_alert(module='colibri',severity='critical',reason='oxygen_depletion')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-015",
+      "MASA-DOC-040"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks do not mention any oxygen concentration thresholds or specific oxygen-related alerts. However, the LLM incorrectly predicted 'oxygen_depletion' instead of 'oxygen_leak'. Given that the query mentions a sudden drop in oxygen concentration to 12.3%, which is below the normal range"
+  },
+  {
+    "id": "T-00137",
+    "query": "We've lost all contact with Colibrí and the blackout is now extending to other modules—44 minutes of silence and no recovery yet. Should we escalate this to command?",
+    "gold_tool_call": "send_alert(module='colibri',severity='high',reason='communication_loss')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-007',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-004",
+      "MASA-DOC-020",
+      "MASA-DOC-018",
+      "MASA-DOC-011"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain sufficient information to determine the correct tool call, including the Communication Blackout Protocol (MASA-SEC-007) and the need for high-severity action due to communication loss. However, the LLM predicted `activate_protocol` instead of `send_alert`, indicating a r"
+  },
+  {
+    "id": "T-00138",
+    "query": "Tucán power bus showing 139.1 V voltage fluctuation — should I log an alert?",
+    "gold_tool_call": "send_alert(module='tucan',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='tucan',severity='medium',reason='voltage_fluctuation')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-011",
+      "MASA-DOC-014",
+      "MASA-DOC-006",
+      "MASA-DOC-006"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call uses the correct tool name and module ('tucan') and severity ('medium'), but it incorrectly specifies 'voltage_fluctuation' instead of 'power_fluctuation' as the reason for the alert. The retrieved chunks discuss voltage fluctuation as a medium-severity issue, which supports "
+  },
+  {
+    "id": "T-00140",
+    "query": "Cóndor pressure sensors are showing 88.9 kPa and declining — Commander Reyes has confirmed the reading. What emergency procedure should we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-011',scope='module_only')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-007",
+      "MASA-DOC-024",
+      "MASA-DOC-024"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that a pressure drop below 85.0 kPa triggers MASA-SEC-001 (Rapid Decompression Response), which is a critical protocol. However, the LLM predicted MASA-SEC-011 instead, suggesting a reasoning error despite having the necessary context. The correct protocol (MASA"
+  },
+  {
+    "id": "T-00141",
+    "query": "Kai just reported Quetzal’s temp is climbing at 3.2 degrees per minute—what emergency steps do we take for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-003',scope='module_only')",
+    "predicted": "send_alert(module='quetzal',severity='high',reason='temperature_spike')",
+    "gold_doc_id": "MASA-DOC-008",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-029",
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-002",
+      "MASA-DOC-002"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about temperature thresholds and the Quetzal module's temperature range, which should have been sufficient to determine the correct action. However, the LLM predicted sending a high-severity alert instead of activating a protocol, indicating a reasoning error"
+  },
+  {
+    "id": "T-00142",
+    "query": "Oxygen concentration in Vicuña just dropped to 12.6% and still falling—Commander Reyes reports the crew is feeling lightheaded. What emergency procedure should we initiate for this?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-002',scope='station_wide')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='oxygen_leak')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-011",
+      "MASA-DOC-005"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about oxygen levels and critical thresholds, which are relevant to determining the correct tool call. However, the LLM predicted an incorrect action (sending an alert) instead of initiating the MASA-SEC-002 protocol, which is specifically mentioned in Chunk 1"
+  },
+  {
+    "id": "T-00144",
+    "query": "We've got a debris avoidance maneuver coming up—plot the optimal trajectory for the 408 km LEO adjustment.",
+    "gold_tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='planned')",
+    "predicted": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-058",
+      "MASA-DOC-040",
+      "MASA-DOC-029",
+      "MASA-DOC-029",
+      "MASA-DOC-040"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks discuss debris avoidance protocols and maneuver types, providing enough context to understand that the maneuver should be classified as 'debris_avoidance'. However, the LLM incorrectly classified it as 'orbit_adjustment' instead, despite the presence of relevant information."
+  },
+  {
+    "id": "T-00145",
+    "query": "Radiation sensors in Vicuña are reading 9.9 mSv/hr and climbing — what emergency procedure do we initiate for this?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='radiation_spike')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-039",
+      "MASA-DOC-006",
+      "MASA-DOC-039",
+      "MASA-DOC-039"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention that radiation levels above 5.0 mSv/hour trigger the MASA-SEC-004 protocol, which is a station-wide critical response. However, the LLM predicted sending an alert instead of activating the protocol, indicating a reasoning error despite having the necessary inform"
+  },
+  {
+    "id": "T-00154",
+    "query": "Cóndor's temperature is rising at 4.1 degrees per minute—what emergency procedure should we initiate?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-003',scope='module_only')",
+    "predicted": "send_alert(module='condor',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-008",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-026",
+      "MASA-DOC-001",
+      "MASA-DOC-026",
+      "MASA-DOC-001",
+      "MASA-DOC-001"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about the temperature thresholds and the need for emergency procedures, including the critical threshold that would trigger MASA-SEC-003. However, the LLM predicted a send_alert command instead of activating the appropriate protocol, indicating a reasoning er"
+  },
+  {
+    "id": "T-00156",
+    "query": "Medical, we've got a crew member reporting persistent headaches and nausea in Tucán—can you confirm receipt and assess?",
+    "gold_tool_call": "send_message(recipient='medical_officer',priority='medium')",
+    "predicted": "send_message(recipient='medical_officer',priority='high')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-042",
+      "MASA-DOC-022",
+      "MASA-DOC-035"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information about the medical officer's responsibilities and the nature of the Crew Medical Examination. However, the LLM incorrectly classified the priority level of the message as 'high' instead of 'medium', despite the context not indicating any urgency tha"
+  },
+  {
+    "id": "T-00157",
+    "query": "We’re seeing a voltage fluctuation on the Colibrí power bus—current reading is 97.3 V. What emergency procedure should we initiate for this?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-018',scope='module_only')",
+    "predicted": "send_alert(module='colibri',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-004",
+      "MASA-DOC-011",
+      "MASA-DOC-004",
+      "MASA-DOC-004"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information about voltage fluctuation thresholds or the specific protocol ID 'MASA-SEC-018'. Chunk 1 mentions the general threshold but does not specify the exact protocol ID, and the other chunks focus on different topics like humidity levels, system interdep"
+  },
+  {
+    "id": "T-00158",
+    "query": "Ana, we've got an incoming supply vessel that needs docking clearance—can you confirm the approach vector and prepare for manual override if needed?",
+    "gold_tool_call": "send_message(recipient='pilot',priority='medium')",
+    "predicted": "send_message(recipient='pilot',priority='high')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-027",
+      "MASA-DOC-027",
+      "MASA-DOC-021",
+      "MASA-DOC-029",
+      "MASA-DOC-021"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information about the docking procedure and the role of Pilot Ana Valdivia, but the LLM incorrectly set the priority level to 'high' instead of 'medium'. There is no evidence in the chunks suggesting that the priority should be higher than medium for this situ"
+  },
+  {
+    "id": "T-00160",
+    "query": "Cóndor pressure sensors are showing 88.5 kPa and still dropping—Commander Reyes has flagged this. What emergency procedure should we initiate?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-011',scope='module_only')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-007",
+      "MASA-DOC-024",
+      "MASA-DOC-024"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that a pressure drop below 85.0 kPa triggers MASA-SEC-001 (Rapid Decompression Response), which is a higher severity protocol. However, the model incorrectly predicted MASA-SEC-011 instead, suggesting a reasoning error rather than a retrieval issue."
+  },
+  {
+    "id": "T-00161",
+    "query": "Jaguar temperature sensors are showing a rapid rise at 4.4 degrees per minute and still climbing—what emergency procedure should we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-003',scope='module_only')",
+    "predicted": "send_alert(module='jaguar',severity='high',reason='temperature_rapid_rise')",
+    "gold_doc_id": "MASA-DOC-008",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-026",
+      "MASA-DOC-026",
+      "MASA-DOC-003",
+      "MASA-DOC-026",
+      "MASA-DOC-036"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about the critical temperature threshold and the need for immediate action when temperatures exceed certain levels. However, the LLM predicted a send_alert command instead of activating the specific protocol MASA-SEC-003, indicating a reasoning error despite "
+  },
+  {
+    "id": "T-00162",
+    "query": "Pressure in Vicuña just dropped to 85.3 kPa and it's still falling—what emergency steps do we take for this scenario?",
+    "gold_tool_call": "send_alert(module='vicuna',severity='high',reason='pressure_drop')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-010",
+      "MASA-DOC-039",
+      "MASA-DOC-011",
+      "MASA-DOC-039"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that a pressure drop below 85.0 kPa triggers a critical condition, which should prompt the initiation of MASA-SEC-001 (Rapid Decompression Response). However, the model predicted 'send_alert' with 'severity=critical' instead of 'severity=high'. Given the context"
+  },
+  {
+    "id": "T-00164",
+    "query": "Kai Nakamura just reported CO2 concentration in Jaguar has hit 2.0% and crew members are experiencing headaches. What emergency procedure should we initiate for this situation?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-014',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-015",
+      "MASA-DOC-011",
+      "MASA-DOC-003",
+      "MASA-DOC-038",
+      "MASA-DOC-015"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information to determine the correct protocol, which is MASA-SEC-009 based on the CO2 concentration threshold of 2.0%. However, the LLM predicted MASA-SEC-014 instead, likely due to a misinterpretation of the severity level or the specific protocol ID. Chunk 1"
+  },
+  {
+    "id": "T-00166",
+    "query": "Vicuña pressure sensors just dropped to 74.7 kPa — Engineer Kozlov reports a possible hull breach. What emergency procedure do we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-010",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-027"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information about the critical pressure threshold or the MASA-SEC-001 protocol, which are necessary to determine the correct tool call. Instead, the chunks discuss general operational ranges, cargo transfer safety, and docking procedures, none of which directl"
+  },
+  {
+    "id": "T-00167",
+    "query": "I need to log an alert — Vicuña pressure sensors just hit 84.7 kPa and it’s still dropping. What emergency steps do we take?",
+    "gold_tool_call": "send_alert(module='vicuna',severity='critical',reason='pressure_drop')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-007",
+      "MASA-DOC-005"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention that a pressure drop below 85.0 kPa triggers a critical alert, yet the LLM predicted an abnormal temperature as the reason for the alert instead of the specified pressure drop. Chunk 1 explicitly states that a pressure drop to 84.7 kPa, which is below the critica"
+  },
+  {
+    "id": "T-00169",
+    "query": "Radiation sensors in Colibrí are reading 2.6 mSv/hr, and Fatima Al-Hassan just reported a possible increase in solar activity — what emergency procedure do we need to initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-012',scope='station_wide')",
+    "predicted": "send_alert(module='colibri',severity='medium',reason='radiation_spike')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-009",
+      "MASA-DOC-009",
+      "MASA-DOC-028",
+      "MASA-DOC-004",
+      "MASA-DOC-004"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the protocol MASA-SEC-012 (Solar Flare Advisory) and its activation criteria, which include radiation levels reaching 1.1 to 5.0 mSv/hour. However, the LLM predicted sending an alert instead of activating the protocol, indicating a reasoning error despite having "
+  },
+  {
+    "id": "T-00171",
+    "query": "Water recycling in Jaguar is down to 24.1% and has been degrading for hours — what emergency steps should we take for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-015',scope='station_wide')",
+    "predicted": "send_alert(module='jaguar',severity='critical',reason='water_recycling_system_failure')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-003",
+      "MASA-DOC-015",
+      "MASA-DOC-019",
+      "MASA-DOC-003",
+      "MASA-DOC-003"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention the water recycling system and its efficiency, but they do not provide specific information about activating a protocol for a degraded system. The LLM predicted sending an alert with 'critical' severity, which is not directly supported by the context, whereas the gold an"
+  },
+  {
+    "id": "T-00180",
+    "query": "Cóndor pressure sensors are showing 88.3 kPa and still dropping — Kai just called it in. What emergency procedure should we initiate for this?",
+    "gold_tool_call": "send_alert(module='condor',severity='high',reason='pressure_drop')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-001',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-024",
+      "MASA-DOC-026",
+      "MASA-DOC-007"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that a pressure drop below 85.0 kPa triggers MASA-SEC-001, which is a critical protocol. However, the LLM predicted the activation of MASA-SEC-001 instead of sending a high-severity alert, likely due to misinterpreting the severity level. The chunks provide enou"
+  },
+  {
+    "id": "T-00181",
+    "query": "Jaguar oxygen concentration has dropped to 11.0% — Engineer Kozlov reports crew symptoms. What emergency procedure should we initiate?",
+    "gold_tool_call": "send_alert(module='jaguar',severity='critical',reason='oxygen_leak')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-002',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-003",
+      "MASA-DOC-015",
+      "MASA-DOC-007",
+      "MASA-DOC-034",
+      "MASA-DOC-007"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that the oxygen concentration in the Jaguar module has fallen below the critical threshold of 14.0%, which should trigger MASA-SEC-002. However, the LLM predicted the activation of MASA-SEC-002 instead of sending an alert, likely due to misinterpreting the urgen"
+  },
+  {
+    "id": "T-00183",
+    "query": "Ana Valdivia just reported oxygen concentration in Colibrí is down to 14.0% and still dropping—should we flag this for emergency response?",
+    "gold_tool_call": "send_alert(module='colibri',severity='high',reason='oxygen_leak')",
+    "predicted": "send_alert(module='colibri',severity='critical',reason='oxygen_depletion')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-006",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-015"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that an oxygen concentration of 14.0% triggers the MASA-SEC-002 (Oxygen Depletion Response), which is a critical threshold. However, the LLM predicted a 'critical' severity instead of 'high', showing a reasoning error despite having the necessary information."
+  },
+  {
+    "id": "T-00184",
+    "query": "Vicuña pressure sensors just dropped to 74.0 kPa — Engineer Kozlov reports a possible hull breach. What emergency procedure should we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-010",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-027"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information about the critical pressure threshold of 74.0 kPa or the protocol MASA-SEC-001 for rapid decompression response. Chunk 1 mentions a critical condition at pressures below 85.0 kPa but does not specify the exact protocol to be initiated."
+  },
+  {
+    "id": "T-00185",
+    "query": "We’ve got a rapid pressure drop in Jaguar—sensors just hit 75.6 kPa and still falling. Commander Reyes reports possible hull breach. What emergency procedure do we initiate here?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-001',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-026",
+      "MASA-DOC-015",
+      "MASA-DOC-007",
+      "MASA-DOC-003",
+      "MASA-DOC-007"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct tool name `MASA-SEC-001` but specifies the wrong scope (`module_only` instead of `station_wide`). The relevant chunk [Chunk 3] mentions the moderate pressure drop response (MASA-SEC-011) and [Chunk 5] discusses the rapid decompression response (MASA-SEC-001), "
+  },
+  {
+    "id": "T-00186",
+    "query": "Oxygen concentration in Colibrí has dropped to 10.7% — Kai Nakamura just reported it. What emergency procedure should we initiate for this?",
+    "gold_tool_call": "send_alert(module='colibri',severity='critical',reason='oxygen_leak')",
+    "predicted": "send_alert(module='colibri',severity='critical',reason='oxygen_depletion')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-017",
+      "MASA-DOC-038",
+      "MASA-DOC-015"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention oxygen concentration and critical thresholds, but the LLM did not correctly infer that an oxygen depletion event requires sending a critical alert. Instead, it used \"oxygen_depletion\" which is close but not exactly the same as the gold \"oxygen_leak\". The chunks provide e"
+  },
+  {
+    "id": "T-00187",
+    "query": "Vicuña hull stress sensors are reading 88.4% and climbing — should we log an alert for this?",
+    "gold_tool_call": "send_alert(module='vicuna',severity='high',reason='structural_damage')",
+    "predicted": "send_alert(module='vicuna',severity='medium',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-010",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-010",
+      "MASA-DOC-039",
+      "MASA-DOC-005",
+      "MASA-DOC-010",
+      "MASA-DOC-039"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that a high-severity alert (send_alert(severity='high')) should be triggered when hull stress exceeds 88%, which matches the current reading of 88.4%. However, the LLM predicted a medium-severity alert instead, suggesting a reasoning error despite having the nec"
+  },
+  {
+    "id": "T-00189",
+    "query": "I need to log an alert — Quetzal pressure sensors are reading 87.5 kPa and declining. What emergency steps should we initiate for this situation?",
+    "gold_tool_call": "send_alert(module='quetzal',severity='high',reason='pressure_drop')",
+    "predicted": "send_alert(module='quetzal',severity='medium',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-002",
+      "MASA-DOC-017",
+      "MASA-DOC-005"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention pressure readings and thresholds, but they do not specify a high-severity alert for the 87.5 kPa reading. The LLM likely chose 'medium' based on the pressure drop context, even though the gold answer specifies 'high'."
+  },
+  {
+    "id": "T-00190",
+    "query": "Check the current food stock levels in Vicuña and let me know if we need to schedule a routine resupply for the next available cargo launch.",
+    "gold_tool_call": "request_supply(category='food',urgency='routine')",
+    "predicted": "get_module_status(module='vicuna',system='life_support')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-055",
+      "MASA-DOC-039",
+      "MASA-DOC-005",
+      "MASA-DOC-039",
+      "MASA-DOC-039"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain specific information about the current food stock levels in Vicuña, which is necessary to determine the correct tool call. While the chunks mention Vicuña and food storage, they do not provide the required details to assess the current stock levels or set threshol"
+  },
+  {
+    "id": "T-00191",
+    "query": "Radiation sensors in Tucán are reading 8.2 mSv/hr and climbing — Medical Officer Mendoza just reported it. What emergency steps should we take for this?",
+    "gold_tool_call": "send_alert(module='tucan',severity='critical',reason='radiation_spike')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-009",
+      "MASA-DOC-006"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any specific information about radiation levels exceeding critical thresholds or the need for a critical alert. The closest relevant information is in Chunk 4, which mentions radiation monitoring, but it does not specify the current radiation level or the need for"
+  },
+  {
+    "id": "T-00192",
+    "query": "Cóndor pressure sensors are showing 87.1 kPa and declining — Commander Reyes has confirmed the reading. What emergency procedure should we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-011',scope='module_only')",
+    "predicted": "send_alert(module='condor',severity='high',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-007",
+      "MASA-DOC-024",
+      "MASA-DOC-024"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that the pressure drop below 85.0 kPa triggers MASA-SEC-001 (Rapid Decompression Response), which is a high-severity protocol. However, the LLM predicted a high-severity alert instead of activating the specific protocol, indicating a reasoning error despite havi"
+  },
+  {
+    "id": "T-00193",
+    "query": "Cóndor pressure sensors are showing 86.3 kPa and still dropping — what emergency response should we initiate here? Commander Reyes just reported the anomaly.",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-011',scope='module_only')",
+    "predicted": "send_alert(module='condor',severity='high',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-026",
+      "MASA-DOC-024",
+      "MASA-DOC-007"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that the pressure drop below 85.0 kPa triggers MASA-SEC-001 (Rapid Decompression Response), yet the LLM predicted a high-severity alert instead of activating the appropriate protocol. The specific threshold of 85.0 kPa and the protocol ID MASA-SEC-001 are mentio"
+  },
+  {
+    "id": "T-00195",
+    "query": "Cóndor radiation sensors now showing 1.4 mSv/hr—Reyes just reported the climb. What emergency procedure should we initiate for this?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-012',scope='station_wide')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-026",
+      "MASA-DOC-024",
+      "MASA-DOC-024",
+      "MASA-DOC-009"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct tool name 'activate_protocol' and the correct scope 'station_wide'. However, the wrong protocol ID 'MASA-SEC-004' was used instead of the gold 'MASA-SEC-012'. The retrieved chunks mention 'MASA-SEC-004: Radiation Lockdown Protocol', but there is no reference t"
+  },
+  {
+    "id": "T-00198",
+    "query": "Oxygen concentration in Jaguar has dropped to 11.0%—what emergency procedure should we initiate? Engineer Kozlov just reported the crew is feeling lightheaded.",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-002',scope='station_wide')",
+    "predicted": "send_alert(module='jaguar',severity='critical',reason='oxygen_depletion')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-015",
+      "MASA-DOC-003",
+      "MASA-DOC-007",
+      "MASA-DOC-007",
+      "MASA-DOC-036"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that an oxygen concentration of 11.0% is well below the critical threshold of 14.0% for MASA-SEC-002, which would trigger its activation. However, the LLM predicted a send_alert action instead of activating the MASA-SEC-002 protocol, despite the severe oxygen de"
+  },
+  {
+    "id": "T-00199",
+    "query": "Oxygen concentration in Vicuña has dropped to 13.6% and is still falling—what emergency steps should we take for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-002',scope='station_wide')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='oxygen_depletion')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-005",
+      "MASA-DOC-005",
+      "MASA-DOC-015",
+      "MASA-DOC-011"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain the necessary information about oxygen depletion thresholds and the corresponding protocol (MASA-SEC-002). However, the LLM predicted sending an alert instead of activating the protocol, indicating a reasoning error despite having the correct context."
+  },
+  {
+    "id": "T-00200",
+    "query": "Radiation sensors in Colibrí are reading 5.3 mSv/hr and rising—what emergency steps do we take for this scenario?",
+    "gold_tool_call": "send_alert(module='colibri',severity='critical',reason='radiation_spike')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-040",
+      "MASA-DOC-004"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information related to radiation levels, thresholds, or emergency procedures for radiation spikes. The closest relevant information is in Chunk 1, which discusses temperature thresholds, but there is no mention of radiation or its handling. Therefore, the enco"
+  },
+  {
+    "id": "T-00201",
+    "query": "Cóndor power bus voltage just hit 137.4 V—should we flag this immediately or wait for confirmation?",
+    "gold_tool_call": "send_alert(module='condor',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='condor',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-014",
+      "MASA-DOC-001",
+      "MASA-DOC-014",
+      "MASA-DOC-026"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention that a power fluctuation exceeding 129.8V would trigger a medium severity alert, yet the LLM incorrectly identified the reason as 'abnormal_temperature' instead of 'power_fluctuation'. The correct severity level 'medium' was correctly predicted, but the specific "
+  },
+  {
+    "id": "T-00203",
+    "query": "We need to schedule an urgent hull inspection for the Cóndor module—Reyes reported possible micro-meteoroid impacts during the last orbital pass.",
+    "gold_tool_call": "schedule_maintenance(module='condor',task='hull_inspection',priority='urgent')",
+    "predicted": "schedule_maintenance(module='condor',task='sensor_repair',priority='urgent')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-029",
+      "MASA-DOC-028",
+      "MASA-DOC-028",
+      "MASA-DOC-010",
+      "MASA-DOC-029"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about hull inspections and the Cóndor module, which should have been sufficient for the LLM to correctly identify the task as 'hull_inspection'. However, the LLM incorrectly predicted 'sensor_repair' instead."
+  },
+  {
+    "id": "T-00205",
+    "query": "Cóndor radiation sensors are showing 2.3 mSv/hr and climbing—Commander Reyes has flagged this. What emergency procedure should we initiate?",
+    "gold_tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-024",
+      "MASA-DOC-001",
+      "MASA-DOC-024",
+      "MASA-DOC-026",
+      "MASA-DOC-009"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain the necessary information about radiation levels and the corresponding protocols, including the critical threshold of 2.0 mSv/hour and the MASA-SEC-004 protocol. However, the LLM predicted the wrong action, suggesting protocol activation instead of sending an alert, desp"
+  },
+  {
+    "id": "T-00206",
+    "query": "Cóndor pressure sensors are showing 89.8 kPa and declining — Commander Reyes has confirmed the reading. What emergency procedure should we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-011',scope='module_only')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-001',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-007",
+      "MASA-DOC-024",
+      "MASA-DOC-024"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that a pressure drop below 85.0 kPa triggers MASA-SEC-001 (Rapid Decompression Response), which is a higher-severity protocol than MASA-SEC-011. However, the model incorrectly predicted MASA-SEC-011 instead of MASA-SEC-001, suggesting a reasoning error rather th"
+  },
+  {
+    "id": "T-00207",
+    "query": "Cóndor pressure sensors just dropped to 77.5 kPa—Reyes is reporting a possible hull breach. What emergency procedure do we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "send_alert(module='condor',severity='critical',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-007",
+      "MASA-DOC-026",
+      "MASA-DOC-024",
+      "MASA-DOC-027"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain the specific information needed to determine the correct tool call. While the chunks discuss pressure thresholds and the protocol MASA-SEC-001, they do not explicitly mention activating the protocol with the 'scope' parameter set to 'station_wide'. The chunks focu"
+  },
+  {
+    "id": "T-00210",
+    "query": "Oxygen readings in Vicuña just dropped to 14.6% and still falling—what’s the next emergency procedure we follow?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-010',scope='module_only')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='oxygen_depletion')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-015",
+      "MASA-DOC-006",
+      "MASA-DOC-011",
+      "MASA-DOC-007"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that an oxygen level below 14.6% would trigger the MASA-SEC-002 protocol, which mandates evacuation. However, the LLM predicted a less severe response (MASA-SEC-010) with a 'module_only' scope instead of the critical 'MASA-SEC-002'. The chunks contain the necess"
+  },
+  {
+    "id": "T-00212",
+    "query": "We’re seeing a voltage fluctuation on the Colibrí power bus, with readings dropping to 104.7 V—what emergency steps should we take for this situation?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-018',scope='module_only')",
+    "predicted": "send_alert(module='colibri',severity='medium',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-011",
+      "MASA-DOC-004"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks discuss voltage fluctuation thresholds and protocols, but the LLM incorrectly focused on temperature alerts instead of the voltage fluctuation protocol. Specifically, Chunk 1 mentions the Power Fluctuation Response Protocol, which is relevant to the situation described in the qu"
+  },
+  {
+    "id": "T-00214",
+    "query": "Ana Valdivia just reported oxygen concentration in Vicuña dropping to 15.5%—should we escalate this to command?",
+    "gold_tool_call": "send_alert(module='vicuna',severity='high',reason='oxygen_leak')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='oxygen_depletion')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-015",
+      "MASA-DOC-006",
+      "MASA-DOC-011",
+      "MASA-DOC-005"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that an oxygen level below 18.0% triggers a low-severity alert, and levels below 16.0% require immediate corrective action. However, the LLM predicted a 'critical' severity instead of 'high' based on the oxygen level dropping to 15.5%. The chunks provide suffici"
+  },
+  {
+    "id": "T-00215",
+    "query": "Kozlov just reported Colibrí power bus showing 104.7 V on the console—should we flag this for the flight director?",
+    "gold_tool_call": "send_alert(module='colibri',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='colibri',severity='medium',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-014",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-004"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention the power fluctuation threshold of 104.2V to 129.8V, which includes the reported 104.7V. However, the LLM predicted an \"abnormal_temperature\" alert instead of a \"power_fluctuation\" alert, despite the relevant information being present in the retrieved chunks."
+  },
+  {
+    "id": "T-00217",
+    "query": "Kai Nakamura just reported CO2 concentration in Jaguar has hit 2.1% and is still climbing—crew's complaining of headaches. Do we need to flag this up the chain immediately?",
+    "gold_tool_call": "send_alert(module='jaguar',severity='high',reason='oxygen_leak')",
+    "predicted": "send_alert(module='jaguar',severity='critical',reason='co2_concentration_exceedance')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-015",
+      "MASA-DOC-003",
+      "MASA-DOC-011",
+      "MASA-DOC-036",
+      "MASA-DOC-015"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information about CO2 concentration thresholds and the potential impact on crew health, but the LLM incorrectly identified the reason for the alert as 'co2_concentration_exceedance' instead of 'oxygen_leak'. The chunks do not mention an oxygen leak issue, and "
+  },
+  {
+    "id": "T-00218",
+    "query": "Radiation sensors in Colibrí are reading 2.9 mSv/hr, and solar activity reports suggest it might rise. Should we flag this to Commander Reyes and start any precautions?",
+    "gold_tool_call": "send_alert(module='colibri',severity='high',reason='radiation_spike')",
+    "predicted": "send_alert(module='colibri',severity='medium',reason='radiation_spike')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-009",
+      "MASA-DOC-009",
+      "MASA-DOC-028",
+      "MASA-DOC-004",
+      "MASA-DOC-040"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information to determine that a medium-severity alert should be issued based on the current radiation level of 2.9 mSv/hr, which falls within the 1.1 to 5.0 mSv/hour range mentioned in Chunk 2. However, the LLM predicted a high-severity alert instead of the co"
+  },
+  {
+    "id": "T-00219",
+    "query": "Vicuña power bus voltage just hit 134.7 V—should we flag this as an anomaly?",
+    "gold_tool_call": "send_alert(module='vicuna',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='vicuna',severity='medium',reason='voltage_fluctuation')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-014",
+      "MASA-DOC-011",
+      "MASA-DOC-039",
+      "MASA-DOC-005"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention that a medium-severity alert is triggered when the voltage exceeds 129.8V, which aligns with the given voltage of 134.7V. However, the LLM predicted 'voltage_fluctuation' instead of 'power_fluctuation' as the reason for the alert, indicating a reasoning error despite hav"
+  },
+  {
+    "id": "T-00222",
+    "query": "We’ve got a pressure anomaly in Vicuña—readings just hit 89.4 kPa and still dropping. What emergency procedure should we initiate for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-011',scope='module_only')",
+    "predicted": "send_alert(module='vicuna',severity='medium',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-010",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-011"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that a pressure drop below 85.0 kPa would trigger a critical condition, necessitating the activation of a specific protocol. However, the LLM predicted an \"send_alert\" action instead of activating the appropriate protocol, despite the context mentioning the need"
+  },
+  {
+    "id": "T-00227",
+    "query": "Medical Officer Mendoza, urgent message incoming—crew vitals from Tucán are showing irregular patterns and need immediate review.",
+    "gold_tool_call": "send_message(recipient='medical_officer',priority='high')",
+    "predicted": "send_message(recipient='medical_officer',priority='urgent')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-035",
+      "MASA-DOC-042",
+      "MASA-DOC-012"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide context about Dr. Mendoza's responsibilities and the nature of her role, but they do not explicitly mention the need to send an urgent message. The LLM likely inferred \"urgent\" from the term \"urgent message\" in the query, but it did not correctly interpret the specific a"
+  },
+  {
+    "id": "T-00229",
+    "query": "Cóndor's power bus is showing voltage fluctuations with a reading of 134.5 V — should we escalate this to the flight director?",
+    "gold_tool_call": "send_alert(module='condor',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='condor',severity='medium',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-014",
+      "MASA-DOC-001",
+      "MASA-DOC-023",
+      "MASA-DOC-024"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention that voltage fluctuations above 129.8V trigger the Power Fluctuation Response Protocol, which aligns with the query about voltage readings of 134.5V. However, the LLM predicted 'abnormal_temperature' instead of 'power_fluctuation' as the reason for the alert, des"
+  },
+  {
+    "id": "T-00231",
+    "query": "Jaguar hull stress sensors are reading 90.0%—Engineer Kozlov reports possible micrometeorite impact. Should we flag this for immediate review?",
+    "gold_tool_call": "send_alert(module='jaguar',severity='high',reason='structural_damage')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-008',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-010",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-010",
+      "MASA-DOC-010",
+      "MASA-DOC-026",
+      "MASA-DOC-026",
+      "MASA-DOC-036"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the 85% threshold for hull stress sensors and the activation of MASA-SEC-008 upon detection of stress readings exceeding this threshold. The chunks also discuss the need for immediate review upon such events. However, the LLM predicted an activation of a protocol"
+  },
+  {
+    "id": "T-00232",
+    "query": "Radiation sensors in Colibrí are reading 7.4 mSv/hr and rising—how should we respond to this spike?",
+    "gold_tool_call": "send_alert(module='colibri',severity='critical',reason='radiation_spike')",
+    "predicted": "send_alert(module='colibri',severity='medium',reason='radiation_spike')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-004"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks do not mention radiation sensors or any radiation-related thresholds. The LLM likely failed to correctly interpret the context and instead used the term \"spike\" to infer a medium-severity alert, rather than recognizing the need for a critical alert based on the radiation level m"
+  },
+  {
+    "id": "T-00235",
+    "query": "Vicuña CO2 concentration has hit 2.3% and is climbing—crew reporting headaches. What emergency steps do we take for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')",
+    "predicted": "send_alert(module='vicuna',severity='high',reason='co2_concentration_increase')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-024",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-005",
+      "MASA-DOC-011"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks do contain information about CO2 levels and their effects, but the LLM failed to correctly infer that an emergency protocol needs to be activated based on the CO2 concentration reaching 2.3%. The chunks mention CO2 levels and their impact, but the LLM predicted a send_alert acti"
+  },
+  {
+    "id": "T-00236",
+    "query": "Kai just reported Vicuña's temperature is climbing at 2.7 degrees per minute and still rising—what emergency procedure should we initiate for this?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-003',scope='module_only')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-008",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-039"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about temperature thresholds and the need for action when temperatures exceed certain limits. However, the LLM predicted a send_alert action instead of activating a specific security protocol, indicating a reasoning error despite having the necessary context."
+  },
+  {
+    "id": "T-00237",
+    "query": "Cóndor module is showing CO2 concentration at 2.2% and climbing, crew reports headaches. What emergency steps should we take for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')",
+    "predicted": "send_alert(module='condor',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-024",
+      "MASA-DOC-001",
+      "MASA-DOC-024",
+      "MASA-DOC-024",
+      "MASA-DOC-023"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information related to CO2 concentration levels, emergency steps, or the specific protocol MASA-SEC-009. The chunks focus on CO2 scrubber calibration anomalies, telemetry specifications, lessons learned, and systems activation logs, none of which provide the n"
+  },
+  {
+    "id": "T-00242",
+    "query": "Cóndor module temperature is rising at 2.2 degrees per minute—should we flag this immediately?",
+    "gold_tool_call": "send_alert(module='condor',severity='critical',reason='abnormal_temperature')",
+    "predicted": "send_alert(module='condor',severity='medium',reason='temperature_rise')",
+    "gold_doc_id": "MASA-DOC-008",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-026",
+      "MASA-DOC-013",
+      "MASA-DOC-026",
+      "MASA-DOC-001"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide information about temperature ranges and thresholds, but the LLM did not correctly interpret that a 2.2-degree-per-minute rise in temperature, while concerning, does not yet meet the criteria for a critical alert. The correct severity should be 'medium' based on the prov"
+  },
+  {
+    "id": "T-00246",
+    "query": "Cóndor CO2 concentration has hit 2.4% and is climbing—Commander Reyes reports headaches in the crew. What emergency procedure should we initiate?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')",
+    "predicted": "send_alert(module='condor',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-024",
+      "MASA-DOC-024",
+      "MASA-DOC-024",
+      "MASA-DOC-001",
+      "MASA-DOC-028"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information related to CO2 concentration thresholds or the specific protocol MASA-SEC-009. The chunks discuss general operational procedures, commissioning activities, and lessons learned, but fail to provide the necessary context for determining the correct e"
+  },
+  {
+    "id": "T-00250",
+    "query": "Can you pull up the training records for the current crew, specifically any drills related to emergency oxygen system failures?",
+    "gold_tool_call": "no_action",
+    "predicted": "get_crew_status(module='condor',info='current_activity')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-020",
+      "MASA-DOC-037",
+      "MASA-DOC-022",
+      "MASA-DOC-020",
+      "MASA-DOC-038"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any specific information about the current crew's training records or drills related to the emergency oxygen system failures. The chunks discuss general emergency procedures, reporting requirements, and other operational protocols, but none of them mention the exa"
+  },
+  {
+    "id": "T-00254",
+    "query": "Water recycling in Vicuña has dropped to 22.9% and been degrading for hours. Engineer Kozlov noticed—what emergency steps do we take?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-015',scope='station_wide')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='water_recycling_system_failure')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-039",
+      "MASA-DOC-015",
+      "MASA-DOC-039",
+      "MASA-DOC-003"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that the water recycling output has fallen below the threshold, triggering the MASA-SEC-015 protocol. However, the LLM predicted sending a critical alert instead of activating the protocol, showing a reasoning error despite having the necessary context."
+  },
+  {
+    "id": "T-00258",
+    "query": "Oxygen concentration in Quetzal has dropped to 12.1% — Kai Nakamura reports dizziness. What emergency procedure should we initiate?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-002',scope='station_wide')",
+    "predicted": "send_alert(module='quetzal',severity='critical',reason='oxygen_depletion')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-041",
+      "MASA-DOC-029",
+      "MASA-DOC-002",
+      "MASA-DOC-032",
+      "MASA-DOC-002"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention that an oxygen level drop below 18.0% triggers a low-severity alert, and that Nakamura is responsible for initiating corrective measures before the condition escalates. However, the LLM predicted a 'critical' severity alert instead of following the protocol for a 'low-se"
+  },
+  {
+    "id": "T-00261",
+    "query": "Cóndor radiation sensors are showing 3.9 mSv/hr and climbing—what emergency response should we initiate here? Commander Reyes just reported solar activity may be increasing.",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-012',scope='station_wide')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-024",
+      "MASA-DOC-026",
+      "MASA-DOC-001",
+      "MASA-DOC-023",
+      "MASA-DOC-024"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain the necessary information about radiation thresholds and protocol activations, but the LLM incorrectly identified 'MASA-SEC-004' instead of 'MASA-SEC-012'. The chunk MASA-DOC-001 clearly states that readings above 3.9 mSv/hour would trigger a medium-severity alert, which"
+  },
+  {
+    "id": "T-00262",
+    "query": "Hull stress readings in Quetzal have hit 91.5% and are rising—Nakamura reports possible micrometeorite impact. Do we escalate this immediately?",
+    "gold_tool_call": "send_alert(module='quetzal',severity='high',reason='structural_damage')",
+    "predicted": "send_alert(module='quetzal',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-010",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-010",
+      "MASA-DOC-029",
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-010"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information about the hull stress threshold and the current reading of 91.5%, which exceeds the 85% threshold. However, the LLM predicted 'critical' severity instead of 'high', indicating a reasoning error despite having the necessary context."
+  },
+  {
+    "id": "T-00263",
+    "query": "I need to log an alert — oxygen sensors in Quetzal are showing 14.8% concentration.",
+    "gold_tool_call": "send_alert(module='quetzal',severity='high',reason='oxygen_leak')",
+    "predicted": "send_alert(module='quetzal',severity='critical',reason='oxygen_leak')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-002",
+      "MASA-DOC-002",
+      "MASA-DOC-002",
+      "MASA-DOC-006",
+      "MASA-DOC-041"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain the necessary information about oxygen concentration thresholds, specifically mentioning that oxygen levels below 14.8% should trigger a critical alert. However, the LLM predicted a 'critical' severity instead of the correct 'high' severity based on the provided context."
+  },
+  {
+    "id": "T-00265",
+    "query": "Cóndor's CO2 sensors are reading 3.0% and climbing — Commander Reyes reports crew headaches. Should we escalate this?",
+    "gold_tool_call": "send_alert(module='condor',severity='high',reason='oxygen_leak')",
+    "predicted": "send_alert(module='condor',severity='high',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-024",
+      "MASA-DOC-024",
+      "MASA-DOC-024",
+      "MASA-DOC-024",
+      "MASA-DOC-028"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information related to CO2 sensor readings, crew headaches, or the need to escalate the situation. There is no mention of CO2 levels, their impact on crew health, or the specific thresholds that would trigger an alert. The chunks focus on general operational p"
+  },
+  {
+    "id": "T-00267",
+    "query": "Kai just reported Vicuña hull stress sensors are reading 92.0%—what emergency response should we initiate?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-008',scope='module_only')",
+    "predicted": "no_action",
+    "gold_doc_id": "MASA-DOC-010",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-011"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information related to hull stress sensors or the specific threshold of 92.0%. There is no mention of stress sensors or their associated protocols in the provided chunks, indicating that the retrieval process failed to find the relevant context needed to deter"
+  },
+  {
+    "id": "T-00270",
+    "query": "Vicuña pressure sensors just dropped to 70.5 kPa—Engineer Kozlov reports a possible hull breach. What emergency procedure should we initiate?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "send_alert(module='vicuna',severity='medium',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-010",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-027"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about pressure thresholds and emergency procedures, including the critical condition threshold of 85.0 kPa, which matches the situation described. However, the LLM predicted an 'send_alert' action instead of 'activate_protocol(MASA-SEC-001, station_wide)', in"
+  },
+  {
+    "id": "T-00271",
+    "query": "Oxygen readings in Colibrí have dropped to 14.3% and are still falling. What’s the emergency procedure for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-010',scope='module_only')",
+    "predicted": "send_alert(module='colibri',severity='critical',reason='oxygen_depletion')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-017",
+      "MASA-DOC-006",
+      "MASA-DOC-007"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain the specific information needed to determine the correct tool call. There is no mention of MASA-SEC-010 protocol or a \"module_only\" scope in the provided chunks. The closest relevant information is in Chunk 4, which discusses the critical threshold of 14.0% for ox"
+  },
+  {
+    "id": "T-00273",
+    "query": "We’ve got a pressure anomaly in Quetzal—readings are at 89.5 kPa and still declining. What emergency steps should we take for this situation?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-011',scope='module_only')",
+    "predicted": "send_alert(module='quetzal',severity='medium',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-041",
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-002",
+      "MASA-DOC-017"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks discuss various safety protocols and operational ranges, but none specifically mention a protocol called 'MASA-SEC-011' or a medium-severity alert for pressure drops. The LLM likely inferred a medium-severity alert based on the pressure decline, but it did not correctly identify"
+  },
+  {
+    "id": "T-00275",
+    "query": "Kai just reported Quetzal’s temp is climbing at 5.0 degrees per minute—what emergency steps do we take for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-003',scope='module_only')",
+    "predicted": "send_alert(module='quetzal',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-008",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-029",
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-041",
+      "MASA-DOC-002"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain information about temperature thresholds and the Quetzal module's temperature range, which should have been sufficient to determine the correct action. However, the LLM predicted sending a critical alert instead of activating a protocol, likely due to misinterpreting the"
+  },
+  {
+    "id": "T-00277",
+    "query": "Dim the lighting in Colibrí to reduce glare during Pilot Valdivia’s navigation checks.",
+    "gold_tool_call": "control_system(module='colibri',system='lighting',action='decrease')",
+    "predicted": "control_system(module='colibri',system='lighting',action='deactivate')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-031",
+      "MASA-DOC-031",
+      "MASA-DOC-004",
+      "MASA-DOC-040",
+      "MASA-DOC-004"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks discuss various aspects of the Colibrí module's operations, including navigation, communication, and station-keeping procedures. However, none of the chunks explicitly mention the lighting system or provide instructions on how to dim it. Despite having the necessary context, the"
+  },
+  {
+    "id": "T-00278",
+    "query": "Hull stress readings in Quetzal have hit 89.6% — Kai Nakamura reports possible micrometeorite impact. Do we flag this for command?",
+    "gold_tool_call": "send_alert(module='quetzal',severity='high',reason='structural_damage')",
+    "predicted": "send_alert(module='quetzal',severity='critical',reason='micrometeorite_impact')",
+    "gold_doc_id": "MASA-DOC-010",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-010",
+      "MASA-DOC-029",
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-002"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information to determine the correct tool call, including the 85% threshold for activating the Structural Integrity Alert and the reported micrometeorite impact. However, the LLM predicted 'severity=\"critical\"' instead of 'severity=\"high\"', indicating a reason"
+  },
+  {
+    "id": "T-00279",
+    "query": "Cóndor radiation sensors are showing 2.1 mSv/hr and climbing—Commander Reyes has requested we flag this and check for any necessary emergency procedures. Solar activity reports indicate possible furth",
+    "gold_tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')",
+    "predicted": "send_alert(module='condor',severity='medium',reason='radiation_spike')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-024",
+      "MASA-DOC-024",
+      "MASA-DOC-001",
+      "MASA-DOC-024",
+      "MASA-DOC-023"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain the information about radiation levels and thresholds, indicating that a medium-severity alert should be triggered at 2.1 mSv/hr. However, the LLM predicted a medium-severity alert instead of a high-severity alert, likely due to an error in reasoning despite having the n"
+  },
+  {
+    "id": "T-00281",
+    "query": "Radiation sensors in Vicuña are reading 6.3 mSv/hr and climbing — what emergency procedure do we initiate for this?",
+    "gold_tool_call": "send_alert(module='vicuna',severity='critical',reason='radiation_spike')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-004',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-009",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-039",
+      "MASA-DOC-006",
+      "MASA-DOC-039",
+      "MASA-DOC-039"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention that radiation levels above 5.0 mSv/hour trigger the MASA-SEC-004 protocol, which aligns with the gold answer. However, the LLM predicted \"activate_protocol\" instead of \"send_alert,\" indicating a reasoning error despite having the necessary context."
+  },
+  {
+    "id": "T-00282",
+    "query": "Cóndor's oxygen concentration has dropped to 11.1%—what emergency procedure should we initiate? Commander Reyes just reported crew members are experiencing shortness of breath.",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-002',scope='station_wide')",
+    "predicted": "send_alert(module='condor',severity='critical',reason='oxygen_depletion')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-001",
+      "MASA-DOC-024",
+      "MASA-DOC-007",
+      "MASA-DOC-001"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention that an oxygen concentration below 14.0% triggers MASA-SEC-002 (Oxygen Depletion Response). However, the LLM predicted sending a critical alert instead of activating the appropriate protocol, indicating a reasoning error despite having the necessary information."
+  },
+  {
+    "id": "T-00283",
+    "query": "Cóndor CO2 concentration has hit 1.8% and is climbing—crew reporting headaches. What emergency steps do we take for this scenario?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-009',scope='module_only')",
+    "predicted": "send_alert(module='condor',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-024",
+      "MASA-DOC-001",
+      "MASA-DOC-024",
+      "MASA-DOC-024",
+      "MASA-DOC-024"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information related to CO2 concentration levels exceeding thresholds or the appropriate protocol for handling such an emergency. Specifically, there is no mention of the protocol ID 'MASA-SEC-009' or any relevant CO2 concentration thresholds that would justify"
+  },
+  {
+    "id": "T-00287",
+    "query": "Tucán pressure sensors just hit 75.9 kPa and still dropping—what emergency response should we initiate?",
+    "gold_tool_call": "send_alert(module='tucan',severity='critical',reason='pressure_drop')",
+    "predicted": "send_alert(module='tucan',severity='medium',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-010"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention critical thresholds for pressure, but the LLM predicted a medium-severity alert instead of a critical one. Specifically, the chunks indicate that a drop to 75.9 kPa would trigger a low-severity alert, not a critical one, suggesting the model misinterpreted the severity b"
+  },
+  {
+    "id": "T-00288",
+    "query": "Tucán pressure sensors just hit 73.9 kPa and still dropping—what emergency response should we initiate?",
+    "gold_tool_call": "send_alert(module='tucan',severity='critical',reason='pressure_drop')",
+    "predicted": "send_alert(module='tucan',severity='medium',reason='pressure_drop')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-010"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention critical thresholds for pressure, but the LLM predicted a medium-severity alert instead of a critical one. Specifically, the chunks indicate that a drop to 73.9 kPa would trigger a critical alert, yet the model chose a medium-severity alert, showing a reasoning error des"
+  },
+  {
+    "id": "T-00290",
+    "query": "We’ve lost all ground contact through Colibrí—blackout now at 89 minutes and counting. What emergency steps should we initiate for this?",
+    "gold_tool_call": "send_alert(module='colibri',severity='high',reason='communication_loss')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-007',scope='station_wide')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-004",
+      "MASA-DOC-038",
+      "MASA-DOC-012",
+      "MASA-DOC-016"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the Communication Blackout Protocol (MASA-SEC-007) and its activation criteria, which include a 30-minute blackout threshold. However, the LLM predicted the wrong tool call, focusing on a broader station-wide protocol (MASA-SEC-020) instead of the specific commun"
+  },
+  {
+    "id": "T-00294",
+    "query": "We’re seeing a voltage fluctuation on the Colibrí power bus—current reading is 96.6 V. Should we flag this for further review?",
+    "gold_tool_call": "send_alert(module='colibri',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='colibri',severity='medium',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-011",
+      "MASA-DOC-004"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks do contain information about voltage fluctuation and the need for a medium-severity alert, but the LLM incorrectly identified \"abnormal temperature\" as the reason instead of \"power_fluctuation\". Chunk 1 explicitly mentions the Power Fluctuation Response Protocol and the threshol"
+  },
+  {
+    "id": "T-00295",
+    "query": "We’ve got a voltage fluctuation on Jaguar’s power bus, currently reading 130.1 V. What emergency procedure should we initiate for this?",
+    "gold_tool_call": "send_alert(module='jaguar',severity='medium',reason='power_fluctuation')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-018',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-003",
+      "MASA-DOC-003",
+      "MASA-DOC-026",
+      "MASA-DOC-003"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the threshold for activating the Power Fluctuation Response Protocol (129.8V), which matches the current voltage reading of 130.1V. However, the LLM predicted an activation of a different protocol (MASA-SEC-018) instead of sending a medium severity alert, indicat"
+  },
+  {
+    "id": "T-00297",
+    "query": "Vicuña hull stress sensors just hit 93.2% and climbing — Engineer Kozlov reports possible micrometeorite impact. Do we flag this for command?",
+    "gold_tool_call": "send_alert(module='vicuna',severity='high',reason='structural_damage')",
+    "predicted": "send_alert(module='vicuna',severity='high',reason='micrometeorite_impact')",
+    "gold_doc_id": "MASA-DOC-010",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-010",
+      "MASA-DOC-010",
+      "MASA-DOC-039",
+      "MASA-DOC-039",
+      "MASA-DOC-039"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain sufficient information to determine the correct tool call, including the threshold for activating the Structural Integrity Alert (85%) and the fact that the current reading is 93.2%. However, the LLM predicted 'micrometeorite_impact' as the reason for the alert instead o"
+  },
+  {
+    "id": "T-00298",
+    "query": "Cóndor oxygen concentration just dropped to 12.8%—Commander Reyes reports crew feeling lightheaded. What emergency procedure should we initiate?",
+    "gold_tool_call": "send_alert(module='condor',severity='critical',reason='oxygen_leak')",
+    "predicted": "send_alert(module='condor',severity='critical',reason='oxygen_depletion_response')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-024",
+      "MASA-DOC-007",
+      "MASA-DOC-024",
+      "MASA-DOC-028"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information about the oxygen concentration threshold and the corresponding protocol. However, the LLM predicted \"oxygen_depletion_response\" instead of \"oxygen_leak,\" indicating a reasoning error rather than a retrieval issue. The context clearly states that th"
+  },
+  {
+    "id": "T-00301",
+    "query": "We’ve got a rapid pressure drop in Jaguar—sensors just hit 84.5 kPa and still falling. Commander Reyes reports possible hull breach. What emergency procedure do we initiate here?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-001',scope='station_wide')",
+    "predicted": "activate_protocol(protocol_id='MASA-SEC-001',scope='module_only')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-026",
+      "MASA-DOC-015",
+      "MASA-DOC-007",
+      "MASA-DOC-003",
+      "MASA-DOC-007"
+    ],
+    "category": "NEAR_MISS",
+    "evidence": "The predicted tool call has the correct tool name `MASA-SEC-001` but specifies the wrong scope (`module_only` instead of `station_wide`). The relevant chunk [Chunk 3] mentions the moderate pressure drop response (MASA-SEC-011) and [Chunk 5] discusses the rapid decompression response (MASA-SEC-001), "
+  },
+  {
+    "id": "T-00302",
+    "query": "Cóndor power bus voltage just hit 104.8 V—should we log an alert on this fluctuation?",
+    "gold_tool_call": "send_alert(module='condor',severity='medium',reason='power_fluctuation')",
+    "predicted": "send_alert(module='condor',severity='medium',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-014",
+      "MASA-DOC-001",
+      "MASA-DOC-014",
+      "MASA-DOC-026"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks do contain information about power fluctuation thresholds and the specific voltage value of 104.8V, which is within the normal range and does not trigger a medium severity alert. However, the LLM predicted an alert based on an abnormal temperature reading, which is not relevant "
+  },
+  {
+    "id": "T-00303",
+    "query": "Kai just reported Quetzal’s temp is climbing at 3.3 degrees per minute—should we escalate this to command?",
+    "gold_tool_call": "send_alert(module='quetzal',severity='critical',reason='abnormal_temperature')",
+    "predicted": "send_alert(module='quetzal',severity='high',reason='temperature_spike')",
+    "gold_doc_id": "MASA-DOC-008",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-029",
+      "MASA-DOC-041",
+      "MASA-DOC-025",
+      "MASA-DOC-002",
+      "MASA-DOC-002"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention that a temperature deviation beyond 35.0°C triggers a low-severity alert, and further increase to 45.0°C triggers a medium-severity alert. However, the temperature climb of 3.3 degrees per minute does not reach the threshold for even a low-severity alert, hence the corre"
+  },
+  {
+    "id": "T-00304",
+    "query": "Oxygen in Quetzal just dropped to 15.0% and is still falling—Kai spotted the trend on his console. Do we need to escalate this or take immediate action?",
+    "gold_tool_call": "send_alert(module='quetzal',severity='high',reason='oxygen_leak')",
+    "predicted": "send_alert(module='quetzal',severity='critical',reason='oxygen_depletion_response')",
+    "gold_doc_id": "MASA-DOC-007",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-029",
+      "MASA-DOC-041",
+      "MASA-DOC-041",
+      "MASA-DOC-041",
+      "MASA-DOC-002"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks mention that oxygen levels dropping below 18.0% trigger a low-severity alert, not a critical one. The LLM incorrectly interpreted the situation as requiring a critical response instead of a high-severity alert based on the provided context."
+  },
+  {
+    "id": "T-00305",
+    "query": "Water recycling in Vicuña has dropped to 26.4% and been degrading for hours. Engineer Kozlov noticed—what emergency steps do we take?",
+    "gold_tool_call": "activate_protocol(protocol_id='MASA-SEC-015',scope='station_wide')",
+    "predicted": "send_alert(module='vicuna',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-011",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-011",
+      "MASA-DOC-015",
+      "MASA-DOC-039",
+      "MASA-DOC-003",
+      "MASA-DOC-039"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain the specific information needed to determine the correct tool call, such as the protocol ID 'MASA-SEC-015' or the scope 'station_wide'. The chunks discuss general water recycling system details, safety requirements, and storage logistics but fail to provide the ex"
+  },
+  {
+    "id": "T-00306",
+    "query": "Medical Officer Mendoza, urgency flag — crew reports a sudden onset of severe headache and nausea, need your immediate assessment.",
+    "gold_tool_call": "send_message(recipient='medical_officer',priority='urgent')",
+    "predicted": "send_alert(module='tucan',severity='high',reason='abnormal_temperature')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-035",
+      "MASA-DOC-012",
+      "MASA-DOC-035"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks provide sufficient information about the medical emergency protocol (MASA-SEC-005) and the medical officer's responsibilities, including the need for an urgent response. However, the LLM predicted an incorrect tool call related to sending an alert for abnormal temperature, inste"
+  },
+  {
+    "id": "T-00307",
+    "query": "I need to log an alert — Quetzal hull stress sensors are reading 91.3%, possible micrometeorite impact reported by Specialist Nakamura.",
+    "gold_tool_call": "send_alert(module='quetzal',severity='high',reason='structural_damage')",
+    "predicted": "send_alert(module='quetzal',severity='critical',reason='abnormal_temperature')",
+    "gold_doc_id": "MASA-DOC-010",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-010",
+      "MASA-DOC-010",
+      "MASA-DOC-002",
+      "MASA-DOC-002",
+      "MASA-DOC-029"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention that the 91.3% hull stress reading exceeds the 85% threshold, which should trigger a high-severity alert rather than a critical temperature alert. The LLM likely misinterpreted the \"critical\" in \"critical temperature\" as the severity level instead of recognizing "
+  },
+  {
+    "id": "T-00315",
+    "query": "What were the most significant construction milestones achieved during the first two years of Kuntur Station’s assembly?",
+    "gold_tool_call": "no_action",
+    "predicted": "get_module_status(module='condor',system='life_support')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-053",
+      "MASA-DOC-053",
+      "MASA-DOC-053",
+      "MASA-DOC-051",
+      "MASA-DOC-053"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any specific information about construction milestones or the first two years of Kuntur Station’s assembly. The content is more general and focuses on the cultural significance, timeline, and integration phases rather than detailed milestones. Therefore, the encod"
+  },
+  {
+    "id": "T-00319",
+    "query": "What role did international partnerships play in the construction timeline, especially during the Quetzal module’s assembly?",
+    "gold_tool_call": "no_action",
+    "predicted": "get_crew_status(module='quetzal',info='current_activity')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-053",
+      "MASA-DOC-057",
+      "MASA-DOC-053",
+      "MASA-DOC-057",
+      "MASA-DOC-057"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any specific information about the role of international partnerships in the construction timeline of the Quetzal module. The chunks discuss partnerships and collaborations in general terms but do not provide details relevant to the construction timeline or the Qu"
+  },
+  {
+    "id": "T-00331",
+    "query": "Could you clarify the standard steps for verifying life support redundancy before entering the Vicuña module for extended maintenance work?",
+    "gold_tool_call": "no_action",
+    "predicted": "get_module_status(module='vicuna',system='life_support')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-003",
+      "MASA-DOC-039",
+      "MASA-DOC-003",
+      "MASA-DOC-011",
+      "MASA-DOC-039"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain specific information about verifying life support redundancy before entering the Vicuña module. The closest relevant information is in Chunk 3, which discusses Class A redundancy architecture, but it does not provide the detailed steps required for verification as"
+  },
+  {
+    "id": "T-00335",
+    "query": "Were there any complications with the docking procedure during the arrival of the Vicuña module?",
+    "gold_tool_call": "no_action",
+    "predicted": "get_telemetry(module='vicuna',metric='pressure',timeframe_hours=6)",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-005",
+      "MASA-DOC-027",
+      "MASA-DOC-021",
+      "MASA-DOC-010",
+      "MASA-DOC-039"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information about complications or issues during the docking procedure, nor do they mention any telemetry data related to pressure readings. The chunks focus on general procedures, specifications, and safety requirements but do not provide the specific context"
+  },
+  {
+    "id": "T-00339",
+    "query": "I’ve heard the Quetzal module has a unique radiation shielding layer—what material was used?",
+    "gold_tool_call": "no_action",
+    "predicted": "get_module_status(module='quetzal',system='shielding')",
+    "gold_doc_id": null,
+    "seed_type": "direct",
+    "retrieved_docs": [
+      "MASA-DOC-009",
+      "MASA-DOC-009",
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-002"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any specific information about the material used in the Quetzal module's radiation shielding layer. Chunk 1 mentions the Jaguar and Cóndor modules' shielding materials but does not specify Quetzal's. Therefore, the encoder failed to find the relevant context neede"
+  },
+  {
+    "id": "T-00343",
+    "query": "The thermal sensors in Cóndor are showing 42°C. Pilot Valdivia noticed it during her routine check. What’s the protocol here?",
+    "gold_tool_call": "control_system(module='condor',system='cooling',action='increase')",
+    "predicted": "send_alert(module='jaguar',severity='medium',reason='temperature_deviation')",
+    "gold_doc_id": "MASA-DOC-013",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-026",
+      "MASA-DOC-001",
+      "MASA-DOC-024",
+      "MASA-DOC-013",
+      "MASA-DOC-025"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain specific information about the Cóndor module's cooling system or the exact thresholds and actions required for a temperature deviation of 42°C. Chunk 4 mentions the alert severities but does not specify the exact action to be taken for a medium-severity alert, and"
+  },
+  {
+    "id": "T-00345",
+    "query": "The power load in Cóndor just hit 94%—what actions do we need to take at this threshold?",
+    "gold_tool_call": "control_system(module='condor',system='lighting',action='deactivate')",
+    "predicted": "send_alert(module='condor',severity='medium',reason='power_load_exceed')",
+    "gold_doc_id": "MASA-DOC-014",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-014",
+      "MASA-DOC-014",
+      "MASA-DOC-001",
+      "MASA-DOC-001"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that a power load of 93% or higher triggers a medium-severity alert and prompts the activation of MASA-OPS-011 (Power Management and Load Balancing). However, the LLM predicted sending a medium-severity alert instead of activating the load balancing procedure, s"
+  },
+  {
+    "id": "T-00346",
+    "query": "Medical Officer Mendoza just reported Tucán’s cabin temp is reading 28°C—any idea why it’s climbing above the 25°C limit?",
+    "gold_tool_call": "control_system(module='tucan',system='cooling',action='activate')",
+    "predicted": "get_telemetry(module='tucan',metric='temperature',timeframe_hours=1)",
+    "gold_doc_id": "MASA-DOC-013",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-008",
+      "MASA-DOC-006",
+      "MASA-DOC-013"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly mention the temperature limits and the need to activate cooling when the temperature exceeds 25°C. However, the LLM predicted a tool call to get telemetry data instead of activating the cooling system, indicating a reasoning error despite having the necessary context."
+  },
+  {
+    "id": "T-00347",
+    "query": "Quetzal module is showing 95% power consumption—should we be concerned, or is this expected?",
+    "gold_tool_call": "control_system(module='quetzal',system='lighting',action='deactivate')",
+    "predicted": "get_telemetry(module='quetzal',metric='power',timeframe_hours=1)",
+    "gold_doc_id": "MASA-DOC-014",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-014",
+      "MASA-DOC-002",
+      "MASA-DOC-041",
+      "MASA-DOC-002",
+      "MASA-DOC-002"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any specific information about power consumption thresholds or actions related to the control system, which are necessary to determine the correct tool call. The chunks discuss general power allocation, environmental requirements, and telemetry specifications, but"
+  },
+  {
+    "id": "T-00348",
+    "query": "Specialist Nakamura flagged a 3.8 m/s velocity discrepancy in the telemetry logs—anything we should check?",
+    "gold_tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='planned')",
+    "predicted": "get_telemetry(module='quetzal',metric='velocity',timeframe_hours=1)",
+    "gold_doc_id": "MASA-DOC-040",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-040",
+      "MASA-DOC-032",
+      "MASA-DOC-006",
+      "MASA-DOC-006",
+      "MASA-DOC-006"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any specific information about velocity discrepancies or trajectory adjustments, which are necessary to determine the correct tool call. Chunk 1 mentions velocity deviations but does not specify the exact threshold or provide a tool call related to trajectory adju"
+  },
+  {
+    "id": "T-00350",
+    "query": "Engineer Kozlov just flagged that Colibrí’s comms are still on 2.1.3—how urgently should we apply the 2.1.4 update?",
+    "gold_tool_call": "schedule_maintenance(module='colibri',task='software_update',priority='routine')",
+    "predicted": "request_supply(category='software',urgency='expedited')",
+    "gold_doc_id": "MASA-DOC-019",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-028",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-004"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any specific information about software updates or maintenance tasks for Colibrí. There is no mention of the 2.1.4 update or any related maintenance procedures, which are crucial for determining the correct tool call."
+  },
+  {
+    "id": "T-00351",
+    "query": "Colibrí’s diagnostic shows the comms system is on 2.1.3; the new 2.1.4 patch is ready—do we deploy it during this quiet window?",
+    "gold_tool_call": "schedule_maintenance(module='colibri',task='software_update',priority='routine')",
+    "predicted": "schedule_maintenance(module='colibri',task='software_update',priority='urgent')",
+    "gold_doc_id": "MASA-DOC-019",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-028",
+      "MASA-DOC-004",
+      "MASA-DOC-004"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks discuss communication schedules, module roles, and environmental specifications but do not mention any urgency or priority levels for software updates. The LLM likely inferred \"urgent\" based on the context of a \"quiet window\" for deployment, but the gold answer specifies \"routin"
+  },
+  {
+    "id": "T-00352",
+    "query": "Specialist Nakamura noted Jaguar’s humidity is at 34% and is asking if this needs immediate attention",
+    "gold_tool_call": "control_system(module='jaguar',system='ventilation',action='increase')",
+    "predicted": "send_alert(module='jaguar',severity='low',reason='abnormal_humidity')",
+    "gold_doc_id": "MASA-DOC-017",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-003",
+      "MASA-DOC-015",
+      "MASA-DOC-017",
+      "MASA-DOC-036",
+      "MASA-DOC-017"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain specific information about the need for immediate attention at 34% humidity. While they mention low-severity alerts for humidity levels between 30-39%, there is no indication that 34% specifically triggers an immediate action beyond a low-severity alert."
+  },
+  {
+    "id": "T-00353",
+    "query": "Commander Reyes just reported Cóndor's power load is reading 94%—should we be concerned about this level?",
+    "gold_tool_call": "control_system(module='condor',system='lighting',action='deactivate')",
+    "predicted": "send_alert(module='condor',severity='medium',reason='power_fluctuation')",
+    "gold_doc_id": "MASA-DOC-014",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-001",
+      "MASA-DOC-014",
+      "MASA-DOC-026",
+      "MASA-DOC-024",
+      "MASA-DOC-030"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks clearly indicate that a power load of 94% is below the medium-severity threshold of 93%, and does not warrant a medium-severity alert. The correct action based on the context would be to monitor the situation rather than activate a medium-severity alert. The LLM incorrectly inte"
+  },
+  {
+    "id": "T-00354",
+    "query": "Medical Officer Mendoza just reported the Cóndor module's docking clamps are down to 26% reserve—should we prioritize a resupply run or reroute power from non-essentials?",
+    "gold_tool_call": "request_supply(category='equipment',urgency='expedited')",
+    "predicted": "no_action",
+    "gold_doc_id": "MASA-DOC-021",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-027",
+      "MASA-DOC-024",
+      "MASA-DOC-029",
+      "MASA-DOC-027",
+      "MASA-DOC-023"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information about the current status of the Cóndor module's docking clamps or the need to prioritize a resupply run. There is no mention of the 26% reserve or the decision-making process related to resupply needs."
+  },
+  {
+    "id": "T-00355",
+    "query": "Medical Officer Mendoza reports Colibrí’s comms are running version 2.1.3—should we push the 2.1.4 patch now or wait until post-EVA?",
+    "gold_tool_call": "schedule_maintenance(module='colibri',task='software_update',priority='routine')",
+    "predicted": "no_action",
+    "gold_doc_id": "MASA-DOC-019",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-028",
+      "MASA-DOC-020",
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-004"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information about software updates, patches, or the specific version numbers of Colibrí’s communication system. There is no context provided to determine whether the current version (2.1.3) should be updated to 2.1.4, making it impossible for the model to gene"
+  },
+  {
+    "id": "T-00357",
+    "query": "Station altitude is now 414 km, 6 km above nominal. What do you advise?",
+    "gold_tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')",
+    "predicted": "schedule_maintenance(module='colibri',task='sensor_repair',priority='urgent')",
+    "gold_doc_id": "MASA-DOC-040",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-040",
+      "MASA-DOC-040",
+      "MASA-DOC-040",
+      "MASA-DOC-028",
+      "MASA-DOC-039"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any specific information about trajectory deviations or the need for an immediate maneuver adjustment. The closest relevant chunk discusses general station-keeping procedures but does not mention the exact threshold or condition that would trigger an immediate man"
+  },
+  {
+    "id": "T-00359",
+    "query": "Pilot Valdivia just radioed in a 12.3 m/s velocity discrepancy—what’s the next step?",
+    "gold_tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')",
+    "predicted": "send_alert(module='colibri',severity='high',reason='velocity_delta')",
+    "gold_doc_id": "MASA-DOC-040",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-031",
+      "MASA-DOC-031",
+      "MASA-DOC-031",
+      "MASA-DOC-040",
+      "MASA-DOC-031"
+    ],
+    "category": "REASONING_FAILURE",
+    "evidence": "The retrieved chunks contain the necessary information about velocity thresholds and the specific velocity delta of 12.3 m/s, which triggers a high-severity condition. However, the LLM predicted the wrong tool call, suggesting an alert instead of calculating the necessary trajectory adjustment. The "
+  },
+  {
+    "id": "T-00360",
+    "query": "Temperature readings in the Jaguar module are showing 30°C and increasing. It's supposed to be between 19-23°C. What's the next step?",
+    "gold_tool_call": "control_system(module='jaguar',system='cooling',action='activate')",
+    "predicted": "get_telemetry(module='jaguar',metric='temperature',timeframe_hours=1)",
+    "gold_doc_id": "MASA-DOC-013",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-003",
+      "MASA-DOC-026",
+      "MASA-DOC-026",
+      "MASA-DOC-036",
+      "MASA-DOC-013"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain specific information about activating the cooling system or the exact thresholds and actions needed to address the temperature increase in the Jaguar module. Chunk 1 mentions the temperature range and thresholds but does not suggest activating the cooling system. "
+  },
+  {
+    "id": "T-00361",
+    "query": "Specialist Nakamura reports Colibrí’s navigation drift has hit 0.8 degrees off nominal—any idea what’s causing the inconsistency?",
+    "gold_tool_call": "schedule_maintenance(module='colibri',task='system_calibration',priority='urgent')",
+    "predicted": "get_telemetry(module='colibri',metric='orientation',timeframe_hours=1)",
+    "gold_doc_id": "MASA-DOC-019",
+    "seed_type": "rag",
+    "retrieved_docs": [
+      "MASA-DOC-004",
+      "MASA-DOC-004",
+      "MASA-DOC-040",
+      "MASA-DOC-040",
+      "MASA-DOC-004"
+    ],
+    "category": "RETRIEVAL_FAILURE",
+    "evidence": "The retrieved chunks do not contain any information related to scheduling maintenance tasks or system calibration, which are key elements of the gold answer. The chunks focus on navigation systems, trajectory deviations, and station-keeping procedures, but do not mention maintenance schedules or cal"
+  }
+]
