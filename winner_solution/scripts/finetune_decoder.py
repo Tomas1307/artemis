@@ -238,7 +238,7 @@ def main() -> None:
     args = sys.argv[1:]
     device = "cuda"
     epochs = 5
-    batch_size = 8
+    batch_size = 2
     lr = 1e-4
 
     if "--device" in args:
@@ -316,7 +316,8 @@ def main() -> None:
         metric_for_best_model="eval_loss",
         greater_is_better=False,
         fp16=True,
-        gradient_accumulation_steps=4,
+        gradient_accumulation_steps=16,
+        gradient_checkpointing=True,
         report_to="none",
     )
 
@@ -329,7 +330,7 @@ def main() -> None:
 
     logger.info(
         f"Training: {epochs} epochs, batch_size={batch_size}, "
-        f"grad_accum=4, effective_batch={batch_size * 4}, lr={lr}"
+        f"grad_accum=16, effective_batch={batch_size * 16}, lr={lr}"
     )
     trainer.train()
 
