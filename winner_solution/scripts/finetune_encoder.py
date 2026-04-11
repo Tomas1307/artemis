@@ -187,7 +187,8 @@ def build_evaluator(
         relevant_docs=relevant_docs,
         name="val_eval",
         mrr_at_k=[5],
-        recall_at_k=[1, 3, 5],
+        accuracy_at_k=[1, 3, 5],
+        precision_recall_at_k=[1, 3, 5],
         show_progress_bar=False,
         write_csv=True,
     )
