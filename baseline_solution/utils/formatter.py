@@ -81,16 +81,16 @@ def canonicalize_tool_call(raw: str) -> str:
     Returns:
         Canonical tool call string.
     """
-    raw = raw.strip().lower()
+    raw = raw.strip()
 
-    tool_match = re.match(r'(\w+)\s*\(', raw)
+    tool_match = re.match(r'(\w+)\s*\(', raw, re.IGNORECASE)
     if not tool_match:
-        return raw
+        return raw.lower()
 
-    tool_name = tool_match.group(1)
+    tool_name = tool_match.group(1).lower()
     param_order = TOOL_PARAM_ORDER.get(tool_name)
     if param_order is None:
-        return raw
+        return raw.lower()
 
     inner = raw[tool_match.end():]
     inner = inner.rstrip(")")
@@ -98,8 +98,12 @@ def canonicalize_tool_call(raw: str) -> str:
     param_pattern = re.compile(r'(\w+)\s*=\s*(?:\'([^\']*)\'|"([^"]*)"|([^\s,)]+))')
     parsed: dict[str, str] = {}
     for m in param_pattern.finditer(inner):
-        key = m.group(1)
+        key = m.group(1).lower()
         value = m.group(2) or m.group(3) or m.group(4) or ""
+        if key == "protocol_id":
+            value = value.upper()
+        else:
+            value = value.lower()
         parsed[key] = value
 
     parts = []
