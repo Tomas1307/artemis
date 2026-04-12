@@ -33,6 +33,7 @@ DATA_CSV_PATH = PROJECT_ROOT / "data" / "data.csv"
 TEST_GOLD_PATH = PROJECT_ROOT / "data" / "test_gold_standard.json"
 TOOLS_PATH = PROJECT_ROOT / "data" / "tools_definition.json"
 WINNER_DIR = PROJECT_ROOT / "artifacts" / "winner"
+INTERNAL_TEST_CSV_PATH = WINNER_DIR / "test_data.csv"
 ENCODER_PATH = WINNER_DIR / "encoder" / "finetuned_encoder"
 DECODER_PATH = WINNER_DIR / "decoder" / "finetuned_decoder"
 CHUNKS_PATH = WINNER_DIR / "chunks.json"
@@ -75,6 +76,14 @@ def main() -> None:
             logger.info("Gold standard loaded — accuracy will be computed.")
         else:
             logger.warning("test_gold_standard.json not found — skipping accuracy.")
+    elif split == "internal_test":
+        with open(INTERNAL_TEST_CSV_PATH, encoding="utf-8") as f:
+            queries = [
+                {"id": r["id"], "query": r["query"], "gold": r["tool_call"]}
+                for r in csv.DictReader(f)
+            ]
+        gold_map = {q["id"]: q["gold"] for q in queries}
+        logger.info(f"Internal test split: {len(queries)} queries with gold answers.")
     else:
         with open(DATA_CSV_PATH, encoding="utf-8") as f:
             queries = [
