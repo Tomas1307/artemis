@@ -48,6 +48,10 @@ class PromptLoader:
                 "file": "decoder.yaml",
                 "key": "decoder_user",
             },
+            "decoder_user_enhanced": {
+                "file": "decoder.yaml",
+                "key": "decoder_user_enhanced",
+            },
         }
 
     def _load_file(self, filename: str) -> Dict[str, Any]:

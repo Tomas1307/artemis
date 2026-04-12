@@ -33,3 +33,20 @@ decoder_user:
     QUERY: {query}
 
     TOOL CALL:
+
+decoder_user_enhanced:
+  prompt_template: |
+    TOOLS:
+    {tools}
+
+    CONTEXT:
+    {context}
+
+    QUERY: {query}
+
+    REMINDERS:
+    - If a MASA-SEC-XXX protocol ID appears in the CONTEXT and matches this situation, use activate_protocol. Otherwise use send_alert.
+    - Read severity, priority, and urgency levels from the CONTEXT thresholds, not from the query wording.
+    - protocol_id values must be UPPERCASE (e.g., MASA-SEC-001).
+
+    TOOL CALL:

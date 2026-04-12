@@ -50,17 +50,24 @@ def main() -> None:
     split = "test"
     sample_size = None
 
+    enhanced = False
+
     if "--device" in args:
         device = args[args.index("--device") + 1]
     if "--split" in args:
         split = args[args.index("--split") + 1]
     if "--sample" in args:
         sample_size = int(args[args.index("--sample") + 1])
+    if "--enhanced" in args:
+        enhanced = True
 
     system_prompt = prompt_loader.get_system_message_by_type("decoder_system")
-    user_template = prompt_loader.get_prompt_template_by_type("decoder_user")
+    template_key = "decoder_user_enhanced" if enhanced else "decoder_user"
+    user_template = prompt_loader.get_prompt_template_by_type(template_key)
     if not user_template:
-        raise ValueError("No prompt template found for 'decoder_user'.")
+        raise ValueError(f"No prompt template found for '{template_key}'.")
+    if enhanced:
+        logger.info("Using ENHANCED user template with inference-time reminders.")
 
     tools_json = TOOLS_PATH.read_text(encoding="utf-8")
     chunks = json.loads(CHUNKS_PATH.read_text(encoding="utf-8"))
