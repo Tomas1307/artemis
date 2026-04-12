@@ -1,4 +1,4 @@
-"""Clean and split data.csv for decoder fine-tuning.
+"""Clean and split train.csv for decoder fine-tuning.
 
 Removes exact duplicate (query, tool_call) rows, validates tool call
 format, and creates a stratified train/val/test split by tool type.
@@ -87,7 +87,7 @@ def _validate_row(row: dict) -> list[str]:
 
 
 def main() -> None:
-    """Clean data.csv and produce train/val splits."""
+    """Clean train.csv and produce train/val/test splits."""
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     with open(RAW_CSV_PATH, encoding="utf-8") as f:
