@@ -29,7 +29,9 @@ from winner_solution.utils.formatter import build_rich_context, extract_tool_cal
 
 PROJECT_ROOT = Path(__file__).parent.parent
 TEST_CSV_PATH = PROJECT_ROOT / "data" / "test_queries.csv"
-DATA_CSV_PATH = PROJECT_ROOT / "data" / "data.csv"
+PUBLIC_TEST_CSV_PATH = PROJECT_ROOT / "data" / "test.csv"
+PUBLIC_TEST_GOLD_PATH = PROJECT_ROOT / "data" / "test_gold.json"
+TRAIN_CSV_PATH = PROJECT_ROOT / "data" / "train.csv"
 TEST_GOLD_PATH = PROJECT_ROOT / "data" / "test_gold_standard.json"
 TOOLS_PATH = PROJECT_ROOT / "data" / "tools_definition.json"
 WINNER_DIR = PROJECT_ROOT / "artifacts" / "winner"
@@ -83,6 +85,16 @@ def main() -> None:
             logger.info("Gold standard loaded — accuracy will be computed.")
         else:
             logger.warning("test_gold_standard.json not found — skipping accuracy.")
+    elif split == "public_test":
+        with open(PUBLIC_TEST_CSV_PATH, encoding="utf-8") as f:
+            queries = [{"id": r["id"], "query": r["query"]} for r in csv.DictReader(f)]
+        gold_map = {}
+        if PUBLIC_TEST_GOLD_PATH.exists():
+            gold = json.loads(PUBLIC_TEST_GOLD_PATH.read_text(encoding="utf-8"))
+            gold_map = {g["question_id"]: g["tool_call"] for g in gold}
+            logger.info("Public test gold loaded — accuracy will be computed.")
+        else:
+            logger.info("No public test gold found — predictions only.")
     elif split == "internal_test":
         with open(INTERNAL_TEST_CSV_PATH, encoding="utf-8") as f:
             queries = [
@@ -92,7 +104,7 @@ def main() -> None:
         gold_map = {q["id"]: q["gold"] for q in queries}
         logger.info(f"Internal test split: {len(queries)} queries with gold answers.")
     else:
-        with open(DATA_CSV_PATH, encoding="utf-8") as f:
+        with open(TRAIN_CSV_PATH, encoding="utf-8") as f:
             queries = [
                 {"id": r["id"], "query": r["query"], "gold": r["tool_call"]}
                 for r in csv.DictReader(f)

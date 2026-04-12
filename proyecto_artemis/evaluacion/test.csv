@@ -1,0 +1,448 @@
+id,query
+Q-02301,Deactivate the filtration system in Tucán—Mendoza reports maintenance is needed and it's safe to take it offline.
+Q-03142,Engineer Kozlov flagged Vicuña’s medical supplies at 29% capacity. Should we initiate a restock procedure?
+Q-02729,"Check the current health status of the crew in Tucán, specifically Medical Officer Mendoza."
+Q-01971,Cóndor hull stress sensors just hit 92.1%—Commander Reyes reports a potential micrometeorite impact. What emergency procedure should we initiate?
+Q-00507,Generate a planned debris avoidance trajectory for Kuntur Station at 408 km LEO—ensure it doesn’t interfere with the next supply rendezvous.
+Q-03102,Specialist Nakamura called in from Tucán—temperature’s up to 28°C. What’s the next step?
+Q-01773,Oxygen readings in Vicuña are trending down to 14.5%—what emergency response should we initiate?
+Q-02173,Ana Valdivia just reported Colibrí radiation sensors are reading 3.2 mSv/hr and climbing. What emergency procedure should we initiate for this scenario?
+Q-01037,We need emergency resupply for critical scientific equipment—Quetzal just reported their backup systems are failing and they’re running out of time.
+Q-01652,"Medical, we've got a crew member reporting persistent nausea and dizziness in Tucán—can you assess and advise before the next shift change?"
+Q-02570,"Ana, we've got an incoming supply vessel that needs docking guidance—can you confirm you're ready to take manual control?"
+Q-01672,Can we expedite a request for equipment resupply? The crew needs additional tools for an upcoming EVA.
+Q-03053,Reyes wants to confirm the power load numbers in Cóndor are stable before the software update—what are we seeing?
+Q-02288,Kai just reported a rapid temperature rise in Quetzal—sensors are showing 4.9 degrees per minute. What emergency procedure should we initiate for this scenario?
+Q-03021,"What were the key differences between the combustion behavior experiments run in the Jaguar module compared to those conducted on the International Space Station, based on past mission reports?"
+Q-01260,Pull the last hour of oxygen telemetry from Jaguar—we need to check the trend.
+Q-01122,Increase lighting levels in Colibrí—Valdivia reports the comms console is too dim for optimal operations.
+Q-00077,Tucán pressure sensors are showing 86.2 kPa and still dropping—what emergency response should we initiate?
+Q-00895,Pull the last 12 hours of oxygen telemetry from Cóndor for the shift review.
+Q-02255,Ana Valdivia just reported the Quetzal airlock equalization rate is climbing at 1.0 kPa per minute — what emergency procedure do we initiate right now?
+Q-00858,Hull stress readings in Quetzal have hit 86.7% and are rising—what emergency steps do we take for this scenario?
+Q-01879,We’re seeing a voltage fluctuation on Quetzal’s power bus—current reading is 134.4 V. This has been trending upward since Commander Reyes reported it during the last systems check. Should we escalate this?
+Q-02849,How did the **Cóndor-7** mission’s life support performance influence the current station’s backup systems?
+Q-01128,We’ve got a voltage fluctuation on Quetzal’s power bus—sensors just hit 136.8 V and still fluctuating. What emergency procedure should we initiate for this scenario?
+Q-01664,Kai just reported radiation sensors in Vicuña are reading 4.9 mSv/hr and climbing—what emergency procedure should we initiate for this?
+Q-02105,I need to log an alert — Vicuña pressure sensors just hit 86.7 kPa and they’re still trending down.
+Q-02751,Pull the last six hours of pressure readings from Colibrí for review.
+Q-01366,Radiation sensors in Tucán are reading 4.0 mSv/hr and climbing—what emergency procedure do we initiate for this scenario?
+Q-00103,Oxygen concentration in Vicuña has dropped to 11.5% and is still falling—what emergency steps should we take for this scenario?
+Q-02472,We’re seeing a voltage fluctuation on Quetzal’s power bus—current reading is 99.5 V. What emergency procedure should we initiate for this?
+Q-03020,Can you remind me of the details surrounding the solar panel misalignment on the Cóndor module?
+Q-02100,Fatima just reported headaches in Colibrí—CO2 sensors are reading 1.9% and still climbing. Should we flag this to Commander Reyes immediately?
+Q-00008,Kozlov just reported Vicuña’s temp is climbing at 2.4 degrees per minute—how should we respond?
+Q-03107,Orbit data shows station altitude at 410.5 km—should we be concerned about the 2.5 km deviation from nominal?
+Q-00740,I need to log an alert — Jaguar temperature sensors are showing a rapid rise at 3.5 degrees per minute. What emergency procedure should we initiate for this situation?
+Q-03233,Engineer Kozlov flagged the Vicuña lab's reagent stock is now projected to last exactly 75 operational days; what's the plan?
+Q-02307,Kozlov just reported unusual hull stress readings in Jaguar during his inspection—can we schedule an urgent maintenance task for a detailed hull inspection?
+Q-01737,Ana Valdivia just reported the Colibrí airlock equalization rate is holding at 0.8 kPa per minute — what emergency procedure covers this?
+Q-01067,Kai just reported Vicuña radiation sensors reading 3.6 mSv/hr and rising—how should we respond?
+Q-00935,Cóndor airlock equalization rate is reading 1.4 kPa per minute—what emergency response should we initiate?
+Q-02696,Cóndor radiation sensors are showing 3.5 mSv/hr and climbing—what emergency response should we initiate for this scenario? Commander Reyes just reported the spike.
+Q-02192,Activate the cooling system in Jaguar module immediately.
+Q-00809,Cóndor oxygen concentration just dropped to 15.1% and is still falling—what emergency response should we initiate? Commander Reyes reported the trend started ten minutes ago.
+Q-01588,I need to log an alert — Quetzal pressure sensors just hit 89.3 kPa and are still declining. What emergency steps should we take for this situation?
+Q-02381,Kai Nakamura just reported CO2 concentration in Quetzal is reading 3.0% and climbing—crew has headaches. What emergency steps do we take?
+Q-03004,"Can you describe the objectives of the neural adaptation studies that Medical Officer Lucía Mendoza has contributed to, particularly those focusing on long-duration spaceflight?"
+Q-01900,Cóndor radiation sensors are showing 9.3 mSv/hr—what emergency procedure should we initiate?
+Q-01923,"We’ve got a rapid pressure drop in Colibrí, currently reading 71.5 kPa—what emergency procedure should we initiate for this?"
+Q-01661,Check the current power status in Tucán—we need to confirm it's stable before the crew sleeps.
+Q-00876,Vicuña airlock equalization rate is at 1.0 kPa per minute and rising—what emergency steps do we take for this scenario?
+Q-00588,Oxygen concentration in Quetzal has dropped to 13.3% — Kai Nakamura reports dizziness. What emergency procedure should we initiate?
+Q-03046,Station telemetry indicates we're holding at 410.5 km; is that 2.5 km overshoot within acceptable limits?
+Q-02312,We’re seeing a voltage fluctuation on Quetzal’s power bus—current reading is 99.6 V. Should we flag this for engineering review?
+Q-02996,What’s the standard timeline for a specialist to complete full cross-disciplinary certification across all station systems?
+Q-00548,"Can we get the current life support status for Vicuña, including temperature and pressure readings?"
+Q-01535,Generate the planned station-keeping trajectory profile for Kuntur at 408 km altitude—include burn durations and delta-V for the next maneuver window.
+Q-01738,Increase ventilation in Colibrí to maintain optimal temperature levels for communications equipment.
+Q-02327,Tucán radiation sensors are at 8.9 mSv/hr and rising—what emergency response should we initiate?
+Q-02884,Could you provide some insights into the joint missions that MASA has undertaken with the Russian space agency Roscosmos?
+Q-01534,"We’ve got a voltage fluctuation on Jaguar’s power bus, currently reading 137.6 V—what emergency steps should we initiate for this?"
+Q-02862,"There’s a story behind the Jaguar module’s name, right? Something about its role in pre-Columbian mythology?"
+Q-01300,Tucán hull stress sensors are reading 94.7%—what emergency procedure covers this kind of structural anomaly?
+Q-00958,Pull the last 24 hours of power telemetry from Quetzal for the shift report.
+Q-01131,Fatima just reported headaches in Quetzal—CO2 sensors are reading 2.8% and still climbing. Should we flag this to Commander Reyes immediately?
+Q-01301,Jaguar airlock equalization rate is showing 1.0 kPa per minute and still increasing—what emergency procedure should we initiate for this scenario?
+Q-02904,"The Quetzal module’s name obviously references the bird, but which specific indigenous traditions does it tie into?"
+Q-00105,Pull the humidity readings from Jaguar for the last six hours to verify environmental stability.
+Q-01927,We’re seeing a voltage fluctuation on Vicuña’s power bus—readings just dropped to 103.2 V and holding. Kai Nakamura reported it during his last systems check. Should we flag this for further review?
+Q-02965,Could you provide details on Specialist Nakamura’s contributions to AI-driven diagnostic tools used in past MASA missions?
+Q-01010,We’ve got a voltage fluctuation on the Colibrí power bus—sensors just hit 132.4 V and still fluctuating. Fatima flagged it from the science lab. Should we escalate this to command?
+Q-01318,Cóndor's power grid is at 97.6% capacity with no sign of dropping—how should we proceed? Commander Reyes is monitoring the situation closely.
+Q-02367,Radiation sensors in Colibrí are reading 10.7 mSv/hr and climbing. Commander Reyes has confirmed the spike—what emergency procedure should we initiate for this scenario?
+Q-01636,Pull the last six hours of pressure readings from the Jaguar module for review.
+Q-02869,The Tucán’s bright colors are iconic—does the module’s interior or exterior reflect that in any way?
+Q-02400,We’ve got a pressure anomaly in Colibrí—readings are at 88.6 kPa and still declining. What emergency steps should we take for this situation?
+Q-01456,We’ve got a voltage fluctuation on the Colibrí power bus—sensors are reading 138.6 V and still fluctuating. Need to flag this and check if we should escalate.
+Q-02423,Ana Valdivia just reported the Quetzal airlock equalization rate is holding at 1.3 kPa per minute — what emergency procedure covers this?
+Q-03092,"Jaguar module's HEPA filter differential pressure is reading 12.5 kPa—Kozlov reports it's beyond service life, what's our next step?"
+Q-00685,Cóndor oxygen concentration just dropped to 11.0%—Commander Reyes reports crew feeling lightheaded. What emergency procedure covers this scenario?
+Q-02422,Notify Specialist Nakamura immediately—Quetzal's latest experiment data needs his review before the next downlink window.
+Q-00075,Water recycling in Jaguar is down to 36.2% and still dropping—what emergency response should we initiate here?
+Q-00839,We’ve got a pressure anomaly in Jaguar—sensors just hit 87.6 kPa and it’s still trending down. What’s the emergency procedure for this?
+Q-02612,Radiation sensors in Quetzal are reading 3.7 mSv/hr and rising—Nakamura reports solar activity may be increasing. Should we flag this up the chain immediately?
+Q-03040,Could you confirm whether Medical Officer Lucía Mendoza has any prior experience with long-duration spaceflight medical protocols?
+Q-03163,Specialist Nakamura reports Quetzal’s experiment array is pulling 18.7 kW—what’s our current power reserve margin against DOC-014 thresholds?
+Q-00539,Kai Nakamura just reported CO2 concentration in Jaguar has hit 2.9% and crew members are experiencing headaches. Should we escalate this to command?
+Q-03224,"We've just completed docking with Vicuña, and I'm seeing a 0.75% variance in the structural integrity readings from the expected baseline. What's the next step?"
+Q-01740,Schedule routine filter replacement in Quetzal—Nakamura mentioned it during the morning check and it’s due this cycle.
+Q-00808,I need to log an alert — pressure sensors in Jaguar are showing 88.8 kPa and still dropping. What emergency procedure should we initiate for this situation?
+Q-01327,Check the current status of the communications system in Tucán module.
+Q-02014,"We’ve got a rapid pressure drop in Colibrí, currently reading 75.7 kPa—what emergency procedure should we initiate for this?"
+Q-03024,"How do rotation schedules impact the continuity of experiments in the Vicuña module, which often run for years?"
+Q-01246,Cóndor pressure sensors are showing 86.3 kPa and still dropping — how should we handle this?
+Q-01173,Oxygen concentration in Colibrí just dropped to 10.5% — Kai Nakamura reports dizziness. What emergency steps should we initiate?
+Q-01127,Cóndor's oxygen concentration has dropped to 14.2% and is still falling—Commander Reyes just reported it. Should I flag this for immediate review?
+Q-00945,Cóndor's power grid is at 97.6% capacity with stress indicators active—what emergency measures do we initiate?
+Q-01769,Vicuña temperature sensors are showing a rapid rise of 4.0 degrees per minute—what emergency response should we initiate?
+Q-00643,Radiation sensors in Quetzal just spiked to 9.8 mSv/hr—Nakamura reports it’s still climbing. Do we escalate this to command or initiate containment first?
+Q-01048,We need emergency resupply for scientific equipment—Nakamura just reported critical shortages in Quetzal. Escalate this immediately.
+Q-00771,Tucán pressure sensors just hit 75.9 kPa and are still falling — what emergency procedure do we initiate?
+Q-02500,"We’re seeing a voltage fluctuation on Jaguar’s power bus, currently reading 130.1 V. What emergency procedure should we initiate for this?"
+Q-01558,Check the life support status in Tucán—Mendoza mentioned the readings are off during her last check.
+Q-02952,What happened with the data loss incident during the 2023 scientific research mission?
+Q-03039,"I’m looking for information on the development timeline of the zero-gravity 3D printing research program—when was it first introduced, and how has it progressed through the Cóndor missions?"
+Q-00637,Tucán radiation sensors are reading 1.6 mSv/hr and rising—what emergency response should we initiate?
+Q-01742,We need to expedite an equipment supply request—Quetzal just reported a critical tool failure during the current experiment.
+Q-02374,Oxygen concentration in Colibrí just dropped to 13.5% — Kai Nakamura reports dizziness. How should we handle this?
+Q-00677,Kai just reported radiation sensors in Jaguar are showing 3.2 mSv/hr and climbing. What’s the emergency procedure for this scenario?
+Q-01098,"We’ve got a rapid pressure drop in Quetzal, currently reading 78.1 kPa—what emergency procedure should we initiate for this scenario?"
+Q-00486,Tucán temperature sensors are showing a rapid rise at 2.7 degrees per minute and still climbing—what emergency procedure should we initiate for this scenario?
+Q-00370,Oxygen in Colibrí just dropped to 15.4% and is still falling—what emergency steps do we take for this scenario? Fatima flagged it during her systems check.
+Q-01747,Can we get the current status of the communications system in Colibrí? Valdivia mentioned some irregularities during her last check.
+Q-02762,What’s the protocol for switching from primary to secondary comms if the main link degrades?
+Q-01915,I need to log an alert — pressure sensors in Colibrí are showing 87.6 kPa and still declining. What emergency steps should we take for this situation?
+Q-00454,Oxygen concentration in Quetzal just dropped to 13.8% — Kai Nakamura reports dizziness. How should we handle this?
+Q-00938,Cóndor radiation sensors are showing 7.3 mSv/hr—what emergency procedure should we initiate?
+Q-01390,Hull stress readings in Quetzal have hit 91.3% — Kai Nakamura reports possible micrometeorite impact. What emergency steps do we take?
+Q-00911,Give me the oxygen telemetry from Colibrí for the last hour—Valdivia reported a fluctuation during comms check.
+Q-00294,Kai just reported Jaguar's temperature is rising at 3.4 degrees per minute—what emergency response should we initiate?
+Q-02402,Oxygen concentration in Vicuña has dropped to 10.8% and is still falling—what emergency steps should we take for this scenario?
+Q-03105,Pilot Valdivia noted a 3.8 m/s delta-v on the flight path monitors—what’s the correct procedure here?
+Q-00698,Can we get the current status of life support systems in Cóndor? Commander Reyes wants a quick update.
+Q-02855,Can you give me an overview of the educational initiatives that MASA has launched in partnership with universities in South America?
+Q-02784,How long did it take to go from the first module launch to the station being declared fully operational?
+Q-01249,Oxygen concentration in Quetzal is reading 15.6% and still dropping—what’s the next emergency procedure we follow?
+Q-01020,"We’ve got a rapid pressure drop in Quetzal, currently reading 82.1 kPa—what emergency procedure should we initiate for this scenario?"
+Q-01030,Schedule routine sensor maintenance in Tucán for the next available window.
+Q-02294,Oxygen in Vicuña has dropped to 15.5% and is still falling — what emergency procedure do we initiate right now?
+Q-02371,I need to log an alert — oxygen sensors in Jaguar are reading 15.6% and declining. What emergency procedure should we initiate for this scenario?
+Q-01004,Cóndor oxygen concentration just dropped to 12.6%—Commander Reyes reports crew feeling lightheaded. What emergency procedure should we initiate for this?
+Q-01070,We’ve got a rapid pressure drop in Jaguar—sensors just hit 70.7 kPa and still falling. Commander Reyes reports possible hull breach. Need to escalate this immediately. What’s the next step?
+Q-02698,Cóndor radiation sensors are showing 4.0 mSv/hr and climbing—Commander Reyes has requested immediate emergency response procedures. What steps do we initiate?
+Q-03130,Engineer Kozlov just requested a full status check on Jaguar's life support systems before we kick off the bi-weekly maintenance—what’s the current readout showing?
+Q-02861,How does MASA's partnership with the Brazilian Space Agency influence the operations at Kuntur Station?
+Q-00132,We've lost all contact with Colibrí for 77 minutes—what emergency procedure covers this kind of communications blackout?
+Q-01692,Kai just reported Jaguar's temperature is rising at 4.2 degrees per minute—what emergency procedure should we initiate?
+Q-02636,Cóndor pressure sensors are showing 86.9 kPa and declining — Commander Reyes just called it in. What emergency procedure should we initiate for this?
+Q-00259,Vicuña hull stress sensors just hit 90.5% and climbing — Commander Reyes reports a possible micrometeorite impact. What emergency steps do we take?
+Q-01162,Airlock equalization rate in Colibrí is showing 0.7 kPa per minute and rising—what emergency procedure should we initiate for this scenario?
+Q-01469,"We’ve lost all ground contact through Colibrí, and the blackout has now extended to 48 minutes—how should we escalate this?"
+Q-03192,We’re seeing Tucán’s thermal telemetry hit 28°C; that’s outside the 20-25°C envelope. Should we alert the crew?
+Q-02670,Cóndor radiation sensors are showing 2.1 mSv/hr and climbing—Commander Reyes reports solar activity may be increasing. What emergency procedure covers this?
+Q-02837,I need to double-check which international space agencies contributed to the Cóndor module’s construction—was it just CONAE or were there others?
+Q-00917,Cóndor's oxygen concentration has dropped to 10.7%—what emergency procedure should we initiate? Commander Reyes just reported crew members are experiencing shortness of breath.
+Q-02615,"Get an expedited food resupply request sent up—Vicuña stores are running low, and we need to restock before the next crew rotation."
+Q-00229,Radiation sensors in Jaguar are showing 3.9 mSv/hr and rising—what emergency response should we initiate?
+Q-01763,Ana Valdivia just reported a pressure differential of 6.4 kPa at the Vicuña docking port during active docking—what emergency steps should we take?
+Q-02746,Oxygen readings in Colibrí have dropped to 15.5% and are still falling — what’s the emergency procedure for this scenario?
+Q-02897,The Vicuña module’s name feels tied to sustainability—was that considered in its environmental systems?
+Q-02920,Has there ever been a case where Kuntur Station had to rely solely on the Tucán module’s secondary comms array?
+Q-01427,Radiation sensors in Vicuña are reading 5.8 mSv/hr and still rising—Commander Reyes wants to know what emergency steps we need to initiate right now.
+Q-02589,Jaguar power bus showing 130.6 V fluctuation—what emergency procedure covers this voltage reading?
+Q-02777,How did the station’s construction timeline evolve as new modules like Vicuña and Tucán were added later on?
+Q-03210,"Commander Reyes just reported an unplanned velocity change, telemetry shows a 3.8 m/s delta—what’s our next move?"
+Q-03187,I’m seeing a 6 km drift in altitude — station is currently at 414 km. How should we respond?
+Q-02875,What’s the maximum sustained crew complement the Colibrí module was designed to support?
+Q-02977,Could you describe the cultural significance behind naming the Vicuña module after the Andean animal?
+Q-02455,Radiation sensors in Tucán are reading 4.0 mSv/hr and climbing—should we flag this up the chain? Commander Reyes noted it during his last module check.
+Q-00006,Cóndor pressure sensors just dropped to 73.3 kPa—what emergency procedure do we need to activate here?
+Q-00396,Can we schedule a routine hull inspection for the Jaguar module during the next maintenance window? Kozlov mentioned it during his last report.
+Q-00414,Tucán hull stress sensors are reading 88.3%—what emergency procedure should we initiate?
+Q-02753,Oxygen concentration in Quetzal has dropped to 13.4% — Kai Nakamura just reported it’s still falling. What emergency steps should we take?
+Q-00254,Tucán hull stress sensors are reading 87.0%—Kai Nakamura reported a possible micrometeorite impact. What emergency steps do we take?
+Q-01975,Tucán oxygen concentration has dropped to 12.7%—what emergency procedure do we need to activate here?
+Q-00435,Tucán ventilation is running higher than necessary—can we bring it down a notch?
+Q-02972,What kind of acoustic damping materials were used in the Quetzal module to reduce noise from experiments?
+Q-01998,Nakamura just reported an unexpected life support reading in Quetzal—can we get a quick status check on that module?
+Q-02303,Pull the radiation telemetry from Cóndor for the last 12 hours to verify background levels.
+Q-01101,"We’re seeing a voltage fluctuation on Jaguar’s power bus, currently reading 97.1 V. Engineer Kozlov just flagged it—what emergency steps should we initiate for this?"
+Q-02597,"Commander, urgent update needed — life support in Jaguar is showing irregular readings and needs immediate attention."
+Q-01028,We’re seeing a voltage fluctuation on the Colibrí power bus—current reading is 97.3 V. Should we flag this for further review?
+Q-03148,"Pilot Valdivia just called in—supply vessel *Tucán-7* is holding at 1.8 kilometers from Vicuña, requesting clearance. Do we grant docking?"
+Q-02403,Give me the temperature readings from Colibrí for the past hour.
+Q-00161,Cóndor's temperature is rising at 2.2 degrees per minute—what emergency procedure should we initiate?
+Q-01582,We've got debris tracking showing a close pass in 12 minutes—calculate and upload the avoidance burn trajectory to Cóndor immediately.
+Q-00368,Water recycling in Jaguar has been dropping for hours—now at 38.9%. What emergency response should we initiate?
+Q-01872,"Could you pass along a reminder to Commander Reyes about the upcoming crew briefing scheduled in 30 minutes? No rush, just for his reference."
+Q-03155,Commander Reyes just radioed in; they’re showing 11% fuel left following an unplanned burn
+Q-00044,I need to log an alert — pressure sensors in Colibrí are showing 86.3 kPa and still declining. What emergency steps should we take for this situation?
+Q-01765,Cut the heating in Vicuña — we need to deactivate it before the next cargo transfer.
+Q-00252,Cóndor's power grid is at 99.4% capacity with stress indicators—what emergency response should we initiate? Commander Reyes reports systems are straining.
+Q-02506,I need to log an alert — Quetzal pressure sensors just hit 88.0 kPa and are still declining. What emergency steps should we take for this situation?
+Q-01365,We’ve got a voltage fluctuation on the Colibrí power bus—sensors just hit 132.4 V and still fluctuating. What emergency procedure should we initiate for this scenario?
+Q-00781,I need to log an alert — Quetzal pressure sensors just hit 88.1 kPa and they're still dropping. What emergency steps should we be taking on this?
+Q-00794,Nakamura just reported an urgent shortage of critical scientific supplies in Quetzal—what's the immediate response for this?
+Q-00483,Tucán airlock equalization rate is showing 1.1 kPa per minute and still increasing—what emergency procedure should we initiate for this scenario?
+Q-01154,Kai Nakamura just reported Jaguar pressure sensors reading 78.0 kPa and still dropping—how should we respond to this hull breach scenario?
+Q-01695,We've got debris tracking showing a close pass in 22 minutes—calculate and upload the avoidance trajectory to Cóndor immediately.
+Q-00197,I need to log an alert — pressure sensors in Colibrí are showing 89.3 kPa and still declining. What emergency steps should we take for this situation?
+Q-03146,Engineer Kozlov flagged that Jaguar module humidity just dipped to 34%—what’s the protocol here?
+Q-01229,Tucán pressure sensors just hit 73.9 kPa and are still falling — what emergency procedure do we initiate for this scenario?
+Q-00792,Hull stress readings in Colibrí have hit 91.8% — Kai Nakamura just reported possible micrometeorite impact. What emergency steps should we initiate?
+Q-02731,Tucán temperature sensors showing a rise of 2.7 degrees per minute and climbing — what emergency procedure do we initiate?
+Q-00365,Hull stress sensors in Colibrí are showing 90.9% and rising — what emergency procedure do we initiate for this?
+Q-01011,Oxygen in Quetzal just dropped to 15.0% and is still falling—what emergency steps do we take for this scenario? Fatima flagged it during her systems check.
+Q-00663,Can you pass a low-priority message to Specialist Nakamura about the scheduled calibration for Quetzal's spectrometer tomorrow?
+Q-01897,Get us an expedited resupply of equipment—we need those parts for the Colibrí repairs before the next communications blackout.
+Q-02812,Can you remind me what the standard communication window duration is between Kuntur Station and the primary ground station in Cusco?
+Q-00251,Cóndor radiation sensors are showing 8.6 mSv/hr—should we log an alert on this spike?
+Q-03211,Commander Reyes just reported that the Cóndor module's temperature has dropped to 17°C. How should we proceed?
+Q-00057,Radiation sensors in Vicuña are reading 6.4 mSv/hr and climbing—Commander Reyes just reported it. What emergency steps should we take for this situation?
+Q-01460,Tucán oxygen concentration has dropped to 15.2% over the past 30 minutes—should we escalate this to the crew?
+Q-02383,Cóndor radiation sensors are showing 2.2 mSv/hr and climbing—Commander Reyes has requested we escalate this immediately.
+Q-02037,Check the inventory for scientific supplies in Vicuña and submit a routine restocking request if levels are low.
+Q-02648,Jaguar hull stress sensors are reading 88.1%—should we flag this as a possible micrometeorite impact?
+Q-00047,We’ve got a rapid pressure drop in Jaguar—sensors just hit 71.2 kPa and still falling. Commander Reyes is reporting possible hull breach. What emergency steps should we take here?
+Q-01917,Pull the 24-hour temperature log from Cóndor for review—Reyes reported a minor fluctuation in the command module earlier.
+Q-00735,Vicuña airlock equalization rate is reading 1.4 kPa per minute—what emergency response should we initiate?
+Q-00930,Can you confirm the primary operational functions of the Cóndor module before the next crew briefing?
+Q-02063,Cóndor's temperature is rising at 4.1 degrees per minute—what emergency procedure covers this kind of thermal event?
+Q-00015,Cóndor's oxygen concentration has dropped to 11.0%—what emergency procedure should we initiate? Commander Reyes just reported crew members are experiencing shortness of breath.
+Q-00446,Dim the lights in Tucán to assist Lucía Mendoza during the medical assessment.
+Q-00703,Can we get a structural integrity update for Vicuña? Kozlov mentioned some odd readings during the last cargo transfer.
+Q-00947,Can we schedule a routine software update for Jaguar during the next maintenance window? Kozlov mentioned it during his last report.
+Q-00770,Cóndor pressure sensors are showing 88.1 kPa and declining — should we log an alert for this anomaly?
+Q-03231,We're getting a high-temperature alert from the Jaguar module—readings just hit 41°C. What’s the next step?
+Q-01735,Kai Nakamura just reported CO2 concentration in Quetzal is at 2.9% and rising—crew's complaining of headaches. What's the emergency procedure here?
+Q-01206,I need to log an alert — pressure sensors in Colibrí are showing 86.0 kPa and still declining. What emergency steps should we take for this situation?
+Q-01605,"Medical Officer Mendoza, urgency on this—crew reporting sudden onset of severe headaches and nausea in multiple modules. Need your immediate assessment and next steps."
+Q-00481,Can we get a quick health status update for the crew currently in Cóndor?
+Q-02583,Nakamura just reported that Quetzal's calibration systems are offline—can we schedule an urgent maintenance run for system recalibration?
+Q-02528,Hull stress readings in Colibrí have hit 92.6% — Kai Nakamura reports possible micrometeorite impact. What emergency steps do we initiate?
+Q-01045,Radiation sensors in Colibrí are reading 6.7 mSv/hr and rising—what emergency steps do we take for this scenario? Fatima flagged it during a comms check.
+Q-01862,Radiation sensors in Colibrí are reading 6.3 mSv/hr and rising—should we escalate this to command?
+Q-01751,Ana Valdivia just reported oxygen concentration in Quetzal is reading 10.6% on her console—how should we handle this?
+Q-03084,Specialist Nakamura noted Vicuña’s medical stock is critically low—only 29% remaining. How do we address this?
+Q-02512,Activate the heating system in Quetzal—Nakamura just reported temperatures are approaching the lower limit.
+Q-00707,Oxygen concentration in Jaguar has dropped to 15.7% over the past 30 minutes—what emergency procedure should we initiate for this scenario?
+Q-01584,Tucán temperature sensors showing a rise of 2.9 degrees per minute and climbing — what emergency procedure do we initiate?
+Q-00398,Bump up the airflow in Tucán—Mendoza just reported stuffiness and rising CO₂ during the crew’s sleep cycle.
+Q-02117,"Where is Pilot Ana Valdivia currently located within Colibrí, and what is her status?"
+Q-02010,Cóndor power bus voltage just hit 131.5 V—what emergency procedure covers this fluctuation?
+Q-01848,Cóndor module temperature is rising at 3.3 degrees per minute—should we log an alert on this?
+Q-03047,Medical Officer Mendoza just reported our food reserves are down to 27%—should we adjust rations or request a resupply?
+Q-00231,Airlock equalization rate in Colibrí is showing 1.3 kPa per minute and rising—what emergency procedure should we initiate for this scenario?
+Q-02890,How does the **Jaguar** module’s oxygen generation system differ in philosophy from earlier MASA stations?
+Q-03138,Medical Officer Mendoza reports Tucán medical bay temp fluctuating between 18°C and 24°C—what's the next step?
+Q-02005,Kozlov reported Jaguar's life support systems are showing unstable readings—what’s the current status?
+Q-00495,Cóndor power bus voltage just hit 104.8 V—what emergency procedure covers this fluctuation?
+Q-00149,Notify all crew that the station-wide communication check will begin in ten minutes—confirm receipt required.
+Q-01704,Cóndor pressure sensors just dropped to 83.3 kPa—what emergency procedure do we need to activate here?
+Q-01233,Get Jaguar life support calibrated urgently — Kozlov reports readings are out of bounds and need immediate correction.
+Q-00140,Kai Nakamura just reported CO2 concentration in Quetzal is reading 2.1% and climbing—crew has headaches. What emergency steps do we take?
+Q-01699,Generate the planned trajectory for the upcoming docking maneuver at 408 km LEO.
+Q-01559,We’ve lost all ground contact through Colibrí—blackout now at 57 minutes and counting. What emergency steps do we initiate for this kind of communications failure?
+Q-02315,Oxygen concentration in Vicuña just dropped to 10.9% and still falling — should we flag this to Commander Reyes immediately?
+Q-02036,"We’re seeing a voltage fluctuation on Jaguar’s power bus, currently reading 99.4 V. Engineer Kozlov just flagged it—what emergency steps should we initiate for this?"
+Q-00640,Deactivate the heating system in Cóndor module—commander reports temperatures are rising above normal.
+Q-02055,We've lost all contact with Colibrí for 89 minutes—what emergency procedure covers this kind of communications blackout?
+Q-00325,Tucán hull stress sensors just spiked to 91.3% — Kai Nakamura reports possible micrometeorite impact. What emergency steps do we initiate?
+Q-03143,Commander Reyes just asked for the current power load distribution in Cóndor before they start the software update—what's the status?
+Q-00732,Tucán temperature sensors showing a rise of 2.4 degrees per minute and climbing — should we log an alert for this?
+Q-00578,Can we confirm Ana Valdivia's current schedule and activity status in Colibrí for the next two hours?
+Q-01168,Vicuña hull stress sensors are reading 88.4% and climbing—what emergency procedure should we initiate for this?
+Q-00488,Cóndor radiation sensors just spiked to 10.1 mSv/hr—Commander Reyes is reporting this now. What emergency steps do we initiate?
+Q-00310,Can we get a status update from all crew members on their current tasks and any issues they're encountering?
+Q-01731,Jaguar oxygen concentration has dropped to 12.1% — Engineer Kozlov reports crew symptoms. What emergency procedure do we initiate immediately?
+Q-00852,Check the current thermal status in Colibrí—Valdivia reported temperatures are rising.
+Q-02945,I’ve heard the **Quetzal** module’s life support was designed with modular upgrades in mind—can you confirm that?
+Q-00022,Kozlov just flagged a potential debris field approaching our altitude—run the numbers for a safe avoidance trajectory before the next shift.
+Q-01069,Check the current health status of the crew members in Quetzal.
+Q-00405,Tucán oxygen concentration has dropped to 14.5% and is still falling — what emergency procedure do we initiate right now?
+Q-01203,Radiation sensors in Quetzal are reading 1.6 mSv/hr and rising—what emergency steps should we take for this scenario?
+Q-02940,What’s the maximum delay we’ve ever experienced in real-time voice comms between the station and Earth?
+Q-00967,Radiation sensors in Vicuña are reading 2.5 mSv/hr and climbing; solar activity may be increasing. What emergency procedure should we initiate for this scenario?
+Q-00439,Cóndor radiation sensors are showing 3.1 mSv/hr and climbing—Commander Reyes has requested we escalate this to the emergency response team immediately.
+Q-01644,Can you confirm the primary function of the Quetzal module for the incoming crew briefing?
+Q-00199,Tucán temperature sensors showing a rise of 3.1 degrees per minute — Kai Nakamura just reported it. What emergency procedure should we follow for this?
+Q-01906,"We've got a rapid pressure drop in Colibrí, currently reading 71.5 kPa. What emergency procedure should we initiate for this scenario?"
+Q-00222,Jaguar oxygen concentration has dropped to 11.2% — Engineer Kozlov reports crew symptoms. What emergency procedure should we initiate?
+Q-01302,Schedule routine system calibration for Vicuña during the next maintenance window.
+Q-02282,"We’ve got a voltage fluctuation on Jaguar’s power bus, currently reading 132.4 V—Engineer Kozlov just flagged it. What’s the next step here?"
+Q-02608,Kai Nakamura just reported hull stress readings at 90.7% in Jaguar—what emergency response should we initiate?
+Q-01031,Kai just reported Vicuña radiation sensors reading 4.1 mSv/hr and rising—how should we respond?
+Q-00429,Ana Valdivia just reported oxygen concentration in Colibrí is down to 15.8% and still dropping—what emergency procedure should we initiate for this?
+Q-01810,"Kai just reported headaches in Jaguar, and CO2 sensors are reading 2.0%—should we escalate this to command?"
+Q-00642,Tucán oxygen concentration has dropped to 14.8% over the past 30 minutes—should we escalate this to command?
+Q-00716,We’ve got a rapid pressure drop in Jaguar—sensors just hit 79.2 kPa and still falling. Commander Reyes is reporting possible hull breach signs. How do we proceed with this?
+Q-00117,We need emergency food supplies sent to Kuntur Station immediately—crew reports are showing critical shortages.
+Q-03147,We’re seeing Colibrí’s position telemetry fluctuating by 0.8 degrees compared to ground truth—should we recalibrate or check for interference?
+Q-02305,Oxygen concentration in Colibrí just dropped to 13.7% — Kai Nakamura reports dizziness. How should we handle this?
+Q-02767,How do the crew handle personal messages to family—are those routed differently than operational comms?
+Q-02180,Where is the Medical Officer currently located in Tucán? I need to coordinate a quick check-in before the next shift.
+Q-02216,Oxygen concentration in Quetzal just dropped to 11.9% — Kai Nakamura reports dizziness. How should we handle this?
+Q-00340,I need to log an alert — pressure sensors in Jaguar are showing 86.5 kPa and still dropping. What emergency procedure should we initiate for this situation?
+Q-02757,Decrease the filtration system output in Cóndor—commander reports pressure is rising above nominal.
+Q-00682,Tucán CO2 sensors hit 2.8% and rising—crew reporting headaches since 0400. What emergency procedure covers this?
+Q-00345,Vicuña hull stress sensors just hit 93.2% and climbing — Engineer Kozlov reports possible micrometeorite impact. What emergency steps do we initiate?
+Q-02166,Radiation sensors in Colibrí are reading 6.5 mSv/hr and rising—what emergency steps should we take for this scenario?
+Q-03076,"We’ve got a radiation concern in Quetzal. Nakamura says the experiment is reacting to fluctuations, and they need the past six hours of readings to assess"
+Q-03067,"The telemetry just updated—Cóndor's main power cell is at 18%, under the minimum. Any immediate actions we should take?"
+Q-00063,Vicuña O2 concentration just hit 10.3% and still dropping — Kai Nakamura reports dizziness. What emergency procedure covers this?
+Q-00364,"Commander, urgent message for you — we've got an unplanned EVA suit breach alarm from Valdivia. Need immediate guidance on next steps."
+Q-01055,Jaguar oxygen concentration has dropped to 12.3%—Engineer Kozlov reports crew experiencing lightheadedness. What emergency steps do we initiate?
+Q-01133,Check the current communications status in Jaguar and confirm if we're still receiving telemetry from life support—Kozlov reported a possible comms glitch during his last update.
+Q-01933,We’ve got a pressure differential at Vicuña’s docking port reading 8.0 kPa during active docking—what emergency procedure should we initiate for this scenario?
+Q-02267,Radiation sensors in Jaguar are showing 8.2 mSv/hr and still rising—what emergency measures do we need to take for this situation?
+Q-00014,Tucán radiation sensors are showing 1.9 mSv/hr and rising—what emergency response should we initiate? Commander Reyes reports solar activity may be increasing.
+Q-01440,Cóndor's oxygen concentration has dropped to 11.6% — what emergency procedure do we need to initiate here?
+Q-03003,Can you remind me what the primary structural material is for the Cóndor module’s outer shell?
+Q-01585,We’ve got a pressure anomaly in Quetzal—readings are at 87.1 kPa and still declining. What emergency steps should we take for this situation?
+Q-02290,"Ana Valdivia just reported headaches from Colibrí, CO2 concentration climbing to 3.0%—what emergency procedure should we initiate for this?"
+Q-02249,We need emergency spare parts sent to Vicuña immediately—structural integrity is compromised and Kozlov can't proceed without them.
+Q-00584,Tucán pressure sensors are reading 85.3 kPa and still dropping—what emergency response should we initiate?
+Q-02318,Oxygen concentration in Vicuña just dropped to 12.0% and still falling — what emergency procedure do we initiate?
+Q-00520,We've lost all contact with Colibrí and the blackout has now extended to 44 minutes of complete silence—what emergency procedure should we initiate for this kind of ground communication failure?
+Q-01794,Radiation sensors in Jaguar are showing 8.1 mSv/hr and rising—what emergency response should we initiate?
+Q-01138,Cóndor CO2 concentration has hit 3.0% and is climbing — Commander Reyes reports crew headaches. What emergency procedure should we initiate for this?
+Q-00433,Hull stress readings in Colibrí have hit 86.9% and are holding—what emergency steps do we take for this scenario? Fatima flagged it during a systems check.
+Q-01992,Check the current health status of all crew members in Vicuña for today's medical review.
+Q-01165,Give me the radiation levels in Tucán for the past hour.
+Q-00828,Kai just reported Quetzal’s temp is climbing at 3.1 degrees per minute—how should we respond?
+Q-00175,Tucán power bus showing 136.8 V voltage fluctuation — what emergency procedure should we initiate for this?
+Q-01026,Tucán hull stress sensors are reading 88.7%—should we flag this as a possible micrometeorite impact?
+Q-02053,Tucán oxygen concentration has dropped to 15.8% and is still falling — Medical Officer Mendoza just reported it. What emergency steps should we take for this?
+Q-02130,"What’s the current schedule for the crew in Cóndor, and are there any changes to Reyes’ planned activities today?"
+Q-01040,Pull the last six hours of oxygen telemetry from Colibrí for the shift review.
+Q-00865,Vicuña power bus voltage just hit 131.0 V—what emergency procedure do we need to activate here?
+Q-01792,Kai just reported a rapid temperature rise in Colibrí—sensors are showing 2.9 degrees per minute and climbing. What emergency steps should we initiate right now?
+Q-03120,Specialist Nakamura just reported that the Quetzal workstation sensors are showing inconsistent readings—last calibrated 14 days ago
+Q-03015,Can you clarify the differences between the basic and advanced extravehicular activity certification pathways?
+Q-00664,Check current activity status for the crew member assigned to Colibrí module.
+Q-01287,What are Nakamura and Al-Hassan currently working on in Quetzal?
+Q-02419,Oxygen readings in Quetzal have dropped to 14.1% and are still falling — should we escalate this to the emergency response team?
+Q-02018,Check Jaguar's thermal system status — Kozlov mentioned higher-than-normal readings during his last report.
+Q-01163,Notify Specialist Nakamura immediately—Quetzal's latest experiment data needs urgent review before the next transmission window.
+Q-00415,Cóndor's oxygen concentration has dropped to 14.5% and is still falling—Commander Reyes just reported it. What emergency steps should we take for this situation?
+Q-00644,Ana Valdivia just reported oxygen concentration in Quetzal is down to 15.5% and still dropping. What emergency procedure should we initiate for this?
+Q-02619,Tucán hull stress sensors just spiked to 92.6% — Kai Nakamura reports possible micrometeorite impact. Do we flag this for command?
+Q-02167,Cóndor's power bus is showing voltage fluctuations with a reading of 136.7 V. Commander Reyes has noticed this and is requesting guidance on the next steps.
+Q-00725,Cóndor oxygen concentration just dropped to 15.2% and is still falling—what emergency response should we initiate? Commander Reyes reports the crew is aware and standing by.
+Q-01124,Radiation sensors in Colibrí are reading 1.6 mSv/hr and rising—what emergency steps should we take station-wide?
+Q-01434,Oxygen concentration in Quetzal just dropped to 13.8% and is still falling—what’s the emergency response for this scenario? Fatima reported dizziness over comms.
+Q-01253,Jaguar oxygen concentration has dropped to 13.8% — Engineer Kozlov reports crew symptoms. What emergency procedure do we initiate immediately?
+Q-00690,We’re seeing CO₂ sensors in Colibrí spike to 2.2%—crew reports headaches in the module. What emergency procedure should we initiate?
+Q-00386,We’ve got a pressure anomaly in Colibrí—readings are at 88.7 kPa and still declining. What emergency steps should we take for this situation?
+Q-01554,"We’ve got a rapid pressure drop in Quetzal, currently reading 73.3 kPa—what emergency procedure should we initiate for this scenario?"
+Q-02398,We’ve got a rapid pressure drop in Colibrí—sensors just hit 79.1 kPa and still falling. Commander Reyes is reporting possible hull breach symptoms. What emergency steps do we initiate right now?
+Q-02533,Activate the cooling system in Vicuña immediately—temperature readings are approaching critical levels.
+Q-01944,We’ve got a pressure differential at Vicuña’s docking port reading 5.4 kPa during active docking—what emergency procedure should we initiate for this scenario?
+Q-00245,Schedule routine maintenance for Jaguar module to repair sensor issues during the next available window.
+Q-00387,I need to log an alert — Vicuña pressure sensors are reading 87.5 kPa and still dropping. What emergency steps should we initiate for this situation?
+Q-02234,I need to log an alert — pressure sensors in Jaguar are showing 85.1 kPa and still dropping.
+Q-01805,"Get Colibrí ready for an urgent software update—Pilot Valdivia reports comms glitches, so we need this patched before the next crew shift."
+Q-00476,Decrease the filtration system output in Vicuña—storage readings are above target and need adjustment before the next cargo transfer.
+Q-00276,Cóndor's power grid is at 97.1% capacity with climbing readings—what emergency response should we initiate? Commander Reyes reports flickering lights in Quetzal.
+Q-02639,Jaguar power grid showing 99.2% consumption and climbing rapidly — how should we respond to this situation?
+Q-00025,Water recycling in Jaguar is down to 31.5% and has been degrading for hours. Engineer Kozlov noticed the trend—what’s the next step here?
+Q-02914,I’m reviewing the **Vicuña** module specs—what was the rationale behind its dual-loop water purification system?
+Q-00491,Shut down the heating system in Jaguar immediately—Kozlov reports temperatures are approaching critical levels.
+Q-02306,Kai just reported Jaguar's temperature is climbing at 2.4 degrees per minute—what emergency response should we initiate?
+Q-00432,Vicuña power bus voltage just hit 96.9 V and is still unstable—what emergency response should we initiate?
+Q-01494,"Cóndor, we've got a rapid pressure drop in Colibrí—sensors now reading 74.0 kPa and still falling. Fatima just flagged it over comms. Should we escalate this to command?"
+Q-00450,Hull stress sensors in Quetzal are showing 92.1% — Kai Nakamura just reported possible micrometeorite impact. What emergency procedure covers this?
+Q-00982,Can we get the trajectory calculations for the planned station-keeping maneuver before the next shift?
+Q-02040,Tucán oxygen concentration has dropped to 14.5% — Engineer Kozlov reports it's still trending down. What emergency steps should we initiate?
+Q-00374,Cóndor's oxygen concentration has dropped to 13.8%—what emergency procedure should we initiate? Commander Reyes just reported crew members feeling lightheaded.
+Q-01804,We’ve got a pressure anomaly in Colibrí—readings are at 85.6 kPa and still declining. What emergency steps should we take for this situation?
+Q-01112,"Give me a current overview of the Kuntur Station, including module status and crew assignments for today's shift."
+Q-02520,Cóndor's oxygen concentration has dropped to 13.4%—should we flag this immediately? Commander Reyes just reported the crew is feeling lightheaded.
+Q-02916,Can you walk me through the approved method for conducting a full systems diagnostic in the Cóndor module without disrupting ongoing experiments?
+Q-01789,"Cóndor just reported voltage fluctuations on the Colibrí power bus, with readings dropping to 105.0 V—should we flag this for further review?"
+Q-02195,We’ve got a pressure anomaly in Quetzal—readings are at 86.5 kPa and still declining. Specialist Nakamura just flagged it. Should we escalate this immediately?
+Q-00094,"Radiation sensors in Colibrí are reading 3.5 mSv/hr, and Fatima Al-Hassan just reported a possible uptick in solar activity—should we flag this with Commander Reyes?"
+Q-00831,Cóndor radiation sensors are showing 4.0 mSv/hr and climbing — how should we handle this?
+Q-02789,I need a refresher on the overlap period between outgoing and incoming crews—how many days is typical?
+Q-00669,Water recycling in Jaguar is down to 21.9% and has been degrading for hours. Engineer Kozlov just reported it — what’s the emergency procedure here?
+Q-01241,What is the standard procedure for handling communication blackouts during solar storms affecting Colibrí?
+Q-00210,Cóndor's power grid is at 98.4% capacity with no sign of dropping—how should we proceed?
+Q-00224,"We’ve got a rising CO2 issue in Vicuña, currently reading 2.8%. Crew is reporting headaches. What emergency procedure should we initiate for this situation?"
+Q-02924,I’ve read that the Vicuña was sacred in Inca times—does the module’s purpose align with that symbolism?
+Q-01531,Tucán power bus showing 100.8 V voltage fluctuation — what emergency procedure should we initiate for this?
+Q-02414,Notify Kozlov that there's a minor issue with the secondary coolant loop in Jaguar that needs his attention when he's free.
+Q-02118,Cóndor pressure sensors are showing 88.1 kPa and declining — Commander Reyes has confirmed the reading. What emergency procedure should we initiate for this scenario?
+Q-01059,Tucán radiation sensors are reading 1.9 mSv/hr and rising—what emergency response should we initiate?
+Q-03223,"The supply logs show food reserves at 13%, and Pilot Valdivia says the crew’s already cutting portions. How do we handle this?"
+Q-01433,Check the current health status of the crew member in Jaguar module.
+Q-03197,We're seeing elevated power draw on Colibrí’s antenna array—Valdivia wants to know the usage trend over the past day. What’s the best way to get that?
+Q-00754,Cóndor's filter replacement has been flagged as a priority—schedule it urgently before the next crew rotation.
+Q-02872,"Why was the phrase “Kuntur a Tierra, copia” chosen as the standard call sign for routine communication checks?"
+Q-01945,I need to log an alert — Vicuña pressure sensors just hit 73.4 kPa and still dropping. What emergency procedure should we initiate for this situation?
+Q-01596,Kai just reported Vicuña's temperature is climbing at 3.5 degrees per minute and still rising—what emergency procedure should we initiate for this?
+Q-03034,How did the **Cóndor-5** incident with the CO₂ scrubber failure shape MASA’s current redundancy protocols?
+Q-02799,"What kind of training do crew members undergo in the neutral buoyancy lab to prepare for EVAs, and how often is it required?"
+Q-01882,Kozlov just reported a critical issue with the life support systems in Jaguar—get him on comms immediately.
+Q-00313,Cóndor module is showing CO2 concentration at 2.6% and climbing—Commander Reyes reports crew headaches. Should we escalate this up the chain?
+Q-01932,Activate the lighting system in Colibrí—Pilot Valdivia needs full visibility for the upcoming comms array realignment.
+Q-01248,Jaguar hull stress sensors just spiked to 87.6% — Kai Nakamura reports possible micrometeorite impact. Do we flag this for immediate review?
+Q-02621,Check the current food stock levels in Vicuña and submit a resupply request for routine restocking before next week's inventory check.
+Q-00929,Cóndor's power cells need urgent replacement—schedule a maintenance slot ASAP and flag it for priority.
+Q-00475,Cóndor pressure sensors just dropped to 73.3 kPa—Reyes is reporting a possible hull breach. How should we handle this?
+Q-00406,Radiation sensors in Quetzal are reading 7.3 mSv/hr and rising—what emergency steps do we take for this scenario?
+Q-00255,I need to log an alert — pressure sensors in Colibrí are showing 85.3 kPa and still declining. What emergency steps should we take for this situation?
+Q-02871,What was the first message transmitted from the Cóndor module when it was first activated in orbit?
+Q-00612,Check the structural integrity status for Vicuña—Nakamura mentioned unusual sensor readings during the last cargo transfer.
+Q-01578,Check the inventory for spare parts in Vicuña and submit a routine restocking request if levels are low.
+Q-01931,Cóndor O2 concentration has dropped to 11.3% — Engineer Kozlov reports crew is experiencing lightheadedness. What emergency steps do we initiate?
+Q-03160,Pilot Valdivia just radioed that the Jaguar's spectrograph coolants are reading 75 days of life—need guidance on next steps
+Q-01861,"We've got a debris threat on approach—calculate an immediate avoidance trajectory for the station. Altitude is 408 km, and we need that maneuver plan now."
+Q-03208,"Quetzal’s air sensors just spiked to 17 PPM, and Specialist Nakamura reports a chemical odor. How should we proceed?"
+Q-02967,What kind of training does the crew go through to handle delayed communications during solar conjunctions?
+Q-00225,Radiation sensors in Quetzal are reading 9.7 mSv/hr—what emergency response should we initiate?
+Q-01744,Kai just reported hull stress in Colibrí at 93.4%—what emergency response should we initiate?
+Q-02390,Pull the last 12 hours of oxygen telemetry from Jaguar for review.
+Q-03085,Commander Reyes is asking about the low moisture levels; Vicuña module shows 28% humidity on the display
+Q-01217,Tucán CO2 sensors hit 1.7% and rising—crew reporting headaches since 0400. What emergency procedure do we initiate?
+Q-01071,Vicuña power bus voltage just hit 130.3 V—what emergency procedure covers this fluctuation?
+Q-00062,Kai just reported Vicuña radiation sensors reading 4.1 mSv/hr—what emergency response should we initiate?
+Q-00164,Kai just reported Vicuña radiation sensors reading 1.2 mSv/hr and rising—should we escalate this to command?
+Q-01480,We need urgent sensor repair in Vicuña—schedule it before the next cargo transfer.
+Q-00099,Ana Valdivia just reported the Quetzal airlock equalization rate is holding at 0.8 kPa per minute — what emergency procedure covers this?
+Q-01575,Pull the last hour of power telemetry from Tucán for the shift review.
+Q-00827,"I need to log an alert — Quetzal's CO2 sensors are reading 2.3% and climbing, crew reporting headaches."
+Q-00045,Cóndor pressure sensors are showing 87.1 kPa and declining — should we log an alert for this anomaly?
+Q-02880,Can you remind me when the first crewed mission arrived at the station and how many modules were operational by then?
+Q-01383,"All crew, emergency notification—immediate response required. Acknowledge receipt and prepare for further instructions."
+Q-03097,"We’re seeing Tucán’s environmental controls at 17°C, well below the safe range—how should we respond?"
+Q-03054,VOC levels in Cóndor just hit 218 ppm—Specialist Al-Hassan reports the odor started near the life-support rack; what’s the next step?
+Q-00861,I need to log an alert — Quetzal pressure sensors are reading 87.1 kPa and dropping. What emergency procedure should we initiate for this situation?
+Q-01984,Radiation sensors in Colibrí are reading 10.3 mSv/hr and still climbing—what emergency procedure should we initiate for this?
+Q-01868,Check current activity for the engineer in Jaguar—need to confirm what Kozlov’s working on before the next shift change.
+Q-01702,Schedule routine filter replacement in Jaguar module during the next maintenance window.
+Q-03157,"We’re getting VOC readings in Cóndor peaking at 218 parts per million—crew reports a faint solvent smell near the starboard storage lockers, what’s the call here?"
+Q-02822,Which past mission had the longest uninterrupted communication streak without a single dropout?
+Q-02298,Cóndor hull stress sensors are reading 94.5%—Commander Reyes just reported a possible micrometeorite impact. What emergency procedure do we initiate?
+Q-00665,We’ve got a pressure anomaly in Quetzal—readings are at 85.7 kPa and still declining. What emergency steps should we initiate for this situation?
+Q-02304,Kai just reported Jaguar O2 concentration at 14.6% and still falling — should we log an alert?
+Q-00693,"We’re seeing a voltage fluctuation on Vicuña’s power bus—readings just spiked to 137.4 V. Commander Reyes is monitoring, but what’s the next step here? Should we flag this up the chain?"
+Q-00536,Can you give me a quick overview of the current scientific research program running in the Quetzal module?
+Q-01141,We’ve got a pressure anomaly in Quetzal—readings are at 87.2 kPa and still declining. What emergency steps should we take for this situation?
+Q-00541,Radiation sensors in Quetzal are reading 1.9 mSv/hr and rising—should we escalate this to command?
+Q-01353,Can we schedule a routine hull inspection for Cóndor during the next maintenance window?
+Q-00527,Pull the temperature readings from Quetzal for the last 12 hours and display the trend.
+Q-02821,"When was the Colibrí module added to the station, and what was its primary purpose at the time of installation?"
+Q-00623,Tucán power bus showing 130.6 V voltage fluctuation — what emergency procedure should we initiate for this?
+Q-00054,Give me a full rundown of the Kuntur Station's current mission and module layout before the next crew briefing.
+Q-00021,"What is the Medical Officer doing in Tucán right now, and has there been any change in her scheduled activities for this shift?"
+Q-01728,Tucán hull stress sensors just spiked to 87.1% — Kai Nakamura reports possible micrometeorite impact. Do we flag this for command?
+Q-02230,Cóndor radiation sensors are showing 3.5 mSv/hr with solar activity increasing—what emergency procedure do we initiate?
+Q-02197,Give me the radiation levels in Vicuña for the last 12 hours.
+Q-00262,Hull stress readings in Quetzal have hit 94.3% — Kai Nakamura reports possible micrometeorite impact. What emergency steps do we initiate?
+Q-00776,Activate the cooling system in Quetzal—Nakamura just reported temperatures climbing above safe range.
+Q-02431,Shut down the filtration system in Jaguar immediately—Kozlov reports contamination risk and we need to isolate it now.
+Q-03195,"The thermal monitors are flagging Jaguar at 41°C. Crew hasn’t noticed anything yet, but should we take action?"
+Q-03023,What was the nature of the experiment failure during the 2022 mission to the Jaguar module?
+Q-00441,Tucán pressure sensors are at 89.0 kPa and still dropping—what emergency response should we initiate?
+Q-02899,How many joint training exercises are required annually between MASA and international partner agencies?

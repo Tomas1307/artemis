@@ -22,7 +22,7 @@ import numpy as np
 from loguru import logger
 
 PROJECT_ROOT = Path(__file__).parent.parent
-RAW_CSV_PATH = PROJECT_ROOT / "data" / "data.csv"
+RAW_CSV_PATH = PROJECT_ROOT / "data" / "train.csv"
 OUTPUT_DIR = PROJECT_ROOT / "artifacts" / "winner"
 
 VALID_TOOLS = {
