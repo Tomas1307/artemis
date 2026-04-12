@@ -1,0 +1,1278 @@
+[
+  {
+    "id": "T-00001",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00002",
+    "tool_call": "send_alert(module='vicuna',severity='critical',reason='abnormal_temperature')"
+  },
+  {
+    "id": "T-00003",
+    "tool_call": "send_message(recipient='specialist_2',priority='high')"
+  },
+  {
+    "id": "T-00004",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00007",
+    "tool_call": "request_supply(category='medical',urgency='emergency')"
+  },
+  {
+    "id": "T-00008",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-012',scope='station_wide')"
+  },
+  {
+    "id": "T-00010",
+    "tool_call": "get_telemetry(module='jaguar',metric='humidity',timeframe_hours=12)"
+  },
+  {
+    "id": "T-00011",
+    "tool_call": "get_telemetry(module='condor',metric='power',timeframe_hours=12)"
+  },
+  {
+    "id": "T-00012",
+    "tool_call": "send_alert(module='jaguar',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00014",
+    "tool_call": "calculate_trajectory(maneuver='station_keeping',urgency='planned')"
+  },
+  {
+    "id": "T-00015",
+    "tool_call": "get_module_status(module='tucan',system='thermal')"
+  },
+  {
+    "id": "T-00016",
+    "tool_call": "send_message(recipient='pilot',priority='high')"
+  },
+  {
+    "id": "T-00017",
+    "tool_call": "send_alert(module='quetzal',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00018",
+    "tool_call": "request_supply(category='food',urgency='routine')"
+  },
+  {
+    "id": "T-00019",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-010',scope='module_only')"
+  },
+  {
+    "id": "T-00020",
+    "tool_call": "request_supply(category='equipment',urgency='expedited')"
+  },
+  {
+    "id": "T-00021",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-004',scope='station_wide')"
+  },
+  {
+    "id": "T-00022",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='communication_loss')"
+  },
+  {
+    "id": "T-00024",
+    "tool_call": "send_alert(module='jaguar',severity='critical',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00025",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00026",
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00027",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-011',scope='module_only')"
+  },
+  {
+    "id": "T-00028",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-002',scope='station_wide')"
+  },
+  {
+    "id": "T-00030",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-017',scope='module_only')"
+  },
+  {
+    "id": "T-00031",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-001',scope='station_wide')"
+  },
+  {
+    "id": "T-00032",
+    "tool_call": "schedule_maintenance(module='colibri',task='power_cell_swap',priority='urgent')"
+  },
+  {
+    "id": "T-00033",
+    "tool_call": "schedule_maintenance(module='condor',task='sensor_repair',priority='urgent')"
+  },
+  {
+    "id": "T-00034",
+    "tool_call": "send_alert(module='colibri',severity='critical',reason='abnormal_temperature')"
+  },
+  {
+    "id": "T-00035",
+    "tool_call": "send_message(recipient='medical_officer',priority='urgent')"
+  },
+  {
+    "id": "T-00036",
+    "tool_call": "schedule_maintenance(module='condor',task='power_cell_swap',priority='routine')"
+  },
+  {
+    "id": "T-00037",
+    "tool_call": "send_alert(module='vicuna',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00038",
+    "tool_call": "send_alert(module='condor',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00039",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-008',scope='module_only')"
+  },
+  {
+    "id": "T-00040",
+    "tool_call": "send_message(recipient='specialist_2',priority='low')"
+  },
+  {
+    "id": "T-00041",
+    "tool_call": "send_alert(module='vicuna',severity='critical',reason='abnormal_temperature')"
+  },
+  {
+    "id": "T-00043",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00044",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-001',scope='station_wide')"
+  },
+  {
+    "id": "T-00045",
+    "tool_call": "request_supply(category='medical',urgency='expedited')"
+  },
+  {
+    "id": "T-00048",
+    "tool_call": "send_alert(module='tucan',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00049",
+    "tool_call": "send_alert(module='jaguar',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00050",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-004',scope='station_wide')"
+  },
+  {
+    "id": "T-00052",
+    "tool_call": "control_system(module='condor',system='ventilation',action='decrease')"
+  },
+  {
+    "id": "T-00053",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-011',scope='module_only')"
+  },
+  {
+    "id": "T-00055",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-018',scope='module_only')"
+  },
+  {
+    "id": "T-00056",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-018',scope='module_only')"
+  },
+  {
+    "id": "T-00057",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-001',scope='station_wide')"
+  },
+  {
+    "id": "T-00058",
+    "tool_call": "get_module_status(module='jaguar',system='life_support')"
+  },
+  {
+    "id": "T-00059",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-004',scope='station_wide')"
+  },
+  {
+    "id": "T-00061",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-001',scope='station_wide')"
+  },
+  {
+    "id": "T-00062",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00063",
+    "tool_call": "get_crew_status(module='quetzal',info='schedule')"
+  },
+  {
+    "id": "T-00064",
+    "tool_call": "send_alert(module='jaguar',severity='critical',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00065",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-011',scope='module_only')"
+  },
+  {
+    "id": "T-00066",
+    "tool_call": "send_alert(module='jaguar',severity='critical',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00067",
+    "tool_call": "send_alert(module='condor',severity='critical',reason='abnormal_temperature')"
+  },
+  {
+    "id": "T-00068",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-008',scope='module_only')"
+  },
+  {
+    "id": "T-00070",
+    "tool_call": "control_system(module='condor',system='lighting',action='increase')"
+  },
+  {
+    "id": "T-00071",
+    "tool_call": "get_crew_status(module='colibri',info='schedule')"
+  },
+  {
+    "id": "T-00072",
+    "tool_call": "send_alert(module='condor',severity='critical',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00073",
+    "tool_call": "send_alert(module='colibri',severity='critical',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00074",
+    "tool_call": "calculate_trajectory(maneuver='debris_avoidance',urgency='immediate')"
+  },
+  {
+    "id": "T-00075",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00077",
+    "tool_call": "get_telemetry(module='colibri',metric='power',timeframe_hours=6)"
+  },
+  {
+    "id": "T-00079",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-001',scope='station_wide')"
+  },
+  {
+    "id": "T-00080",
+    "tool_call": "get_telemetry(module='vicuna',metric='temperature',timeframe_hours=6)"
+  },
+  {
+    "id": "T-00082",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-008',scope='module_only')"
+  },
+  {
+    "id": "T-00083",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-011',scope='module_only')"
+  },
+  {
+    "id": "T-00084",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-014',scope='station_wide')"
+  },
+  {
+    "id": "T-00085",
+    "tool_call": "send_alert(module='tucan',severity='high',reason='structural_damage')"
+  },
+  {
+    "id": "T-00086",
+    "tool_call": "get_crew_status(module='condor',info='health')"
+  },
+  {
+    "id": "T-00088",
+    "tool_call": "schedule_maintenance(module='quetzal',task='hull_inspection',priority='routine')"
+  },
+  {
+    "id": "T-00089",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-001',scope='station_wide')"
+  },
+  {
+    "id": "T-00090",
+    "tool_call": "send_alert(module='tucan',severity='critical',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00091",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00092",
+    "tool_call": "schedule_maintenance(module='tucan',task='hull_inspection',priority='routine')"
+  },
+  {
+    "id": "T-00093",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-018',scope='module_only')"
+  },
+  {
+    "id": "T-00094",
+    "tool_call": "control_system(module='vicuna',system='lighting',action='deactivate')"
+  },
+  {
+    "id": "T-00095",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00096",
+    "tool_call": "request_supply(category='fuel',urgency='emergency')"
+  },
+  {
+    "id": "T-00097",
+    "tool_call": "calculate_trajectory(maneuver='station_keeping',urgency='immediate')"
+  },
+  {
+    "id": "T-00098",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-017',scope='module_only')"
+  },
+  {
+    "id": "T-00099",
+    "tool_call": "send_alert(module='tucan',severity='high',reason='structural_damage')"
+  },
+  {
+    "id": "T-00100",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00101",
+    "tool_call": "send_alert(module='condor',severity='critical',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00102",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-001',scope='station_wide')"
+  },
+  {
+    "id": "T-00103",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-009',scope='module_only')"
+  },
+  {
+    "id": "T-00105",
+    "tool_call": "send_alert(module='vicuna',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00106",
+    "tool_call": "schedule_maintenance(module='quetzal',task='software_update',priority='urgent')"
+  },
+  {
+    "id": "T-00107",
+    "tool_call": "control_system(module='jaguar',system='heating',action='activate')"
+  },
+  {
+    "id": "T-00108",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-014',scope='station_wide')"
+  },
+  {
+    "id": "T-00109",
+    "tool_call": "get_crew_status(module='quetzal',info='current_activity')"
+  },
+  {
+    "id": "T-00110",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-018',scope='module_only')"
+  },
+  {
+    "id": "T-00111",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-018',scope='module_only')"
+  },
+  {
+    "id": "T-00112",
+    "tool_call": "control_system(module='jaguar',system='filtration',action='increase')"
+  },
+  {
+    "id": "T-00113",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-012',scope='station_wide')"
+  },
+  {
+    "id": "T-00115",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-001',scope='station_wide')"
+  },
+  {
+    "id": "T-00116",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-010',scope='module_only')"
+  },
+  {
+    "id": "T-00117",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-004',scope='station_wide')"
+  },
+  {
+    "id": "T-00118",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-003',scope='module_only')"
+  },
+  {
+    "id": "T-00119",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-004',scope='station_wide')"
+  },
+  {
+    "id": "T-00120",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-001',scope='station_wide')"
+  },
+  {
+    "id": "T-00121",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-018',scope='module_only')"
+  },
+  {
+    "id": "T-00123",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-009',scope='module_only')"
+  },
+  {
+    "id": "T-00126",
+    "tool_call": "send_alert(module='condor',severity='critical',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00127",
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='structural_damage')"
+  },
+  {
+    "id": "T-00128",
+    "tool_call": "send_alert(module='vicuna',severity='critical',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00129",
+    "tool_call": "get_module_status(module='jaguar',system='life_support')"
+  },
+  {
+    "id": "T-00130",
+    "tool_call": "send_alert(module='quetzal',severity='critical',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00131",
+    "tool_call": "send_alert(module='colibri',severity='critical',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00132",
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00133",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-011',scope='module_only')"
+  },
+  {
+    "id": "T-00134",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-018',scope='module_only')"
+  },
+  {
+    "id": "T-00136",
+    "tool_call": "send_alert(module='colibri',severity='critical',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00137",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='communication_loss')"
+  },
+  {
+    "id": "T-00138",
+    "tool_call": "send_alert(module='tucan',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00139",
+    "tool_call": "control_system(module='condor',system='filtration',action='deactivate')"
+  },
+  {
+    "id": "T-00140",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-011',scope='module_only')"
+  },
+  {
+    "id": "T-00141",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-003',scope='module_only')"
+  },
+  {
+    "id": "T-00142",
+    "tool_call": "send_alert(module='vicuna',severity='critical',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00143",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-017',scope='module_only')"
+  },
+  {
+    "id": "T-00144",
+    "tool_call": "calculate_trajectory(maneuver='docking',urgency='planned')"
+  },
+  {
+    "id": "T-00145",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-004',scope='station_wide')"
+  },
+  {
+    "id": "T-00146",
+    "tool_call": "get_crew_status(module='condor',info='health')"
+  },
+  {
+    "id": "T-00147",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00148",
+    "tool_call": "request_supply(category='medical',urgency='expedited')"
+  },
+  {
+    "id": "T-00150",
+    "tool_call": "send_alert(module='jaguar',severity='critical',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00151",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-001',scope='station_wide')"
+  },
+  {
+    "id": "T-00152",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-005',scope='module_only')"
+  },
+  {
+    "id": "T-00154",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-003',scope='module_only')"
+  },
+  {
+    "id": "T-00155",
+    "tool_call": "request_supply(category='spare_parts',urgency='expedited')"
+  },
+  {
+    "id": "T-00156",
+    "tool_call": "send_message(recipient='medical_officer',priority='high')"
+  },
+  {
+    "id": "T-00157",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-018',scope='module_only')"
+  },
+  {
+    "id": "T-00158",
+    "tool_call": "send_message(recipient='pilot',priority='medium')"
+  },
+  {
+    "id": "T-00159",
+    "tool_call": "get_crew_status(module='tucan',info='current_activity')"
+  },
+  {
+    "id": "T-00160",
+    "tool_call": "send_alert(module='condor',severity='high',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00161",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-003',scope='module_only')"
+  },
+  {
+    "id": "T-00162",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-001',scope='station_wide')"
+  },
+  {
+    "id": "T-00163",
+    "tool_call": "get_telemetry(module='vicuna',metric='power',timeframe_hours=12)"
+  },
+  {
+    "id": "T-00164",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-009',scope='module_only')"
+  },
+  {
+    "id": "T-00165",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00166",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-009',scope='module_only')"
+  },
+  {
+    "id": "T-00167",
+    "tool_call": "send_alert(module='vicuna',severity='critical',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00168",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00169",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-012',scope='station_wide')"
+  },
+  {
+    "id": "T-00171",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-015',scope='station_wide')"
+  },
+  {
+    "id": "T-00172",
+    "tool_call": "send_alert(module='jaguar',severity='critical',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00173",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-011',scope='module_only')"
+  },
+  {
+    "id": "T-00176",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-017',scope='module_only')"
+  },
+  {
+    "id": "T-00177",
+    "tool_call": "schedule_maintenance(module='colibri',task='power_cell_swap',priority='routine')"
+  },
+  {
+    "id": "T-00178",
+    "tool_call": "get_module_status(module='colibri',system='life_support')"
+  },
+  {
+    "id": "T-00179",
+    "tool_call": "get_telemetry(module='condor',metric='temperature',timeframe_hours=12)"
+  },
+  {
+    "id": "T-00180",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-011',scope='module_only')"
+  },
+  {
+    "id": "T-00181",
+    "tool_call": "send_alert(module='jaguar',severity='critical',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00182",
+    "tool_call": "get_module_status(module='jaguar',system='power')"
+  },
+  {
+    "id": "T-00183",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00184",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-009',scope='module_only')"
+  },
+  {
+    "id": "T-00185",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-001',scope='station_wide')"
+  },
+  {
+    "id": "T-00186",
+    "tool_call": "send_alert(module='colibri',severity='critical',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00187",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='structural_damage')"
+  },
+  {
+    "id": "T-00188",
+    "tool_call": "schedule_maintenance(module='quetzal',task='system_calibration',priority='routine')"
+  },
+  {
+    "id": "T-00189",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00190",
+    "tool_call": "request_supply(category='food',urgency='routine')"
+  },
+  {
+    "id": "T-00191",
+    "tool_call": "send_alert(module='tucan',severity='critical',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00192",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-011',scope='module_only')"
+  },
+  {
+    "id": "T-00193",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-011',scope='module_only')"
+  },
+  {
+    "id": "T-00194",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-008',scope='module_only')"
+  },
+  {
+    "id": "T-00195",
+    "tool_call": "send_alert(module='condor',severity='medium',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00197",
+    "tool_call": "control_system(module='jaguar',system='lighting',action='activate')"
+  },
+  {
+    "id": "T-00198",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-002',scope='station_wide')"
+  },
+  {
+    "id": "T-00199",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-002',scope='station_wide')"
+  },
+  {
+    "id": "T-00200",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-004',scope='station_wide')"
+  },
+  {
+    "id": "T-00201",
+    "tool_call": "send_alert(module='condor',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00202",
+    "tool_call": "get_module_status(module='colibri',system='communications')"
+  },
+  {
+    "id": "T-00203",
+    "tool_call": "schedule_maintenance(module='condor',task='hull_inspection',priority='urgent')"
+  },
+  {
+    "id": "T-00205",
+    "tool_call": "send_alert(module='condor',severity='medium',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00206",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-011',scope='module_only')"
+  },
+  {
+    "id": "T-00207",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-009',scope='module_only')"
+  },
+  {
+    "id": "T-00208",
+    "tool_call": "get_telemetry(module='tucan',metric='radiation',timeframe_hours=24)"
+  },
+  {
+    "id": "T-00209",
+    "tool_call": "send_alert(module='jaguar',severity='critical',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00210",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-010',scope='module_only')"
+  },
+  {
+    "id": "T-00211",
+    "tool_call": "send_alert(module='tucan',severity='critical',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00212",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-018',scope='module_only')"
+  },
+  {
+    "id": "T-00213",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-017',scope='module_only')"
+  },
+  {
+    "id": "T-00214",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00215",
+    "tool_call": "send_alert(module='colibri',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00216",
+    "tool_call": "send_alert(module='jaguar',severity='critical',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00217",
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00218",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00219",
+    "tool_call": "send_alert(module='vicuna',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00220",
+    "tool_call": "get_telemetry(module='colibri',metric='humidity',timeframe_hours=24)"
+  },
+  {
+    "id": "T-00222",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-011',scope='module_only')"
+  },
+  {
+    "id": "T-00224",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-008',scope='module_only')"
+  },
+  {
+    "id": "T-00226",
+    "tool_call": "get_crew_status(module='tucan',info='schedule')"
+  },
+  {
+    "id": "T-00227",
+    "tool_call": "send_message(recipient='medical_officer',priority='urgent')"
+  },
+  {
+    "id": "T-00228",
+    "tool_call": "get_crew_status(module='tucan',info='health')"
+  },
+  {
+    "id": "T-00229",
+    "tool_call": "send_alert(module='condor',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00230",
+    "tool_call": "get_telemetry(module='vicuna',metric='power',timeframe_hours=1)"
+  },
+  {
+    "id": "T-00231",
+    "tool_call": "send_alert(module='jaguar',severity='high',reason='structural_damage')"
+  },
+  {
+    "id": "T-00232",
+    "tool_call": "send_alert(module='colibri',severity='critical',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00233",
+    "tool_call": "control_system(module='quetzal',system='lighting',action='deactivate')"
+  },
+  {
+    "id": "T-00234",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-003',scope='module_only')"
+  },
+  {
+    "id": "T-00235",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-009',scope='module_only')"
+  },
+  {
+    "id": "T-00236",
+    "tool_call": "send_alert(module='vicuna',severity='critical',reason='abnormal_temperature')"
+  },
+  {
+    "id": "T-00237",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-009',scope='module_only')"
+  },
+  {
+    "id": "T-00238",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-017',scope='module_only')"
+  },
+  {
+    "id": "T-00239",
+    "tool_call": "get_telemetry(module='vicuna',metric='humidity',timeframe_hours=1)"
+  },
+  {
+    "id": "T-00240",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')"
+  },
+  {
+    "id": "T-00241",
+    "tool_call": "get_module_status(module='condor',system='thermal')"
+  },
+  {
+    "id": "T-00242",
+    "tool_call": "send_alert(module='condor',severity='critical',reason='abnormal_temperature')"
+  },
+  {
+    "id": "T-00243",
+    "tool_call": "schedule_maintenance(module='quetzal',task='sensor_repair',priority='routine')"
+  },
+  {
+    "id": "T-00245",
+    "tool_call": "request_supply(category='fuel',urgency='emergency')"
+  },
+  {
+    "id": "T-00246",
+    "tool_call": "send_alert(module='condor',severity='high',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00247",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-008',scope='module_only')"
+  },
+  {
+    "id": "T-00248",
+    "tool_call": "schedule_maintenance(module='jaguar',task='software_update',priority='routine')"
+  },
+  {
+    "id": "T-00250",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00251",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00252",
+    "tool_call": "schedule_maintenance(module='vicuna',task='filter_replacement',priority='routine')"
+  },
+  {
+    "id": "T-00254",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-015',scope='station_wide')"
+  },
+  {
+    "id": "T-00257",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-017',scope='module_only')"
+  },
+  {
+    "id": "T-00258",
+    "tool_call": "send_alert(module='quetzal',severity='critical',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00259",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-007',scope='station_wide')"
+  },
+  {
+    "id": "T-00260",
+    "tool_call": "calculate_trajectory(maneuver='docking',urgency='immediate')"
+  },
+  {
+    "id": "T-00261",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-012',scope='station_wide')"
+  },
+  {
+    "id": "T-00262",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='structural_damage')"
+  },
+  {
+    "id": "T-00263",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00264",
+    "tool_call": "get_telemetry(module='tucan',metric='power',timeframe_hours=12)"
+  },
+  {
+    "id": "T-00265",
+    "tool_call": "send_alert(module='condor',severity='high',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00267",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-008',scope='module_only')"
+  },
+  {
+    "id": "T-00268",
+    "tool_call": "schedule_maintenance(module='tucan',task='system_calibration',priority='urgent')"
+  },
+  {
+    "id": "T-00269",
+    "tool_call": "control_system(module='condor',system='cooling',action='deactivate')"
+  },
+  {
+    "id": "T-00270",
+    "tool_call": "send_alert(module='vicuna',severity='critical',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00271",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-010',scope='module_only')"
+  },
+  {
+    "id": "T-00272",
+    "tool_call": "get_module_status(module='condor',system='structural')"
+  },
+  {
+    "id": "T-00273",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-011',scope='module_only')"
+  },
+  {
+    "id": "T-00274",
+    "tool_call": "send_alert(module='tucan',severity='high',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00275",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-003',scope='module_only')"
+  },
+  {
+    "id": "T-00276",
+    "tool_call": "send_alert(module='vicuna',severity='critical',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00277",
+    "tool_call": "control_system(module='colibri',system='lighting',action='decrease')"
+  },
+  {
+    "id": "T-00278",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='structural_damage')"
+  },
+  {
+    "id": "T-00279",
+    "tool_call": "send_alert(module='condor',severity='high',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00281",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-004',scope='station_wide')"
+  },
+  {
+    "id": "T-00282",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-002',scope='station_wide')"
+  },
+  {
+    "id": "T-00283",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-009',scope='module_only')"
+  },
+  {
+    "id": "T-00285",
+    "tool_call": "send_alert(module='tucan',severity='high',reason='radiation_spike')"
+  },
+  {
+    "id": "T-00286",
+    "tool_call": "calculate_trajectory(maneuver='station_keeping',urgency='immediate')"
+  },
+  {
+    "id": "T-00287",
+    "tool_call": "send_alert(module='tucan',severity='critical',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00288",
+    "tool_call": "send_alert(module='tucan',severity='critical',reason='pressure_drop')"
+  },
+  {
+    "id": "T-00289",
+    "tool_call": "control_system(module='tucan',system='filtration',action='increase')"
+  },
+  {
+    "id": "T-00290",
+    "tool_call": "send_alert(module='colibri',severity='high',reason='communication_loss')"
+  },
+  {
+    "id": "T-00291",
+    "tool_call": "control_system(module='quetzal',system='cooling',action='deactivate')"
+  },
+  {
+    "id": "T-00292",
+    "tool_call": "get_telemetry(module='vicuna',metric='oxygen',timeframe_hours=24)"
+  },
+  {
+    "id": "T-00294",
+    "tool_call": "send_alert(module='colibri',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00295",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-018',scope='module_only')"
+  },
+  {
+    "id": "T-00297",
+    "tool_call": "send_alert(module='vicuna',severity='high',reason='structural_damage')"
+  },
+  {
+    "id": "T-00298",
+    "tool_call": "send_alert(module='condor',severity='critical',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00299",
+    "tool_call": "send_alert(module='jaguar',severity='critical',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00300",
+    "tool_call": "request_supply(category='medical',urgency='routine')"
+  },
+  {
+    "id": "T-00301",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-001',scope='station_wide')"
+  },
+  {
+    "id": "T-00302",
+    "tool_call": "send_alert(module='condor',severity='medium',reason='power_fluctuation')"
+  },
+  {
+    "id": "T-00303",
+    "tool_call": "send_alert(module='quetzal',severity='critical',reason='abnormal_temperature')"
+  },
+  {
+    "id": "T-00304",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='oxygen_leak')"
+  },
+  {
+    "id": "T-00305",
+    "tool_call": "activate_protocol(protocol_id='masa-sec-015',scope='station_wide')"
+  },
+  {
+    "id": "T-00306",
+    "tool_call": "send_message(recipient='medical_officer',priority='high')"
+  },
+  {
+    "id": "T-00307",
+    "tool_call": "send_alert(module='quetzal',severity='high',reason='structural_damage')"
+  },
+  {
+    "id": "T-00308",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00309",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00310",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00311",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00312",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00313",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00314",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00315",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00316",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00317",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00318",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00319",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00320",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00321",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00322",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00323",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00324",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00325",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00326",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00327",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00328",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00329",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00330",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00331",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00332",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00333",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00334",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00335",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00336",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00337",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00338",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00339",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00340",
+    "tool_call": "no_action"
+  },
+  {
+    "id": "T-00341",
+    "tool_call": "request_supply(category='medical',urgency='expedited')"
+  },
+  {
+    "id": "T-00342",
+    "tool_call": "get_telemetry(module='quetzal',metric='radiation',timeframe_hours=6)"
+  },
+  {
+    "id": "T-00343",
+    "tool_call": "control_system(module='condor',system='cooling',action='increase')"
+  },
+  {
+    "id": "T-00344",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='planned')"
+  },
+  {
+    "id": "T-00345",
+    "tool_call": "control_system(module='condor',system='lighting',action='deactivate')"
+  },
+  {
+    "id": "T-00346",
+    "tool_call": "control_system(module='tucan',system='cooling',action='increase')"
+  },
+  {
+    "id": "T-00347",
+    "tool_call": "get_module_status(module='quetzal',system='power')"
+  },
+  {
+    "id": "T-00348",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')"
+  },
+  {
+    "id": "T-00349",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')"
+  },
+  {
+    "id": "T-00350",
+    "tool_call": "schedule_maintenance(module='colibri',task='software_update',priority='urgent')"
+  },
+  {
+    "id": "T-00351",
+    "tool_call": "schedule_maintenance(module='colibri',task='software_update',priority='routine')"
+  },
+  {
+    "id": "T-00352",
+    "tool_call": "send_message(recipient='specialist_2',priority='high')"
+  },
+  {
+    "id": "T-00353",
+    "tool_call": "control_system(module='condor',system='lighting',action='deactivate')"
+  },
+  {
+    "id": "T-00354",
+    "tool_call": "request_supply(category='equipment',urgency='expedited')"
+  },
+  {
+    "id": "T-00355",
+    "tool_call": "schedule_maintenance(module='colibri',task='software_update',priority='urgent')"
+  },
+  {
+    "id": "T-00356",
+    "tool_call": "request_supply(category='medical',urgency='emergency')"
+  },
+  {
+    "id": "T-00357",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='planned')"
+  },
+  {
+    "id": "T-00358",
+    "tool_call": "request_supply(category='food',urgency='emergency')"
+  },
+  {
+    "id": "T-00359",
+    "tool_call": "calculate_trajectory(maneuver='reentry',urgency='planned')"
+  },
+  {
+    "id": "T-00360",
+    "tool_call": "control_system(module='jaguar',system='cooling',action='activate')"
+  },
+  {
+    "id": "T-00361",
+    "tool_call": "calculate_trajectory(maneuver='orbit_adjustment',urgency='immediate')"
+  },
+  {
+    "id": "T-00362",
+    "tool_call": "request_supply(category='fuel',urgency='expedited')"
+  }
+]
