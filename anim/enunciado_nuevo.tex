@@ -122,7 +122,7 @@ El sistema cuenta con 10 \textit{tools} disponibles, todas con parámetros tipo 
 
 La misma definición se entrega como archivo procesable en \texttt{tools\_definition.json}.\\
 
-\textit{Nota: Si bien los valores válidos dentro de los parámetros no contienen  caracteres especiales del español ('´','ñ'), los documentos en inglés si los tienen}.
+\textit{Nota importante: Los nombres de los módulos en los documentos técnicos conservan su grafía original en español (Cóndor, Colibrí, Vicuña, Tucán), mientras que los valores válidos en las \textit{tool calls} usan su forma ASCII sin acentos (\texttt{condor}, \texttt{colibri}, \texttt{vicuna}, \texttt{tucan}). Tenga en cuenta que estos nombres propios provienen de lenguas indígenas y del español, y no forman parte del vocabulario estándar de modelos entrenados en inglés.}
 
 \subsection{Requisitos técnicos}
 
@@ -131,8 +131,8 @@ continuación. Por lo tanto, obtendrá una calificación de 0 en la actividad co
 proyecto final.  Los requisitos son los siguientes:
 
 \begin{itemize}
-    \item El \textit{decoder} obligatorio es \texttt{meta-llama/Llama-3.2-1B}. No se permite usar otro \textit{decoder}.
-    \item El \textit{encoder} obligatorio es \texttt{BAAI/bge-small-en-v1.5}. No se permite usar otro \textit{encoder}.
+    \item El \textit{decoder} obligatorio es \texttt{meta-llama/Llama-3.2-1B-Instruct} (\href{https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct}{link}). No se permite usar otro \textit{decoder}.
+    \item El \textit{encoder} obligatorio es \texttt{BAAI/bge-small-en-v1.5} (\href{https://huggingface.co/BAAI/bge-small-en-v1.5}{link}). No se permite usar otro \textit{encoder}.
     \item Está prohibido el uso de modelos pagos (OpenAI, Claude, Cohere, Gemini APIs u otros servicios de pago).
     \item Está prohibido usar datos externos no entregados por el equipo docente.
     \item Está prohibido utilizar los datos de prueba para entrenar (\textit{data leakage}).
@@ -144,17 +144,51 @@ proyecto final.  Los requisitos son los siguientes:
 
 
 \section{Envío de resultados por la plataforma Kaggle}
-Para enviar los resultados, genere un archivo CSV en el formato especificado y súbalo en la plataforma Kaggle. Una parte de los resultados se usará para el \textbf{score público} y otra parte para el \textbf{score privado}, que determinará el resultado final.
+Para enviar los resultados, genere un archivo CSV con las predicciones para \textbf{todas} las 766 consultas de \texttt{test.csv} y súbalo en la plataforma Kaggle. El archivo \texttt{test.csv} contiene tanto las consultas del score público como del privado, mezcladas sin distinción. La evaluación tiene dos componentes:
+
+\begin{itemize}
+    \item \textbf{Score público}: se calcula sobre un subconjunto de las consultas de \texttt{test.csv}. Este score es visible durante la competencia y permite al grupo iterar sobre su solución.
+    \item \textbf{Score privado}: se calcula sobre el subconjunto restante de consultas de \texttt{test.csv}. Este score se revela al cierre de la competencia y determina el ranking final. Los participantes no saben cuáles consultas pertenecen al score público y cuáles al privado.
+\end{itemize}
+
+La métrica de evaluación es \textit{Categorization Accuracy} (\textit{exact string match}): la predicción debe coincidir carácter por carácter con la \textit{tool call} canónica correcta. No se otorga crédito parcial.
+
+\textbf{Nombre del equipo en Kaggle:} Cada grupo debe registrarse con el nombre \texttt{Grupo\_N}, donde \texttt{N} es el número de su grupo asignado en Coursera. Ejemplos: \texttt{Grupo\_1}, \texttt{Grupo\_2}, \texttt{Grupo\_10}. Es obligatorio usar el mismo número de grupo que tienen en la plataforma de Coursera, ya que este será el identificador para asociar los resultados de Kaggle con la nota del grupo.
 
 \section{Entregables en Coursera}
 
-En la semana 8 del curso se habilitará una actividad en donde usted y su grupo deben subir los siguientes
-entregables correspondientes únicamente al modelo final con el que obtuvieron los mejores resultados en la
-tabla de líderes pública de la competencia de Kaggle:
+En la semana 8 del curso se habilitará una actividad en donde usted y su grupo deben entregar los siguientes
+artefactos correspondientes únicamente al modelo final con el que obtuvieron los mejores resultados en la
+tabla de líderes pública de la competencia de Kaggle. Todos los entregables deben empaquetarse en un único archivo \texttt{.zip} nombrado \texttt{entrega\_grupo\_XX.zip} y subirse a una carpeta compartida de Google Drive cuyo enlace se proporcionará en Coursera. El \texttt{.zip} debe contener:
 
 \begin{enumerate}
-    \item \textbf{Notebook único} con el \textit{pipeline} completo, organizado en secciones claramente diferenciadas: (1) carga y exploración de datos, (2) entrenamiento del o los modelos, (3) construcción del índice de \textit{retrieval}, (4) inferencia, y (5) generación del archivo de respuesta. Toda \textit{data augmentation} o generación adicional de texto debe quedar dentro del mismo \textit{notebook} para garantizar la reproducibilidad.
-    \item \textbf{Checkpoint(s) del decoder} (\texttt{Llama-3.2-1B} \textit{fine-tuneado}). Si realizaron \textit{fine-tuning} adicional sobre otros componentes del \textit{pipeline}, deben incluir también esos \textit{checkpoints}.
+    \item \textbf{Notebook principal} con el \textit{pipeline} completo, organizado en secciones claramente diferenciadas: (1) carga y exploración de datos, (2) entrenamiento del o los modelos, (3) construcción del índice de \textit{retrieval}, (4) inferencia, y (5) generación del archivo de respuesta. Toda \textit{data augmentation} o generación adicional de texto debe quedar documentada en el \textit{notebook}. Si el grupo utiliza \textit{scripts} de Python externos que se invocan desde el \textit{notebook}, está permitido siempre que todos los \textit{scripts} estén incluidos en el \texttt{.zip}.
+
+    El \textit{notebook} debe seguir una estructura clara con secciones marcadas. Ejemplo mínimo:
+    \begin{lstlisting}
+# 1. Carga y Exploracion de Datos
+  - Carga de train.csv, consultas_centro_control.json, documentos MASA
+  - Analisis exploratorio: distribucion de tools, duplicados, estadisticas
+
+# 2. Preprocesamiento
+  - Limpieza de datos (duplicados, ruido)
+  - Chunking de documentos
+  - Generacion de datos adicionales (si aplica, justificar modelo usado)
+
+# 3. Entrenamiento
+  - Fine-tuning del encoder (si aplica)
+  - Construccion del indice FAISS
+  - Fine-tuning del decoder (obligatorio)
+
+# 4. Inferencia
+  - Carga de modelos entrenados
+  - Pipeline completo: query -> retrieval -> generacion -> post-procesamiento
+
+# 5. Generacion del Archivo de Respuesta
+  - Generacion de submission.csv para Kaggle
+    \end{lstlisting}
+    \item \textbf{Mejor modelo del decoder} (\texttt{Llama-3.2-1B-Instruct} \textit{fine-tuneado}): el \textit{checkpoint} completo del mejor modelo obtenido durante el entrenamiento (directorio generado por \texttt{model.save\_pretrained()}).
+    \item \textbf{Mejor modelo del encoder} (si aplica): si realizaron \textit{fine-tuning} del \textit{encoder} (\texttt{bge-small-en-v1.5}), incluir el \textit{checkpoint} completo del mejor modelo.
     \item \textbf{Índice de retrieval} en formato JSON con la siguiente estructura por cada \textit{chunk} indexado:
     \begin{lstlisting}
 [
@@ -175,8 +209,35 @@ tabla de líderes pública de la competencia de Kaggle:
     Si un documento se divide en múltiples \textit{chunks}, el \texttt{doc\_id} se repite y cada \texttt{chunk\_id} es único, tanto dentro de ese documento como de forma global.
 \end{enumerate}
 
+\noindent Estructura esperada del \texttt{.zip}:
+\begin{lstlisting}
+entrega_grupo_XX.zip/
+  pipeline.ipynb                  # Notebook principal
+  scripts/                        # Scripts externos (si aplica)
+    chunker.py
+    finetune_decoder.py
+    utils.py
+  prompts/                        # Prompts utilizados (si aplica)
+    system_prompt.yaml
+  models/
+    decoder/                      # Checkpoint del decoder fine-tuneado
+      adapter_config.json
+      adapter_model.safetensors
+      tokenizer.json
+      ...
+    encoder/                      # Checkpoint del encoder (si aplica)
+      config.json
+      model.safetensors
+      tokenizer.json
+      ...
+  retrieval_index.json            # Indice de retrieval con chunks y vectores
+  requirements.txt                # Dependencias
+\end{lstlisting}
+
+\noindent \textbf{Entrega en Coursera:} en la actividad habilitada en Coursera, suba únicamente el \textbf{enlace de Google Drive} donde se encuentra el archivo \texttt{entrega\_grupo\_XX.zip}. Asegúrese de que el enlace tenga permisos de lectura para cualquier persona con el enlace.
+
 \subsection{Sobre el uso de modelos adicionales para data augmentation}
-Si el grupo decide generar datos sintéticos adicionales para mejorar el entrenamiento, puede utilizar modelos de lenguaje \textit{open-source} disponibles en \href{https://huggingface.co/}{Hugging Face} (descargados localmente) o NVIDIA BUIILD, en este último, también se puede través del \textit{endpoint} gratuito de \href{https://build.nvidia.com/models}{NVIDIA Build} (\texttt{build.nvidia.com/models}). En ambos casos, el grupo \textbf{debe justificar la elección del modelo} (capacidades, licencia, motivación) dentro del mismo \textit{notebook} entregado. No se aceptan modelos pagos ni datos externos no generados por el grupo.
+Si el grupo decide generar datos sintéticos adicionales para mejorar el entrenamiento, puede utilizar modelos de lenguaje \textit{open-source} disponibles en \href{https://huggingface.co/}{Hugging Face} (descargados localmente) o NVIDIA BUILD, en este último, también se puede través del \textit{endpoint} gratuito de \href{https://build.nvidia.com/models}{NVIDIA Build} (\texttt{build.nvidia.com/models}). En ambos casos, el grupo \textbf{debe justificar la elección del modelo} (capacidades, licencia, motivación) dentro del mismo \textit{notebook} entregado. No se aceptan modelos pagos ni datos externos no generados por el grupo.
 
 
 \section{Rúbrica de Evaluación}
@@ -229,36 +290,37 @@ $>$ percentil 75 & 100\% \\ \hline
 Se proporcionan los siguientes archivos:
 
 \begin{itemize}
-    \item \textbf{train.csv}: contiene 3\,186 ejemplos de entrenamiento correspondientes a consultas de operadores del centro de control, con las siguientes columnas:
+    \item \textbf{train.csv}: contiene 2\,718 ejemplos de entrenamiento correspondientes a consultas de operadores del centro de control. Este archivo representa aproximadamente el 80\% del \textit{dataset} completo. Contiene datos duplicados y ruidosos --- parte del reto es limpiarlos adecuadamente. Se recomienda particionar este archivo en subconjuntos de entrenamiento y validación según la estrategia del grupo. Columnas:
     \begin{itemize}
         \item \texttt{id}: identificador único de la consulta (formato \texttt{Q-XXXXX}).
         \item \texttt{query}: consulta en lenguaje natural emitida por un operador.
         \item \texttt{tool\_call}: \textit{tool call} correcta en formato canónico (variable objetivo).
     \end{itemize}
 
-    \item \textbf{test.csv}: archivo de evaluación que contiene 354 consultas a clasificar, con las siguientes columnas:
+    \item \textbf{test.csv}: archivo de evaluación que contiene 766 consultas sin respuesta. Incluye tanto las consultas del score público como del score privado, mezcladas sin distinción. No hay superposición con \texttt{train.csv}. Columnas:
     \begin{itemize}
-        \item \texttt{id}: identificador único de la consulta (formato \texttt{T-XXXXX}).
+        \item \texttt{id}: identificador único de la consulta (formato \texttt{Q-XXXXX}).
         \item \texttt{query}: consulta en lenguaje natural a la cual se debe predecir la \textit{tool call}.
     \end{itemize}
 
-    \item \textbf{consultas\_centro\_control.json}: archivo con 800 pares \texttt{(query, doc\_id)} que registran consultas históricas del centro de control junto con el documento técnico que las responde. Cada entrada tiene la forma:
+    \item \textbf{consultas\_centro\_control.json}: archivo con 810 pares \texttt{(query, doc\_id)} que registran consultas históricas del centro de control junto con el documento técnico que las responde. Algunas entradas incluyen además un campo \texttt{hard\_negative\_doc\_id} que indica un documento que podría confundirse con el correcto. Cada entrada tiene la forma:
     \begin{lstlisting}
 {"query": "Which protocol governs radiation lockdown procedures?",
- "doc_id": "MASA-DOC-009"}
+ "doc_id": "MASA-DOC-009",
+ "hard_negative_doc_id": "MASA-DOC-012"}
     \end{lstlisting}
 
-    \item \textbf{base\_conocimiento.zip}: archivo comprimido que contiene los 54 documentos técnicos de MASA (manuales de módulos, protocolos de seguridad, procedimientos operacionales y guías de sistemas) que conforman el \textit{corpus} de \textit{retrieval}. Cada documento se entrega como archivo Markdown bajo una carpeta nombrada con su identificador (\texttt{MASA-DOC-XXX/doc.md}).
+    \item \textbf{base\_conocimiento/}: carpeta que contiene los 54 documentos técnicos de MASA (manuales de módulos, protocolos de seguridad, procedimientos operacionales y guías de sistemas) que conforman el \textit{corpus} de \textit{retrieval}. Cada documento se entrega como archivo Markdown bajo una carpeta nombrada con su identificador (\texttt{MASA-DOC-XXX/doc.md}).
 
     \item \textbf{tools\_definition.json}: definición completa de las 10 \textit{tools} disponibles en formato JSON procesable, incluyendo todos los parámetros válidos por enumeración. Corresponde a la tabla presentada en la Sección 3.2.
 
-    \item \textbf{sample\_submission.csv}: ejemplo del formato de entrega esperado en Kaggle. Contiene una fila por cada \texttt{id} del archivo \texttt{test.csv} con un valor \textit{placeholder} en la columna \texttt{tool\_call}, que el estudiante debe reemplazar con la predicción de su modelo.
+    \item \textbf{sample\_submission.csv}: ejemplo del formato de entrega esperado en Kaggle para \texttt{test.csv}. Contiene una fila por cada \texttt{id} del archivo \texttt{test.csv} con un valor \textit{placeholder} en la columna \texttt{tool\_call}, que el estudiante debe reemplazar con la predicción de su modelo.
 \end{itemize}
 
 \subsection{Formato de respuesta canónico}
 
 
-Las respuestas deben seguir un formato estricto de \textit{tool call}: sin espacios después de comas, parámetros en el orden definido por la \textit{tool}, \textit{strings} con comillas simples, todo en minúsculas y números sin comillas. La métrica de evaluación es \textit{exact match} del \textit{string} completo. Se permite post-procesamiento del \textit{output} (regex, normalización de formato).\\
+Las respuestas deben seguir un formato estricto de \textit{tool call}: sin espacios después de comas, parámetros en el orden definido por la \textit{tool}, \textit{strings} con comillas simples, todo en minúsculas excepto \texttt{protocol\_id} que va en mayúsculas (e.g., \texttt{MASA-SEC-001}), y números sin comillas. Se evalúa que la \textit{tool call} completa --- nombre de la función, parámetros y valores --- coincida exactamente con la respuesta esperada, ya que en un entorno operativo real cualquier discrepancia impediría la ejecución de la herramienta y pondría en riesgo la misión. La métrica de evaluación es \textit{exact match} del \textit{string} completo; no se otorga crédito parcial. Se permite post-procesamiento del \textit{output} (regex, normalización de formato).\\
 
 \textbf{Ejemplos de tool calls válidos:}
 \begin{lstlisting}
